@@ -1,0 +1,149 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+  line-height: 1.5;
+}
+
+.mall-navbar {
+    background-color: white; 
+}
+
+.navbar-nav li a {
+ line-height: 35px;
+ color: #6f6868;
+ font-size: 16px;
+}
+
+@media screen and (max-width: 480px) {
+    
+    #mall-nav-collapse {
+        background-color: #ffffffff;
+        z-index: 100;
+    } 
+
+    .navbar-brand{
+        font-size: 20px;
+        margin-top: auto;    
+        line-height: 0px;
+    }   
+}
+
+.navbar-brand {
+    line-height: 35px;
+    font-size: 27px;
+}
+
+.widewrapper.pagetitle {
+    background-color: #4b596f;
+    /*-webkit-box-shadow: inset 1px 3px 1px -2px #620F0F;*/
+    /*-moz-box-shadow: inset 1px 3px 1px -2px #620F0F;*/
+    /*box-shadow: inset 0px 0px 2px 1px #620F0F;*/
+}
+
+div.pagetitle {
+    padding: 8px;
+}
+div.pagetitle, .calltoaction {
+    color: #ffffff;
+}
+.widewrapper {
+    background-repeat: repeat-x;
+    background-color: #ffffff;
+    -webkit-box-shadow: inset 1px 3px 1px -2px #e2e1e1;
+    -moz-box-shadow: inset 1px 3px 1px -2px #e2e1e1;
+    box-shadow: inset 1px 3px 1px -2px #e2e1e1;
+}
+
+.widewrapper.footer {
+    background-color: #4b596f;
+    -webkit-box-shadow: inset 1px 3px 1px -2px #620F0F;
+    -moz-box-shadow: inset 1px 3px 1px -2px #620F0F;
+    box-shadow: inset 0px 0px 2px 1px #620F0F;
+    position: absolute;
+    /*bottom: 0;*/
+    width: 100%;
+    margin-top: 20px;
+    color: white;
+
+}
+
+.row.footer {
+    margin-top: 20px;
+    padding: 20px;
+    color: white;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+
+
+.research {
+	text-align: justify;
+}
+
+.people-section {
+    display: block;
+}
+
+.people-photo {
+    height: 140px;
+    max-width: 100%;
+}
+
+.funding {
+ height: 60px;
+ margin: 10px;
+}
+
+.people-profile {
+
+    margin: 20px;
+    padding: 5px;
+
+}
+
+.navbar-logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+}
+
+.news {
+    height: 100px; /* %-height of the viewport */
+
+}
+
+.blank-cell
+{
+    height: 30px !important; /* Overwrite any previous rules */
+    background-color: #FFFFFF;
+    border-top: none;
+}
+
+/*.gallery {
+    align-content: center;
+    text-align: center;
+}
+.gallery-content {
+    display: inline-block;
+}
+*/
+/* .gallery-item {
+
+} */
+
+.gallery-photo {
+    height: 400px;
+    max-width: 100%;
+    width: 100%;
+}
+.gallery-photo-text {
+    text-align: center;
+}
