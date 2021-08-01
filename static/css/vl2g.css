@@ -139,6 +139,19 @@ body {
 
 } */
 
+span.highlight {
+  background-color: #ffffd0;
+}
+.blinking{
+  animation:blinkingText 2.5s infinite;
+ }
+   @keyframes blinkingText{
+   0%{     color: #ff0000;    }
+   50%{    color: transparent; }
+   100%{   color: #ff0000;    }
+}
+
+
 .gallery-photo {
     height: 400px;
     max-width: 100%;
