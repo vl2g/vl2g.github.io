@@ -5,7 +5,7 @@ body {
 }
 
 .mall-navbar {
-    background-color: darkslategrey; 
+    background-color: #8c1515; 
 }
 
 .navbar-nav li a {
@@ -55,7 +55,7 @@ div.pagetitle, .calltoaction {
 }
 
 .widewrapper.footer {
-    background-color: darkslategrey;
+    background-color: #8c1515;
     -webkit-box-shadow: inset 1px 3px 1px -2px #620F0F;
     -moz-box-shadow: inset 1px 3px 1px -2px #620F0F;
     box-shadow: inset 0px 0px 2px 1px #620F0F;
