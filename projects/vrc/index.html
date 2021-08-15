@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://malllabiisc.github.io/resources/kvqa/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Text to Image">
+    <meta name="author" content="MALL lab">
+
+    <title>Few-Shot VRC</title>
+
+    <link href="./index_files/bootstrap.css" rel="stylesheet">
+    <link href="./index_files/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <h2 class="text"><center>Few-Shot Visual Relationship Co-Localization</center></h2>
+<h4 class="text"><center><a href="https://revantteotia.github.io/">Revant Teotia*</a>, <a href="https://www.linkedin.com/in/vaibhav-mishra-iitj/?originalSubdomain=in">Vaibhav Mishra*</a>, <a href="https://www.linkedin.com/in/maheshwarimayank333">Mayank Maheshwari*</a>, <a href="https://anandmishra22.github.io/">Anand Mishra</a> </center></h4>
+<h6 class="text"><center>* : Equal Contribution</center></h6>
+<h4 class="text"><center>Indian Institute of Technology, Jodhpur</center></h4>
+<h4 class="text"><center>ICCV 2021</center></h4>
+
+<h4 class="text"><center> [<a href="./docs/VRC_ICCV2021_paper.pdf">Paper</a>][<a href="https://github.com/vaibhavmishra1/Relationship-Colo">Code</a>][<a href="./docs/VRC_ICCV2021_supp.pdf">Supplementry Material</a>][<a href="./docs/VRC_ICCV2021_slides.pptx">Slides</a>][<a href="./docs/textKVQA-poster.pdf">Poster</a>] </center></h4>
+       </div>
+
+ <div class="container">
+      <div class="header">
+      <br>
+<center>
+<figure class="figure"> 
+    <img class="figure-img" width="100%" src= "figures/fig1.png" > 
+
+ </figure>
+</center>
+&nbsp;
+&nbsp;
+&nbsp;
+
+</div>
+      <div class="row">
+        <h3>Motivation</h3>
+        <p style="text-align: justify;">                   
+          In this paper, we study the problem of co-localizing visual subjects and objects connected via a common predicate across a bag of 
+          images. For example, given a small collection of images, each containing a common but latent predicate such as "biting", we are 
+          interested in localizing <em>who</em> is biting <em>what</em> i.e., visual subject (<em>who</em>) and visual object (<em>what</em>) pairs 
+          in each of the images.</p><p>
+          Visual relationship co-localization (<em>VRC</em> as an abbreviation) is a challenging task, even more so than the well-studied object 
+          co-localization task. This becomes further challenging when the model has to learn to co-localize unseen predicates based on just 
+          the similarity between a few images. To solve <em>VRC</em>, we propose an optimization framework to select a common visual relationship in each image of the bag.
+          Obviously, the optimization framework should, (a) learn visual relationship similarity in a few-shot setting, (b) find the optimal 
+          solution despite the combinatorial complexity of the problem.</p><p> 
+          To obtain robust visual relationship representation, we utilize a simple yet effective technique that learns relationship embedding 
+          as a translation vector from visual subject to visual object in a shared space. Further, to learn visual relationship similarity, we 
+          utilize a proven meta-learning technique commonly used for few-shot classification tasks.
+          Finally, to tackle the combinatorial complexity challenge arising from an exponential number of possible solutions, we use a greedy 
+          approximation inference algorithm that selects approximately the best solution.
+          We have extensively evaluated our proposed framework on variations of bag sizes obtained from two challenging public datasets, namely 
+          VrR-VG and VG-150, and obtain impressive performance gains over baselines.
+        </p>
+      </div>
+      <div class="row">
+        <h3>Contributions</h3>
+     <ul> 
+     <li> We introduce a novel task of Visual Relationship Co-Localization (VRC).</li>
+     <li> VRC has several potential applications and would be an important step in holistic scene understanding.  </li>
+     <li> We also propose an energy optimization framework to solve the problem of VRC.</li>
+     <li> Used meta-learning based few-shot learning approach to tackle the problem in a semi-supervised way. </li>
+     </ul>
+               
+     </div>
+
+
+<!-- <div class="row">
+    <h3 id="datasetE">Dataset</h3>
+    <p>&nbsp;</p>
+    <p>
+    	<figure class="figure"> 
+		    <img class="figure-img" width="100%" src= "figures/samples_data.png" > 
+		      
+		    <figcaption class="figure-caption">
+		    	Sample images, question-ground truth answer pairs and a relevant supporting fact from our newly introduced text-KVQA dataset.
+Please note that supporting fact is not explicitly provided during training and inference of our method. Rather it is mined from the largescale knowledge bases. Please refer to supplementary material for more examples.
+		    </figcaption> 
+
+ 		</figure>
+    </p>
+    <p>
+    	<figure class="figure"> 
+		    <img class="figure-img" width="100%" src= "figures/dataset.png" > 
+		      
+		    <figcaption class="figure-caption">
+		    	text-KVQA as compared to related datasets which identifies the need for reading text for VQA task. Our dataset is not only
+significantly larger than these datasets, but also only dataset which identifies the need for background knowledge in answering questions.
+		    </figcaption> 
+
+ 		</figure>
+    </p>
+</div>
+
+<div class="row">
+  <h3 id="datasetD">Dataset Downloads</h3>
+  <div class="row">
+    <ol type="A">
+      <li>Dataset images and QA Pairs</li>
+      <ol type="a">
+        <li>text-KVQA <i>(scene)</i>&nbsp;[<a href="http://dosa.cds.iisc.ac.in/kvqa/text-KVQA-scene.tar.gz"><i>Images [14.6 GB]</i></a>,&nbsp;<a href="https://drive.google.com/open?id=1uJesYPfOv0IQS1GICSLOE-CzDDp1bC5S"><i>QA Pairs</i></a>]</li>
+        <li>text-KVQA <i>(book)</i>&nbsp;[<a href="https://drive.google.com/open?id=1nooQXQlYfJyM8lWsDWZGDM2OPTT4P7t0"><i>Image URLs and QA Pairs</i></a>]</li>
+        <li>text-KVQA <i>(movie)</i>&nbsp;[<a href="https://drive.google.com/file/d/1JqTjtARVg31tLJPM1tlgWnYfxI-JRTCw/view?usp=sharing"><i>Image URLs and QA Pairs</i></a>]</li>
+      </ol>
+      <li>Knowledge Bases</li>
+      <ol type="a">
+        <li><a href="https://drive.google.com/file/d/1uqjE2cd2vmRyFLJBQOQaLAQrheR0aMmw/view?usp=sharing">KB-business</i></a></li>
+        <li><a href="https://drive.google.com/open?id=19kVWqjAYofKXkZgKcX2MmdpOZUQCuHsV">KB-book</i></a></li>
+        <li><a href="https://drive.google.com/open?id=1b5e71gihr45Qj1d22Im9P1HCMhCEx_Gd">KB-movie</i></a></li>
+      </ol>
+    </ol>
+	<a href="./README.txt">README</a>
+  </div>
+</div>
+
+<hr> -->
+
+
+<h3><strong><span style="font-size: 12pt;">Bibtex</span></strong></h3>
+<p>If you use this dataset, please cite:</p>
+<pre><tt>@InProceedings{singhMSC19,
+  author    = "Teotia, Revant and Mishra, Vaibhav and Maheshwari, Mayank and Mishra, Anand",
+  title     = "Few-shot Visual Relationship Co-Localization",
+  booktitle = "ICCV",
+  year      = "2021",
+}</tt></pre>
+<!-- <hr>
+
+        <h3>Publications</h3>
+       <br>
+Ajeet Kumar Singh, Anand Mishra, Shashank Shekhar, Anirban Chakraborty, <b>From Strings to Things: Knowledge-enabled VQA Model that can Read and Reason</b>, ICCV 2019
+[<a href="./dos/textKVQA_ICCV2019.pdf"><u>pdf</u></a>][<a href="./docs/textKVQA_ICCV2019_supp.pdf"><u>Supplementary</u></a>][<a href="./docs/textKVQA-slides.pdf"><u>Slides</u></a>][<a href="./docs/textKVQA-poster.pdf"><u>Poster</u></a>]
+<br>
+<br> -->
+
+
+            
+ <!-- <div class="row">
+       <h3>People</h3>
+       	<a href="https://ajeetksingh.github.io/"><u>Ajeet Kumar Singh</u></a></br>
+        <a href="https://anandmishra22.github.io/"><u>Anand Mishra</u></a> <br>
+        <a href="#"><u>Shashank Shekhar</u></a><br>
+        <a href="#"> <u>Anirban Chakraborty</u></a> <br>
+        
+      </div> -->
+
+
+      <!-- <div class="row">
+       <h3>Acknowledgements</h3>
+        <p> Authors would like to thank MHRD, Govt. of India and Intel Corporation for partly supporting this work. 
+        </p>
+      </div> -->
+      
+      
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  
+
+
+</div></div>
+</div></div></body></html>
