@@ -47,32 +47,20 @@
 
 </div>
       <div class="row">
-        <h3>Motivation</h3>
+        <h3>Abstract</h3>
         <p style="text-align: justify;">                   
-          In this paper, we study the problem of co-localizing visual subjects and objects connected via a common predicate across a bag of 
-          images. For example, given a small collection of images, each containing a common but latent predicate such as "biting", we are 
-          interested in localizing <em>who</em> is biting <em>what</em> i.e., visual subject (<em>who</em>) and visual object (<em>what</em>) pairs 
-          in each of the images.</p><p>
-          Visual relationship co-localization (<em>VRC</em> as an abbreviation) is a challenging task, even more so than the well-studied object 
-          co-localization task. This becomes further challenging when the model has to learn to co-localize unseen predicates based on just 
-          the similarity between a few images. To solve <em>VRC</em>, we propose an optimization framework to select a common visual relationship in each image of the bag.
-          Obviously, the optimization framework should, (a) learn visual relationship similarity in a few-shot setting, (b) find the optimal 
-          solution despite the combinatorial complexity of the problem.</p><p> 
-          To obtain robust visual relationship representation, we utilize a simple yet effective technique that learns relationship embedding 
-          as a translation vector from visual subject to visual object in a shared space. Further, to learn visual relationship similarity, we 
-          utilize a proven meta-learning technique commonly used for few-shot classification tasks.
-          Finally, to tackle the combinatorial complexity challenge arising from an exponential number of possible solutions, we use a greedy 
-          approximation inference algorithm that selects approximately the best solution.
-          We have extensively evaluated our proposed framework on variations of bag sizes obtained from two challenging public datasets, namely 
-          VrR-VG and VG-150, and obtain impressive performance gains over baselines.
-        </p>
+        In this paper, given a small bag of images, each containing a common but latent predicate, we are interested in localizing visual subject-object pairs connected via the common predicate in each of the images. We refer to this novel problem as visual relationship co-localization or VRC as an abbreviation. VRC is a challenging task, even more so than the well-studied object co-localization task. This becomes further challenging when using just a few images, the model has to learn to co-localize visual subject-object pairs connected via unseen predicates. To solve VRC, we propose an optimization framework to select a common visual relationship in each image of the bag. The goal of the optimization framework is to find the optimal solution by learning visual relationship similarity across images in a few-shot setting. To obtain robust visual relationship representation, we utilize a simple yet effective technique that learns relationship embedding as a translation vector from visual subject to visual object in a shared space. Further, to learn visual relationship similarity, we utilize a proven meta-learning technique commonly used for few-shot classification tasks. Finally, to tackle the combinatorial complexity challenge arising from an exponential number of feasible solutions, we use a greedy approximation inference algorithm that selects approximately the best solution.
+
+We extensively evaluate our proposed framework on variations of bag sizes obtained from two challenging public datasets, namely VrR-VG and VG-150, and achieve impressive visual co-localization performance.
+
+	</p>
       </div>
       <div class="row">
-        <h3>Contributions</h3>
+        <h3>Highlights</h3>
      <ul> 
      <li> We introduce a novel task of Visual Relationship Co-Localization (VRC).</li>
      <li> VRC has several potential applications and would be an important step in holistic scene understanding.  </li>
-     <li> We also propose an energy optimization framework to solve the problem of VRC.</li>
+     <li> We  propose an energy optimization framework to solve the problem of VRC.</li>
      <li> Used meta-learning based few-shot learning approach to tackle the problem in a semi-supervised way. </li>
      </ul>
                
@@ -138,6 +126,10 @@ significantly larger than these datasets, but also only dataset which identifies
   booktitle = "ICCV",
   year      = "2021",
 }</tt></pre>
+
+     </div>
+
+
 <!-- <hr>
 
         <h3>Publications</h3>
