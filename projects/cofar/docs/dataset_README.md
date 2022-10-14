@@ -37,7 +37,7 @@ Here the image ID is `Q1619375_4` and its source is the text-KVQA dataset.
 
 ## Annotations for COFAR Images
 
-We provide human annotated textual search queries for the images of COFAR. These can be found in the `cofar_train.json` file as well as the test files `test_unified.zip`, `test_brand.zip`, `test_celebrities.zip`, and `test_landmarks.zip` files available on the COFAR project page.
+We provide human annotated text queries for the images of COFAR. These can be found in the `cofar_train.json` file as well as the test files `test_unified.zip`, `test_brand.zip`, `test_celebrities.zip`, and `test_landmarks.zip` available on the COFAR project page.
 
 The organization of the annotation files are as follows:
 
@@ -48,7 +48,6 @@ The organization of the annotation files are as follows:
         "Girl white dress is present in the display of apparel store",
         "Variety suits with different designs upto 50% discount in apparel store"
     ],
-    ...
 }
 ```
 
