@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://malllabiisc.github.io/resources/kvqa/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VisToT">
+    <meta name="author" content="VL2G IIT J">
+
+    <title>VisToT</title>
+
+    <link href="./index_files/bootstrap.css" rel="stylesheet">
+    <link href="./index_files/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <h2 class="text"><center>VisToT: Vision-Augmented Table-to-Text Generation</center></h2>
+<!-- <h4 class="text"><center><a href="https://revantteotia.github.io/">Revant Teotia*</a>, <a href="https://www.linkedin.com/in/vaibhav-mishra-iitj/?originalSubdomain=in">Vaibhav Mishra*</a>, <a href="https://www.linkedin.com/in/maheshwarimayank333">Mayank Maheshwari*</a>, <a href="https://anandmishra22.github.io/">Anand Mishra</a> </center></h4> -->
+<h4 class="text"><center><a href="https://prajwalgatti.github.io/">Prajwal Gatti</a><sup>1</sup>, <a href="https://anandmishra22.github.io/">Anand Mishra</a><sup>1</sup>, <a href="https://sites.google.com/view/manishg/">Manish Gupta</a><sup>2</sup>, <a href="https://scholar.google.co.in/citations?user=79PCaM0AAAAJ&hl=en">Mithun Das Gupta</a><sup>2</sup> </center></h4>
+<h4 class="text"><center><sup>1</sup>Indian Institute of Technology Jodhpur&ensp;<sup>2</sup>Microsoft, India</center></h4>
+<h4 class="text"><center><a href="https://2022.emnlp.org/">EMNLP 2022</a></center></h4>
+
+<h4 class="text"><center> [<a href="https://drive.google.com/file/d/1AdNxy6Z45mlKOTZjtJQHO52AcoJkhK91/view?usp=sharing">Paper</a>]  [<a href="https://github.com/vl2g/vistot.git">Code</a>]  [<a href="./docs/VisToT-Presentation.pdf">Slides</a>]</center></h4>
+       </div>
+
+ <div class="container">
+      <div class="header">
+      <br>
+<center>
+<figure class="figure"> 
+    <img class="figure-img" width="80%" src= "figures/web_page_intro.svg" > 
+ </figure>
+</center>
+&nbsp;
+&nbsp;
+&nbsp;
+
+</div>
+      <div class="row">
+        <h3>Abstract</h3>
+        <p style="text-align: justify;">                   
+          Table-to-text generation has been widely studied in the Natural Language Processing community in the recent years. Given the significant increase in <i>multimodal</i> data, it is critical to incorporate signals from both images as well as tables to generate relevant text. While tables contain a structured list of facts, images are a rich source of unstructured visual information. For example, in tourism domain, images can be used to infer knowledge such as the type of landmark (e.g., Church), its architecture (e.g., Ancient Roman), and composition (e.g., White marble). However, previous work has largely focused on table-to-text without images. In this paper, we introduce the novel task of Vision-augmented Table-To-Text Generation (VisToT), defined as follows: given a table and an associated image, produce a descriptive sentence conditioned on the multimodal input. For the task, we present a novel multimodal table-to-text dataset, WikiLandmarks, covering 73,084 unique world landmarks. Further, we also present a novel competitive multimodal architecture, namely, VT3 that generates accurate sentences conditioned on the image and table pairs. Through extensive analyses and experiments, we show that visual cues from images are helpful in (i) inferring missing information from incomplete tables, and (ii) strengthening the importance of useful information from noisy tables for natural language generation.
+          
+	</p>
+      </div>
+      <div class="row">
+        <h3>Highlights</h3>
+     <ul> 
+     <li> Introduced VisToT – a novel task of Data-to-Text generation conditioned on multimodal data of tables and images.</li>
+     <li> Introduced a new dataset 'WikiLandmarks' containing 73,084 unique world landmarks for studying the VisToT task.</li>
+     <li> Proposed VT3: <u>V</u>isual-<u>T</u>abular Data-to-<u>T</u>ext <u>T</u>ransformer that generates accurate text descriptions based on the information provided in image and table pairs.</li>
+     </ul>
+               
+     </div>
+
+
+<!-- <div class="row">
+    <h3 id="datasetE">Dataset</h3>
+    <p>&nbsp;</p>
+    <p>
+    	<figure class="figure"> 
+		    <img class="figure-img" width="100%" src= "figures/samples_data.png" > 
+		      
+		    <figcaption class="figure-caption">
+		    	Sample images, question-ground truth answer pairs and a relevant supporting fact from our newly introduced text-KVQA dataset.
+Please note that supporting fact is not explicitly provided during training and inference of our method. Rather it is mined from the largescale knowledge bases. Please refer to supplementary material for more examples.
+		    </figcaption> 
+
+ 		</figure>
+    </p>
+    <p>
+    	<figure class="figure"> 
+		    <img class="figure-img" width="100%" src= "figures/dataset.png" > 
+		      
+		    <figcaption class="figure-caption">
+		    	text-KVQA as compared to related datasets which identifies the need for reading text for VQA task. Our dataset is not only
+significantly larger than these datasets, but also only dataset which identifies the need for background knowledge in answering questions.
+		    </figcaption> 
+
+ 		</figure>
+    </p>
+</div>
+
+<hr> -->
+
+<!-- <div class="row">
+  <h3 id="datasetD">Dataset Downloads</h3>
+  <div class="row">
+    <ol type="A">
+      <li>Dataset images, captions and knowledge texts</li>
+      <ol type="a">
+        <li>COFAR <i>(brand)</i>&nbsp;[<a href=""><i>Image URLs and Captions</i></a>]</li>
+        <li>COFAR <i>(celeb)</i>&nbsp;[<a href=""><i>Image URLs and Captions</i></a>]</li>
+        <li>COFAR <i>(landmark)</i>&nbsp;[<a href=""><i>Image URLs and Captions</i></a>]</li>
+      </ol>
+      <li>Knowledge Bases</li>
+      <ol type="a">
+        <li><a href="">KB-brand</i></a></li>
+        <li><a href="">KB-celeb</i></a></li>
+        <li><a href="">KB-landmark</i></a></li>
+      </ol>
+    </ol>
+	<a href="./README.txt">README</a>
+  </div>
+</div> -->
+
+<div class="row">
+  <h3 id="datasetD">WikiLandmarks Dataset</h3>
+  <center>
+    <figure class="figure"> 
+        <img class="figure-img" width="100%" src= "figures/vistot_examples.svg" > 
+     </figure>
+    </center>
+  <div class="row">
+  <br><br>
+  Dataset will be made available for download soon.
+  </div>
+</div>
+
+<hr>
+
+<h3><strong><span style="font-size: 14pt;">Bibtex</span></strong></h3>
+<p>Please cite our work as follows:</p>
+<pre><tt>@inproceedings{vistot2022emnlp,
+  author    = "Gatti, Prajwal and 
+              Mishra, Anand and
+              Gupta, Manish and
+              Das Gupta, Mithun"
+  title     = "VisToT: Vision-Augmented Table-to-Text Generation",
+  booktitle = "EMNLP",
+  year      = "2022",
+}</tt></pre>
+     </div>
+
+<hr>
+<h3><strong><span style="font-size: 14pt;">Acknowledgements</span></strong></h3>
+We thank Microsoft for supporting this work through the Microsoft Academic Partnership Grant (MAPG) 2021.
+<br><br><br>      
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  
+
+
+</div></div>
+</div></div></body></html>
