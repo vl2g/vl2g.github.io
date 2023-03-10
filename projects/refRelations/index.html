@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://malllabiisc.github.io/resources/kvqa/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VRC">
+    <meta name="author" content="VL2G IIT J">
+
+    <title>Few-Shot Referring Relatioships</title>
+
+    <link href="./index_files/bootstrap.css" rel="stylesheet">
+    <link href="./index_files/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <h2 class="text"><center>Few-Shot Referring Relationships in Videos</center></h2>
+<h4 class="text"><center><a href="/">Yogesh Kumar</a>, <a href="https://anandmishra22.github.io/">Anand Mishra</a> </center></h4>
+<h4 class="text"><center>Indian Institute of Technology, Jodhpur</center></h4>
+<h4 class="text"><center>CVPR 2023</center></h4>
+
+<h4 class="text"><center> [<a href="">Paper</a>][<a href="">Code</a>][<a href="">Supplementry Material</a>][<a href="">Slides</a>][<a href="">Poster</a>][<a href="">Talk</a>]</center></h4>
+       </div>
+
+ <div class="container">
+      <div class="header">
+      <br>
+<center>
+<figure class="figure"> 
+    <img class="figure-img" width="100%" src= "figures/" > 
+
+ </figure>
+</center>
+&nbsp;
+&nbsp;
+&nbsp;
+
+</div>
+      <div class="row">
+        <h3>Abstract</h3>
+        <p style="text-align: justify;">                   
+ Interpreting visual relationships is a core aspect of comprehensive video understanding. Given a query visual relationship as <subject, predicate, object> and a test video, the goal is to localize the subject and object on the test video. With modern Visio-lingual understanding capabilities, solving this problem may be relatively easy, subject to the availability of large-scale annotated training examples. However, annotating for every combination of subject, object, and predicate is cumbersome, expensive, and possibly infeasible. Therefore, there is a need for models that can learn to spatially and temporally localize subjects and objects connected via an unseen predicate with the help of only a few support set videos sharing the common predicate. We address this challenging problem referred to as few-shot referring relationships in videos for the first time. To this end, we pose the problem as a minimization of an objective function defined over a T -partite random field where T is the number of frames in the test video, and the vertices of the random field represent candidate bounding boxes for the subject and object correspond to the random variables. This objective function is composed of frame level and visual relationship similarity potentials. These potentials are learned using a relation network that takes query-conditioned translational relationship embedding as inputs and is meta-trained using support set videos in an episodic way. Further, the objective function is minimized using a belief propagation-based message passing on the random field to obtain the spatio-temporal localization or subject and object trajectories. We perform extensive experiments using two public benchmarks, namely ImageNet-VidVRD and VidOR and compare the proposed approach with competitive baselines to assess its efficacy.
+
+
+	</p>
+      </div>
+      <div class="row">
+        <h3>Highlights</h3>
+     <ul> 
+     <li> We propose a novel problem setup for referring relationship task in videos where with the help of a few videos, the model has to learn to localize subject and object corresponding to a query visual relationship that is unseen during training..</li>
+     <li> We propose a new formulation to solve this task based on the minimization of an objective function on T-partite random field where T is the number of frames in the test video, and the vertices of the random field representing potential bounding boxes for subject and objects correspond to the random variables.</li>
+     <li> We present two aggregation techniques to enrich query-conditioned relational embeddings, namely global semantic and local localization aggregations. </li>
+     </ul>
+               
+     </div>
+
+
+<!-- <div class="row">
+    <h3 id="datasetE">Dataset</h3>
+    <p>&nbsp;</p>
+    <p>
+    	<figure class="figure"> 
+		    <img class="figure-img" width="100%" src= "figures/samples_data.png" > 
+		      
+		    <figcaption class="figure-caption">
+		    	Sample images, question-ground truth answer pairs and a relevant supporting fact from our newly introduced text-KVQA dataset.
+Please note that supporting fact is not explicitly provided during training and inference of our method. Rather it is mined from the largescale knowledge bases. Please refer to supplementary material for more examples.
+		    </figcaption> 
+
+ 		</figure>
+    </p>
+    <p>
+    	<figure class="figure"> 
+		    <img class="figure-img" width="100%" src= "figures/dataset.png" > 
+		      
+		    <figcaption class="figure-caption">
+		    	text-KVQA as compared to related datasets which identifies the need for reading text for VQA task. Our dataset is not only
+significantly larger than these datasets, but also only dataset which identifies the need for background knowledge in answering questions.
+		    </figcaption> 
+
+ 		</figure>
+    </p>
+</div>
+
+<div class="row">
+  <h3 id="datasetD">Dataset Downloads</h3>
+  <div class="row">
+    <ol type="A">
+      <li>Dataset images and QA Pairs</li>
+      <ol type="a">
+        <li>text-KVQA <i>(scene)</i>&nbsp;[<a href="http://dosa.cds.iisc.ac.in/kvqa/text-KVQA-scene.tar.gz"><i>Images [14.6 GB]</i></a>,&nbsp;<a href="https://drive.google.com/open?id=1uJesYPfOv0IQS1GICSLOE-CzDDp1bC5S"><i>QA Pairs</i></a>]</li>
+        <li>text-KVQA <i>(book)</i>&nbsp;[<a href="https://drive.google.com/open?id=1nooQXQlYfJyM8lWsDWZGDM2OPTT4P7t0"><i>Image URLs and QA Pairs</i></a>]</li>
+        <li>text-KVQA <i>(movie)</i>&nbsp;[<a href="https://drive.google.com/file/d/1JqTjtARVg31tLJPM1tlgWnYfxI-JRTCw/view?usp=sharing"><i>Image URLs and QA Pairs</i></a>]</li>
+      </ol>
+      <li>Knowledge Bases</li>
+      <ol type="a">
+        <li><a href="https://drive.google.com/file/d/1uqjE2cd2vmRyFLJBQOQaLAQrheR0aMmw/view?usp=sharing">KB-business</i></a></li>
+        <li><a href="https://drive.google.com/open?id=19kVWqjAYofKXkZgKcX2MmdpOZUQCuHsV">KB-book</i></a></li>
+        <li><a href="https://drive.google.com/open?id=1b5e71gihr45Qj1d22Im9P1HCMhCEx_Gd">KB-movie</i></a></li>
+      </ol>
+    </ol>
+	<a href="./README.txt">README</a>
+  </div>
+</div>
+
+<hr> -->
+
+
+<h3><strong><span style="font-size: 12pt;">Bibtex</span></strong></h3>
+<p>Please cite this work as follows::</p>
+<pre><tt>@inproceedings{
+anonymous2023fewshot,
+title={Few-Shot Referring Relationships in Videos},
+author={Anonymous},
+booktitle={Conference on Computer Vision and Pattern Recognition 2023},
+year={2023},
+url={https://openreview.net/forum?id=dCbmHXhGtib}
+}
+}</tt></pre>
+
+     </div>
+
+
+<!-- <hr>
+
+
+
+            
+ <!-- <div class="row">
+       <h3>People</h3>
+       	<a href="https://ajeetksingh.github.io/"><u>Ajeet Kumar Singh</u></a></br>
+        <a href="https://anandmishra22.github.io/"><u>Anand Mishra</u></a> <br>
+        <a href="#"><u>Shashank Shekhar</u></a><br>
+        <a href="#"> <u>Anirban Chakraborty</u></a> <br>
+        
+      </div> -->
+
+
+      <!-- <div class="row">
+       <h3>Acknowledgements</h3>
+        <p> Authors would like to thank MHRD, Govt. of India and Intel Corporation for partly supporting this work. 
+        </p>
+      </div> -->
+      
+      
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  
+
+
+</div></div>
+</div></div></body></html>
