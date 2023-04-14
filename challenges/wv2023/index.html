@@ -1,0 +1,404 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>NCVPRIPG@WV</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<div id="header">
+		<div class="top">
+			<!-- Logo -->
+			<div id="logo">
+				<h1 id="title">Writer Verification Challenge 2023</h1>
+			</div>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul>
+					<li><a href="#top" id="top-link">Home</a></li>
+					<li><a href="#task" id="task-link">Task</a></li>
+					<li><a href="#registration" id="registration-link">Registration</a></li>
+					<li><a href="#schedule" id="schedule-link">Schedule</a></li>
+					<li><a href="#dataset" id="dataset-link">Dataset</a></li>
+					<li><a href="#contact" id="contact-link">Contact us</a></li>
+					<!-- <li><a href="https://events.iitj.ac.in/ncvpripg2023/" target="_blank">NCVPRIPG 2023</a></li>  -->
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- Intro -->
+		<section id="top" class="one dark cover">
+			<div class="container">
+				<header>
+					<h2 class="alt" style="text-align:center">Summer Challenge on Writer Verification, under NCVPRIPG'23
+					</h2>
+				</header>
+
+				<!-- <div class="floating_container">
+					<div class="left-div left-text">
+						<h4>Challenge Updates</h4>
+						<ul>
+							<li>Website ready on April 13th, '23</li>
+						</ul>
+					</div>
+				</div>
+				 -->
+
+			</div>
+		</section>
+
+		<!-- task -->
+		<section id="task" class="two">
+			<div class="container">
+
+				<header>
+					<h2>Challenge</h2>
+				</header>
+				<p align="justify">Given a pair of handwritten Hindi Text images, the task is to automatically determine whether they are written by
+					the <i>same writer</i> or <i>different writers</i>.
+				</p>
+				<!-- <div id="outer" style="text-align: center;">
+								<img src="images/same_writer.png" alt="Same Writer" >
+								<img src="images/different_writer.png" alt="Different Writer" >
+							</div> -->
+				<div id="outer" style="text-align: center;">
+					<img src="images/intro_figure.png" alt="Same Writer" width="70%">
+				</div>
+				<p align="justify">Writer Verification task originated as a signature verification problem to flag potentials
+					frauds in banking-sector. This is a challenging task as the individual handwriting can significantly
+					vary from person to person and thus the underlying model needs to learn the varations in the
+					handwriting
+					style. The problem becomes even more complex in the offline setting, where the dynamic information
+					about
+					the writing process is not available (like writing in an electronic equipment).</p>
+				<h4>Evaluation metrics</h4>
+				<p align="justify">Following the literature on verification tasks, we shall use the following performance measures:
+				<ul>
+					<li>F1</li>
+					<li>AUC</li>
+				</ul>
+				The F1 score is a measure of a model's accuracy that takes into account both precision and recall. <br>
+				<div style="text-align: center">
+					F1 score = <sup>2 * (precision * recall)</sup> &frasl; <sub> (precision + recall)</sub></div>
+				<br>
+
+				The Area Under the Curve (AUC) is a metric that measures the performance of a binary classification
+				model by calculating the area under the receiver operating characteristic (ROC) curve. The AUC ranges
+				from 0 to 1, where a score of 1 indicates a perfect classifier, while a score of 0.5 indicates a random
+				classifier. Note that the Leaderboard will be decided based on the AUC score only.
+				</p>
+				<h4>Input and output specifications</h4>
+				<p align="justify">Training set contains 1352 folders of images. All the images in one folder are written by the same
+					person.
+					Validation set contains a set of images from 92 different writers. The val.csv file contains name of
+					image pairs
+					and the corresponding labels. A label of 1 indicates that the images are written by the same writer
+					and a label of 0
+					indicates that the images are written by different writers. <br> For futher details, please refer to
+					the
+					<a href="https://github.com/ceyxasm/NCVPRIPG-writer-verification"> Github repository</a>.
+				</p>
+				<p align="justify">Test set contains images from 360 writers. In test.csv you are given name of image pairs. For output,
+					you need to predict the label for given pair of images and submit the csv file in the format by editing the test.csv file. Note that test set will be released at a later date than train and validation set.
+				</p>
+
+				<h4>Code to get started</h4>
+				<p align="justify">A <a href="https://github.com/ceyxasm/NCVPRIPG-writer-verification">github repository</a> is provided
+					to get started with the challenge. The repository contains a sample code to
+					read the dataset and evaluate the performance and other necessary instructions.
+				</p>
+
+			</div>
+		</section>
+
+		<!-- registration -->
+		<section id="registration" class="four">
+			<div class="container">
+
+				<header>
+					<h2>Registration</h2>
+				</header>
+
+				<p align="justify">If you are interested in participation, please click here. <a
+						href="https://docs.google.com/forms/d/e/1FAIpQLSdobNfqyIAQLXI3D-zToQQPcQsygg8MT5jYj7aWsqeI4ToE6Q/viewform?usp=sf_link"
+						target="_blank">Link to google form</a></p>
+				<h3 id="rules">Challenge Rules</h3>
+				<ul>
+					<li>This challenge is open to all (students and professionals)</li>
+					<li>Participants can either register as a solo particiapnt or can form a team.</li>
+					<li>Rules for team formation:
+						<ul>
+							<li>A team can have a maximum of 4 participants</li>
+							<li>Team members can be from same or different organizations/affiliations</li>
+							<li>A participant can only be a part of a single team</li>
+							<li>Only one member from the team has to register for the challenge</li>
+							<li>One team can only have one registration. Multiple registrations can lead to
+								disqualification.</li>
+							<li>There is no limitations on the number of teams from the same organizations/affiliations
+								(However, one participant can only be part of an unique team)</li>
+						</ul>
+					<li>Data download will be permitted only after the team has completed the registration</li>
+					<li>Attending conference (NCVPRIPG'23) will be highly encouraged. Only attending team will get the
+						certificates and awards.</li>
+					<li>The evaluation will be done in two stages: Semifinal (Online) and Final (in-person). Only top-performing teams will be invited to participate in the final evaluation that will be held during the conference. In the case of ties, the organizing committee may rank teams based on the method’s novelty and readability of codes. The organizing committee’s decision in this regard will be final.</li>
+					</li>
+				</ul>
+
+				<h3 id="awards">Awards and Recognition</h3>
+				<ul>
+					<li>Cash prizes(in INR)<strong>*</strong>:
+						<ul>
+							<li>Winner: 15K</li>
+							<li>First Runner-up: 10K</li>
+							<li>Second Runner-up: 5K</li>
+						</ul>
+					<li>Free registration to top-5 teams in NCVPRIPG'23</li>
+					<li>Opportunity for summer internship in IITJ</li>
+					<li>Paper writing collaboration</li>
+					<li>Certificate to each participant</li>
+				</ul>
+
+				<p align="justify"><i>(*It is mandatory to attend the NCVPRIPG'23 in person in order to be eligible for the
+						prize and certificates.*)</i></p>
+
+			</div>
+		</section>
+
+		<!-- schedule Me -->
+		<section id="schedule" class="three">
+			<div class="container">
+
+				<header>
+					<h2>Schedule</h2>
+				</header>
+				<div class="table">
+					<table>
+						<tr>
+							<th style="color:white;">Event</th>
+							<th style="color:white;">Deadline</th>
+							<!-- <th style="color:white;">Status</th> -->
+						</tr>
+						<tr>
+							<td>Challenge announced</td>
+							<td>April 14, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Release of Training and validation Data</td>
+							<td>April 14, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Registration Closes</td>
+							<td>April 30, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Release of Test Data (for semifinal)</td>
+							<td>June 29, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Last date for submitting the results (for semifinal)</td>
+							<td>June 30, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Last date for submitting the trained model</td>
+							<td>June 30, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Last date for submitting the inference model</td>
+							<td>June 30, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Leaderboard updates (for semifinal)</td>
+							<td>July 1, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Last date to submit a writeup about the submitted solution</td>
+							<td>July 10, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Release of test data (for finals)</td>
+							<td>July 20, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Last date for submitting the results (for final)</td>
+							<td>July 21, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Announcement of final winners</td>
+							<td>July 21-23, 2023 (during conference)</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Closing of the competetion</td>
+							<td>July 23, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+					</table>
+				</div>
+
+			</div>
+		</section>
+
+		<!--Dataset-->
+		<section id="dataset" class="five">
+			<div class="container">
+
+				<header>
+					<h2>Dataset</h2>
+				</header>
+
+				<h4>Dataset description here</h4>
+				<p align="justify">
+					The dataset for consists of handwritten text images in Hindi. The problem is to identify
+					whether writer of a given pair of images are same or not. The dataset is divided into three
+					folders: train, test, and val.
+				<ul>
+					<li>The train folder contains 1352 subfolders, where each subfolder represents a
+						different writer. The images in each subfolder are samples of handwritten text
+						written by that particular writer.
+					</li>
+					<li>
+						The val folder contains 730 handwritten text images from 92 writers.
+						Additionally, you will be provided with a val.csv file, which contains the
+						labels for the validation data. Each row in val.csv contains the names of an image
+						pairs followed by a label (1 or 0), indicating whether the two images were written
+						by the same writer or different writers.
+
+					</li>
+					<li>
+						The test folder contains 2926 handwritten text images from 360 writers.
+						You will also be provided with a test.csv file, which does not contain any labels.
+						Your task is to predict the writer for each image in the test dataset.
+
+					</li>
+				</ul>
+				</p>
+				<h4>Training Dataset</h4>
+				<p>Google Drive link will be provided in the mail</p>
+				<h4>Validation Dataset</h4>
+				<p>Google Drive link will be provided in the mail</p>
+				<h4>Testing Dataset</h4>
+				<p>Google Drive link will be provided in the mail</p>
+
+			</div>
+		</section>
+
+		<!-- Contact -->
+		<section id="contact" class="four">
+			<div class="container">
+
+				<header>
+					<h2>Contact</h2>
+				</header>
+				<p>For any queries, please contact Abu Shahid @ <a
+						href="mailto:shahid.3@iitj.ac.in">shahid.3@iitj.ac.in</a>.</p>
+
+				Organizers:
+				<div class="container2">
+					<div class="container3">
+						<div class="profile-card">
+							<img src="images/profiles/dam_rz.png" alt="Dr. Anand Mishra">
+						</div>
+						<div class="name-card">
+							<h5>Dr. Anand Mishra</h5>
+							<a href="mailto:mishra@iitj.ac.in">mishra@iitj.ac.in</a>
+							<p>Assistant Professor,<br> Department of CSE,<br> IIT Jodhpur</p>
+						</div>
+					</div>
+					<div class="container3">
+						<div class="profile-card">
+							<img src="images/profiles/gp_rz.png" alt="Gyan Prabhat">
+						</div>
+						<div class="name-card">
+							<h5>Gyan Prabhat</h5>
+							<a href="mailto:prabhat.1@iitj.ac.in">prabhat.1@iitj.ac.in</a>
+							<p>Ph.D. Student</p>
+						</div>
+					</div>
+					<div class="container3">
+						<div class="profile-card">
+							<img src="images/profiles/pg_rz.png" alt="Prajwal Gatti">
+						</div>
+						<div class="name-card">
+							<h5>Prajwal Gatti</h5>
+							<a href="mailto:pgatti@iitj.ac.in">pgatti@iitj.ac.in</a>
+							<p>Research Assistant</p>
+						</div>
+					</div>
+					<div class="container3">
+						<div class="profile-card">
+							<img src="images/profiles/asm_rz.png" alt="Abu Shahid">
+						</div>
+						<div class="name-card">
+							<h5>Abu Shahid</h5>
+							<a href="mailto:shahid.3@iitj.ac.in">shahid.3@iitj.ac.in</a>
+							<p>Undergraduate Student</p>
+						</div>
+					</div>
+				</div>
+
+				<!--here tak-->
+
+				<!-- <ul>
+								<li>Dr. Anand Mishra @<a href="mailto:mishra@iitj.ac.in">mishra@iitj.ac.in</a>, Assistant Professor, Department of CSE, IIT Jodhpur
+								</li>
+								<li>Abu Shahid @<a href="mailto:shahid.3@iitj.ac.in">shahid.3@iitj.ac.in</a>, Undergraduate student</li>
+								<li>Gyan Prabhat @<a href="mailto:prabhat.1@iitj.ac.in">prabhat.1@iitj.ac.in</a>, PhD student</li>
+								<li>Prajwal Gatti @<a href="pgatti@iitj.ac.in">pgatti@iitj.ac.in</a>, Research Assistant</li>
+							</ul> -->
+
+			</div>
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+	<div id="footer">
+
+		<!-- Copyright -->
+		<ul class="copyright">
+			<li>&copy; All rights reserved.</li>
+			<li>Design: NCVPRIPG
+				<!-- <a href="http://html5up.net">HTML5 UP</a> -->
+			</li>
+		</ul>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
