@@ -1,1 +1,1 @@
-This is COFAR.
+This is FloCo.
