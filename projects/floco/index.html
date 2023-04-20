@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://malllabiisc.github.io/resources/kvqa/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FloCo">
+    <meta name="author" content="VL2G IIT J">
+
+    <title>Towards Making Flowchart Images Machine Interpretable</title>
+
+    <link href="./index_files/bootstrap.css" rel="stylesheet">
+    <link href="./index_files/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <h2 class="text"><center>Towards Making Flowchart Images Machine Interpretable</center></h2>
+<!-- <h4 class="text"><center><a href="https://revantteotia.github.io/">Revant Teotia*</a>, <a href="https://www.linkedin.com/in/vaibhav-mishra-iitj/?originalSubdomain=in">Vaibhav Mishra*</a>, <a href="https://www.linkedin.com/in/maheshwarimayank333">Mayank Maheshwari*</a>, <a href="https://anandmishra22.github.io/">Anand Mishra</a> </center></h4> -->
+<h4 class="text"><center><a href="https://in.linkedin.com/in/shreya-shukla-54b069205">Shreya Shukla</a>,&emsp;<a href="https://prajwalgatti.github.io/">Prajwal Gatti</a>,&emsp;<a href="https://yogesh-iitj.github.io/">Yogesh Kumar</a>,&emsp;<a href="https://in.linkedin.com/in/vikash-rs-yadav">Vikash Yadav</a>,&emsp;<a href="https://anandmishra22.github.io/">Anand Mishra</a></center></h4>
+
+<h4 class="text"><center>Indian Institute of Technology Jodhpur</center></h4>
+<!-- <h4 class="text"><center> Columbia University</center></h4> -->
+<!-- <h4 class="text"><center></center></h4> -->
+<h4 class="text"><center><a href="https://icdar2023.org/">ICDAR 2023</a></center></h4>
+
+<h4 class="text"><center> [<a href="">Paper</a>]  [<a href="https://github.com/vl2g/floco.git">Code</a>]  [<a href="./docs/FloCo-Poster.pdf">Poster</a>]  [<a href="">Short Talk</a>]  [<a href="./docs/FloCo-Slides.pdf">Slides</a>]</center></h4>
+</div>
+
+ <!-- <div class="container"> -->
+      <div class="header">
+      <br>
+<center>
+<figure class="figure"> 
+    <img class="figure-img" width="100%" src= "figures/floco_intro.png" > 
+ </figure>
+</center>
+<p><center>Our work aims to convert flowcharts in images to executable computer progams.</center></p>
+&nbsp;
+&nbsp;
+&nbsp;
+<!-- </div> -->
+      <div class="row">
+        <h3>Abstract</h3>
+        <p style="text-align: justify;">                   
+          Computer programming textbooks and software documentations often contain flowcharts to illustrate the flow of an algorithm or procedure. Modern OCR engines often tag these flowcharts as graphics and ignore them in further processing. In this paper, we work towards making flowchart images machine-interpretable by converting them to executable Python codes. To this end, inspired by the recent success in natural language to code generation literature, we present a novel transformer-based framework, namely FloCo-T5. Our model is well-suited for this task, as it can effectively learn semantics, structure, and patterns of programming languages, which it leverages to generate syntactically correct code. We also used a task-specific pre-training objective to pre-train FloCo-T5 using a large number of logic-preserving augmented code samples. Further, to perform a rigorous study of this problem, we introduce the FloCo dataset that contains 11,884 flowchart images and their corresponding Python codes. Our experiments show promising results, and FloCo-T5 clearly outperforms related competitive baselines on code generation metrics. We will make our dataset and implementation publicly available.
+          
+	</p>
+      </div>
+&nbsp;
+&nbsp;
+&nbsp;
+      <div class="row">
+        <h3>Highlights</h3>
+     <ul> 
+     <li> Studied the flowchart-to-code task that aims to convert flowcharts in images to executable computer programs.</li>
+     <li> Introduced the FloCo dataset containing 11.8K flowchart images and corresponding Python codes.</li>
+     <li> Proposed a novel transformer-based method – FloCo-T5 to address this challenge, and also explored various pre-training, data-augmentation and flowchart-encoding methods. </li>
+     </ul>     
+     </div>
+
+&nbsp;
+&nbsp;
+&nbsp;
+<div class="row">
+  <h3 id="datasetD">FloCo Dataset</h3>
+  <!-- <b>Explore the dataset:</b> [<a href="./gallery/index.html">Gallery</a>]<br> -->
+  We introduce a new large-scale dataset called "FloCo" for <u>Flo</u>wchart images to Python <u>Co</u>des conversion. It contains 11,884 paired flowchart-code samples. 
+  
+  The dataset can be downloaded here: <a href="">Google Drive link</a> (__ MB in size). Please note the disclaimer provided for the dataset <a href="">here</a>. 
+  Please refer to the paper for more details regarding statistics and dataset construction.
+</div>
+
+<hr>
+
+<h3><strong><span style="font-size: 20pt;">Bibtex</span></strong></h3>
+<p>Please cite our work as follows:</p>
+<pre><tt>@inproceedings{shukla2023floco,
+  author    = "Shukla, Shreya and 
+              Gatti, Prajwal and 
+              Kumar, Yogesh and
+              Yadav, Vikash and
+              Mishra, Anand",
+  title     = "Towards Making Flowchart Images Machine Interpretable",
+  booktitle = "ICDAR",
+  year      = "2023",
+}</tt></pre>
+     </div>
+
+</div></div>
+</div></div></body></html>
