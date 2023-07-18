@@ -28,11 +28,11 @@
 
 				<ul>
 					<li><a href="#top" id="top-link">Home</a></li>
-					<li><a href="#leaderboard">Leaderboard</a></li>
 					<li><a href="#task" id="task-link">Task</a></li>
-					<li><a href="#registration" id="registration-link">Registration</a></li>
-					<li><a href="#schedule" id="schedule-link">Schedule</a></li>
 					<li><a href="#dataset" id="dataset-link">Dataset</a></li>
+					<li><a href="#schedule" id="schedule-link">Timeline</a></li>
+					<li><a href="#leaderboard">Leaderboard</a></li>
+					<li><a href="#registration" id="registration-link">Registration</a></li>
 					<li><a href="#contact" id="contact-link">Contact us</a></li>
 					<!-- <li><a href="https://events.iitj.ac.in/ncvpripg2023/" target="_blank">NCVPRIPG 2023</a></li>  -->
 				</ul>
@@ -64,8 +64,10 @@
 			</div>
 		</section>
 
+
+
 		<!-- task -->
-		<section id="task" class="two">
+		<section id="updates" class="two">
 
 			<div class="floating_container">
 				<div class="left-div left-text">
@@ -76,7 +78,7 @@
 						<li>Semi-finals over</li>
 						<li>Top-6 qualifying teams announced</li>
 						<li>Write-up submission closed</li>
-						<li>Schedule updated<sup style="color: red;"> new</sup></li>
+						<li><a href="#schedule2">Event schedule</a> updated<sup style="color: red;"> new</sup></li>
 
 
 					</ul>
@@ -84,9 +86,65 @@
 					<p align="center"><strong> "See you in Jodhpur :)"</strong></p>
 				</div>
 			</div>
+		</section>
 
+		<section id="schedule2" class="two">
 			<div class="container">
+				<h3>Events schedule </h3>
+				<h4>When: July 21, 2023; 1730-1930 IST</h4>
+								<div class="table">
+					<table>
+						<tr>
+							<th style="color:white;">Time slot (in IST)</th>
+							<th style="color:white;">Activity</th>
+							<th style="color:white;">Speaker</th>
+							<!-- <th style="color:white;">Status</th> -->
+						</tr>
+						<tr>
+							<td>1730-1735</td>
+							<td>Welcome and Introduction</td>
+							<td>Organizing team</td>
+						</tr>
+						<tr>
+							<td>1735-1745</td>
+							<td>Task Dataset and Challenge Overview</td>
+							<td>Dr. Anand Mishra</td>
+						</tr>
+						<tr>
+							<td>1745-1815</td>
+							<td>Invited Talk: "Catch me if you can; Writer verification in offline signatures"</td>
+							<td><a href="https://sounakdey.github.io/">Dr. Sounak Dey</a>, AI Research Engineer, Helsing AI</td>
+						</tr>
+						<tr>
+							<td>1815-1845</td>
+							<td>Invited talk 2:</td>
+							<td><a href="https://www.iitg.ac.in/iitg_faculty_details?fac=aXl5RzlWTUxpTkJJYlhldEF3cWNDZz09">Dr. Suresh Sundaram</a>, IIT Guwahati</td>
+						</tr>
+						<tr>
+							<td>1845-1850</td>
+							<td>Winner Announcement</td>
+							<td>Dr. Anand Mishra</td>
+						</tr>
+						<tr>
+							<td>1850-1920</td>
+							<td>Team presentations</td>
+							<td>~</td>
+						</tr>
+						<tr>
+							<td>1920-1925</td>
+							<td>Closing remarks</td>
+							<td>Dr. Anand Mishra</td>
+						</tr>
+	
+					</table>
+				</div>
+				<br>
 
+			</div>
+		</section>
+
+		<section id ="task" class="two">
+			<div class="container">
 				<header>
 					<h2>Challenge</h2>
 				</header>
@@ -160,7 +218,139 @@
 			</div>
 		</section>
 
+		<!--Dataset-->
+		<section id="dataset" class="five">
+			<div class="container">
 
+				<header>
+					<h2>Dataset</h2>
+				</header>
+
+				<h4>Dataset description here</h4>
+				<p align="justify">
+					The dataset for consists of handwritten text images in Hindi. The problem is to identify
+					whether writer of a given pair of images are same or not. The dataset is divided into three
+					folders: train, test, and val.
+				<ul>
+					<li>The train folder contains 1352 subfolders, where each subfolder represents a
+						different writer. The images in each subfolder are samples of handwritten text
+						written by that particular writer.
+					</li>
+					<li>
+						The val folder contains 730 handwritten text images from 92 writers.
+						Additionally, you will be provided with a val.csv file, which contains the
+						labels for the validation data. Each row in val.csv contains the names of an image
+						pairs followed by a label (1 or 0), indicating whether the two images were written
+						by the same writer or different writers.
+
+					</li>
+					<li>
+						The test folder contains 2926 handwritten text images from 360 writers.
+						You will also be provided with a test.csv file, which does not contain any labels.
+						Your task is to predict the writer for each image in the test dataset.
+
+					</li>
+				</ul>
+				Before using the dataset, please read the disclaimer provided <a href="dataset_disclaimer.txt">here</a>.
+				</p>
+				<h4>Training Dataset</h4>
+				<p>Google Drive link will be provided in the mail</p>
+				<h4>Validation Dataset</h4>
+				<p>Google Drive link will be provided in the mail</p>
+				<h4>Testing Dataset</h4>
+				<p>Google Drive link will be provided in the mail</p>
+
+			</div>
+		</section>
+
+		<!-- schedule Me -->
+		<section id="schedule" class="three">
+			<div class="container">
+
+				<header>
+					<h2>Events timeline</h2>
+				</header>
+				
+				<div class="table">
+					<table>
+						<tr>
+							<th style="color:white;">Event</th>
+							<th style="color:white;">Deadline</th>
+							<!-- <th style="color:white;">Status</th> -->
+						</tr>
+						<tr>
+							<td>Challenge announced</td>
+							<td>April 14, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Release of Training and validation Data</td>
+							<td>April 14, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Registration Closes</td>
+							<td>April 30, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Release of Test Data (for semifinal)</td>
+							<td>June 29, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Last date for submitting the results (for semifinal)</td>
+							<td>June 30, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Last date for submitting the trained model</td>
+							<td>June 30, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Last date for submitting the inference model</td>
+							<td>June 30, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Leaderboard updates (for semifinal)</td>
+							<td>July 1, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Last date to submit a writeup about the submitted solution</td>
+							<td>July 10, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Release of test data (for finals)</td>
+							<td>July 16, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Last date for submitting the results (for final)</td>
+							<td>July 16, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Announcement of final winners</td>
+							<td>July 21-23, 2023 (during conference)</td>
+							<!-- <td></td> -->
+						</tr>
+						<tr>
+							<td>Closing of the competetion</td>
+							<td>July 23, 2023</td>
+							<!-- <td></td> -->
+						</tr>
+					</table>
+				</div>
+				<br>
+
+			</div>
+		</section>
+
+		<!--leaderboard-->
 		<section id="leaderboard" class="four">
 			<div class="container">
 
@@ -263,7 +453,7 @@
 
 		</section>
 
-
+		
 		<!-- registration -->
 		<section id="registration" class="four">
 			<div class="container">
@@ -320,188 +510,6 @@
 			</div>
 		</section>
 
-		<!-- schedule Me -->
-		<section id="schedule" class="three">
-			<div class="container">
-
-				<header>
-					<h2>Schedule</h2>
-				</header>
-				
-				<h3>Conference schedule </h3>
-				<h4>When: July 21, 2023; 1730-1930</h4>
-								<div class="table">
-					<table>
-						<tr>
-							<th style="color:white;">Time slot</th>
-							<th style="color:white;">Activity</th>
-							<th style="color:white;">Speaker</th>
-							<!-- <th style="color:white;">Status</th> -->
-						</tr>
-						<tr>
-							<td>1730-1735</td>
-							<td>Welcome and Introduction</td>
-							<td>Organizing team</td>
-						</tr>
-						<tr>
-							<td>1735-1745</td>
-							<td>Task Dataset and Challenge Overview</td>
-							<td>Dr. Anand Mishra</td>
-						</tr>
-						<tr>
-							<td>1745-1815</td>
-							<td>Invited Talk: Catch me if you can; Writer verification in offline signatures</td>
-							<td>Sounak Dey, AI Research Engineer, Helsing AI</td>
-						</tr>
-						<tr>
-							<td>1815-1845</td>
-							<td>Invited talk 2:</td>
-							<td>Suresh Sundaram, IIT Guwahati</td>
-						</tr>
-						<tr>
-							<td>1845-1850</td>
-							<td>Winner Announcement</td>
-							<td>Dr. Anand Mishra</td>
-						</tr>
-						<tr>
-							<td>1850-1920</td>
-							<td>Team presentations</td>
-							<td>~</td>
-						</tr>
-						<tr>
-							<td>1920-1925</td>
-							<td>Closing remarks</td>
-							<td>Dr. Anand Mishra</td>
-						</tr>
-
-					</table>
-				</div>
-				<br>
-				
-				<h3>Events schedule </h3>
-				<div class="table">
-					<table>
-						<tr>
-							<th style="color:white;">Event</th>
-							<th style="color:white;">Deadline</th>
-							<!-- <th style="color:white;">Status</th> -->
-						</tr>
-						<tr>
-							<td>Challenge announced</td>
-							<td>April 14, 2023</td>
-							<!-- <td></td> -->
-						</tr>
-						<tr>
-							<td>Release of Training and validation Data</td>
-							<td>April 14, 2023</td>
-							<!-- <td></td> -->
-						</tr>
-						<tr>
-							<td>Registration Closes</td>
-							<td>April 30, 2023</td>
-							<!-- <td></td> -->
-						</tr>
-						<tr>
-							<td>Release of Test Data (for semifinal)</td>
-							<td>June 29, 2023</td>
-							<!-- <td></td> -->
-						</tr>
-						<tr>
-							<td>Last date for submitting the results (for semifinal)</td>
-							<td>June 30, 2023</td>
-							<!-- <td></td> -->
-						</tr>
-						<tr>
-							<td>Last date for submitting the trained model</td>
-							<td>June 30, 2023</td>
-							<!-- <td></td> -->
-						</tr>
-						<tr>
-							<td>Last date for submitting the inference model</td>
-							<td>June 30, 2023</td>
-							<!-- <td></td> -->
-						</tr>
-						<tr>
-							<td>Leaderboard updates (for semifinal)</td>
-							<td>July 1, 2023</td>
-							<!-- <td></td> -->
-						</tr>
-						<tr>
-							<td>Last date to submit a writeup about the submitted solution</td>
-							<td>July 10, 2023</td>
-							<!-- <td></td> -->
-						</tr>
-						<tr>
-							<td>Release of test data (for finals)</td>
-							<td>July 16, 2023</td>
-							<!-- <td></td> -->
-						</tr>
-						<tr>
-							<td>Last date for submitting the results (for final)</td>
-							<td>July 16, 2023</td>
-							<!-- <td></td> -->
-						</tr>
-						<tr>
-							<td>Announcement of final winners</td>
-							<td>July 21-23, 2023 (during conference)</td>
-							<!-- <td></td> -->
-						</tr>
-						<tr>
-							<td>Closing of the competetion</td>
-							<td>July 23, 2023</td>
-							<!-- <td></td> -->
-						</tr>
-					</table>
-				</div>
-				<br>
-
-			</div>
-		</section>
-
-		<!--Dataset-->
-		<section id="dataset" class="five">
-			<div class="container">
-
-				<header>
-					<h2>Dataset</h2>
-				</header>
-
-				<h4>Dataset description here</h4>
-				<p align="justify">
-					The dataset for consists of handwritten text images in Hindi. The problem is to identify
-					whether writer of a given pair of images are same or not. The dataset is divided into three
-					folders: train, test, and val.
-				<ul>
-					<li>The train folder contains 1352 subfolders, where each subfolder represents a
-						different writer. The images in each subfolder are samples of handwritten text
-						written by that particular writer.
-					</li>
-					<li>
-						The val folder contains 730 handwritten text images from 92 writers.
-						Additionally, you will be provided with a val.csv file, which contains the
-						labels for the validation data. Each row in val.csv contains the names of an image
-						pairs followed by a label (1 or 0), indicating whether the two images were written
-						by the same writer or different writers.
-
-					</li>
-					<li>
-						The test folder contains 2926 handwritten text images from 360 writers.
-						You will also be provided with a test.csv file, which does not contain any labels.
-						Your task is to predict the writer for each image in the test dataset.
-
-					</li>
-				</ul>
-				Before using the dataset, please read the disclaimer provided <a href="dataset_disclaimer.txt">here</a>.
-				</p>
-				<h4>Training Dataset</h4>
-				<p>Google Drive link will be provided in the mail</p>
-				<h4>Validation Dataset</h4>
-				<p>Google Drive link will be provided in the mail</p>
-				<h4>Testing Dataset</h4>
-				<p>Google Drive link will be provided in the mail</p>
-
-			</div>
-		</section>
 
 		<!-- Contact -->
 		<section id="contact" class="four">
