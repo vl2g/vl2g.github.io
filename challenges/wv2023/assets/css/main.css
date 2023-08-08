@@ -2895,3 +2895,8 @@ button:active,
 		width: calc(100% - 40px);
 	}
 }
+
+.carousel-caption-text {
+	text-align: center; /* Center align the text */
+	padding: 10px; /* Give it a little space at the top and bottom */
+  }
