@@ -1,0 +1,15 @@
+Disclaimer for dataset provided for Summer Challenge on Writer Verification under NCVPRIPG 2023
+
+Please read the following disclaimer carefully before using, accessing, or distributing the the handwriting dataset, provided as part of the Summer Challenge on Writer Verification under NCVPRIPG 2023.
+
+Challenge-Specific Use: The dataset is provided exclusively for participation in the NCVPRIPG 2023 Challenge. Any use of the dataset for purposes other than the Challenge is strictly prohibited.
+
+Data Privacy and Anonymization: The dataset has been collected from a diverse group of students with the consent of the institutional authorities of the respective educational institutions. All personally identifiable information (PII) has been removed or anonymized to protect the privacy of the students. Any attempt to identify individuals, their personal details, or their educational institutions is strictly prohibited.
+
+Data Quality: While efforts have been made to ensure the quality and accuracy of the dataset, it may contain errors, inaccuracies, or inconsistencies due to the nature of handwritten documents and the variation in students' writing styles. Users of the dataset should be aware of these limitations and take them into account when utilizing the dataset for the Challenge.
+
+Copyright and Ownership: The dataset is provided for the purpose of the NCVPRIPG Challenge only. All intellectual property rights, including but not limited to copyrights, belong to the original authors and their educational institutions. Any unauthorized use, copying, distribution, or modification of the dataset is strictly prohibited.
+
+Limitation of Liability: By using the dataset, users agree that the creators, contributors, and distributors of the dataset shall not be held responsible or liable for any direct, indirect, incidental, or consequential damages that may arise from the use or interpretation of the dataset, or any decisions or actions taken based on the information provided.
+
+By accessing or using the dataset for the Summer Challenge on Writer Verification under NCVPRIPG 2023, you acknowledge and agree to the terms and conditions stated in this disclaimer.
