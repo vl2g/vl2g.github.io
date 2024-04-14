@@ -21,7 +21,7 @@
 		<div class="top">
 			<!-- Logo -->
 			<div id="logo">
-				<h1 id="title">Writer Verification Challenge 2023</h1>
+				<h1 id="title">Auto Evaluation Challenge 2024</h1>
 			</div>
 
 			<!-- Nav -->
@@ -48,7 +48,7 @@
 		<section id="top" class="one dark cover">
 			<div class="container">
 				<header>
-					<h2 class="alt" style="text-align:center">Summer Challenge on Writer Verification, under NCVPRIPG'23
+					<h2 class="alt" style="text-align:center">Summer Challenge on Auto Evaluation, under NCVPRIPG'24
 					</h2>
 				</header>
 				<!-- 
@@ -56,7 +56,7 @@
 					<div class="left-div left-text">
 						<h3>Challenge Updates</h3>
 						<ul>
-							<li>Registrations closed</li>
+							<li>Registrations open</li>
 						</ul>
 					</div>
 				</div> -->
@@ -75,7 +75,7 @@
 				<div class="left-div left-text">
 					<h3>Challenge Updates</h3>
 					<ul>
-						<li>Registrations are now closed</li>
+						<li>Registrations are now open</li>
 						<li>Semi-final dataset released</li>
 						<li>Semi-finals over</li>
 						<li>Top-6 qualifying teams announced</li>
@@ -187,12 +187,11 @@
 				</header>
 
 				<p align="justify">
-					Welcome to the Summer Challenge on Writer Verification, hosted as part of the National Conference on
+					Welcome to the Summer Challenge on Auto Evaluation, hosted as part of the National Conference on
 					Computer Vision, Pattern Recognition, Image Processing and Graphics (<a
 						href="https://events.iitj.ac.in/ncvpripg2023/">NCVPRIPG'23</a>).
-					Given a pair of handwritten Hindi Text images, the task is to automatically determine whether they
-					are written by
-					the <i>same writer</i> or <i>different writers</i>.
+					Given a set of handwritten answersheets in a predetermined layout, the task is to <i>automatically</i> evaluate them and 
+					return the <i>total marks</i> scored by the student based on the correct answers.
 				</p>
 				<!-- <div id="outer" style="text-align: center;">
 								<img src="images/same_writer.png" alt="Same Writer" >
@@ -201,41 +200,31 @@
 				<div id="outer" style="text-align: center;">
 					<img src="images/intro_figure.png" alt="Same Writer" width="70%">
 				</div>
-				<p align="justify">Writer Verification task originated as a signature verification problem to flag
-					potentials
-					frauds in banking-sector. This is a challenging task as the individual handwriting can significantly
-					vary from person to person and thus the underlying model needs to learn the varations in the
-					handwriting
-					style. The problem becomes even more complex in the offline setting, where the dynamic information
-					about
-					the writing process is not available (like writing in an electronic equipment).</p>
-				<h4>Evaluation metrics</h4>
-				<p align="justify">Following the literature on verification tasks, we shall use the following
-					performance measures:
+				<p align="justify">The task of Auto Evaluation presents a unique challenge. Unlike writer verification, it avoids the complexities of individual handwriting styles.
+				In order to achieve high performance, however, the underlying models need to contend with inconsistencies in spelling, incomplete words, variations in student penmanship
+				(cursive vs print, letter size) etc. Furthermore, differentiating intended answers from markings(scribbles, underlines) adds another layer of complexity.</p>
+				<h4>Performance Measure</h4>
+				<p align="justify"> The leaderboard will be based on the inference time and accuracy of the submited API:
 				<ul>
-					<li>F1</li>
-					<li>AUC</li>
+					<li>Mean Absolute Error</li>
+					<li>Inference Time</li>
 				</ul>
-				The F1 score is a measure of a model's accuracy that takes into account both precision and recall. <br>
+				The Mean Absolute Error is measured by taking the average of the absolute difference between actual values and the predictions.<br>
 				<div style="text-align: center">
 					F1 score = <sup>2 * (precision * recall)</sup> &frasl; <sub> (precision + recall)</sub></div>
 				<br>
-
-				The Area Under the Curve (AUC) is a metric that measures the performance of a binary classification
-				model by calculating the area under the receiver operating characteristic (ROC) curve. The AUC ranges
-				from 0 to 1, where a score of 1 indicates a perfect classifier, while a score of 0.5 indicates a random
-				classifier. Note that the Leaderboard will be decided based on the AUC score only.
 				</p>
-				<h4>Input and output specifications</h4>
-				<p align="justify">Training set contains 1352 folders of images. All the images in one folder are
-					written by the same
-					person.
-					Validation set contains a set of images from 92 different writers. The val.csv file contains name of
-					image pairs
-					and the corresponding labels. A label of 1 indicates that the images are written by the same writer
-					and a label of 0
-					indicates that the images are written by different writers. <br> For futher details, please refer to
-					the
+				<h4>Input and Output specifications</h4>
+				<p align="justify"> 
+					<ul>
+						<li>Input</li>
+						<ul>
+							<li>Handwritten answer sheets in a predetermined layout.</li>
+							<li>Model solution for each True/False question.</li>
+						</ul>
+						<li>Output</li>
+					</ul>
+					<br> For futher details, please refer to the
 					<a href="https://github.com/ceyxasm/NCVPRIPG-writer-verification"> Github repository</a>.
 				</p>
 				<p align="justify">Test set contains images from 360 writers. In test.csv you are given name of image
