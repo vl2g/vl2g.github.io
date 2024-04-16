@@ -2869,13 +2869,12 @@ button:active,
 	border-radius: 10px;
 	text-align: center;
 	/* width: calc(50% - 40px);  */
-	background-color: #ecf1f1;
 	overflow: hidden;
 }
 
 .profile-card img {
 	width: 100%;
-	/* height: 100%; */
+	height: 100%;
 	object-fit: cover;
 	object-position: center;
 }
