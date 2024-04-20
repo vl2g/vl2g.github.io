@@ -200,16 +200,15 @@
 				<div id="outer" style="text-align: center;">
 					<img src="images/task_n.PNG" alt="AutoEval Task" width="70%">
 				</div>
-				<p align="justify">The task of Auto Evaluation presents a unique challenge. Unlike writer verification, it avoids the complexities of individual handwriting styles.
+				<p align="justify">The task of Auto Evaluation presents a unique challenge.
 				In order to achieve high performance, however, the underlying models need to contend with inconsistencies in spelling, incomplete words, variations in student penmanship
 				(cursive vs print, letter size) etc. Furthermore, differentiating intended answers from markings(scribbles, underlines) adds another layer of complexity.</p>
 				<h4>Performance Measure</h4>
-				<p align="justify"> The leaderboard will be based on the inference time and accuracy of the submited API:
+				<p align="justify"> The leaderboard for Phase-1 will be based on the following metric:
 				<ul>
 					<li>Mean Absolute Error</li>
-					<li>Inference Time</li>
 				</ul>
-				The Mean Absolute Error is measured by taking the average of the absolute difference between actual values and the predictions.<br>
+				The Mean Absolute Error is measured by taking the average of the absolute difference between actual values(y) and the predictions(y hat).<br>
 				<!-- <div style="text-align: center"> -->
 				<div id="outer" style="text-align: center;">
 					<!-- F1 score = <sup>2 * (precision * recall)</sup> &frasl; <sub> (precision + recall)</sub></div> -->
@@ -230,15 +229,15 @@
 							<li>Total marks obtained by the student based on correct answers.</li>
 						</ul>
 					</ul>
-					<br> For futher details, please refer to the
-					<a href="https://github.com/ceyxasm/NCVPRIPG-writer-verification"> Github repository</a>.
+					<!--<br> For futher details, please refer to the
+					<a href="https://github.com/ceyxasm/NCVPRIPG-writer-verification"> Github repository</a>.-->
 				</p>
-				<p align="justify">Test set contains images from 360 writers. In test.csv you are given name of image
+				<!--<p align="justify">Test set contains images from 360 writers. In test.csv you are given name of image
 					pairs. For output,
 					you need to predict the label for given pair of images and submit the csv file in the format by
 					editing the test.csv file. Note that test set will be released at a later date than train and
 					validation set.
-				</p>
+				</p>-->
 
 				<h4>Code to get started</h4>
 				<p align="justify">A <a href="https://github.com/ceyxasm/NCVPRIPG-writer-verification">github
@@ -425,26 +424,26 @@
 						</tr>
 						<tr>
 							<td>Website for challenge up</td>
-							<td>April 16, 2024</td>
+							<td>April 21, 2024</td>
 							<!-- <td></td> -->
 						</tr>
 						<tr>
 							<td>Registrations Open</td>
-							<td>April 16, 2024</td>
+							<td>April 21, 2024</td>
 							<!-- <td></td> -->
 						</tr>
 						<tr>
 							<td>Registrations Closes</td>
-							<td>April 30, 2024</td>
+							<td>May 1, 2024</td>
 							<!-- <td></td> -->
 						</tr>
 						<tr>
 							<td>Release of Sample Data</td>
-							<td>April 16, 2024</td>
+							<td>May 1, 2024</td>
 							<!-- <td></td> -->
 						</tr>
 						<tr>
-							<td>Last Date for submitting API (for semi-final)</td>
+							<td>Last Date for reporting evaluation metrics (for Phase-1)</td>
 							<td>June 25, 2024</td>
 							<!-- <td></td> -->
 						</tr>
@@ -507,7 +506,7 @@
 				<h3 id="rules">Challenge Rules</h3>
 				<ul>
 					<li>This challenge is open to all (students and professionals)</li>
-					<li>Participants can either register as a solo particiapnt or can form a team.</li>
+					<li>Participants can either register as a solo participant or can form a team.</li>
 					<li>Rules for team formation:
 						<ul>
 							<li>A team can have a maximum of 4 participants</li>
@@ -519,13 +518,13 @@
 							<li>There are no limitations on the number of teams from the same organizations/affiliations
 								(However, one participant can only be part of an unique team)</li>
 						</ul>
-					<li>Data download will be permitted only after the team has completed the registration</li>
-					<li>Attending conference (NCVPRIPG'24) will be highly encouraged. Only attending team will get the
+					<li> Sample Data download will be permitted only after the team has completed the registration</li>
+					<li>Attending conference (NCVPRIPG'24) will be highly encouraged. Only attending teams will get the
 						certificates and awards.</li>
-					<li>The evaluation will be done in two stages: Semifinal (Online) and Final (in-person). Only
-						top-performing teams will be invited to participate in the final evaluation that will be held
-						during the conference. In the case of ties, the organizing committee may rank teams based on the
-						method’s novelty and readability of codes. The organizing committee’s decision in this regard
+					<li>The evaluation will be done in two stages: Phase-1 (Online) and Phase-2 (in-person). Only
+						top-performing teams in Phase -1 will be invited to participate in the final evaluation that will be held
+						during the conference. In case of ties, the organizing committee may rank teams based on the
+						method’s readability of code and easy accessibility of the API/application. The organizing committee’s decision in this regard
 						will be final.</li>
 					</li>
 				</ul>
@@ -559,8 +558,8 @@
 				<header>
 					<h2>Contact</h2>
 				</header>
-				<p>For any queries, please contact Arvind Kumar Sharma @ <a
-						href="mailto:sharma.126@iitj.ac.in">sharma.126@iitj.ac.in</a>.</p>
+				<p>For any queries, please contact Arvind @ <a
+						href="mailto:sharma.126@iitj.ac.in">sharma.126@iitj.ac.in</a> and Uday @ <a href ="mailto:agarwaluday@iitj.ac.in".</p>
 
 				Organizers:
 				<div class="container2">
