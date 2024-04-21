@@ -208,7 +208,7 @@
 				<ul>
 					<li>Mean Absolute Error</li>
 				</ul>
-				The Mean Absolute Error is measured by taking the average of the absolute difference between actual values(y) and the predictions(y hat).<br>
+				The Mean Absolute Error is measured by taking the average of the absolute difference between actual values(y) and the model predictions(y hat).<br>
 				<!-- <div style="text-align: center"> -->
 				<div id="outer" style="text-align: center;">
 					<!-- F1 score = <sup>2 * (precision * recall)</sup> &frasl; <sub> (precision + recall)</sub></div> -->
@@ -269,19 +269,18 @@
 				<ul>
 					<li>
 						<h4>Phase-1</h4>
-						<p align="justify">For Phase-1, the teams have to submit their final models built atop the sample data. Subsequently,
-						for the evaluation of the models, we will release a set of 1000 images of handwritten answersheets
-						on which the participants will test their models and report results in a CSV file (format specified by us.)
-						The Mean Absolute Error described above will be used as the evaluation criteria. <i>Only the top-5 teams from this round
-						will proceed to Phase-2</i>
+						<p align="justify">In Phase 1, teams will submit their final models built on the provided sample data. 
+							To evaluate these models, we'll release a set of 1,000 handwritten answer sheet images. 
+							Teams will test their models on this data and report the results in a specific CSV format (details will be provided separately). 
+							Mean Absolute Error (MAE) will determine the best performing models. <i>Only the top 5 teams based on MAE will progress to Phase 2</i>.
 						</p>
 					</li>
 
 					<li>
 						<h4>Phase-2</h4>
 						<p align = "justify">
-							The selected teams would have to then create an API/application that automatically evaulates the
-							handwritten answer sheet images 
+							The selected teams would now have to create an API/application that automatically evaluates the
+										 
 						</p>
 					</li>
 				</ul>
