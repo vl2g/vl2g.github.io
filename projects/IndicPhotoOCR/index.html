@@ -1,1 +1,1011 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link href="https://fonts.cdnfonts.com/css/chalkduster" rel="stylesheet">
+<style>
+    @import url('https://fonts.cdnfonts.com/css/chalkduster');
+</style>
+<!-- <script src="./sm/assets/teaser-data.js"></script> -->
 
+
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>IndicPhotoOCR</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta name="description"
+        content="Project page for <!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link href="https://fonts.cdnfonts.com/css/chalkduster" rel="stylesheet">
+<style>
+    @import url('https://fonts.cdnfonts.com/css/chalkduster');
+</style>
+<!-- <script src="./sm/assets/teaser-data.js"></script> -->
+
+
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta name="description"
+        content="Project page for &#39;Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation.&#39;">
+    <!-- <link rel="icon" href="./pics/wis_logo.jpg"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta name="description"
+        content="Project page for &#39;Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation&#39;">
+
+
+      <meta charset="utf-8">
+      <meta name="description" content="Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation">
+       <meta name="keywords" content="">
+      <meta name="author" content="Prajwal Gatti">
+      <title>[ICPR 2024] Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation</title>
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="[ICPR 2024] Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation" />
+      <meta name="twitter:description" content="[ICPR 2024] Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation" />
+      <meta name="twitter:image:alt" content="visTrans (ICPR 2024)" />
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <p class="title">Show Me the World in My Language: Establishing the First Baseline<br> for Scene-Text to Scene-Text Translation</p>
+    <div style="text-align: center; font-size: 15pt; margin-bottom: 15px">
+            <span><a href="https://icpr2024.org/">ICPR 2024</a></span>
+    </div>
+    <p class="author">
+	<span class="author"><a href="">Shreyas Vaidya<sup>*</sup> </a>&nbsp;<sup>1</sup></span>
+        <span class="author"><a href="">Arvind Kumar Sharma<sup>*</sup> </a>&nbsp;<sup>1</sup></span>
+        <span class="author"><a href="https://prajwalgatti.github.io/">Prajwal Gatti</a>&nbsp;<sup>2</sup></span>
+        <span class="author"><a href="https://anandmishra22.github.io/">Anand Mishra</a>&nbsp;<sup>1</sup></span>
+    </p>
+    <table border="0" align="center" class="affiliations" width="700px">
+        <tbody align="center">
+            <tc>
+                <td style="text-align: center;"><sup>1</sup>&nbsp;IIT Jodhpur</td>
+            </tc> <tc>
+                <td style="text-align: center;"><sup>2</sup>&nbsp;University of Bristol</td>
+            </tc>
+        </tbody>
+    </table>
+	    <table border="0" align="center" style="margin-bottom: 8px;" class = "affiliations" width = "500px">
+        <tbody>
+            <tr>
+                <td align="center">(*: Equal Contribution)</td>
+            </tr>
+        </tbody>
+    </table>
+
+	
+
+	
+    <table width="999" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+        <tbody>
+            <tr>
+                <td align="center">| <a href="./resources/paper.pdf">Paper</a> | <a href="https://github.com/Bhashini-IITJ/visualTranslation/">Code</a> | <a href="#dataset">Dataset</a> | <a href="https://youtu.be/xvetn4t3tEI">Short Talk</a> | <a href="./resources/ICPR2024-poster.pdf">Poster</a></td>
+            </tr>
+        </tbody>
+    </table>
+   <div style="display: flex; justify-content: center; align-items: center; >
+    <div style="background-color: #FFEB3B; padding: 15px; border-radius: 8px; width: 900px; font-family: Arial, sans-serif; color: #333; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+     
+        <p><font color=red>Update: Dataset and Initial Release of code are up now.</font></p>
+    </div>
+</div>
+
+
+
+	
+    <div class="container">
+        <table width="1000" border="0" align="center">
+            <tbody>
+                <tr>
+                    <div id="imageCarousel" class="carousel slide teaser-carousel" data-ride="carousel" data-interval="5000">
+                        <div class="carousel-inner">
+                            <!-- White horse -->
+                            <div class="carousel-item active">
+                                <div>
+                                    <img class="teaser-img" src="./resources/Coral.png" />
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div>
+                                    <img class="teaser-img" src="./resources/No Mobile Phones.png" />
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div>
+                                    <img class="teaser-img" src="./resources/Overseas Relations Office.png" />
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div>
+                                    <img class="teaser-img" src="./resources/Rajput.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                            <div class="slider-navigation-previous">
+                                <svg viewBox="0 0 50 80" xml:space="preserve">
+                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                        stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
+                                    </polyline>
+                                </svg>
+                            </div>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+                            <div class="slider-navigation-next">
+                                <svg viewBox="0 0 50 80" xml:space="preserve">
+                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                        stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
+                                    </polyline>
+                                </svg>
+                            </div>
+                           <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </tr>
+                <!-- <tr> <br /> </tr> -->
+                <tr align="center"></tr>
+            </tbody>
+        </table>
+
+
+        <div style="text-align: justify;text-justify: inter-word;">
+        <p><span class="section"><b>Abstract</b></span> </p>
+        <p> In this work, we study the task of ``visually'' translating scene text from a source language (e.g., Hindi) to a target language (e.g., English). 
+	Visual translation involves not just the recognition and translation of scene text but also the generation of the translated image that preserves visual features of the source scene text, 
+	such as font, size, and background. There are several challenges associated with this task, such as translation with limited context, deciding between translation and transliteration, accommodating varying text lengths within fixed spatial boundaries, and preserving the font and background styles of the source scene text in the target language. To address this problem, we make the following contributions: (i) We study visual translation as a standalone problem for the first time in the literature. (ii) We present a cascaded framework for visual translation that combines state-of-the-art modules for scene text recognition, machine translation, and scene text synthesis as a baseline for the task. (iii)  We propose a set of task-specific design enhancements to design a variant of the baseline to obtain performance improvements. (iv) Currently, the existing related literature lacks any comprehensive performance evaluation for this novel task. To fill this gap, we introduce several automatic and user-assisted evaluation metrics designed explicitly for evaluating visual translation. Further, we evaluate presented baselines for translating scene text between Hindi and English. Our experiments demonstrate that although we can effectively perform visual translation over a large collection of scene text images, the presented baseline only partially addresses challenges posed by visual translation tasks. We firmly believe that this new task and the limitations of existing models, as reported in this paper, 
+	should encourage further research in visual translation. 
+	</p>
+        </div>
+        <div style="text-align: justify;text-justify: inter-word;">
+        <p><b>Keywords:</b> Visual Translation, Scene Text Synthesis, Evaluation Metrics, Cross-lingual Scene Text Editing.</p>
+	</div>
+        <p class="section">&nbsp;</p>
+
+        <p class="section"><b>The Visual Translation Problem</b></p>
+        <div style="text-align: center">
+        <img src="./resources/Rithala.png" alt="" width="700px" style="margin: auto" />
+           <br><br><p align="left">Suppose you are visiting Delhi, India and arrive at the Rithala (Hindi: रिठाला) metro station. If you are not familiar with Hindi, the signboard on the left might be incomprehensible. The result of our proposed baseline solution, shown on the right, seamlessly transliterates the station name रिठाला to English. In our work, we aim to visually translate (or transliterate, when necessary, as in this case) text from the source language to the target language while preserving visual attributes of the source scene text. Specifically, we focus on visual translation between Hindi and English, and vice versa.</p>
+	</div>
+	<p class="section">&nbsp;</p>
+	
+        <div class="section" id="dataset">
+	</div>
+	<p class="section"><b>Dataset</b></p>
+        <ul><li>  <p class="section"><b>VT-Real: Real Scene Image Dataset for evaluating Visual Translation between Hindi and English</b></p>	
+	            <table width="1000" border="0" align="center">
+            <tbody>
+                <tr>
+                    <div id="imageCarousel" class="carousel slide teaser-carousel" data-ride="carousel" data-interval="5000">
+                        <div class="carousel-inner">
+                            <!-- White horse -->
+                            <div class="carousel-item active">
+                                <div>
+                                    <img class="teaser-img" src="./resources/VT Real Icdar.png" />
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div>
+                                    <img class="teaser-img" src="./resources/VT Real BSTD.png" />
+                                </div>
+                            </div>
+
+                            
+
+                        <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                            <div class="slider-navigation-previous">
+                                <svg viewBox="0 0 50 80" xml:space="preserve">
+                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                        stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
+                                    </polyline>
+                                </svg>
+                            </div>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+                            <div class="slider-navigation-next">
+                                <svg viewBox="0 0 50 80" xml:space="preserve">
+                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                        stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
+                                    </polyline>
+                                </svg>
+                            </div>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </tr>
+                <!-- <tr> <br /> </tr> -->
+            </tbody>
+        </table>
+		VT-Real includes 269 images and 1021 words. Images are obtained from ICDAR 2013 and Bharat Scene Text Dataset. These images were translated between English and Hindi by three human annotators. We provide pointers to the images in the respective source dataset and our annotations here.<br>
+			<ol>
+				<li>
+					ICDAR 2013 dataset can be downloaded from <a href = "https://rrc.cvc.uab.es/?ch=2&com=downloads"> here </a>.  
+					Please download Training Set Images (Disk size: 142 MB). 
+
+				</li>
+				<li>
+					The images used from Bharat Scene Text dataset (BSTD) can be downloaded from <a href = "https://github.com/Bhashini-IITJ/BharatSceneTextDataset/blob/main/README.md#image-subset-used-in-vaidya-et-al-icpr-2024-preprint"> here </a>.  (Disk size: 60 MB)
+
+				</li>
+				<li>
+				Please download ground truth translation annotations by three annotators for <a href = "https://drive.google.com/file/d/1ou5Mpw3Bw55cjmqjWT9Ry6bPvrJpSIU0/view?usp=drive_link"> ICDAR images</a> (English-to-Hindi) and <a href = "https://drive.google.com/file/d/1dPE15H1ElqUMXbtfmbGdeHzlXYrsEuML/view?usp=drive_link"> BSTD images </a> (Hindi-to-English).
+				</li>
+			</ol>
+				<br><br><br>
+
+        <li><b>
+<p class="section"><b>VT-Synth: Synthetic Training Data for Visual Translation between Hindi and English</b></p>		
+	</b>
+
+
+		VT-Syn is a synthetically generated corpus of ~600K visually diverse paired bilingual word images in pairs of English-Hindi. It can be used for training visual translation or cross-lingual scene text editing or scene text removal or scene text binarization.<br>
+			<ol>
+				<li>
+					Synthetic word images in Hindi Language [<a href = "https://tinyurl.com/38w3npat">Download</a>] [572,367 images, disk size: 17 GB]
+				</li>
+				<li>
+					Synthetic word images in English Language [<a href = "https://tinyurl.com/yhhdm5z3">Download</a>] [572,367 images, disk size: 17 GB]		
+
+				</li>
+				<li>
+					Background images used for generating the synthetic word images [<a href = "https://tinyurl.com/h2xns597">Download</a>] [572,367 images, disk size: 13 GB]		
+
+				</li>
+				<li>
+					Synthetic Hindi words in gray background [<a href = "https://tinyurl.com/5a8kzjez">Download</a>] [572,367 images, disk size: 6.1 GB]		
+
+				</li>
+				<li>
+					Synthetic English words in gray background [<a href = "https://tinyurl.com/44w9hswz">Download</a>] [572,367 images, disk size: 5.8 GB]		
+
+				</li>
+
+				<li>
+					Mask for synthetic Hindi word images [<a href = "https://tinyurl.com/ytjxvrdj">Download</a>] [572,367 images, disk size: 3.4 GB]		
+
+				</li>
+				<li>
+					Mask for synthetic English word images [<a href = "https://tinyurl.com/suk2js97">Download</a>] [572,367 images, disk size: 3.2 GB]		
+
+				</li>
+				<li>
+					Skeleton images for synthetic Hindi word images [<a href = "https://tinyurl.com/3h9pra6d">Download</a>] [572,367 images, disk size:  407 MB]		
+
+				</li>
+
+					<li>
+					Skeleton images for synthetic English word images [<a href = "https://tinyurl.com/2sa9re6a">Download</a>] [572,367 images, disk size:  374MB] 		
+
+				</li>
+				
+			</ol>
+			</ol>
+
+	</li>
+	</ul>
+	    <b>Note:</b> same image filenames inside engSynthWords and hinSynthWords folders contain synthetic word images with perceptually same font and background style in
+English and Hindi, respectively. 
+	
+	    </br>
+    </br>
+     <p class="section" id="talk"><b>Short Talk</b></p>
+       <iframe width="420" height="345" src="https://www.youtube.com/embed/xvetn4t3tEI">
+        </iframe>
+
+        <p class="section">&nbsp;</p>
+        <p class="section">&nbsp;</p>
+        <p class="section">&nbsp;</p>
+
+
+
+
+	    
+        <p class="section" id="paper"><b>Paper</b></p>
+        <table width="940" border="0">
+            <tbody>
+                <tr>
+                    <td height="100"><a href="./resources/paper.pdf" target="_blank" rel="noopener noreferrer"><img
+                                src="./resources/paper_cover.jpg" alt="" width="140" height="167"></a></td>
+                    <td width="750">
+                        <p><b>Show Me the World in My Language: Establishing the First Baseline<br> for Scene-Text to Scene-Text Translation</b><br>
+                            Shreyas Vaidya*, Arvind Kumar Sharma*, Prajwal Gatti, Anand Mishra.<br />
+                            (* indicates equal contribution) <br>
+                            [<a href="./resources/paper.pdf" target="_blank" rel="noopener noreferrer">paper</a>]<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="section">&nbsp;</p>
+        <p class="section">&nbsp;</p>
+        <p class="section">&nbsp;</p>
+
+        <p class="section" id="bibtex"><b>Bibtex</b></p>
+        <table border="0">
+            <tbody>
+                <pre style=" display: block;
+  background: #eee;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  min-width: 100px;
+  border-radius: 20px;
+  ">
+
+    @InProceedings{vistransICPR2024,
+        author    = {Vaidya, Shreyas and Sharma, Arvind Kumar and Gatti, Prajwal and Mishra, Anand},
+        title     = {Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation},
+        booktitle = {ICPR},
+        year      = {2024},
+    }       
+			  </pre>
+</table>
+
+
+
+
+ <p class="section">&nbsp;</p>
+        <p class="section">&nbsp;</p>
+        <div class="team">
+            <p class="section" id="team"><b>Team</b></p>
+  <div class="row justify-content-center">
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                     <div class="mainflip">
+                           <div class="card">
+                              <div class="card-body text-center card-no-padding">
+                                 <p><img class=" img-fluid" src="resources/sv.png" alt="card image"></p>
+                                 <h5 class="card-title">Shreyas <br> Vaidya</h5>
+                                 <ul class="list-inline">
+					<li class="list-inline-item">
+                                       <a class="social-icon text-xs-center" target="_blank" href="https://x.com/shreyasvaidya23/">
+                                       <i class="fa fa-twitter"></i>
+                                       </a>
+                                    </li>
+
+                                   <li class="list-inline-item">
+                                      <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/vaidyashreyas/">
+                                      <i class="fa fa-linkedin"></i>
+                                      </a>
+                                   </li>
+                                 </ul>
+                              </div>
+                           </div>
+                     </div>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                     <div class="mainflip">
+                           <div class="card">
+                              <div class="card-body text-center card-no-padding">
+                                 <p><img class=" img-fluid" src="resources/as.png" alt="card image"></p>
+                                 <h5 class="card-title">Arvind <br> Sharma</h5>
+                                 <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                     <li class="list-inline-item">
+                                      <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/arvind-sharma-524b4525a/">
+                                      <i class="fa fa-linkedin"></i>
+                                      </a>
+                                   </li>
+                                        </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                     </div>
+                  </div>
+
+                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                     <div class="mainflip">
+                           <div class="card">
+                              <div class="card-body text-center card-no-padding">
+                                 <p><img class=" img-fluid" src="resources/pg.png" alt="card image"></p>
+                                 <h5 class="card-title">Prajwal<br> Gatti</h5>
+                                 <ul class="list-inline">
+					                                     <li class="list-inline-item">
+                                       <a class="social-icon text-xs-center" target="_blank" href="https://x.com/prajwal_gatti/">
+                                       <i class="fa fa-twitter"></i>
+                                       </a>
+                                    </li>
+
+                                    <li class="list-inline-item">
+                                     <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/prajwalgatti//">
+                                     <i class="fa fa-linkedin"></i>
+                                     </a>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <a class="social-icon text-xs-center" target="_blank" href="https://prajwalgatti.github.io//">
+                                    <i class="fa fa-user"></i>
+                                    </a>
+                                 </li>
+                                 </ul>
+                              </div>
+                           </div>
+                     </div>
+                  </div>
+
+
+
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                     <div class="mainflip">
+                           <div class="card">
+                              <div class="card-body text-center card-no-padding">
+                                 <p><img class=" img-fluid" src="resources/am.png" alt="card image"></p>
+                                 <h5 class="card-title">Anand <br> Mishra</h5>
+                                 <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                       <a class="social-icon text-xs-center" target="_blank" href="https://twitter.com/anandmishra2012/">
+                                       <i class="fa fa-twitter"></i>
+                                       </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                     <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/anand-mishra-0ab76421/">
+                                     <i class="fa fa-linkedin"></i>
+                                     </a>
+                                  </li>
+                                  <li class="list-inline-item">
+                                     <a class="social-icon text-xs-center" target="_blank" href="https://anandmishra22.github.io/">
+                                     <i class="fa fa-user"></i>
+                                     </a>
+                                  </li>
+                                 </ul>
+                              </div>
+                           </div>
+                     </div>
+                  </div>
+   
+
+
+
+     </div>
+        <p class="section">&nbsp;</p>
+
+ <p class="section">&nbsp;</p>
+        <p class="section">&nbsp;</p>
+        <div class="ack">
+            <p class="section" id="ack"><b>Acknowledgment</b></p>
+This work was partly supported by MeitY, Government of India (Project Number: S/MeitY/AM/20210114) under NLTM-Bhashini	</div>
+<p class="section">&nbsp;</p>
+        <div class="contact">
+            <p class="section" id="related-paper"><b>Contact</b></p>
+            For questions, please contact <a href="mailto:vaidya.2@iitj.ac.in" >Shreyas</a>/<a href="mailto:sharma.126@iitj.ac.in" >Arvind</a> or raise an issue on <a class="publink" href="https://github.com/Bhashini-IITJ/visualTranslation/" target="_blank" style="text-decoration: none">GitHub</a>.
+	</div>
+        <p class="section"></p>
+
+
+    <!-- Footer -->
+<footer>
+    <p class="m-0 text-center">Copyright &copy; IIT Jodhpur</p>
+</footer>   
+
+</body>
+
+ <script>
+    function prompt_on(prompt_element) {
+        prompt_element.classList.add("caption-active");
+    }
+
+    function prompt_off(prompt_element) {
+        prompt_element.classList.remove("caption-active");
+    }
+
+    function toggle_prompt(active_prompt_id, inactive_prompt_ids, result_id) {
+        let active_prompt = document.getElementById(active_prompt_id);
+        prompt_on(active_prompt);
+        for (let i = 0; i < inactive_prompt_ids.length; i++) {
+            let inactive_prompt = document.getElementById(inactive_prompt_ids[i]);
+            prompt_off(inactive_prompt);
+        }
+
+        let result = document.getElementById(result_id);
+        result.src = file_paths[active_prompt_id];
+    }
+ </script>
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>#39;Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation.&#39;">
+    <!-- <link rel="icon" href="./pics/wis_logo.jpg"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta name="description"
+        content="Project page for IndicPhotoOCR;">
+
+
+      <meta charset="utf-8">
+      <meta name="description" content="IndicPhotoOCR">
+       <meta name="keywords" content="">
+      <meta name="author" content="Prajwal Gatti">
+      <title>IndicPhotoOCR: A Comprehensive Toolkit for Scene Text Recognition across 13 Indian Languages</title>
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="[ICPR 2024] Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation" />
+      <meta name="twitter:description" content="[ICPR 2024] Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation" />
+      <meta name="twitter:image:alt" content="visTrans (ICPR 2024)" />
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <p class="title">IndicPhotoOCR: A Comprehensive Toolkit for Scene Text Recognition across 13 Indian Languages</p>
+    <div style="text-align: center; font-size: 15pt; margin-bottom: 15px">
+            <span><a href="https://icpr2024.org/">ICPR 2024</a></span>
+    </div>
+    <p class="author">
+	<span class="author"><a href="">Shreyas Vaidya<sup>*</sup> </a>&nbsp;<sup>1</sup></span>
+        <span class="author"><a href="">Arvind Kumar Sharma<sup>*</sup> </a>&nbsp;<sup>1</sup></span>
+        <span class="author"><a href="https://prajwalgatti.github.io/">Prajwal Gatti</a>&nbsp;<sup>2</sup></span>
+        <span class="author"><a href="https://anandmishra22.github.io/">Anand Mishra</a>&nbsp;<sup>1</sup></span>
+    </p>
+    <table border="0" align="center" class="affiliations" width="700px">
+        <tbody align="center">
+            <tc>
+                <td style="text-align: center;"><sup>1</sup>&nbsp;IIT Jodhpur</td>
+            </tc> <tc>
+                <td style="text-align: center;"><sup>2</sup>&nbsp;University of Bristol</td>
+            </tc>
+        </tbody>
+    </table>
+	    <table border="0" align="center" style="margin-bottom: 8px;" class = "affiliations" width = "500px">
+        <tbody>
+            <tr>
+                <td align="center">(*: Equal Contribution)</td>
+            </tr>
+        </tbody>
+    </table>
+
+	
+
+	
+    <table width="999" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+        <tbody>
+            <tr>
+                <td align="center">| <a href="./resources/paper.pdf">Paper</a> | <a href="https://github.com/Bhashini-IITJ/visualTranslation/">Code</a> | <a href="#dataset">Dataset</a> | <a href="https://youtu.be/xvetn4t3tEI">Short Talk</a> | <a href="./resources/ICPR2024-poster.pdf">Poster</a></td>
+            </tr>
+        </tbody>
+    </table>
+   <div style="display: flex; justify-content: center; align-items: center; >
+    <div style="background-color: #FFEB3B; padding: 15px; border-radius: 8px; width: 900px; font-family: Arial, sans-serif; color: #333; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+     
+        <p><font color=red>Update: Dataset and Initial Release of code are up now.</font></p>
+    </div>
+</div>
+
+
+
+	
+    <div class="container">
+        <table width="1000" border="0" align="center">
+            <tbody>
+                <tr>
+                    <div id="imageCarousel" class="carousel slide teaser-carousel" data-ride="carousel" data-interval="5000">
+                        <div class="carousel-inner">
+                            <!-- White horse -->
+                            <div class="carousel-item active">
+                                <div>
+                                    <img class="teaser-img" src="./resources/Coral.png" />
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div>
+                                    <img class="teaser-img" src="./resources/No Mobile Phones.png" />
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div>
+                                    <img class="teaser-img" src="./resources/Overseas Relations Office.png" />
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div>
+                                    <img class="teaser-img" src="./resources/Rajput.png" />
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                            <div class="slider-navigation-previous">
+                                <svg viewBox="0 0 50 80" xml:space="preserve">
+                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                        stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
+                                    </polyline>
+                                </svg>
+                            </div>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+                            <div class="slider-navigation-next">
+                                <svg viewBox="0 0 50 80" xml:space="preserve">
+                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                        stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
+                                    </polyline>
+                                </svg>
+                            </div>
+                           <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </tr>
+                <!-- <tr> <br /> </tr> -->
+                <tr align="center"></tr>
+            </tbody>
+        </table>
+
+
+        <div style="text-align: justify;text-justify: inter-word;">
+        <p><span class="section"><b>Abstract</b></span> </p>
+        <p> In this work, we study the task of ``visually'' translating scene text from a source language (e.g., Hindi) to a target language (e.g., English). 
+	Visual translation involves not just the recognition and translation of scene text but also the generation of the translated image that preserves visual features of the source scene text, 
+	such as font, size, and background. There are several challenges associated with this task, such as translation with limited context, deciding between translation and transliteration, accommodating varying text lengths within fixed spatial boundaries, and preserving the font and background styles of the source scene text in the target language. To address this problem, we make the following contributions: (i) We study visual translation as a standalone problem for the first time in the literature. (ii) We present a cascaded framework for visual translation that combines state-of-the-art modules for scene text recognition, machine translation, and scene text synthesis as a baseline for the task. (iii)  We propose a set of task-specific design enhancements to design a variant of the baseline to obtain performance improvements. (iv) Currently, the existing related literature lacks any comprehensive performance evaluation for this novel task. To fill this gap, we introduce several automatic and user-assisted evaluation metrics designed explicitly for evaluating visual translation. Further, we evaluate presented baselines for translating scene text between Hindi and English. Our experiments demonstrate that although we can effectively perform visual translation over a large collection of scene text images, the presented baseline only partially addresses challenges posed by visual translation tasks. We firmly believe that this new task and the limitations of existing models, as reported in this paper, 
+	should encourage further research in visual translation. 
+	</p>
+        </div>
+        <div style="text-align: justify;text-justify: inter-word;">
+        <p><b>Keywords:</b> Visual Translation, Scene Text Synthesis, Evaluation Metrics, Cross-lingual Scene Text Editing.</p>
+	</div>
+        <p class="section">&nbsp;</p>
+
+        <p class="section"><b>The Visual Translation Problem</b></p>
+        <div style="text-align: center">
+        <img src="./resources/Rithala.png" alt="" width="700px" style="margin: auto" />
+           <br><br><p align="left">Suppose you are visiting Delhi, India and arrive at the Rithala (Hindi: रिठाला) metro station. If you are not familiar with Hindi, the signboard on the left might be incomprehensible. The result of our proposed baseline solution, shown on the right, seamlessly transliterates the station name रिठाला to English. In our work, we aim to visually translate (or transliterate, when necessary, as in this case) text from the source language to the target language while preserving visual attributes of the source scene text. Specifically, we focus on visual translation between Hindi and English, and vice versa.</p>
+	</div>
+	<p class="section">&nbsp;</p>
+	
+        <div class="section" id="dataset">
+	</div>
+	<p class="section"><b>Dataset</b></p>
+        <ul><li>  <p class="section"><b>VT-Real: Real Scene Image Dataset for evaluating Visual Translation between Hindi and English</b></p>	
+	            <table width="1000" border="0" align="center">
+            <tbody>
+                <tr>
+                    <div id="imageCarousel" class="carousel slide teaser-carousel" data-ride="carousel" data-interval="5000">
+                        <div class="carousel-inner">
+                            <!-- White horse -->
+                            <div class="carousel-item active">
+                                <div>
+                                    <img class="teaser-img" src="./resources/VT Real Icdar.png" />
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div>
+                                    <img class="teaser-img" src="./resources/VT Real BSTD.png" />
+                                </div>
+                            </div>
+
+                            
+
+                        <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                            <div class="slider-navigation-previous">
+                                <svg viewBox="0 0 50 80" xml:space="preserve">
+                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                        stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
+                                    </polyline>
+                                </svg>
+                            </div>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+                            <div class="slider-navigation-next">
+                                <svg viewBox="0 0 50 80" xml:space="preserve">
+                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                        stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
+                                    </polyline>
+                                </svg>
+                            </div>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </tr>
+                <!-- <tr> <br /> </tr> -->
+            </tbody>
+        </table>
+		VT-Real includes 269 images and 1021 words. Images are obtained from ICDAR 2013 and Bharat Scene Text Dataset. These images were translated between English and Hindi by three human annotators. We provide pointers to the images in the respective source dataset and our annotations here.<br>
+			<ol>
+				<li>
+					ICDAR 2013 dataset can be downloaded from <a href = "https://rrc.cvc.uab.es/?ch=2&com=downloads"> here </a>.  
+					Please download Training Set Images (Disk size: 142 MB). 
+
+				</li>
+				<li>
+					The images used from Bharat Scene Text dataset (BSTD) can be downloaded from <a href = "https://github.com/Bhashini-IITJ/BharatSceneTextDataset/blob/main/README.md#image-subset-used-in-vaidya-et-al-icpr-2024-preprint"> here </a>.  (Disk size: 60 MB)
+
+				</li>
+				<li>
+				Please download ground truth translation annotations by three annotators for <a href = "https://drive.google.com/file/d/1ou5Mpw3Bw55cjmqjWT9Ry6bPvrJpSIU0/view?usp=drive_link"> ICDAR images</a> (English-to-Hindi) and <a href = "https://drive.google.com/file/d/1dPE15H1ElqUMXbtfmbGdeHzlXYrsEuML/view?usp=drive_link"> BSTD images </a> (Hindi-to-English).
+				</li>
+			</ol>
+				<br><br><br>
+
+        <li><b>
+<p class="section"><b>VT-Synth: Synthetic Training Data for Visual Translation between Hindi and English</b></p>		
+	</b>
+
+
+		VT-Syn is a synthetically generated corpus of ~600K visually diverse paired bilingual word images in pairs of English-Hindi. It can be used for training visual translation or cross-lingual scene text editing or scene text removal or scene text binarization.<br>
+			<ol>
+				<li>
+					Synthetic word images in Hindi Language [<a href = "https://tinyurl.com/38w3npat">Download</a>] [572,367 images, disk size: 17 GB]
+				</li>
+				<li>
+					Synthetic word images in English Language [<a href = "https://tinyurl.com/yhhdm5z3">Download</a>] [572,367 images, disk size: 17 GB]		
+
+				</li>
+				<li>
+					Background images used for generating the synthetic word images [<a href = "https://tinyurl.com/h2xns597">Download</a>] [572,367 images, disk size: 13 GB]		
+
+				</li>
+				<li>
+					Synthetic Hindi words in gray background [<a href = "https://tinyurl.com/5a8kzjez">Download</a>] [572,367 images, disk size: 6.1 GB]		
+
+				</li>
+				<li>
+					Synthetic English words in gray background [<a href = "https://tinyurl.com/44w9hswz">Download</a>] [572,367 images, disk size: 5.8 GB]		
+
+				</li>
+
+				<li>
+					Mask for synthetic Hindi word images [<a href = "https://tinyurl.com/ytjxvrdj">Download</a>] [572,367 images, disk size: 3.4 GB]		
+
+				</li>
+				<li>
+					Mask for synthetic English word images [<a href = "https://tinyurl.com/suk2js97">Download</a>] [572,367 images, disk size: 3.2 GB]		
+
+				</li>
+				<li>
+					Skeleton images for synthetic Hindi word images [<a href = "https://tinyurl.com/3h9pra6d">Download</a>] [572,367 images, disk size:  407 MB]		
+
+				</li>
+
+					<li>
+					Skeleton images for synthetic English word images [<a href = "https://tinyurl.com/2sa9re6a">Download</a>] [572,367 images, disk size:  374MB] 		
+
+				</li>
+				
+			</ol>
+			</ol>
+
+	</li>
+	</ul>
+	    <b>Note:</b> same image filenames inside engSynthWords and hinSynthWords folders contain synthetic word images with perceptually same font and background style in
+English and Hindi, respectively. 
+	
+	    </br>
+    </br>
+     <p class="section" id="talk"><b>Short Talk</b></p>
+       <iframe width="420" height="345" src="https://www.youtube.com/embed/xvetn4t3tEI">
+        </iframe>
+
+        <p class="section">&nbsp;</p>
+        <p class="section">&nbsp;</p>
+        <p class="section">&nbsp;</p>
+
+
+
+
+	    
+        <p class="section" id="paper"><b>Paper</b></p>
+        <table width="940" border="0">
+            <tbody>
+                <tr>
+                    <td height="100"><a href="./resources/paper.pdf" target="_blank" rel="noopener noreferrer"><img
+                                src="./resources/paper_cover.jpg" alt="" width="140" height="167"></a></td>
+                    <td width="750">
+                        <p><b>Show Me the World in My Language: Establishing the First Baseline<br> for Scene-Text to Scene-Text Translation</b><br>
+                            Shreyas Vaidya*, Arvind Kumar Sharma*, Prajwal Gatti, Anand Mishra.<br />
+                            (* indicates equal contribution) <br>
+                            [<a href="./resources/paper.pdf" target="_blank" rel="noopener noreferrer">paper</a>]<br>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="section">&nbsp;</p>
+        <p class="section">&nbsp;</p>
+        <p class="section">&nbsp;</p>
+
+        <p class="section" id="bibtex"><b>Bibtex</b></p>
+        <table border="0">
+            <tbody>
+                <pre style=" display: block;
+  background: #eee;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  min-width: 100px;
+  border-radius: 20px;
+  ">
+
+    @InProceedings{vistransICPR2024,
+        author    = {Vaidya, Shreyas and Sharma, Arvind Kumar and Gatti, Prajwal and Mishra, Anand},
+        title     = {Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation},
+        booktitle = {ICPR},
+        year      = {2024},
+    }       
+			  </pre>
+</table>
+
+
+
+
+ <p class="section">&nbsp;</p>
+        <p class="section">&nbsp;</p>
+        <div class="team">
+            <p class="section" id="team"><b>Team</b></p>
+  <div class="row justify-content-center">
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                     <div class="mainflip">
+                           <div class="card">
+                              <div class="card-body text-center card-no-padding">
+                                 <p><img class=" img-fluid" src="resources/sv.png" alt="card image"></p>
+                                 <h5 class="card-title">Shreyas <br> Vaidya</h5>
+                                 <ul class="list-inline">
+					<li class="list-inline-item">
+                                       <a class="social-icon text-xs-center" target="_blank" href="https://x.com/shreyasvaidya23/">
+                                       <i class="fa fa-twitter"></i>
+                                       </a>
+                                    </li>
+
+                                   <li class="list-inline-item">
+                                      <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/vaidyashreyas/">
+                                      <i class="fa fa-linkedin"></i>
+                                      </a>
+                                   </li>
+                                 </ul>
+                              </div>
+                           </div>
+                     </div>
+                  </div>
+
+                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                     <div class="mainflip">
+                           <div class="card">
+                              <div class="card-body text-center card-no-padding">
+                                 <p><img class=" img-fluid" src="resources/as.png" alt="card image"></p>
+                                 <h5 class="card-title">Arvind <br> Sharma</h5>
+                                 <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                     <li class="list-inline-item">
+                                      <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/arvind-sharma-524b4525a/">
+                                      <i class="fa fa-linkedin"></i>
+                                      </a>
+                                   </li>
+                                        </a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                     </div>
+                  </div>
+
+                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                     <div class="mainflip">
+                           <div class="card">
+                              <div class="card-body text-center card-no-padding">
+                                 <p><img class=" img-fluid" src="resources/pg.png" alt="card image"></p>
+                                 <h5 class="card-title">Prajwal<br> Gatti</h5>
+                                 <ul class="list-inline">
+					                                     <li class="list-inline-item">
+                                       <a class="social-icon text-xs-center" target="_blank" href="https://x.com/prajwal_gatti/">
+                                       <i class="fa fa-twitter"></i>
+                                       </a>
+                                    </li>
+
+                                    <li class="list-inline-item">
+                                     <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/prajwalgatti//">
+                                     <i class="fa fa-linkedin"></i>
+                                     </a>
+                                  </li>
+                                  <li class="list-inline-item">
+                                    <a class="social-icon text-xs-center" target="_blank" href="https://prajwalgatti.github.io//">
+                                    <i class="fa fa-user"></i>
+                                    </a>
+                                 </li>
+                                 </ul>
+                              </div>
+                           </div>
+                     </div>
+                  </div>
+
+
+
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                     <div class="mainflip">
+                           <div class="card">
+                              <div class="card-body text-center card-no-padding">
+                                 <p><img class=" img-fluid" src="resources/am.png" alt="card image"></p>
+                                 <h5 class="card-title">Anand <br> Mishra</h5>
+                                 <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                       <a class="social-icon text-xs-center" target="_blank" href="https://twitter.com/anandmishra2012/">
+                                       <i class="fa fa-twitter"></i>
+                                       </a>
+                                    </li>
+                                    <li class="list-inline-item">
+                                     <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/anand-mishra-0ab76421/">
+                                     <i class="fa fa-linkedin"></i>
+                                     </a>
+                                  </li>
+                                  <li class="list-inline-item">
+                                     <a class="social-icon text-xs-center" target="_blank" href="https://anandmishra22.github.io/">
+                                     <i class="fa fa-user"></i>
+                                     </a>
+                                  </li>
+                                 </ul>
+                              </div>
+                           </div>
+                     </div>
+                  </div>
+   
+
+
+
+     </div>
+        <p class="section">&nbsp;</p>
+
+ <p class="section">&nbsp;</p>
+        <p class="section">&nbsp;</p>
+        <div class="ack">
+            <p class="section" id="ack"><b>Acknowledgment</b></p>
+This work was partly supported by MeitY, Government of India (Project Number: S/MeitY/AM/20210114) under NLTM-Bhashini	</div>
+<p class="section">&nbsp;</p>
+        <div class="contact">
+            <p class="section" id="related-paper"><b>Contact</b></p>
+            For questions, please contact <a href="mailto:vaidya.2@iitj.ac.in" >Shreyas</a>/<a href="mailto:sharma.126@iitj.ac.in" >Arvind</a> or raise an issue on <a class="publink" href="https://github.com/Bhashini-IITJ/visualTranslation/" target="_blank" style="text-decoration: none">GitHub</a>.
+	</div>
+        <p class="section"></p>
+
+
+    <!-- Footer -->
+<footer>
+    <p class="m-0 text-center">Copyright &copy; IIT Jodhpur</p>
+</footer>   
+
+</body>
+
+ <script>
+    function prompt_on(prompt_element) {
+        prompt_element.classList.add("caption-active");
+    }
+
+    function prompt_off(prompt_element) {
+        prompt_element.classList.remove("caption-active");
+    }
+
+    function toggle_prompt(active_prompt_id, inactive_prompt_ids, result_id) {
+        let active_prompt = document.getElementById(active_prompt_id);
+        prompt_on(active_prompt);
+        for (let i = 0; i < inactive_prompt_ids.length; i++) {
+            let inactive_prompt = document.getElementById(inactive_prompt_ids[i]);
+            prompt_off(inactive_prompt);
+        }
+
+        let result = document.getElementById(result_id);
+        result.src = file_paths[active_prompt_id];
+    }
+ </script>
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
