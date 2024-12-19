@@ -1,1 +1,101 @@
-Welcome to Website for PatentLMM
+<!DOCTYPE html>
+<!-- saved from url=(0044)http://malllabiisc.github.io/resources/kvqa/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PatentLMM: Large Multimodal Model for Generating Descriptions for Patent Figures">
+    <meta name="keywords" content="Patents, PatentMME, PatentLMM, PatentLLaMA, patent description generation, LMM, LLM">
+    <meta name="author" content="VL2G IIT J">
+
+    <title>PatentLMM: Large Multimodal Model for Generating Descriptions for Patent Figures</title>
+
+    <link href="./index_files/bootstrap.css" rel="stylesheet">
+    <link href="./index_files/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <h2 class="text"><center>PatentLMM: Large Multimodal Model for Generating Descriptions for Patent Figures</center></h2>
+<!-- <h4 class="text"><center><a href="https://revantteotia.github.io/">Revant Teotia*</a>, <a href="https://www.linkedin.com/in/vaibhav-mishra-iitj/?originalSubdomain=in">Vaibhav Mishra*</a>, <a href="https://www.linkedin.com/in/maheshwarimayank333">Mayank Maheshwari*</a>, <a href="https://anandmishra22.github.io/">Anand Mishra</a> </center></h4> -->
+<h4 class="text"><center><a href="https://in.linkedin.com/in/shreya-shukla-54b069205">Shreya Shukla</a>&nbsp;<sup>1</sup>*,&emsp;<a href="https://www.linkedin.com/in/nakulsh/">Nakul Sharma</a>&nbsp;<sup>1</sup>*,&emsp;<a href="https://sites.google.com/view/manishg/">Manish Gupta</a>&nbsp;<sup>2</sup>,&emsp;<a href="https://anandmishra22.github.io/">Anand Mishra</a>&nbsp;<sup>1</sup></center></h4>
+
+<h6 class="text"><center>* : Equal Contribution</center></h6>
+<h4 class="text"><center><sup>1</sup>Indian Institute of Technology Jodhpur &emsp; <sup>2</sup>Microsoft, India</center></h4>
+<!-- <h4 class="text"><center> Columbia University</center></h4> -->
+<!-- <h4 class="text"><center></center></h4> -->
+<h4 class="text"><center><a href="https://aaai.org/conference/aaai/aaai-25/">AAAI 2025</a></center></h4>
+
+<h4 class="text"><center> [<a href="#">Paper</a>]  [<a href="https://github.com/vl2g/PatentLMM">Code</a>]  [<a href="#">Data</a>]</center></h4>
+</div>
+
+ <!-- <div class="container"> -->
+      <div class="header">
+      <br>
+<center>
+<figure class="figure"> 
+    <img class="figure-img" width="100%" src= "figures/patentlmm_qual-1.png" > 
+ </figure>
+</center>
+<p><center>Our work aims generate brief and detailed descriptions for patent figures to aid drafting for novel inventions.</center></p>
+&nbsp;
+&nbsp;
+&nbsp;
+<!-- </div> -->
+      <div class="row">
+        <h3>Abstract</h3>
+        <p style="text-align: justify;">
+            Writing comprehensive and accurate descriptions of technical drawings in patent documents is crucial to effective knowledge sharing and enabling the replication and protection of intellectual property. However, automation of this task has been largely overlooked by the research community. To this end, we introduce <i>PatentDesc-355K</i>, a novel large-scale dataset containing ~355K patent figures along with their brief and detailed textual descriptions extracted from 60K+ US patent documents. In addition, we propose PatentLMM - a novel multimodal large language model specifically tailored to generate high-quality descriptions of patent figures. Our proposed PatentLMM comprises two key components: (i) PatentMME, a specialized multimodal vision encoder that captures the unique structural elements of patent figures, and (ii) PatentLLaMA, a domain-adapted version of LLaMA fine-tuned on a large collection of patents. Extensive experiments demonstrate that training a vision encoder specifically designed for patent figures significantly boosts the performance, generating coherent descriptions compared to fine-tuning similar-sized off-the-shelf multimodal models. PatentDesc-355K and PatentLMM pave the way for automating the understanding of patent figures, enabling efficient knowledge sharing and faster drafting of patent documents. We make the code and data publicly available.
+          
+	</p>
+      </div>
+&nbsp;
+&nbsp;
+&nbsp;
+      <div class="row">
+        <h3>Highlights</h3>
+     <ul> 
+     <li> We introduce a large-scale dataset, <b>PatentDesc-355K</b>, with ~355K patent figures and their brief and detailed descriptions.</li>
+     <li> We propose a novel multi-modal model, <b>PatentLMM</b>, comprising a patent-domain-specialized vision encoder trained using objectives specifically tailored to capture the structure of patent documents, and an LLM fine-tuned on patent data.</li>
+     <li>We extensively benchmark existing captioning models and multi-modal LLMs and show that our proposed approach surpasses their best performance by large margins.</li>
+     </ul>     
+     </div>
+
+&nbsp;
+&nbsp;
+&nbsp;
+<div class="row">
+  <h3 id="datasetD">PatentDesc-355K Dataset</h3>
+  <!-- <b>Explore the dataset:</b> [<a href="./gallery/index.html">Gallery</a>]<br> -->
+</div>
+
+<hr>
+
+<h3><strong><span style="font-size: 20pt;">Bibtex</span></strong></h3>
+<p>Please cite our work as follows:</p>
+<pre><tt>@inproceedings{shukla2025patentlmm,
+  author    = "Shukla, Shreya and 
+              Sharma, Nakul and 
+              Gupta, Manish and
+              Mishra, Anand",
+  title     = "PatentLMM: Large Multimodal Model for Generating Descriptions for Patent Figures",
+  booktitle = "AAAI",
+  year      = "2025",
+}</tt></pre>
+     </div>
+
+	    <h3><strong><span style="font-size: 14pt;">Acknowledgements</span></strong></h3>
+        This work was supported by the Mi-crosoft Academic Partnership Grant (MAPG) 2023.
+
+<br><br><br>
+	    
+</div></div>
+</div></div></body></html>
