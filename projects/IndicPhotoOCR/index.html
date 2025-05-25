@@ -42,50 +42,47 @@
 <body>
     <p class="title">IndicPhotoOCR: A Comprehensive PhotoOCR Toolkit for <br>Scene Text Recognition across 13 Indian Languages</p>
     <div style="text-align: center; font-size: 15pt; margin-bottom: 15px">
-            <span><a href="https://icpr2024.org/">ICPR 2024</a></span>
+            <span><a href="https://icpr2024.org/"> </a></span>
     </div>
     <p class="author">
-	<span class="author"><a href="">Anik De<sup>*</sup> </a>&nbsp;<sup>1</sup></span>
-        <span class="author"><a href="">Abhirama Penamakuri<sup>*</sup> </a>&nbsp;<sup>1</sup></span>
-        <span class="author"><a href="https://anandmishra22.github.io/">Anand Mishra</a>&nbsp;<sup>1</sup></span>
+	<span class="author"><a href="">Anik De </a>&nbsp;</span>
+    <span class="author"><a href="">Abhirama Penamakuri </a>&nbsp;</span>
+    <span class="author"><a href="">Sagar Agarwal </a>&nbsp;</span>
+    <span class="author"><a href="">Pravin Kumar </a>&nbsp;</span>
+    <span class="author"><a href="">Rajeev Yadav</a>&nbsp;</span>
+    <span class="author"><a href="">Aditya Rathor </a>&nbsp;</span>
+    <span class="author"><a href="">Harshiv Shah </a>&nbsp;</span>
+    <span class="author"><a href="https://anandmishra22.github.io/">Anand Mishra</a>&nbsp;</span>
+
+
     </p>
     <table border="0" align="center" class="affiliations" width="700px">
         <tbody align="center">
             <tc>
-                <td style="text-align: center;"><sup>1</sup>&nbsp;IIT Jodhpur</td>
-            </tc> <tc>
-                <td style="text-align: center;"><sup>2</sup>&nbsp;University of Bristol</td>
+                <td style="text-align: center;">&nbsp;IIT Jodhpur</td>
             </tc>
         </tbody>
     </table>
-	    <table border="0" align="center" style="margin-bottom: 8px;" class = "affiliations" width = "500px">
-        <tbody>
-            <tr>
-                <td align="center">(*: Equal Contribution)</td>
-            </tr>
-        </tbody>
-    </table>
 
-	
 
-	
+
     <table width="999" border="0" align="center" class="menu" style="margin-bottom: 8px;">
         <tbody>
             <tr>
-                <td align="center">| <a href="./resources/paper.pdf">Paper</a> | <a href="https://github.com/Bhashini-IITJ/visualTranslation/">Code</a> | <a href="#dataset">Dataset</a> | <a href="https://youtu.be/xvetn4t3tEI">Short Talk</a> | <a href="./resources/ICPR2024-poster.pdf">Poster</a></td>
+                <td align="center">| <a href="./resources/paper.pdf">Paper</a> | <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR">Code</a> | <a href="#dataset">Dataset</a> | <a href="https://youtu.be/xvetn4t3tEI">Short Talk</a> | <a href="./resources/ICPR2024-poster.pdf">Poster</a></td>
             </tr>
         </tbody>
     </table>
    <div style="display: flex; justify-content: center; align-items: center; >
     <div style="background-color: #FFEB3B; padding: 15px; border-radius: 8px; width: 900px; font-family: Arial, sans-serif; color: #333; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
-     
+
         <p><font color=red>Update: Dataset and Initial Release of code are up now.</font></p>
     </div>
 </div>
 
 
 
-	
+
     <div class="container">
         <table width="1000" border="0" align="center">
             <tbody>
@@ -95,13 +92,13 @@
                             <!-- White horse -->
                             <div class="carousel-item active">
                                 <div>
-                                    <img class="teaser-img" src="./resources/Coral.png" />
+                                    <img class="teaser-img" src="./resources/demo_p1.png" />
                                 </div>
                             </div>
 
                             <div class="carousel-item">
                                 <div>
-                                    <img class="teaser-img" src="./resources/No Mobile Phones.png" />
+                                    <img class="teaser-img" src="./resources/demo_p2.png" />
                                 </div>
                             </div>
 
@@ -144,37 +141,63 @@
             </tbody>
         </table>
 
+        <p class="section">&nbsp;</p>
+        <p class="section">&nbsp;</p>
+
 
         <div style="text-align: justify;text-justify: inter-word;">
         <p><span class="section"><b>Abstract</b></span> </p>
-        <p> In this work, we study the task of ``visually'' translating scene text from a source language (e.g., Hindi) to a target language (e.g., English). 
-	Visual translation involves not just the recognition and translation of scene text but also the generation of the translated image that preserves visual features of the source scene text, 
-	such as font, size, and background. There are several challenges associated with this task, such as translation with limited context, deciding between translation and transliteration, accommodating varying text lengths within fixed spatial boundaries, and preserving the font and background styles of the source scene text in the target language. To address this problem, we make the following contributions: (i) We study visual translation as a standalone problem for the first time in the literature. (ii) We present a cascaded framework for visual translation that combines state-of-the-art modules for scene text recognition, machine translation, and scene text synthesis as a baseline for the task. (iii)  We propose a set of task-specific design enhancements to design a variant of the baseline to obtain performance improvements. (iv) Currently, the existing related literature lacks any comprehensive performance evaluation for this novel task. To fill this gap, we introduce several automatic and user-assisted evaluation metrics designed explicitly for evaluating visual translation. Further, we evaluate presented baselines for translating scene text between Hindi and English. Our experiments demonstrate that although we can effectively perform visual translation over a large collection of scene text images, the presented baseline only partially addresses challenges posed by visual translation tasks. We firmly believe that this new task and the limitations of existing models, as reported in this paper, 
-	should encourage further research in visual translation. 
-	</p>
+        <p> IndicPhotoOCR is a scene text recognition toolkit designed for detecting, identifying, and recognizing text across
+        Indian languages, including Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil,
+        Telugu, and English, with support for Urdu and Meitei in the pipeline. It is built to handle the unique scripts and
+        complex structures of Indian languages, offering robust detection and recognition capabilities. The package can be
+        installed with just few lines of code, and a straightforward wrapper function makes it easy to use.
+	    </p>
         </div>
-        <div style="text-align: justify;text-justify: inter-word;">
-        <p><b>Keywords:</b> Visual Translation, Scene Text Synthesis, Evaluation Metrics, Cross-lingual Scene Text Editing.</p>
-	</div>
+
         <p class="section">&nbsp;</p>
 
-        <p class="section"><b>The Visual Translation Problem</b></p>
+        <p class="section"><b>Detection</b></p>
         <div style="text-align: center">
-        <img src="./resources/Rithala.png" alt="" width="700px" style="margin: auto" />
-           <br><br><p align="left">Suppose you are visiting Delhi, India and arrive at the Rithala (Hindi: रिठाला) metro station. If you are not familiar with Hindi, the signboard on the left might be incomprehensible. The result of our proposed baseline solution, shown on the right, seamlessly transliterates the station name रिठाला to English. In our work, we aim to visually translate (or transliterate, when necessary, as in this case) text from the source language to the target language while preserving visual attributes of the source scene text. Specifically, we focus on visual translation between Hindi and English, and vice versa.</p>
-	</div>
-	<p class="section">&nbsp;</p>
-	
-        <div class="section" id="dataset">
-	</div>
-	<p class="section"><b>Dataset</b></p>
-        <ul><li>  <p class="section"><b>VT-Real: Real Scene Image Dataset for evaluating Visual Translation between Hindi and English</b></p>	
-	            <table width="1000" border="0" align="center">
+
+        <p align="left">For the text detection task, we utilize TextBPN++ (Zhang et al., 2023), a state-of-the-art boundary-based text detector.
+        TextBPN++ initially generates a coarse boundary proposal around each text instance, which serves as a preliminary
+        estimate of the text region. This initial boundary is then progressively refined through an iterative optimization
+        process that adjusts the boundary points to better conform to the actual text contours.  To evaluate the quality of the detected boundaries, we employ TedEval, a metric specifically designed to
+        assess the precision of text boundary predictions by comparing them to ground-truth annotations.</p>
+	    </div>
+
+        <p class="section"><b>Cropped Word Script Identification</b></p>
+        <div style="text-align: center">
+        <p align="left">After obtaining the bounding boxes, regions were cropped to get word level image.Further script identification task was studied under two distinct settings: (A) distinguishing between three major script
+        categories—English Script, Hindi Script, and Regional Language Scripts (such as Tamil, Telugu, Kannada, etc.), and (B)
+        training a single unified model capable of recognizing all 12 individual scripts. To explore the effectiveness of
+        different architectures, experiments were done where AlexNet and CRNN were trained from scratch for the task, CLIP
+        and ViT were fine-tuned on our script-labeled dataset to better adapt their pre-trained visual representations to the
+        specific characteristics of script data. Fine-tuning allowed powerful transformer-based models to leverage their
+        prior knowledge while learning the nuanced differences across scripts, especially in the multilingualsetting of the study.</p>
+
+	    </div><p class="section"><b>Cropped Word Recognition</b></p>
+        <div style="text-align: center">
+           <p align="left">
+            After identifying the script of the text region, the next step involves recognizing the actual word content within the
+            cropped text images. For this, we employed PARSeq, a robust transformer-based model for scene text recognition. Since
+            different languages may have distinct character sets and writing patterns, a script-specific PARSeq model is selected
+            based on the predicted script. This targeted approach ensures that the most appropriate language model is applied for
+            recognition, thereby improving the accuracy and reliability of the word recognition process.
+           </p>
+	    </div>
+
+    <p class="section">&nbsp;</p>
+
+	<p class="section" id="dataset"><b>Dataset</b></p>
+        <ul><li>  <p class="section"><b>BSTD: Bharat Scene Text Dataset</b></p>
+	        <!-- <table width="1000" border="0" align="center">
             <tbody>
                 <tr>
                     <div id="imageCarousel" class="carousel slide teaser-carousel" data-ride="carousel" data-interval="5000">
                         <div class="carousel-inner">
-                            <!-- White horse -->
+
                             <div class="carousel-item active">
                                 <div>
                                     <img class="teaser-img" src="./resources/VT Real Icdar.png" />
@@ -187,7 +210,7 @@
                                 </div>
                             </div>
 
-                            
+
 
                         <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
                             <div class="slider-navigation-previous">
@@ -211,81 +234,44 @@
                         </a>
                     </div>
                 </tr>
-                <!-- <tr> <br /> </tr> -->
             </tbody>
-        </table>
-		VT-Real includes 269 images and 1021 words. Images are obtained from ICDAR 2013 and Bharat Scene Text Dataset. These images were translated between English and Hindi by three human annotators. We provide pointers to the images in the respective source dataset and our annotations here.<br>
+        </table> -->
+        Bharat Scene Text Dataset is large and real Indian language scene-text dataset with coverage across 13 Indian
+        languages and English. It consists of 6,582 scene-text images, with polygon bounding box annotations of 1,20,560 words
+        and ground truth text annotations of 1,00,495 cropped words.<br>
 			<ol>
 				<li>
-					ICDAR 2013 dataset can be downloaded from <a href = "https://rrc.cvc.uab.es/?ch=2&com=downloads"> here </a>.  
-					Please download Training Set Images (Disk size: 142 MB). 
-
+					The scene-text images used for detection can be downloaded from <a href = "https://drive.google.com/file/d/16irnMGdT8ohhvfMMG3qbBKWKxcPLNF0y/view?usp=share_link"> here </a>.
+					(Disk size: 17 GB).
 				</li>
 				<li>
-					The images used from Bharat Scene Text dataset (BSTD) can be downloaded from <a href = "https://github.com/Bhashini-IITJ/BharatSceneTextDataset/blob/main/README.md#image-subset-used-in-vaidya-et-al-icpr-2024-preprint"> here </a>.  (Disk size: 60 MB)
+                    The images used for training and testing the script identification model and recognition can be downloaded from <a
+                    href="https://drive.google.com/drive/folders/1gjdmyTR_9B7U1-W7hWugewnSowjetXYC?usp=drive_link"> here </a>. (Disk
+                    size: 770 MB)
 
-				</li>
-				<li>
-				Please download ground truth translation annotations by three annotators for <a href = "https://drive.google.com/file/d/1ou5Mpw3Bw55cjmqjWT9Ry6bPvrJpSIU0/view?usp=drive_link"> ICDAR images</a> (English-to-Hindi) and <a href = "https://drive.google.com/file/d/1dPE15H1ElqUMXbtfmbGdeHzlXYrsEuML/view?usp=drive_link"> BSTD images </a> (Hindi-to-English).
-				</li>
+                </li>
 			</ol>
 				<br><br><br>
 
         <li><b>
-<p class="section"><b>VT-Synth: Synthetic Training Data for Visual Translation between Hindi and English</b></p>		
+<p class="section"><b>FineTuned Vit model can be download from the following: </b></p>
 	</b>
 
-
-		VT-Syn is a synthetically generated corpus of ~600K visually diverse paired bilingual word images in pairs of English-Hindi. It can be used for training visual translation or cross-lingual scene text editing or scene text removal or scene text binarization.<br>
 			<ol>
 				<li>
-					Synthetic word images in Hindi Language [<a href = "https://tinyurl.com/38w3npat">Download</a>] [572,367 images, disk size: 17 GB]
-				</li>
-				<li>
-					Synthetic word images in English Language [<a href = "https://tinyurl.com/yhhdm5z3">Download</a>] [572,367 images, disk size: 17 GB]		
-
-				</li>
-				<li>
-					Background images used for generating the synthetic word images [<a href = "https://tinyurl.com/h2xns597">Download</a>] [572,367 images, disk size: 13 GB]		
-
-				</li>
-				<li>
-					Synthetic Hindi words in gray background [<a href = "https://tinyurl.com/5a8kzjez">Download</a>] [572,367 images, disk size: 6.1 GB]		
-
-				</li>
-				<li>
-					Synthetic English words in gray background [<a href = "https://tinyurl.com/44w9hswz">Download</a>] [572,367 images, disk size: 5.8 GB]		
-
+					For 12 class model [<a href = "https://github.com/Bhashini-IITJ/ScriptIdentification/releases/download/Vit_Models/12_classes.zip">Download</a>] [disk size: 304 MB]
 				</li>
 
-				<li>
-					Mask for synthetic Hindi word images [<a href = "https://tinyurl.com/ytjxvrdj">Download</a>] [572,367 images, disk size: 3.4 GB]		
-
-				</li>
-				<li>
-					Mask for synthetic English word images [<a href = "https://tinyurl.com/suk2js97">Download</a>] [572,367 images, disk size: 3.2 GB]		
-
-				</li>
-				<li>
-					Skeleton images for synthetic Hindi word images [<a href = "https://tinyurl.com/3h9pra6d">Download</a>] [572,367 images, disk size:  407 MB]		
-
-				</li>
-
-					<li>
-					Skeleton images for synthetic English word images [<a href = "https://tinyurl.com/2sa9re6a">Download</a>] [572,367 images, disk size:  374MB] 		
-
-				</li>
-				
 			</ol>
 			</ol>
 
 	</li>
 	</ul>
-	    <b>Note:</b> same image filenames inside engSynthWords and hinSynthWords folders contain synthetic word images with perceptually same font and background style in
-English and Hindi, respectively. 
-	
-	    </br>
-    </br>
+
+
+    <p class="section">&nbsp;</p>
+    <p class="section">&nbsp;</p>
+
      <p class="section" id="talk"><b>Short Talk</b></p>
        <iframe width="560" height="315" src="https://www.youtube.com/embed/NT9xc29GTO8?si=JhcLcp8kD9lkunIH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
        </iframe>>
@@ -297,8 +283,8 @@ English and Hindi, respectively.
 
 
 
-	    
-        <p class="section" id="paper"><b>Paper</b></p>
+
+        <!-- <p class="section" id="paper"><b>Paper</b></p>
         <table width="940" border="0">
             <tbody>
                 <tr>
@@ -315,28 +301,28 @@ English and Hindi, respectively.
         </table>
         <p class="section">&nbsp;</p>
         <p class="section">&nbsp;</p>
-        <p class="section">&nbsp;</p>
+        <p class="section">&nbsp;</p> -->
 
         <p class="section" id="bibtex"><b>Bibtex</b></p>
         <table border="0">
             <tbody>
                 <pre style=" display: block;
-  background: #eee;
-  white-space: pre;
-  -webkit-overflow-scrolling: touch;
-  max-width: 100%;
-  min-width: 100px;
-  border-radius: 20px;
-  ">
+                background: #eee;
+                white-space: pre;
+                -webkit-overflow-scrolling: touch;
+                max-width: 100%;
+                min-width: 100px;
+                border-radius: 20px;
+                ">
 
-    @InProceedings{vistransICPR2024,
-        author    = {Vaidya, Shreyas and Sharma, Arvind Kumar and Gatti, Prajwal and Mishra, Anand},
-        title     = {Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation},
-        booktitle = {ICPR},
-        year      = {2024},
-    }       
-			  </pre>
-</table>
+                @misc{ipo,
+                author = {Anik De et al.}
+                title = {{I}ndic{P}hoto{O}CR: A comprehensive toolkit for {I}ndian language scene text understanding},
+                howpublished = {\url{https://github.com/Bhashini-IITJ/IndicPhotoOCR/}},
+                year = 2024,
+                }
+        </pre>
+        </table>
 
 
 
@@ -346,71 +332,46 @@ English and Hindi, respectively.
         <div class="team">
             <p class="section" id="team"><b>Team</b></p>
   <div class="row justify-content-center">
-                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+
+
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
                      <div class="mainflip">
                            <div class="card">
                               <div class="card-body text-center card-no-padding">
-                                 <p><img class=" img-fluid" src="resources/sv.png" alt="card image"></p>
-                                 <h5 class="card-title">Shreyas <br> Vaidya</h5>
+                                 <p><img class=" img-fluid" src="resources/profile_images/anik.jpg" alt="card image"></p>
+                                 <h5 class="card-title">Anik <br> De</h5>
                                  <ul class="list-inline">
-					<li class="list-inline-item">
-                                       <a class="social-icon text-xs-center" target="_blank" href="https://x.com/shreyasvaidya23/">
-                                       <i class="fa fa-twitter"></i>
-                                       </a>
-                                    </li>
-
-                                   <li class="list-inline-item">
-                                      <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/vaidyashreyas/">
+                              <li class="list-inline-item">
+                                      <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/anik-de">
                                       <i class="fa fa-linkedin"></i>
                                       </a>
                                    </li>
+                                <li class="list-inline-item">
+                                    <a class="social-icon text-xs-center" target="_blank" href="https://github.com/anikde">
+                                        <i class="fa fa-user"></i>
+                                    </a>
+                                </li>
                                  </ul>
                               </div>
                            </div>
                      </div>
                   </div>
 
-                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
-                     <div class="mainflip">
-                           <div class="card">
-                              <div class="card-body text-center card-no-padding">
-                                 <p><img class=" img-fluid" src="resources/as.png" alt="card image"></p>
-                                 <h5 class="card-title">Arvind <br> Sharma</h5>
-                                 <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                     <li class="list-inline-item">
-                                      <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/arvind-sharma-524b4525a/">
-                                      <i class="fa fa-linkedin"></i>
-                                      </a>
-                                   </li>
-                                        </a>
-                                    </li>
-                                 </ul>
-                              </div>
-                           </div>
-                     </div>
-                  </div>
 
                  <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
                      <div class="mainflip">
                            <div class="card">
                               <div class="card-body text-center card-no-padding">
-                                 <p><img class=" img-fluid" src="resources/pg.png" alt="card image"></p>
-                                 <h5 class="card-title">Prajwal<br> Gatti</h5>
+                                 <p><img class=" img-fluid" src="resources/profile_images/ap.png" alt="card image"></p>
+                                 <h5 class="card-title">Abhirama <br> Penamakuri</h5>
                                  <ul class="list-inline">
-					                                     <li class="list-inline-item">
-                                       <a class="social-icon text-xs-center" target="_blank" href="https://x.com/prajwal_gatti/">
-                                       <i class="fa fa-twitter"></i>
-                                       </a>
-                                    </li>
-
                                     <li class="list-inline-item">
-                                     <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/prajwalgatti//">
+                                     <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/abhiram4572">
                                      <i class="fa fa-linkedin"></i>
                                      </a>
                                   </li>
                                   <li class="list-inline-item">
-                                    <a class="social-icon text-xs-center" target="_blank" href="https://prajwalgatti.github.io//">
+                                    <a class="social-icon text-xs-center" target="_blank" href="https://github.com/Abhiram4572">
                                     <i class="fa fa-user"></i>
                                     </a>
                                  </li>
@@ -420,20 +381,138 @@ English and Hindi, respectively.
                      </div>
                   </div>
 
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+            <div class="mainflip">
+                <div class="card">
+                    <div class="card-body text-center card-no-padding">
+                        <p><img class=" img-fluid" src="resources/profile_images/sa.png"card image"></p>
+                        <h5 class="card-title">Sagar <br> Agarwal</h5>
+                        <ul class="list-inline">
+
+                            <li class="list-inline-item">
+                                <a class="social-icon text-xs-center" target="_blank"
+                                    href="https://www.linkedin.com/in/sagar-agrawal-4a0b94106/">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="social-icon text-xs-center" target="_blank" href="https://github.com/M22AIE212">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+            <div class="mainflip">
+                <div class="card">
+                    <div class="card-body text-center card-no-padding">
+                        <p><img class=" img-fluid" src="resources/profile_images/pk.jpg" alt="card image"></p>
+                        <h5 class="card-title">Pravin <br> Kumar</h5>
+                        <ul class="list-inline">
+
+
+                            <li class="list-inline-item">
+                                <a class="social-icon text-xs-center" target="_blank"
+                                    href="https://www.linkedin.com/in/prvnkmr9060/">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+            <div class="mainflip">
+                <div class="card">
+                    <div class="card-body text-center card-no-padding">
+                        <p><img class=" img-fluid" src="resources/profile_images/ry.png" alt="card image"></p>
+                        <h5 class="card-title">Rajeev <br> Yadav</h5>
+                        <ul class="list-inline">
+
+                            <li class="list-inline-item">
+                                <a class="social-icon text-xs-center" target="_blank"
+                                    href="https://www.linkedin.com/in/rajeev-yadav/">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+            <div class="mainflip">
+                <div class="card">
+                    <div class="card-body text-center card-no-padding">
+                        <p><img class=" img-fluid" src="resources/profile_images/ar.jpeg" alt="card image"></p>
+                        <h5 class="card-title">Aditya <br> Rathor</h5>
+                        <ul class="list-inline">
+
+                            <li class="list-inline-item">
+                                <a class="social-icon text-xs-center" target="_blank"
+                                    href="https://www.linkedin.com/in/aditya-rathor-87829324b/">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="social-icon text-xs-center" target="_blank" href="https://github.com/adityarathor007">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+            <div class="mainflip">
+                <div class="card">
+                    <div class="card-body text-center card-no-padding">
+                        <p><img class=" img-fluid" src="resources/profile_images/hs.jpg" alt="card image"></p>
+                        <h5 class="card-title">Harshiv <br> Shah</h5>
+                        <ul class="list-inline">
+
+
+                            <li class="list-inline-item">
+                                <a class="social-icon text-xs-center" target="_blank"
+                                    href="https://www.linkedin.com/in/harshivshah27/">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="social-icon text-xs-center" target="_blank" href="https://github.com/harshivshah2504">
+                                    <i class="fa fa-user"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
 
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
                      <div class="mainflip">
                            <div class="card">
                               <div class="card-body text-center card-no-padding">
-                                 <p><img class=" img-fluid" src="resources/am.png" alt="card image"></p>
+                                 <p><img class=" img-fluid" src="https://anandmishra22.github.io/files/Mishra_oct22.png" alt="card image"></p>
                                  <h5 class="card-title">Anand <br> Mishra</h5>
                                  <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                       <a class="social-icon text-xs-center" target="_blank" href="https://twitter.com/anandmishra2012/">
-                                       <i class="fa fa-twitter"></i>
-                                       </a>
-                                    </li>
                                     <li class="list-inline-item">
                                      <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/anand-mishra-0ab76421/">
                                      <i class="fa fa-linkedin"></i>
@@ -449,7 +528,7 @@ English and Hindi, respectively.
                            </div>
                      </div>
                   </div>
-   
+
 
 
 
@@ -460,11 +539,11 @@ English and Hindi, respectively.
         <p class="section">&nbsp;</p>
         <div class="ack">
             <p class="section" id="ack"><b>Acknowledgment</b></p>
-This work was partly supported by MeitY, Government of India (Project Number: S/MeitY/AM/20210114) under NLTM-Bhashini	</div>
+This work was supported by MeitY, Government of India under NLTM-Bhashini	</div>
 <p class="section">&nbsp;</p>
         <div class="contact">
             <p class="section" id="related-paper"><b>Contact</b></p>
-            For questions, please contact <a href="mailto:vaidya.2@iitj.ac.in" >Shreyas</a>/<a href="mailto:sharma.126@iitj.ac.in" >Arvind</a> or raise an issue on <a class="publink" href="https://github.com/Bhashini-IITJ/visualTranslation/" target="_blank" style="text-decoration: none">GitHub</a>.
+            For questions, please contact <a href="anekde@gmail.com" >Anik De</a> or raise an issue on <a class="publink" href="https://github.com/Bhashini-IITJ/IndicPhotoOCR" target="_blank" style="text-decoration: none">GitHub</a>.
 	</div>
         <p class="section"></p>
 
@@ -472,7 +551,7 @@ This work was partly supported by MeitY, Government of India (Project Number: S/
     <!-- Footer -->
 <footer>
     <p class="m-0 text-center">Copyright &copy; IIT Jodhpur</p>
-</footer>   
+</footer>
 
 </body>
 
