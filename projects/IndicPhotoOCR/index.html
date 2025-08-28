@@ -93,7 +93,7 @@
     <div class='container'>
         <div class="navbar-brand">
             <a class="navbar-item" href="/">
-               <img class="lp-badge" src="/assets/site/IndicPhotoOCR_LOGO.png">
+               <img class="lp-badge" src="{{ '/assets/site/IndicPhotoOCR_LOGO.png' | relative_url }}">
             </a>
     
             <div class="navbar-burger" data-target="navbar-main"
@@ -312,7 +312,7 @@
         <p>The end-to-end pipeline wraps each of the best model together to give recognition across 13 different languages. 
 With just 3 lines of code, process a single image and get to recognition all the words.</p>
 
-<p>![Example of an universal API for Layout Detection]({{ ‘/assets/images/index/D_image_271.jpg’ | relative_url}})
+<p><img src="{{ '/assets/images/index/D_image_271.jpg' | relative_url }}" alt="Example of an universal API for Layout Detection" />
 ▲ <em>An example of End-to-End Recognition on a image.</em></p>
 
     </p>
@@ -334,7 +334,7 @@ With just 3 lines of code, process a single image and get to recognition all the
         <p>Text detection works on polygonal boundary coordinate to fetch the word with great precision. we adopt TextBPN++ (Zhang et al., 2024) 
 off the shelf and incorporated in our pipeline which works great.</p>
 
-<p>![Example of Text Detection performed by IndicPhotoOCR]({{ ‘/assets/images/index/D_image_271_det.jpg’ | relative_url }})
+<p><img src="{{ '/assets/images/index/D_image_271_det.jpg' | relative_url }}" alt="Example of Text Detection performed by IndicPhotoOCR" />
  ▲ <em>An example of Text Detection performed by IndicPhotoOCR.</em></p>
 
     </p>
@@ -355,7 +355,7 @@ off the shelf and incorporated in our pipeline which works great.</p>
     <p>
         <p>The model was inherited from google/vit-base-patch16-224-in21k Vision Transformer (ViT) model, which consists of 12 transformer layers and uses 16 x 16 patch embeddings. This based model was appended with a classification head to be able to indentify the correct script.</p>
 
-<p>![example script identification]({{ ‘/assets/images/index/scriptID-webpage.png’ | relative_url }})
+<p><img src="{{ '/assets/images/index/scriptID-webpage.png' | relative_url }}" alt="example script identification" />
 ▲ <em>An example showing Script labelled to each word by the script identifiaciton module of IndicPhotoOCR.</em></p>
 
     </p>
@@ -376,16 +376,8 @@ off the shelf and incorporated in our pipeline which works great.</p>
     <p>
         <p>Transformer based architecture with ResNet as Feature Extractor works fast was trained rigorously on synthetic and real data for 11 languages.</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>![example recognition]({{ ‘ /assets/images/index/output.gif</td>
-      <td>relative_url }} )</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>▲ <em>Examples showing recognitions on different languages on images from (BSTD)[https://github.com/Bhashini-IITJ/BharatSceneTextDataset].</em></p>
+<p><img src="{{ '/assets/images/index/output.gif' | relative_url }}" alt="example recognition" />
+▲ <em>Examples showing recognitions on different languages on images from (BSTD)[https://github.com/Bhashini-IITJ/BharatSceneTextDataset].</em></p>
 
     </p>
     
@@ -534,30 +526,6 @@ off the shelf and incorporated in our pipeline which works great.</p>
     </div>
 </section>
 
-<!-- <section class="hero slack-hero mt-6">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns">
-                <div class="column">
-                    <p class='title is-size-2 slack-title'>Join us on Slack!</p>
-                    <p class='subtitle is-size-5 mt-2'>
-                        Questions or Bugs? Come and join our slack channel! Let's figure out that together and make a vibrant Layout Parser community.
-                    </p>
-                    <button class="mt-2 p-4 slack-btn">
-                        <a class="slack-btn-txt"
-                            href="https://join.slack.com/t/layout-parser/shared_invite/zt-ohjd14k1-OrJ2HltwVRGrxhLeHMfW_w"
-                            target="_blank">Join our #Slack</a>
-                    </button>
-                </div>
-                <div class="column is-two-fifths">
-                    <figure class="image is-2by1">
-                        <img src="/assets/site/slack-lp.svg">
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
 
 <section class="hero slack-hero mt-6">
     <div class="hero-body">
