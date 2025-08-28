@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>IndicPhotoOCR | How to use</title>
+    <meta name="description" content="A user guide on IndicPhotoOCR. 
+">
+
+    <meta property="og:title" content="How to use">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://0.0.0.0:4000/tutorials/how-to-use">
+    <meta property="og:description" content="A user guide on IndicPhotoOCR. 
+">
+    <meta property="og:site_name" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://0.0.0.0:4000/tutorials/how-to-use">
+    <meta name="twitter:title" content="How to use">
+    <meta name="twitter:description" content="A user guide on IndicPhotoOCR. 
+">
+
+    <!-- TODO: Adding page thumbnail for social meida -->
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://0.0.0.0:4000/tutorials/how-to-use">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/bulma.css">
+    <link rel="stylesheet" href="/assets/css/syntax/manni.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="/assets/css/slideshow.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: {
+          equationNumbers: {
+            autoNumber: "AMS"
+          }
+        },
+        tex2jax: {
+          inlineMath: [ ['$','$'] ],
+          displayMath: [ ['$$','$$'] ],
+          processEscapes: true,
+        }
+      });
+    </script>
+    
+    <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+    <!-- Add link to h2 ... h6 -->
+    <!-- Ref: https://ben.balter.com/2014/03/13/pages-anchor-links/ -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+      $(function() {
+        return $("h2, h3, h4, h5, h6").each(function(i, el) {
+          var $el, icon, id;
+          $el = $(el);
+          id = $el.attr('id');
+          icon = '<i class="fas fa-link"></i>';
+          if (id) {
+            return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+          }
+        });
+      });
+    </script>
+    
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+</head>
+
+<body>
+
+    
+    <section class="hero is-danger is-bold slogan-hero">
+    <div class="hero-head">
+        <nav class="navbar lp-navbar" role="navigation">
+    <!-- style="background-color: #EE7070;" -->
+    <div class='container'>
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+               <img class="lp-badge" src="/assets/site/IndicPhotoOCR_LOGO.png">
+            </a>
+    
+            <div class="navbar-burger" data-target="navbar-main"
+                onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    
+        <div class="navbar-menu" id="navbar-main">
+            <div class="navbar-end">
+                <!-- navbar items -->
+                
+                <a href="https://github.com/Bhashini-IITJ/BharatSceneTextDataset" onmousedown="return false" class="navbar-item">Dataset</a>
+                
+                <a href="https://bhashini-iitj.github.io/IndicPhotoOCR/" onmousedown="return false" class="navbar-item">Docs</a>
+                
+                <a href="/team.html" onmousedown="return false" class="navbar-item">Team</a>
+                
+                
+                <div class="navbar-item">
+                    <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR" class="bg-transparent button is-danger" target="_blank">
+                        <i class="fab fa-github fa-w-14 fa-lg" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- <div class="is-divider" style="margin-top: 0.5rem; margin-bottom: 3rem;"></div> -->
+    </div>
+</section>
+
+<section class="hero">
+  <div class="hero-body is-white">
+      <div class="container">
+          <article class="content mt-2">
+  <header class="article-header">
+      <h1>How to use</h1>
+      <div class="article-list-footer">
+    <span class="article-list-date">
+        March 28, 2025
+    </span>
+    <span class="article-list-divider">-</span>
+    <span class="article-list-minutes">
+        
+        
+        3 minute read
+        
+    </span>
+    </span>
+    
+    <span class="article-list-divider">-</span>
+    <span class="article-list-cat">Category:</span>
+    
+    <span class="field">
+        
+        <a href="/category/starter" class="article-list-item">
+            Starter
+        </a>
+        
+        
+    </span>
+    
+    <span class="field">
+        
+    </span>
+</div>
+  </header>
+  <h2 id="how-to-use">How to use</h2>
+<h3 id="detection">Detection</h3>
+
+<div class="language-python highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">IndicPhotoOCR.ocr</span> <span class="kn">import</span> <span class="n">OCR</span>
+<span class="c1"># Create an object of OCR
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">ocr_system</span> <span class="o">=</span> <span class="n">OCR</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c1"># for CPU --&gt; OCR(device="cpu")
+</span>
+<span class="c1"># Get detections
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">detections</span> <span class="o">=</span> <span class="n">ocr_system</span><span class="p">.</span><span class="n">detect</span><span class="p">(</span><span class="s">"test_images/image_141.jpg"</span><span class="p">)</span>
+
+<span class="c1"># Running text detection...
+# 4334 text boxes before nms
+# 1.027989387512207
+</span>
+<span class="c1"># Save and visualize the detection results
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">ocr_system</span><span class="p">.</span><span class="n">visualize_detection</span><span class="p">(</span><span class="s">"test_images/image_141.jpg"</span><span class="p">,</span> <span class="n">detections</span><span class="p">)</span>
+<span class="c1"># Image saved at: test.png
+</span></code></pre>
+  </div>
+</div>
+
+<h3 id="cropped-word-script-identification">Cropped Word Script Identification</h3>
+<div class="language-python highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">IndicPhotoOCR.ocr</span> <span class="kn">import</span> <span class="n">OCR</span>
+<span class="c1"># Create an object of OCR
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">ocr_system</span> <span class="o">=</span> <span class="n">OCR</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>  <span class="n">identifier_lang</span> <span class="o">=</span><span class="s">"auto"</span><span class="p">)</span> <span class="c1"># for CPU --&gt; OCR(device="cpu")
+# Get script id
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">ocr_system</span><span class="p">.</span><span class="n">identify</span><span class="p">(</span><span class="s">"test_images/cropped_image/image_141_0.jpg"</span><span class="p">)</span>
+<span class="c1"># 'hindi'
+</span></code></pre>
+  </div>
+</div>
+
+<h3 id="cropped-word-recognition">Cropped Word Recognition</h3>
+<div class="language-python highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">IndicPhotoOCR.ocr</span> <span class="kn">import</span> <span class="n">OCR</span>
+<span class="c1"># Create an object of OCR
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">ocr_system</span> <span class="o">=</span> <span class="n">OCR</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="c1"># for CPU --&gt; OCR(device="cpu")
+# Get recognitions
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">ocr_system</span><span class="p">.</span><span class="n">recognise</span><span class="p">(</span><span class="s">"test_images/cropped_image/image_141_0.jpg"</span><span class="p">,</span> <span class="s">"hindi"</span><span class="p">)</span>
+<span class="c1"># Recognizing text in detected area...
+# 'मण्डी'
+</span></code></pre>
+  </div>
+</div>
+
+<h3 id="end-to-end-scene-text-recognition">End-to-end Scene Text Recognition</h3>
+<div class="language-python highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">IndicPhotoOCR.ocr</span> <span class="kn">import</span> <span class="n">OCR</span>
+<span class="c1"># Create an object of OCR
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">ocr_system</span> <span class="o">=</span> <span class="n">OCR</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">identifier_lang</span> <span class="o">=</span><span class="s">"auto"</span><span class="p">)</span> <span class="c1"># for CPU --&gt; OCR(device="cpu")
+# Complete pipeline
+</span><span class="o">&gt;&gt;&gt;</span> <span class="n">ocr_system</span><span class="p">.</span><span class="n">ocr</span><span class="p">(</span><span class="s">"test_images/image_141.jpg"</span><span class="p">)</span>
+<span class="c1"># Identifying script for the cropped area...
+# Recognizing text in detected area...
+# Recognized word: रोड
+# Identifying script for the cropped area...
+# Recognizing text in detected area...
+# Recognized word: बाराखम्बा
+# Identifying script for the cropped area...
+# Recognizing text in detected area...
+# Recognized word: राजीव
+# Identifying script for the cropped area...
+# Recognizing text in detected area...
+# Recognized word: चौक
+# Identifying script for the cropped area...
+# Recognizing text in detected area...
+# Recognized word: मण्डी
+# Identifying script for the cropped area...
+# Recognizing text in detected area...
+# Recognized word: हाऊस
+# Identifying script for the cropped area...
+# Recognizing text in detected area...
+# Using cache found in /root/.cache/torch/hub/baudm_parseq_main
+# Recognized word: rajiv
+# Identifying script for the cropped area...
+# Recognizing text in detected area...
+# Using cache found in /root/.cache/torch/hub/baudm_parseq_main
+# Recognized word: chowk
+# Identifying script for the cropped area...
+# Recognizing text in detected area...
+# Using cache found in /root/.cache/torch/hub/baudm_parseq_main
+# Recognized word: mandi
+# Identifying script for the cropped area...
+# Recognizing text in detected area...
+# Using cache found in /root/.cache/torch/hub/baudm_parseq_main
+# Recognized word: house
+# Identifying script for the cropped area...
+# Recognizing text in detected area...
+# Using cache found in /root/.cache/torch/hub/baudm_parseq_main
+# Recognized word: barakhamba
+# Identifying script for the cropped area...
+# Recognizing text in detected area...
+# Using cache found in /root/.cache/torch/hub/baudm_parseq_main
+# Recognized word: road
+</span>
+
+</code></pre>
+  </div>
+</div>
+
+</article>
+
+      </div>
+  </div>
+</section>
+    
+<footer class="footer">
+    <div class="container">
+        <div class="is-divider mb-3"></div>
+        <div class="content has-text-centered">
+            <p>Created and maintained by IndicPhotoOCR Developers. Built with <a href="https://jekyllrb.com/">jekyll</a> and <a href="http://bulma.io/">bulma</a>.</p>
+
+        </div>
+
+    </div>
+</footer>
+
+    <script src="/assets/js/slideshow.js"></script>
+</body>
+
+</html>

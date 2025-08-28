@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>IndicPhotoOCR </title>
+    <meta name="description" content="">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://0.0.0.0:4000/tutorials.html">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://0.0.0.0:4000/tutorials.html">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+
+    <!-- TODO: Adding page thumbnail for social meida -->
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://0.0.0.0:4000/tutorials.html">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/bulma.css">
+    <link rel="stylesheet" href="/assets/css/syntax/manni.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="/assets/css/slideshow.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: {
+          equationNumbers: {
+            autoNumber: "AMS"
+          }
+        },
+        tex2jax: {
+          inlineMath: [ ['$','$'] ],
+          displayMath: [ ['$$','$$'] ],
+          processEscapes: true,
+        }
+      });
+    </script>
+    
+    <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+    <!-- Add link to h2 ... h6 -->
+    <!-- Ref: https://ben.balter.com/2014/03/13/pages-anchor-links/ -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+      $(function() {
+        return $("h2, h3, h4, h5, h6").each(function(i, el) {
+          var $el, icon, id;
+          $el = $(el);
+          id = $el.attr('id');
+          icon = '<i class="fas fa-link"></i>';
+          if (id) {
+            return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+          }
+        });
+      });
+    </script>
+    
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
+
+</head>
+
+<body>
+
+    
+    <section class="hero is-danger is-bold slogan-hero">
+    <div class="hero-head">
+        <nav class="navbar lp-navbar" role="navigation">
+    <!-- style="background-color: #EE7070;" -->
+    <div class='container'>
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+               <img class="lp-badge" src="/assets/site/IndicPhotoOCR_LOGO.png">
+            </a>
+    
+            <div class="navbar-burger" data-target="navbar-main"
+                onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    
+        <div class="navbar-menu" id="navbar-main">
+            <div class="navbar-end">
+                <!-- navbar items -->
+                
+                <a href="https://github.com/Bhashini-IITJ/BharatSceneTextDataset" onmousedown="return false" class="navbar-item">Dataset</a>
+                
+                <a href="https://bhashini-iitj.github.io/IndicPhotoOCR/" onmousedown="return false" class="navbar-item">Docs</a>
+                
+                <a href="/team.html" onmousedown="return false" class="navbar-item">Team</a>
+                
+                
+                <div class="navbar-item">
+                    <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR" class="bg-transparent button is-danger" target="_blank">
+                        <i class="fab fa-github fa-w-14 fa-lg" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- <div class="is-divider" style="margin-top: 0.5rem; margin-bottom: 3rem;"></div> -->
+    </div>
+</section>
+
+<section class="hero">
+  <div class="hero-body is-white">
+      <div class="container">
+          <div class="content pb-3">
+    <h1 class="title is-size-2">
+        Layout Parser Tutorials
+    </h1>
+</div>
+<div class="columns">
+    <div class="column is-10">
+        
+            <div class="pb-6">
+                <h2 class="subtitle is-size-4 mb-1">
+                    STARTER EXAMPLE
+                </h2>
+    
+                
+                    
+                        <div class="is-divider my-3"></div>
+                    
+                    
+                
+                    
+                    
+                        
+                            <a class="is-size-5" href="https://layout-parser.readthedocs.io/en/latest/example/deep_layout_parsing/index.html">Load Layout Models and Perform Layout Detection</a>
+                        
+                        <div class="is-divider my-3"></div>
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                        
+                            <a class="is-size-5" href="/tutorials/installation">Install IndicPhotoOCR</a>
+                        
+                        <div class="is-divider my-3"></div>
+                    
+                
+                    
+                    
+                        
+                            <a class="is-size-5" href="/tutorials/how-to-use">How to use</a>
+                        
+                        <div class="is-divider my-3"></div>
+                    
+                
+                    
+                    
+                        
+                            <a class="is-size-5" href="/tutorials/updates">Updates</a>
+                        
+                        <div class="is-divider my-3"></div>
+                    
+                
+            </div>
+        
+            <div class="pb-6">
+                <h2 class="subtitle is-size-4 mb-1">
+                    USE CASES
+                </h2>
+    
+                
+                    
+                        <div class="is-divider my-3"></div>
+                    
+                    
+                        
+                            <a class="is-size-5" href="https://layout-parser.readthedocs.io/en/latest/example/load_coco/index.html">Load COCO format (PubLayNet Dataset) and Visualize Layout Data</a>
+                        
+                        <div class="is-divider my-3"></div>
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                        
+                            <a class="is-size-5" href="https://layout-parser.readthedocs.io/en/latest/example/parse_ocr/index.html">OCR Tables and Parse the Output</a>
+                        
+                        <div class="is-divider my-3"></div>
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+                    
+                    
+                
+            </div>
+        
+    </div>
+</div>
+      </div>
+  </div>
+</section>
+    
+<footer class="footer">
+    <div class="container">
+        <div class="is-divider mb-3"></div>
+        <div class="content has-text-centered">
+            <p>Created and maintained by IndicPhotoOCR Developers. Built with <a href="https://jekyllrb.com/">jekyll</a> and <a href="http://bulma.io/">bulma</a>.</p>
+
+        </div>
+
+    </div>
+</footer>
+
+    <script src="/assets/js/slideshow.js"></script>
+</body>
+
+</html>

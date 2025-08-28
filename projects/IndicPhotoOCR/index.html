@@ -1,584 +1,623 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<link href="https://fonts.cdnfonts.com/css/chalkduster" rel="stylesheet">
-<style>
-    @import url('https://fonts.cdnfonts.com/css/chalkduster');
-</style>
-<!-- <script src="./sm/assets/teaser-data.js"></script> -->
-
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>IndicPhotoOCR: A Comprehensive PhotoOCR Toolkit for Scene Text Recognition across 13 Indian Languages</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <meta name="description"
-        content="Project page for IndicPhotoOCR&#39;">
-    <!-- <link rel="icon" href="./pics/wis_logo.jpg"> -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>IndicPhotoOCR: A Comprehensive PhotoOCR Toolkit for Scene Text Recognition across 13 Indian Languages</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <meta name="description"
-        content="Project page for IndicPhotoOCR">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <title>IndicPhotoOCR </title>
+    <meta name="description" content="">
 
-      <meta charset="utf-8">
-      <meta name="description" content="Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation">
-       <meta name="keywords" content="">
-      <meta name="author" content="Prajwal Gatti">
-      <title>IndicPhotoOCR: A Comprehensive PhotoOCR Toolkit for Scene Text Recognition across 13 Indian Languages</title>
+    <meta property="og:title" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://0.0.0.0:4000/">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="">
 
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="[ICPR 2024] Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation" />
-      <meta name="twitter:description" content="[ICPR 2024] Show Me the World in My Language: Establishing the First Baseline for Scene-Text to Scene-Text Translation" />
-      <meta name="twitter:image:alt" content="visTrans (ICPR 2024)" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://0.0.0.0:4000/">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
 
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- TODO: Adding page thumbnail for social meida -->
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="http://0.0.0.0:4000/">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/assets/css/bulma.css">
+    <link rel="stylesheet" href="/assets/css/syntax/manni.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="/assets/css/slideshow.css">
+
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: {
+          equationNumbers: {
+            autoNumber: "AMS"
+          }
+        },
+        tex2jax: {
+          inlineMath: [ ['$','$'] ],
+          displayMath: [ ['$$','$$'] ],
+          processEscapes: true,
+        }
+      });
+    </script>
+    
+    <script type="text/javascript"
+            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    
+    <!-- Add link to h2 ... h6 -->
+    <!-- Ref: https://ben.balter.com/2014/03/13/pages-anchor-links/ -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>
+      $(function() {
+        return $("h2, h3, h4, h5, h6").each(function(i, el) {
+          var $el, icon, id;
+          $el = $(el);
+          id = $el.attr('id');
+          icon = '<i class="fas fa-link"></i>';
+          if (id) {
+            return $el.append($("<a />").addClass("header-link").attr("href", "#" + id).html(icon));
+          }
+        });
+      });
+    </script>
+    
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '');
+</script>
+
 
 </head>
 
 <body>
-    <p class="title">IndicPhotoOCR: A Comprehensive PhotoOCR Toolkit for <br>Scene Text Recognition across 13 Indian Languages</p>
-    <div style="text-align: center; font-size: 15pt; margin-bottom: 15px">
-            <span><a href="https://icpr2024.org/"> </a></span>
-    </div>
-    <p class="author">
-	<span class="author"><a href="">Anik De </a>&nbsp;</span>
-    <span class="author"><a href="">Abhirama Penamakuri </a>&nbsp;</span>
-    <span class="author"><a href="">Sagar Agarwal </a>&nbsp;</span>
-    <span class="author"><a href="">Pravin Kumar </a>&nbsp;</span>
-    <span class="author"><a href="">Rajeev Yadav</a>&nbsp;</span>
-    <span class="author"><a href="">Aditya Rathor </a>&nbsp;</span>
-    <span class="author"><a href="">Harshiv Shah </a>&nbsp;</span>
-    <span class="author"><a href="https://anandmishra22.github.io/">Anand Mishra</a>&nbsp;</span>
 
+    
+    <section class="hero is-danger is-bold slogan-hero">
+    <div class="hero-head">
+        <nav class="navbar lp-navbar" role="navigation">
+    <!-- style="background-color: #EE7070;" -->
+    <div class='container'>
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+               <img class="lp-badge" src="/assets/site/IndicPhotoOCR_LOGO.png">
+            </a>
+    
+            <div class="navbar-burger" data-target="navbar-main"
+                onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    
+        <div class="navbar-menu" id="navbar-main">
+            <div class="navbar-end">
+                <!-- navbar items -->
+                
+                <a href="https://github.com/Bhashini-IITJ/BharatSceneTextDataset" onmousedown="return false" class="navbar-item">Dataset</a>
+                
+                <a href="https://bhashini-iitj.github.io/IndicPhotoOCR/" onmousedown="return false" class="navbar-item">Docs</a>
+                
+                <a href="/team.html" onmousedown="return false" class="navbar-item">Team</a>
+                
+                
+                <div class="navbar-item">
+                    <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR" class="bg-transparent button is-danger" target="_blank">
+                        <i class="fab fa-github fa-w-14 fa-lg" aria-hidden="true"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- <div class="is-divider" style="margin-top: 0.5rem; margin-bottom: 3rem;"></div> -->
+    </div>
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            
+            <h1 class="title slogan is-size-2">
+                <p>IndicPhotoOCR – in 3 Lines of Code</p>
+
+            </h1>
+            <h2 class="subtitle has-text-white-ter slogan-description is-size-5">
+                <p>MultiLingual Scene Text Recognition in 11 Indian Language</p>
+
+            </h2>
+            <button class="mt-5 install-btn install-code-block" onclick="copyPipInstall()">
+                <script>
+                    function copyPipInstall() {
+                        var copyText = document.getElementById("pip-install");
+                        var textArea = document.createElement("textarea");
+                        
+                        // Store the full HTML content, including the <br> tags
+                        const content = copyText.innerHTML; 
+            
+                        // Set the textarea value using the text content for a clean copy
+                        textArea.value = copyText.textContent; 
+            
+                        document.body.appendChild(textArea);
+                        textArea.select();
+                        document.execCommand("Copy");
+                        textArea.remove();
+            
+                        // Change the inner HTML to display "Copied!"
+                        $("#pip-install").html("Copied!"); 
+            
+                        // Restore the original HTML content after a delay
+                        setTimeout(function () {
+                            $("#pip-install").html(content); 
+                        }, 2000);
+                    }
+                </script>
+            
+                <span class="is-small mr-2">
+                    <i class="fas fa-copy"><br></i>
+                </span>
+                <span id="pip-install">
+                    
+                        git clone https://github.com/Bhashini-IITJ/IndicPhotoOCR.git<br>
+                    
+                        cd IndicPhotoOCR<br>
+                    
+                        chmod +x setup.sh<br>
+                    
+                        ./setup.sh<br>
+                    
+                </span>
+            </button>
+
+        </div>
+    </div>
+</section>
+
+<section class="hero">
+    <div class="hero-body pb-0 ">
+        <div class="container">
+            
+            <div class="columns is-centered mb-5">
+                <div class="column has-text-centered">
+                    <h1 class="title is-size-2">
+                        <p>What is IndicPhotoOCR?</p>
+
+                    </h1>
+                    <h2 class="subtitle is-size-4">
+                        <p>A Comprehensive Toolkit for Scene Text Recognition in Indian Languages</p>
+
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+    window.onload = () => {
+        document.querySelectorAll(".menu").forEach(menu => {
+            menu.querySelectorAll('a').forEach(atag => {
+                console.log(atag.target)
+                atag.onclick = () => {
+                    menu.querySelector('a.is-active').classList.remove('is-active');
+                    atag.classList.add('is-active');
+                    menu.parentElement.nextElementSibling.querySelector(".what-hero-detail.is-active").classList.remove("is-active");
+                    menu.parentElement.nextElementSibling.querySelector("#" + atag.text.replaceAll(" ", "-")).classList.add("is-active");
+                }
+            })
+        })
+    }
+</script>
+
+<section class="hero">
+    <div class="hero-body pt-4">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-3">
+                    <aside class="menu">
+                        
+                        
+                            <p class="menu-label">
+                                End-to-end scene text recognition
+                            </p>
+                            <ul class="menu-list">
+                                
+                                    <li>
+                                        <a  class="is-active" >End-to-End pipeline</a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                        
+                            <p class="menu-label">
+                                Scene text detection
+                            </p>
+                            <ul class="menu-list">
+                                
+                                    <li>
+                                        <a >Text Detection Module</a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                        
+                            <p class="menu-label">
+                                Scene text script identification
+                            </p>
+                            <ul class="menu-list">
+                                
+                                    <li>
+                                        <a >Script Identification</a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                        
+                            <p class="menu-label">
+                                Scene text recognition
+                            </p>
+                            <ul class="menu-list">
+                                
+                                    <li>
+                                        <a >Crop Word Recognition</a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                        
+                            <p class="menu-label">
+                                Resources
+                            </p>
+                            <ul class="menu-list">
+                                
+                                    <li>
+                                        <a >Introduction Video</a>
+                                    </li>
+                                    
+                                
+                                    <li>
+                                        <a >Supported Languages</a>
+                                    </li>
+                                    
+                                
+                            </ul>
+                        
+                    </aside>
+                </div>
+                <div class="column is-8 is-offset-1">
+                    
+                    
+                        
+                            <div class="is-active what-hero-detail"
+                            id="End-to-End-pipeline">
+                                <div class="content">
+    <h2 class="title is-size-3">
+        Detection | Script Identification | Recognition wrapped together
+    </h2>
+    
+    <p>
+        <p>The end-to-end pipeline wraps each of the best model together to give recognition across 13 different languages. 
+With just 3 lines of code, process a single image and get to recognition all the words.</p>
+
+<p><img src="/assets/images/index/D_image_271.jpg" alt="Example of an universal API for Layout Detection" />
+▲ <em>An example of End-to-End Recognition on a image.</em></p>
 
     </p>
-    <table border="0" align="center" class="affiliations" width="700px">
-        <tbody align="center">
-            <tc>
-                <td style="text-align: center;">&nbsp;IIT Jodhpur</td>
-            </tc>
-        </tbody>
-    </table>
+    
+</div>
+                            </div>  
+                            
+                        
+                    
+                        
+                            <div class="what-hero-detail"
+                            id="Text-Detection-Module">
+                                <div class="content">
+    <h2 class="title is-size-3">
+        Language Agnostic High Performance Text Detection
+    </h2>
+    
+    <p>
+        <p>Text detection works on polygonal boundary coordinate to fetch the word with great precision. we adopt TextBPN++ (Zhang et al., 2024) 
+off the shelf and incorporated in our pipeline which works great.</p>
 
+<p><img src="/assets/images/index/D_image_271_det.jpg" alt="Example of Text Detection performed by IndicPhotoOCR" />
+ ▲ <em>An example of Text Detection performed by IndicPhotoOCR.</em></p>
 
+    </p>
+    
+    <p>
 
-    <table width="999" border="0" align="center" class="menu" style="margin-bottom: 8px;">
-        <tbody>
-            <tr>
-                <td align="center">| <a href="./resources/paper.pdf">Paper</a> | <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR">Code</a> | <a href="#dataset">Dataset</a> | <a href="https://youtu.be/xvetn4t3tEI">Short Talk</a> | <a href="./resources/ICPR2024-poster.pdf">Poster</a></td>
-            </tr>
-        </tbody>
-    </table>
-   <div style="display: flex; justify-content: center; align-items: center; >
-    <div style="background-color: #FFEB3B; padding: 15px; border-radius: 8px; width: 900px; font-family: Arial, sans-serif; color: #333; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+<!-- An technique learned from https://community.shopify.com/c/Shopify-Design/Adding-newline-quot-n-quot-not-lt-br-gt-to-text-string-in-liquid/td-p/215995 for capturing newlines -->
+        <p><strong>See Also:</strong></p>
+<ul>
+  <li><a href="https://layout-parser.readthedocs.io/en/latest/api_doc/elements.html">Layout Data Structure Documentation</a></li>
+</ul>
 
-        <p><font color=red>Update: Dataset and Initial Release of code are up now.</font></p>
-    </div>
+    </p>
+    
+</div>
+                            </div>  
+                            
+                        
+                    
+                        
+                            <div class="what-hero-detail"
+                            id="Script-Identification">
+                                <div class="content">
+    <h2 class="title is-size-3">
+        ViT based 12 Class Script Classification
+    </h2>
+    
+    <p>
+        <p>The model was inherited from google/vit-base-patch16-224-in21k Vision Transformer (ViT) model, which consists of 12 transformer layers and uses 16  16 patch embeddings. This based model was appended with a classification head to be able to indentify the correct script.</p>
+
+<p><img src="/assets/images/index/scriptID-webpage.png" alt="example script identification" />
+▲ <em>An example showing Script labelled to each word by the script identifiaciton module of IndicPhotoOCR.</em></p>
+
+    </p>
+    
+</div>
+                            </div>  
+                            
+                        
+                    
+                        
+                            <div class="what-hero-detail"
+                            id="Crop-Word-Recognition">
+                                <div class="content">
+    <h2 class="title is-size-3">
+        Transformer based Fast Recognition
+    </h2>
+    
+    <p>
+        <p>Transformer based architecture with ResNet as Feature Extractor works fast was trained rigorously on synthetic and real data for 11 languages.</p>
+
+<p><img src="/assets/images/index/output.gif" alt="example recognition" /></p>
+
+<p>▲ <em>Examples showing recognitions on different languages on images from (BSTD)[https://github.com/Bhashini-IITJ/BharatSceneTextDataset].</em></p>
+
+    </p>
+    
+</div>
+                            </div>  
+                            
+                        
+                    
+                        
+                            <div class="what-hero-detail"
+                            id="Introduction-Video">
+                                <div class="content">
+    <h2 class="title is-size-3">
+        Demo hosted on Hugging Face
+    </h2>
+    
+    <p>
+        <div class="video_container">
+  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NT9xc29GTO8?si=JhcLcp8kD9lkunIH" frameborder="0" allowfullscreen="true"></iframe>
 </div>
 
+<p><em>Note: This is a short video on IndicPhotoOCR deployed in hugging face.</em></p>
 
+    </p>
+    
+</div>
+                            </div>  
+                            
+                        
+                            <div class="what-hero-detail"
+                            id="Supported-Languages">
+                                <div class="content">
+    <h2 class="title is-size-3">
+        11 Indian Languages
+    </h2>
+    
+    <p>
+        <p>Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu, and English,</p>
 
+    </p>
+    
+</div>
+                            </div>  
+                            
+                        
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class="hero">
+    <div class="hero-body pb-0 pt-0">
+        <div class="container">
+            
+                <div class="is-divider"></div>
+            
+            <div class="columns is-centered mb-5">
+                <div class="column has-text-centered">
+                    <h1 class="title is-size-2">
+                        <p>Get started!</p>
+
+                    </h1>
+                    <h2 class="subtitle is-size-4">
+                        <p>Learn IndicPhotoOCR with essential resources.</p>
+
+                    </h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="hero">
+    <div class="hero-body pt-4">
+        <div class="container">
+            
+            
+
+            
+                
+                <div class="columns">
+                
+
+                
+
+                
+                
+                </div>
+                
+            
+                
+                <div class="columns">
+                
+
+                
+
+                
+                
+                </div>
+                
+            
+                
+                <div class="columns">
+                
+
+                
+
+                
+                
+                </div>
+                
+            
+                
+                <div class="columns">
+                
+
+                
+
+                
+                
+                </div>
+                
+            
+                
+                <div class="columns">
+                
+
+                
+                <div class="column is-4">
+                    <div class="box" style="height: 100%">
+                        <h2 class="subtitle is-size-4">
+                            
+                            
+                            <a class="theme-color" href="/tutorials/installation">Install IndicPhotoOCR</a>
+                        </h2>
+                        <p>A complete instruction for installing the main IndicPhotoOCR.</p>
+
+                    </div>
+                </div>
+                
+                
+
+                
+                
+            
+                
+
+                
+                <div class="column is-4">
+                    <div class="box" style="height: 100%">
+                        <h2 class="subtitle is-size-4">
+                            
+                            
+                            <a class="theme-color" href="/tutorials/how-to-use">How to use</a>
+                        </h2>
+                        <p>A user guide on IndicPhotoOCR.</p>
+
+                    </div>
+                </div>
+                
+                
+
+                
+                
+            
+                
+
+                
+                <div class="column is-4">
+                    <div class="box" style="height: 100%">
+                        <h2 class="subtitle is-size-4">
+                            
+                            
+                            <a class="theme-color" href="/tutorials/updates">Updates</a>
+                        </h2>
+                        <p>Developments on IndicPhotoOCR</p>
+
+                    </div>
+                </div>
+                
+                
+
+                
+                
+                </div>
+                
+            
+        </div>
+    </div>
+</section>
+
+<section class="hero slack-hero mt-6">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <p class='title is-size-2 slack-title'>Join us on Discord!</p>
+                    <p class='subtitle is-size-5 mt-2'>
+                        Questions or Bugs? Come and join our discord channel! Let's figure out that together and make a vibrant IndicPhotoOCR community.
+                    </p>
+                    <button class="mt-2 p-4 slack-btn">
+                        <a class="slack-btn-txt"
+                            href="https://discord.gg/HHYCDZxqgW"
+                            target="_blank">Join our #Discord</a>
+                    </button>
+                </div>
+                <div class="column is-two-fifths">
+                    <figure class="image is-2by1">
+                        <img src="/assets/site/Discord&IndicPhotoOCR.svg">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<footer class="footer">
     <div class="container">
-        <table width="1000" border="0" align="center">
-            <tbody>
-                <tr>
-                    <div id="imageCarousel" class="carousel slide teaser-carousel" data-ride="carousel" data-interval="5000">
-                        <div class="carousel-inner">
-                            <!-- White horse -->
-                            <div class="carousel-item active">
-                                <div>
-                                    <img class="teaser-img" src="./resources/demo_p1.png" />
-                                </div>
-                            </div>
+        <div class="is-divider mb-3"></div>
+        <div class="content has-text-centered">
+            <p>Created and maintained by IndicPhotoOCR Developers. Built with <a href="https://jekyllrb.com/">jekyll</a> and <a href="http://bulma.io/">bulma</a>.</p>
 
-                            <div class="carousel-item">
-                                <div>
-                                    <img class="teaser-img" src="./resources/demo_p2.png" />
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div>
-                                    <img class="teaser-img" src="./resources/Overseas Relations Office.png" />
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div>
-                                    <img class="teaser-img" src="./resources/Rajput.png" />
-                                </div>
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
-                            <div class="slider-navigation-previous">
-                                <svg viewBox="0 0 50 80" xml:space="preserve">
-                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
-                                        stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
-                                    </polyline>
-                                </svg>
-                            </div>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
-                            <div class="slider-navigation-next">
-                                <svg viewBox="0 0 50 80" xml:space="preserve">
-                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
-                                        stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
-                                    </polyline>
-                                </svg>
-                            </div>
-                           <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </tr>
-                <!-- <tr> <br /> </tr> -->
-                <tr align="center"></tr>
-            </tbody>
-        </table>
-
-        <p class="section">&nbsp;</p>
-        <p class="section">&nbsp;</p>
-
-
-        <div style="text-align: justify;text-justify: inter-word;">
-        <p><span class="section"><b>Abstract</b></span> </p>
-        <p> IndicPhotoOCR is a scene text recognition toolkit designed for detecting, identifying, and recognizing text across
-        Indian languages, including Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil,
-        Telugu, and English, with support for Urdu and Meitei in the pipeline. It is built to handle the unique scripts and
-        complex structures of Indian languages, offering robust detection and recognition capabilities. The package can be
-        installed with just few lines of code, and a straightforward wrapper function makes it easy to use.
-	    </p>
         </div>
 
-        <p class="section">&nbsp;</p>
-
-        <p class="section"><b>Detection</b></p>
-        <div style="text-align: center">
-
-        <p align="left">For the text detection task, we utilize TextBPN++ (Zhang et al., 2023), a state-of-the-art boundary-based text detector.
-        TextBPN++ initially generates a coarse boundary proposal around each text instance, which serves as a preliminary
-        estimate of the text region. This initial boundary is then progressively refined through an iterative optimization
-        process that adjusts the boundary points to better conform to the actual text contours.  To evaluate the quality of the detected boundaries, we employ TedEval, a metric specifically designed to
-        assess the precision of text boundary predictions by comparing them to ground-truth annotations.</p>
-	    </div>
-
-        <p class="section"><b>Cropped Word Script Identification</b></p>
-        <div style="text-align: center">
-        <p align="left">After obtaining the bounding boxes, regions were cropped to get word level image.Further script identification task was studied under two distinct settings: (A) distinguishing between three major script
-        categories—English Script, Hindi Script, and Regional Language Scripts (such as Tamil, Telugu, Kannada, etc.), and (B)
-        training a single unified model capable of recognizing all 12 individual scripts. To explore the effectiveness of
-        different architectures, experiments were done where AlexNet and CRNN were trained from scratch for the task, CLIP
-        and ViT were fine-tuned on our script-labeled dataset to better adapt their pre-trained visual representations to the
-        specific characteristics of script data. Fine-tuning allowed powerful transformer-based models to leverage their
-        prior knowledge while learning the nuanced differences across scripts, especially in the multilingualsetting of the study.</p>
-
-	    </div><p class="section"><b>Cropped Word Recognition</b></p>
-        <div style="text-align: center">
-           <p align="left">
-            After identifying the script of the text region, the next step involves recognizing the actual word content within the
-            cropped text images. For this, we employed PARSeq, a robust transformer-based model for scene text recognition. Since
-            different languages may have distinct character sets and writing patterns, a script-specific PARSeq model is selected
-            based on the predicted script. This targeted approach ensures that the most appropriate language model is applied for
-            recognition, thereby improving the accuracy and reliability of the word recognition process.
-           </p>
-	    </div>
-
-    <p class="section">&nbsp;</p>
-
-	<p class="section" id="dataset"><b>Dataset</b></p>
-        <ul><li>  <p class="section"><b>BSTD: Bharat Scene Text Dataset</b></p>
-	        <!-- <table width="1000" border="0" align="center">
-            <tbody>
-                <tr>
-                    <div id="imageCarousel" class="carousel slide teaser-carousel" data-ride="carousel" data-interval="5000">
-                        <div class="carousel-inner">
-
-                            <div class="carousel-item active">
-                                <div>
-                                    <img class="teaser-img" src="./resources/VT Real Icdar.png" />
-                                </div>
-                            </div>
-
-                            <div class="carousel-item">
-                                <div>
-                                    <img class="teaser-img" src="./resources/VT Real BSTD.png" />
-                                </div>
-                            </div>
-
-
-
-                        <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
-                            <div class="slider-navigation-previous">
-                                <svg viewBox="0 0 50 80" xml:space="preserve">
-                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
-                                        stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
-                                    </polyline>
-                                </svg>
-                            </div>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
-                            <div class="slider-navigation-next">
-                                <svg viewBox="0 0 50 80" xml:space="preserve">
-                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
-                                        stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
-                                    </polyline>
-                                </svg>
-                            </div>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </tr>
-            </tbody>
-        </table> -->
-        Bharat Scene Text Dataset is large and real Indian language scene-text dataset with coverage across 13 Indian
-        languages and English. It consists of 6,582 scene-text images, with polygon bounding box annotations of 1,20,560 words
-        and ground truth text annotations of 1,00,495 cropped words.<br>
-			<ol>
-				<li>
-					The scene-text images used for detection can be downloaded from <a href = "https://drive.google.com/file/d/16irnMGdT8ohhvfMMG3qbBKWKxcPLNF0y/view?usp=share_link"> here </a>.
-					(Disk size: 17 GB).
-				</li>
-				<li>
-                    The images used for training and testing the script identification model and recognition can be downloaded from <a
-                    href="https://drive.google.com/drive/folders/1gjdmyTR_9B7U1-W7hWugewnSowjetXYC?usp=drive_link"> here </a>. (Disk
-                    size: 770 MB)
-
-                </li>
-			</ol>
-				<br><br><br>
-
-        <li><b>
-<p class="section"><b>FineTuned Vit model can be download from the following: </b></p>
-	</b>
-
-			<ol>
-				<li>
-					For 12 class model [<a href = "https://github.com/Bhashini-IITJ/ScriptIdentification/releases/download/Vit_Models/12_classes.zip">Download</a>] [disk size: 304 MB]
-				</li>
-
-			</ol>
-			</ol>
-
-	</li>
-	</ul>
-
-
-    <p class="section">&nbsp;</p>
-    <p class="section">&nbsp;</p>
-
-     <p class="section" id="talk"><b>Short Talk</b></p>
-       <iframe width="560" height="315" src="https://www.youtube.com/embed/NT9xc29GTO8?si=JhcLcp8kD9lkunIH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-       </iframe>>
-
-        <p class="section">&nbsp;</p>
-        <p class="section">&nbsp;</p>
-        <p class="section">&nbsp;</p>
-
-
-
-
-
-        <!-- <p class="section" id="paper"><b>Paper</b></p>
-        <table width="940" border="0">
-            <tbody>
-                <tr>
-                    <td height="100"><a href="./resources/paper.pdf" target="_blank" rel="noopener noreferrer"><img
-                                src="./resources/paper_cover.jpg" alt="" width="140" height="167"></a></td>
-                    <td width="750">
-                        <p><b>Show Me the World in My Language: Establishing the First Baseline<br> for Scene-Text to Scene-Text Translation</b><br>
-                            Shreyas Vaidya*, Arvind Kumar Sharma*, Prajwal Gatti, Anand Mishra.<br />
-                            (* indicates equal contribution) <br>
-                            [<a href="./resources/paper.pdf" target="_blank" rel="noopener noreferrer">paper</a>]<br>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <p class="section">&nbsp;</p>
-        <p class="section">&nbsp;</p>
-        <p class="section">&nbsp;</p> -->
-
-        <p class="section" id="bibtex"><b>Bibtex</b></p>
-        <table border="0">
-            <tbody>
-                <pre style=" display: block;
-                background: #eee;
-                white-space: pre;
-                -webkit-overflow-scrolling: touch;
-                max-width: 100%;
-                min-width: 100px;
-                border-radius: 20px;
-                ">
-
-                @misc{ipo,
-                author = {Anik De et al.}
-                title = {{I}ndic{P}hoto{O}CR: A comprehensive toolkit for {I}ndian language scene text understanding},
-                howpublished = {\url{https://github.com/Bhashini-IITJ/IndicPhotoOCR/}},
-                year = 2024,
-                }
-        </pre>
-        </table>
-
-
-
-
- <p class="section">&nbsp;</p>
-        <p class="section">&nbsp;</p>
-        <div class="team">
-            <p class="section" id="team"><b>Team</b></p>
-  <div class="row justify-content-center">
-
-
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
-                     <div class="mainflip">
-                           <div class="card">
-                              <div class="card-body text-center card-no-padding">
-                                 <p><img class=" img-fluid" src="resources/profile_images/anik.jpg" alt="card image"></p>
-                                 <h5 class="card-title">Anik <br> De</h5>
-                                 <ul class="list-inline">
-                              <li class="list-inline-item">
-                                      <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/anik-de">
-                                      <i class="fa fa-linkedin"></i>
-                                      </a>
-                                   </li>
-                                <li class="list-inline-item">
-                                    <a class="social-icon text-xs-center" target="_blank" href="https://github.com/anikde">
-                                        <i class="fa fa-user"></i>
-                                    </a>
-                                </li>
-                                 </ul>
-                              </div>
-                           </div>
-                     </div>
-                  </div>
-
-
-                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
-                     <div class="mainflip">
-                           <div class="card">
-                              <div class="card-body text-center card-no-padding">
-                                 <p><img class=" img-fluid" src="resources/profile_images/ap.png" alt="card image"></p>
-                                 <h5 class="card-title">Abhirama <br> Penamakuri</h5>
-                                 <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                     <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/abhiram4572">
-                                     <i class="fa fa-linkedin"></i>
-                                     </a>
-                                  </li>
-                                  <li class="list-inline-item">
-                                    <a class="social-icon text-xs-center" target="_blank" href="https://github.com/Abhiram4572">
-                                    <i class="fa fa-user"></i>
-                                    </a>
-                                 </li>
-                                 </ul>
-                              </div>
-                           </div>
-                     </div>
-                  </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
-            <div class="mainflip">
-                <div class="card">
-                    <div class="card-body text-center card-no-padding">
-                        <p><img class=" img-fluid" src="resources/profile_images/sa.png"card image"></p>
-                        <h5 class="card-title">Sagar <br> Agarwal</h5>
-                        <ul class="list-inline">
-
-                            <li class="list-inline-item">
-                                <a class="social-icon text-xs-center" target="_blank"
-                                    href="https://www.linkedin.com/in/sagar-agrawal-4a0b94106/">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="social-icon text-xs-center" target="_blank" href="https://github.com/M22AIE212">
-                                    <i class="fa fa-user"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
-            <div class="mainflip">
-                <div class="card">
-                    <div class="card-body text-center card-no-padding">
-                        <p><img class=" img-fluid" src="resources/profile_images/pk.jpg" alt="card image"></p>
-                        <h5 class="card-title">Pravin <br> Kumar</h5>
-                        <ul class="list-inline">
-
-
-                            <li class="list-inline-item">
-                                <a class="social-icon text-xs-center" target="_blank"
-                                    href="https://www.linkedin.com/in/prvnkmr9060/">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
-            <div class="mainflip">
-                <div class="card">
-                    <div class="card-body text-center card-no-padding">
-                        <p><img class=" img-fluid" src="resources/profile_images/ry.png" alt="card image"></p>
-                        <h5 class="card-title">Rajeev <br> Yadav</h5>
-                        <ul class="list-inline">
-
-                            <li class="list-inline-item">
-                                <a class="social-icon text-xs-center" target="_blank"
-                                    href="https://www.linkedin.com/in/rajeev-yadav/">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
-            <div class="mainflip">
-                <div class="card">
-                    <div class="card-body text-center card-no-padding">
-                        <p><img class=" img-fluid" src="resources/profile_images/ar.jpeg" alt="card image"></p>
-                        <h5 class="card-title">Aditya <br> Rathor</h5>
-                        <ul class="list-inline">
-
-                            <li class="list-inline-item">
-                                <a class="social-icon text-xs-center" target="_blank"
-                                    href="https://www.linkedin.com/in/aditya-rathor-87829324b/">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="social-icon text-xs-center" target="_blank" href="https://github.com/adityarathor007">
-                                    <i class="fa fa-user"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
-            <div class="mainflip">
-                <div class="card">
-                    <div class="card-body text-center card-no-padding">
-                        <p><img class=" img-fluid" src="resources/profile_images/hs.jpg" alt="card image"></p>
-                        <h5 class="card-title">Harshiv <br> Shah</h5>
-                        <ul class="list-inline">
-
-
-                            <li class="list-inline-item">
-                                <a class="social-icon text-xs-center" target="_blank"
-                                    href="https://www.linkedin.com/in/harshivshah27/">
-                                    <i class="fa fa-linkedin"></i>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="social-icon text-xs-center" target="_blank" href="https://github.com/harshivshah2504">
-                                    <i class="fa fa-user"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
-                     <div class="mainflip">
-                           <div class="card">
-                              <div class="card-body text-center card-no-padding">
-                                 <p><img class=" img-fluid" src="https://anandmishra22.github.io/files/Mishra_oct22.png" alt="card image"></p>
-                                 <h5 class="card-title">Anand <br> Mishra</h5>
-                                 <ul class="list-inline">
-                                    <li class="list-inline-item">
-                                     <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/anand-mishra-0ab76421/">
-                                     <i class="fa fa-linkedin"></i>
-                                     </a>
-                                  </li>
-                                  <li class="list-inline-item">
-                                     <a class="social-icon text-xs-center" target="_blank" href="https://anandmishra22.github.io/">
-                                     <i class="fa fa-user"></i>
-                                     </a>
-                                  </li>
-                                 </ul>
-                              </div>
-                           </div>
-                     </div>
-                  </div>
-
-
-
-
-     </div>
-        <p class="section">&nbsp;</p>
-
- <p class="section">&nbsp;</p>
-        <p class="section">&nbsp;</p>
-        <div class="ack">
-            <p class="section" id="ack"><b>Acknowledgment</b></p>
-This work was supported by MeitY, Government of India under NLTM-Bhashini	</div>
-<p class="section">&nbsp;</p>
-        <div class="contact">
-            <p class="section" id="related-paper"><b>Contact</b></p>
-            For questions, please contact <a href="anekde@gmail.com" >Anik De</a> or raise an issue on <a class="publink" href="https://github.com/Bhashini-IITJ/IndicPhotoOCR" target="_blank" style="text-decoration: none">GitHub</a>.
-	</div>
-        <p class="section"></p>
-
-
-    <!-- Footer -->
-<footer>
-    <p class="m-0 text-center">Copyright &copy; IIT Jodhpur</p>
+    </div>
 </footer>
 
+    <script src="/assets/js/slideshow.js"></script>
 </body>
-
- <script>
-    function prompt_on(prompt_element) {
-        prompt_element.classList.add("caption-active");
-    }
-
-    function prompt_off(prompt_element) {
-        prompt_element.classList.remove("caption-active");
-    }
-
-    function toggle_prompt(active_prompt_id, inactive_prompt_ids, result_id) {
-        let active_prompt = document.getElementById(active_prompt_id);
-        prompt_on(active_prompt);
-        for (let i = 0; i < inactive_prompt_ids.length; i++) {
-            let inactive_prompt = document.getElementById(inactive_prompt_ids[i]);
-            prompt_off(inactive_prompt);
-        }
-
-        let result = document.getElementById(result_id);
-        result.src = file_paths[active_prompt_id];
-    }
- </script>
-
- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </html>
