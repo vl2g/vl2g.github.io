@@ -12,23 +12,24 @@
 
     <meta property="og:title" content="">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vl2g.github.io/projects/IndicPhotoOCR//">
+    <meta property="og:url" content="https://vl2g.github.io/projects/IndicPhotoOCR//projects/IndicPhotoOCR/">
     <meta property="og:description" content="">
     <meta property="og:site_name" content="">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:url" content="https://vl2g.github.io/projects/IndicPhotoOCR//">
+    <meta name="twitter:url" content="https://vl2g.github.io/projects/IndicPhotoOCR//projects/IndicPhotoOCR/">
     <meta name="twitter:title" content="">
     <meta name="twitter:description" content="">
 
     <!-- TODO: Adding page thumbnail for social meida -->
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://vl2g.github.io/projects/IndicPhotoOCR//">
+    <link rel="canonical" href="https://vl2g.github.io/projects/IndicPhotoOCR//projects/IndicPhotoOCR/">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/assets/css/bulma.css">
-    <link rel="stylesheet" href="/assets/css/syntax/manni.css">
+   
+    <link rel="stylesheet" href="/projects/IndicPhotoOCR/assets/css/bulma.css">
+    <link rel="stylesheet" href=".css' | relative_url}}">
     <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
 
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -311,7 +312,7 @@
         <p>The end-to-end pipeline wraps each of the best model together to give recognition across 13 different languages. 
 With just 3 lines of code, process a single image and get to recognition all the words.</p>
 
-<p><img src="/assets/images/index/D_image_271.jpg" alt="Example of an universal API for Layout Detection" />
+<p>![Example of an universal API for Layout Detection]({{ ‘/assets/images/index/D_image_271.jpg’ | relative_url}})
 ▲ <em>An example of End-to-End Recognition on a image.</em></p>
 
     </p>
@@ -333,18 +334,8 @@ With just 3 lines of code, process a single image and get to recognition all the
         <p>Text detection works on polygonal boundary coordinate to fetch the word with great precision. we adopt TextBPN++ (Zhang et al., 2024) 
 off the shelf and incorporated in our pipeline which works great.</p>
 
-<p><img src="/assets/images/index/D_image_271_det.jpg" alt="Example of Text Detection performed by IndicPhotoOCR" />
+<p>![Example of Text Detection performed by IndicPhotoOCR]({{ ‘/assets/images/index/D_image_271_det.jpg’ | relative_url }})
  ▲ <em>An example of Text Detection performed by IndicPhotoOCR.</em></p>
-
-    </p>
-    
-    <p>
-
-<!-- An technique learned from https://community.shopify.com/c/Shopify-Design/Adding-newline-quot-n-quot-not-lt-br-gt-to-text-string-in-liquid/td-p/215995 for capturing newlines -->
-        <p><strong>See Also:</strong></p>
-<ul>
-  <li><a href="https://layout-parser.readthedocs.io/en/latest/api_doc/elements.html">Layout Data Structure Documentation</a></li>
-</ul>
 
     </p>
     
@@ -364,7 +355,7 @@ off the shelf and incorporated in our pipeline which works great.</p>
     <p>
         <p>The model was inherited from google/vit-base-patch16-224-in21k Vision Transformer (ViT) model, which consists of 12 transformer layers and uses 16 x 16 patch embeddings. This based model was appended with a classification head to be able to indentify the correct script.</p>
 
-<p><img src="/assets/images/index/scriptID-webpage.png" alt="example script identification" />
+<p>![example script identification]({{ ‘/assets/images/index/scriptID-webpage.png’ | relative_url }})
 ▲ <em>An example showing Script labelled to each word by the script identifiaciton module of IndicPhotoOCR.</em></p>
 
     </p>
@@ -385,7 +376,14 @@ off the shelf and incorporated in our pipeline which works great.</p>
     <p>
         <p>Transformer based architecture with ResNet as Feature Extractor works fast was trained rigorously on synthetic and real data for 11 languages.</p>
 
-<p><img src="/assets/images/index/output.gif" alt="example recognition" /></p>
+<table>
+  <tbody>
+    <tr>
+      <td>![example recognition]({{ ‘ /assets/images/index/output.gif</td>
+      <td>relative_url }} )</td>
+    </tr>
+  </tbody>
+</table>
 
 <p>▲ <em>Examples showing recognitions on different languages on images from (BSTD)[https://github.com/Bhashini-IITJ/BharatSceneTextDataset].</em></p>
 
