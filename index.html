@@ -1,643 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>VL2G @ IITJ</title>
 
-    <!-- Bootstrap 5 -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" type="text/css" href="static/css/vl2g.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VL2G @ IITJ</title>
 
-    <!-- Google Analytics -->
-    <script>
-      (function (i, s, o, g, r, a, m) {
-        i["GoogleAnalyticsObject"] = r;
-        (i[r] =
-          i[r] ||
-          function () {
-            (i[r].q = i[r].q || []).push(arguments);
-          }),
-          (i[r].l = 1 * new Date());
-        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-      })(
-        window,
-        document,
-        "script",
-        "https://www.google-analytics.com/analytics.js",
-        "ga"
-      );
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="static/css/vl2g.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-      ga("create", "UA-85595941-1", "auto");
-      ga("send", "pageview");
-    </script>
-  </head>
+  <!-- Google Analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i["GoogleAnalyticsObject"] = r;
+      (i[r] =
+        i[r] ||
+        function () {
+          (i[r].q = i[r].q || []).push(arguments);
+        }),
+        (i[r].l = 1 * new Date());
+      (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m);
+    })(
+      window,
+      document,
+      "script",
+      "https://www.google-analytics.com/analytics.js",
+      "ga"
+    );
 
-  <body>
-    <!-- Navigation -->
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-          <a class="navbar-brand fw-semibold" href="/">
-            <span class="d-none d-md-inline"
-              >Vision, Language, and Learning Group (VL2G) @ IITJ</span
-            >
-            <span class="d-md-none">VL2G @ IITJ</span>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="/">HOME</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/people/">PEOPLE</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/Publications/">PUBLICATIONS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/gallery/">GALLERY</a>
-              </li>
-            </ul>
+    ga("create", "UA-85595941-1", "auto");
+    ga("send", "pageview");
+  </script>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand fw-semibold" href="/">
+          <span class="d-none d-md-inline">Vision, Language, and Learning Group (VL2G) @ IITJ</span>
+          <span class="d-md-none">VL2G @ IITJ</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="/">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/people/">PEOPLE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/Publications/">PUBLICATIONS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/gallery/">GALLERY</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container py-5">
+      <!-- Introduction Section -->
+      <section class="intro-section mb-5">
+        <div class="row">
+          <div class="col-12">
+            <p class="lead text-justify">
+              The Vision, Language, and Learning Group (VL2G) at the<a href="https://iitj.ac.in/" target="_blank"
+                rel="noopener">
+                Indian Institute of Technology Jodhpur</a>
+              is a group of researchers and students led by
+              <a href="https://anandmishra22.github.io/" target="_blank" rel="noopener">Anand Mishra</a>. The group
+              addresses fundamental vision and language tasks and
+              their applications to socially relevant problems. Currently, the
+              group is primarily focusing on document intelligence, massively
+              multilingual visual text understanding, and fine-grained video
+              understanding, and their applications in various domains,
+              including but not limited to education and assistive
+              technologies.
+            </p>
           </div>
         </div>
-      </nav>
-    </header>
+      </section>
 
-    <!-- Main Content -->
-    <main class="main-content">
-      <div class="container py-5">
-        <!-- Introduction Section -->
-        <section class="intro-section mb-5">
-          <div class="row">
-            <div class="col-12">
-              <p class="lead text-justify">
-                The Vision, Language, and Learning Group (VL2G) at the<a
-                  href="https://iitj.ac.in/"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Indian Institute of Technology Jodhpur</a
-                >
-                is a group of researchers and students led by
-                <a
-                  href="https://anandmishra22.github.io/"
-                  target="_blank"
-                  rel="noopener"
-                  >Anand Mishra</a
-                >. The group addresses fundamental vision and language tasks and
-                their applications to socially relevant problems. Currently, the
-                group is primarily focusing on document intelligence, massively
-                multilingual visual text understanding, and fine-grained video
-                understanding, and their applications in various domains,
-                including but not limited to education and assistive
-                technologies.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- News Section -->
-        <section class="news-section mb-5">
-          <div class="row">
-            <div class="col-12">
-              <h4 class="section-title mb-3"><strong>News</strong></h4>
-              <p class="text-muted small mb-3">[For more news, scroll down]</p>
-              <div class="news-container">
-                <ul class="news-list">
-                  <li>
-                    <strong>[November 2025]</strong> Our debut work on
-                    healthcare AI -- PatientVLM meets DocVLM and a work on
-                    Few-shot Video Object Detection are accepted at
-                    <a
-                      href="https://aaai.org/conference/aaai/aaai-26/"
-                      target="_blank"
-                      rel="noopener"
-                      >AAAI 2026</a
-                    >
-                    Main Track. <span class="badge-new">(NEW)</span>
-                  </li>
-                  <li>
-                    <strong>[November 2025]</strong> Our Work
-                    <a
-                      href="https://github.com/vl2g/MATR.git"
-                      target="_blank"
-                      rel="noopener"
-                      >MATR</a
-                    >
-                    and
-                    <a
-                      href="https://github.com/vl2g/MPA"
-                      target="_blank"
-                      rel="noopener"
-                      >MPA</a
-                    >
-                    are selected for
-                    <a
-                      href="https://icvgip.in/2025/#visionindiaevent"
-                      target="_blank"
-                      rel="noopener"
-                      >Vision India </a
-                    >(The session under ICVGIP 2025 for showcasing top-tier
-                    publications from Indian Institutes).
-                    <span class="badge-new">(NEW)</span>
-                  </li>
-                  <li>
-                    <strong>[October 2025]</strong> Abhirama submitted his PhD
-                    Thesis. <span class="badge-new">(NEW)</span>
-                  </li>
-                  <li>
-                    <b>[August 2025] </b> Our work
-                    <a
-                      href="https://github.com/vl2g/MPA"
-                      target="_blank"
-                      rel="noopener"
-                      >Model Parity Alignment </a
-                    >towards empowering small VLMs is accepted in EMNLP 2025
-                    (Main Track). <span class="badge-new"> (NEW)</span>
-                  </li>
-                  <li>
-                    <strong>[June 2025]</strong> Our work on Video Moment
-                    Retrieval got accepted at ICCV 2025.
-                    <span class="badge-new">(NEW)</span>
-                  </li>
-                  <li>
-                    <strong>[January 2025]</strong> Abhirama participated in
-                    Google Deepmind Research Symposium 2025.
-                    <span class="badge-new">(NEW)</span>
-                  </li>
-                  <li>
-                    <strong>[December 2024]</strong> Abhirama's work on Audio QA
-                    is accepted in ICASSP 2025.
-                  </li>
-                  <li>
-                    <strong>[December 2024]</strong> Yogesh presented his AAAI
-                    2024 work at
-                    <a
-                      href="https://icvgip.in/vision-india-session"
-                      target="_blank"
-                      rel="noopener"
-                      >Vision India</a
-                    >. This special session at ICVGIP features top-tier
-                    publications in computer vision authored by researchers
-                    affiliated with Indian institutions.
-                  </li>
-                  <li>
-                    <strong>[December 2024]</strong> Nakul and Shreya's work
-                    patentLMM is accepted in AAAI 2025.
-                  </li>
-                  <li>
-                    <strong>[November 2024]</strong>
-                    <a
-                      href="https://bmvc2024.org/people/reviewers/"
-                      target="_blank"
-                      rel="noopener"
-                      >Yogesh has been recognized as one of the outstanding
-                      reviewer at BMVC'25.</a
-                    >
-                  </li>
-                  <li>
-                    <strong>[October 2024]</strong> Nakul and Shreya won the IIT
-                    Jodhpur Director's prize for Best Academic Innovation work
-                    from students among all BTech programs.
-                  </li>
-                  <li>
-                    <strong>[October 2024]</strong> Our work on Video Moment
-                    Retreival has been accepted in
-                    <a href="https://icvgip.in/" target="_blank" rel="noopener"
-                      >ICVGIP 2024</a
-                    >!
-                  </li>
-                  <li>
-                    <strong>[September 2024]</strong> Abhirama completed a
-                    summer internship at Adobe Research Bangalore, where he
-                    contributed to project on Multimodal Deep Learning.
-                  </li>
-                  <li>
-                    <strong>[September 2024]</strong> Abhirama was invited to
-                    present his work at Young Researchers' Forum on Data and AI
-                    for Public Good, held at IISc Bangalore.
-                  </li>
-                  <li>
-                    <strong>[September 2024]</strong> Abhirama's work on
-                    Multimodal Knowledge-enabled VQA is accepted in
-                    <a
-                      href="https://2024.emnlp.org/"
-                      target="_blank"
-                      rel="noopener"
-                      >EMNLP</a
-                    >
-                    main track!
-                  </li>
-                  <li>
-                    <strong>[August 2024]</strong> Our Visual Translation work
-                    is accepted in the
-                    <a
-                      href="https://icpr2024.org/index.html"
-                      target="_blank"
-                      rel="noopener"
-                      >ICPR 2024</a
-                    >. Check out the
-                    <a
-                      href="https://vl2g.github.io/projects/visTrans"
-                      target="_blank"
-                      rel="noopener"
-                      >project page</a
-                    >.
-                  </li>
-                  <li>
-                    <strong>[July 2024]</strong> Neelu and Anik's work on
-                    Query-based Chart Image Mining is accepted in the
-                    <a
-                      href="https://link.springer.com/journal/13735"
-                      target="_blank"
-                      rel="noopener"
-                      >IJMIR</a
-                    >.
-                  </li>
-                  <li>
-                    <strong>[April 2024]</strong> Nakul Sharma's Sketch-guided
-                    Image Inpainting work is accepted in the
-                    <a
-                      href="https://cvlai.net/ntire/2024/"
-                      target="_blank"
-                      rel="noopener"
-                      >CVPR workshop 2024</a
-                    >.
-                  </li>
-                  <li>
-                    <strong>[Feb 2024]</strong> Abhirama presented his IJCAI
-                    2023 work on retrieval-based VQA in the 18th ACM-India
-                    Academic Research and Careers for Students (ARCS) Symposium.
-                  </li>
-                  <li>
-                    <strong>[Feb 2024]</strong> Yogesh and Shreya participated
-                    in Google India Research Week 2024.
-                  </li>
-                  <li>
-                    <strong>[Dec 2023]</strong> Yogesh Presented his CVPR 2023
-                    work at Vision India, ICVGIP.
-                  </li>
-                  <li>
-                    <strong>[Dec 2023]</strong> Two papers accepted in AAAI
-                    2024.
-                  </li>
-                  <li>
-                    <strong>[October 2023]</strong> Three papers from the group
-                    have been showcased at
-                    <a
-                      href="https://www.aimlsystems.org/2023/schedule/"
-                      target="_blank"
-                      rel="noopener"
-                      >AI-India Track at AI-ML Systems 2023</a
-                    >.
-                  </li>
-                  <li>
-                    <strong>[July 2023]</strong>
-                    <a
-                      href="https://women.acm.org/scholars/acm-w-scholars/shreya-shukla/"
-                      target="_blank"
-                      rel="noopener"
-                      >Shreya received the ACM-W scholarship</a
-                    >
-                    for attending ICDAR 2023 in San Jose, CA.
-                  </li>
-                  <li>
-                    <strong>[June 2023]</strong> Abhirama received the MSR
-                    Travel Grant for attending IJCAI 2023 in Macao.
-                  </li>
-                  <li>
-                    <strong>[April 2023]</strong> Our work on Retrieval-Based
-                    Visual Question Answering is accepted in IJCAI 2023 (15%
-                    acceptance rate).
-                  </li>
-                  <li>
-                    <strong>[April 2023]</strong> Our work on Flow chart to code
-                    generation is accepted in ICDAR 2023.
-                  </li>
-                  <li>
-                    <strong>[April 2023]</strong> We are hosting Summer
-                    Challenge on Writer Verification (<a
-                      href="https://events.iitj.ac.in/ncvpripg2023/index.html"
-                      target="_blank"
-                      rel="noopener"
-                      >NCVPRIPG 2023</a
-                    >). Check out the challenge
-                    <a
-                      href="https://vl2g.github.io/challenges/wv2023/"
-                      target="_blank"
-                      rel="noopener"
-                      >website</a
-                    >.
-                  </li>
-                  <li>
-                    <strong>[March 2023]</strong> Our work on Few-shot Referring
-                    Relatioship is accepted at CVPR 2023.
-                  </li>
-                  <li>
-                    <strong>[February 2023]</strong> Prajwal won the best poster
-                    award for VISTOT at Industry Day.
-                  </li>
-                  <li>
-                    <strong>[January 2023]</strong> Shreya won the best poster
-                    award for Flowchart work at Prometeo.
-                  </li>
-                  <li>
-                    <strong>[December 2022]</strong> Prajwal presented VISTOT at
-                    EMNLP 2022, Abu Dhabi.
-                  </li>
-                  <li>
-                    <strong>[December 2022]</strong> Nakul Presented logo work
-                    at ICVGIP 2022, IIT Gnadhinagar.
-                  </li>
-                  <li>
-                    <strong>[December 2022]</strong> Shreya got selected for the
-                    2023 Mitacs Globalink Research Internship program.
-                  </li>
-                  <li>
-                    <strong>[September 2022]</strong> Abhirama won first prize
-                    in the "Experiential Interface" track for his work on
-                    "Retrieval-based VQA" in Youth Conclave organized by INAE
-                    and SERB.
-                  </li>
-                  <li>
-                    <strong>[December 2022]</strong> Our logo work accepted at
-                    ICVGIP 2022.
-                  </li>
-                  <li>
-                    <strong>[November 2022]</strong> Prajwal and Abhirama have
-                    attended AACL-IJCNLP 2022 virtually and presented their
-                    paper COFAR.
-                  </li>
-                  <li>
-                    <strong>[October 2022]</strong> Thanks to Accenture Labs for
-                    a Gift Grant.
-                  </li>
-                  <li>
-                    <strong>[October 2022]</strong> Our works
-                    <a
-                      href="https://vl2g.github.io/projects/cofar/"
-                      target="_blank"
-                      rel="noopener"
-                      >COFAR</a
-                    >
-                    and
-                    <a
-                      href="https://vl2g.github.io/projects/vistot/"
-                      target="_blank"
-                      rel="noopener"
-                      >VisTOT</a
-                    >
-                    has been accpeted at
-                    <a
-                      href="https://www.aacl2022.org/paper"
-                      target="_blank"
-                      rel="noopener"
-                      >AACL-IJCNLP 2022</a
-                    >,
-                    <a
-                      href="https://2022.emnlp.org/"
-                      target="_blank"
-                      rel="noopener"
-                      >EMNLP 2022</a
-                    >, respectively.
-                  </li>
-                  <li>
-                    <strong>[October 2021]</strong> PhD student Abhirama got
-                    selected as a PMRF fellow.
-                  </li>
-                  <li>
-                    <strong>[July 2021]</strong> Our work on Few-shot Visual
-                    Relationship Co-Localisation with Revant Teotia, Vaibhav
-                    Mishra and Mayank Maheshwari got accepted in
-                    <a
-                      href="http://iccv2021.thecvf.com/home"
-                      target="_blank"
-                      rel="noopener"
-                      >ICCV 2021</a
-                    >.
-                    <a
-                      href="https://vl2g.github.io/projects/vrc/"
-                      target="_blank"
-                      rel="noopener"
-                      >The paper and code</a
-                    >
-                    are available now.
-                  </li>
-                  <li>
-                    <strong>[June 2021]</strong> Got selected for Microsoft
-                    Academic Partnership Grant (MAPG) 2021.
-                  </li>
-                  <li>
-                    <strong>[March 2021]</strong>
-                    <a
-                      href="https://lear.inrialpes.fr/people/alahari/"
-                      target="_blank"
-                      rel="noopener"
-                      >Dr. Karteek Alahari</a
-                    >
-                    e-visited our group and interected with students.
-                  </li>
-                  <li><strong>[March 2021]</strong> Website of VL2G is up.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Research Focus Section -->
-        <section class="research-section mb-5">
-          <div class="row">
-            <div class="col-12">
-              <h4 class="section-title mb-4">
-                <strong>Broader Research Focus</strong>
-              </h4>
-              <ul class="research-list">
-                <li>Knowledge-aware Computer Vision</li>
-                <li>Multimodal query-guided Image Retrieval</li>
-                <li>Document Intelligence</li>
-                <li>Open-world Object Detection and Recognition</li>
-                <li>Visual Relationship Interpretation</li>
-                <li>Fine-grained Video Understanding</li>
+      <!-- News Section -->
+      <section class="news-section mb-5">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="section-title mb-3"><strong>News</strong></h4>
+            <p class="text-muted small mb-3">[For more news, scroll down]</p>
+            <div class="news-container">
+              <ul class="news-list">
+                <li>
+                  <strong>[December 2025]</strong> Abhirama and Yogesh received ACM/IARCS Travel Grants for EMNLP 2025
+                  and AAAI 2026.. <span class="badge-new">(NEW)</span>
+                </li>
+                <li>
+                  <strong>[December 2025]</strong> Abhirama and Yogesh presented their EMNLP 2025 and ICCV 2025 papers at
+                  <a href="https://icvgip.in/2025/#visionindiaevent" target="_blank" rel="noopener">Vision India
+                  </a>, ICVGIP 2025. <span class="badge-new">(NEW)</span>
+                </li>
+                <li>
+                  <strong>[November 2025]</strong> Our debut work on
+                  healthcare AI -- PatientVLM meets DocVLM and a work on
+                  Few-shot Video Object Detection are accepted at
+                  <a href="https://aaai.org/conference/aaai/aaai-26/" target="_blank" rel="noopener">AAAI 2026</a>
+                  Main Track. <span class="badge-new">(NEW)</span>
+                </li>
+                <li>
+                  <strong>[November 2025]</strong> Our Work
+                  <a href="https://github.com/vl2g/MATR.git" target="_blank" rel="noopener">MATR</a>
+                  and
+                  <a href="https://github.com/vl2g/MPA" target="_blank" rel="noopener">MPA</a>
+                  are selected for
+                  <a href="https://icvgip.in/2025/#visionindiaevent" target="_blank" rel="noopener">Vision India
+                  </a>(The session under ICVGIP 2025 for showcasing top-tier
+                  publications from Indian Institutes).
+                  <span class="badge-new">(NEW)</span>
+                </li>
+                <li>
+                  <strong>[October 2025]</strong> Abhirama submitted his PhD
+                  Thesis. <span class="badge-new">(NEW)</span>
+                </li>
+                <li>
+                  <b>[August 2025] </b> Our work
+                  <a href="https://github.com/vl2g/MPA" target="_blank" rel="noopener">Model Parity Alignment
+                  </a>towards empowering small VLMs is accepted in EMNLP 2025
+                  (Main Track). <span class="badge-new"> (NEW)</span>
+                </li>
+                <li>
+                  <strong>[June 2025]</strong> Our work on Video Moment
+                  Retrieval got accepted at ICCV 2025.
+                  <span class="badge-new">(NEW)</span>
+                </li>
+                <li>
+                  <strong>[January 2025]</strong> Abhirama participated in
+                  Google Deepmind Research Symposium 2025.
+                  <span class="badge-new">(NEW)</span>
+                </li>
+                <li>
+                  <strong>[December 2024]</strong> Abhirama's work on Audio QA
+                  is accepted in ICASSP 2025.
+                </li>
+                <li>
+                  <strong>[December 2024]</strong> Yogesh presented his AAAI
+                  2024 work at
+                  <a href="https://icvgip.in/vision-india-session" target="_blank" rel="noopener">Vision India</a>. This
+                  special session at ICVGIP features top-tier
+                  publications in computer vision authored by researchers
+                  affiliated with Indian institutions.
+                </li>
+                <li>
+                  <strong>[December 2024]</strong> Nakul and Shreya's work
+                  patentLMM is accepted in AAAI 2025.
+                </li>
+                <li>
+                  <strong>[November 2024]</strong>
+                  <a href="https://bmvc2024.org/people/reviewers/" target="_blank" rel="noopener">Yogesh has been
+                    recognized as one of the outstanding
+                    reviewer at BMVC'25.</a>
+                </li>
+                <li>
+                  <strong>[October 2024]</strong> Nakul and Shreya won the IIT
+                  Jodhpur Director's prize for Best Academic Innovation work
+                  from students among all BTech programs.
+                </li>
+                <li>
+                  <strong>[October 2024]</strong> Our work on Video Moment
+                  Retreival has been accepted in
+                  <a href="https://icvgip.in/" target="_blank" rel="noopener">ICVGIP 2024</a>!
+                </li>
+                <li>
+                  <strong>[September 2024]</strong> Abhirama completed a
+                  summer internship at Adobe Research Bangalore, where he
+                  contributed to project on Multimodal Deep Learning.
+                </li>
+                <li>
+                  <strong>[September 2024]</strong> Abhirama was invited to
+                  present his work at Young Researchers' Forum on Data and AI
+                  for Public Good, held at IISc Bangalore.
+                </li>
+                <li>
+                  <strong>[September 2024]</strong> Abhirama's work on
+                  Multimodal Knowledge-enabled VQA is accepted in
+                  <a href="https://2024.emnlp.org/" target="_blank" rel="noopener">EMNLP</a>
+                  main track!
+                </li>
+                <li>
+                  <strong>[August 2024]</strong> Our Visual Translation work
+                  is accepted in the
+                  <a href="https://icpr2024.org/index.html" target="_blank" rel="noopener">ICPR 2024</a>. Check out the
+                  <a href="https://vl2g.github.io/projects/visTrans" target="_blank" rel="noopener">project page</a>.
+                </li>
+                <li>
+                  <strong>[July 2024]</strong> Neelu and Anik's work on
+                  Query-based Chart Image Mining is accepted in the
+                  <a href="https://link.springer.com/journal/13735" target="_blank" rel="noopener">IJMIR</a>.
+                </li>
+                <li>
+                  <strong>[April 2024]</strong> Nakul Sharma's Sketch-guided
+                  Image Inpainting work is accepted in the
+                  <a href="https://cvlai.net/ntire/2024/" target="_blank" rel="noopener">CVPR workshop 2024</a>.
+                </li>
+                <li>
+                  <strong>[Feb 2024]</strong> Abhirama presented his IJCAI
+                  2023 work on retrieval-based VQA in the 18th ACM-India
+                  Academic Research and Careers for Students (ARCS) Symposium.
+                </li>
+                <li>
+                  <strong>[Feb 2024]</strong> Yogesh and Shreya participated
+                  in Google India Research Week 2024.
+                </li>
+                <li>
+                  <strong>[Dec 2023]</strong> Yogesh Presented his CVPR 2023
+                  work at Vision India, ICVGIP.
+                </li>
+                <li>
+                  <strong>[Dec 2023]</strong> Two papers accepted in AAAI
+                  2024.
+                </li>
+                <li>
+                  <strong>[October 2023]</strong> Three papers from the group
+                  have been showcased at
+                  <a href="https://www.aimlsystems.org/2023/schedule/" target="_blank" rel="noopener">AI-India Track at
+                    AI-ML Systems 2023</a>.
+                </li>
+                <li>
+                  <strong>[July 2023]</strong>
+                  <a href="https://women.acm.org/scholars/acm-w-scholars/shreya-shukla/" target="_blank"
+                    rel="noopener">Shreya received the ACM-W scholarship</a>
+                  for attending ICDAR 2023 in San Jose, CA.
+                </li>
+                <li>
+                  <strong>[June 2023]</strong> Abhirama received the MSR
+                  Travel Grant for attending IJCAI 2023 in Macao.
+                </li>
+                <li>
+                  <strong>[April 2023]</strong> Our work on Retrieval-Based
+                  Visual Question Answering is accepted in IJCAI 2023 (15%
+                  acceptance rate).
+                </li>
+                <li>
+                  <strong>[April 2023]</strong> Our work on Flow chart to code
+                  generation is accepted in ICDAR 2023.
+                </li>
+                <li>
+                  <strong>[April 2023]</strong> We are hosting Summer
+                  Challenge on Writer Verification (<a href="https://events.iitj.ac.in/ncvpripg2023/index.html"
+                    target="_blank" rel="noopener">NCVPRIPG 2023</a>). Check out the challenge
+                  <a href="https://vl2g.github.io/challenges/wv2023/" target="_blank" rel="noopener">website</a>.
+                </li>
+                <li>
+                  <strong>[March 2023]</strong> Our work on Few-shot Referring
+                  Relatioship is accepted at CVPR 2023.
+                </li>
+                <li>
+                  <strong>[February 2023]</strong> Prajwal won the best poster
+                  award for VISTOT at Industry Day.
+                </li>
+                <li>
+                  <strong>[January 2023]</strong> Shreya won the best poster
+                  award for Flowchart work at Prometeo.
+                </li>
+                <li>
+                  <strong>[December 2022]</strong> Prajwal presented VISTOT at
+                  EMNLP 2022, Abu Dhabi.
+                </li>
+                <li>
+                  <strong>[December 2022]</strong> Nakul Presented logo work
+                  at ICVGIP 2022, IIT Gnadhinagar.
+                </li>
+                <li>
+                  <strong>[December 2022]</strong> Shreya got selected for the
+                  2023 Mitacs Globalink Research Internship program.
+                </li>
+                <li>
+                  <strong>[September 2022]</strong> Abhirama won first prize
+                  in the "Experiential Interface" track for his work on
+                  "Retrieval-based VQA" in Youth Conclave organized by INAE
+                  and SERB.
+                </li>
+                <li>
+                  <strong>[December 2022]</strong> Our logo work accepted at
+                  ICVGIP 2022.
+                </li>
+                <li>
+                  <strong>[November 2022]</strong> Prajwal and Abhirama have
+                  attended AACL-IJCNLP 2022 virtually and presented their
+                  paper COFAR.
+                </li>
+                <li>
+                  <strong>[October 2022]</strong> Thanks to Accenture Labs for
+                  a Gift Grant.
+                </li>
+                <li>
+                  <strong>[October 2022]</strong> Our works
+                  <a href="https://vl2g.github.io/projects/cofar/" target="_blank" rel="noopener">COFAR</a>
+                  and
+                  <a href="https://vl2g.github.io/projects/vistot/" target="_blank" rel="noopener">VisTOT</a>
+                  has been accpeted at
+                  <a href="https://www.aacl2022.org/paper" target="_blank" rel="noopener">AACL-IJCNLP 2022</a>,
+                  <a href="https://2022.emnlp.org/" target="_blank" rel="noopener">EMNLP 2022</a>, respectively.
+                </li>
+                <li>
+                  <strong>[October 2021]</strong> PhD student Abhirama got
+                  selected as a PMRF fellow.
+                </li>
+                <li>
+                  <strong>[July 2021]</strong> Our work on Few-shot Visual
+                  Relationship Co-Localisation with Revant Teotia, Vaibhav
+                  Mishra and Mayank Maheshwari got accepted in
+                  <a href="http://iccv2021.thecvf.com/home" target="_blank" rel="noopener">ICCV 2021</a>.
+                  <a href="https://vl2g.github.io/projects/vrc/" target="_blank" rel="noopener">The paper and code</a>
+                  are available now.
+                </li>
+                <li>
+                  <strong>[June 2021]</strong> Got selected for Microsoft
+                  Academic Partnership Grant (MAPG) 2021.
+                </li>
+                <li>
+                  <strong>[March 2021]</strong>
+                  <a href="https://lear.inrialpes.fr/people/alahari/" target="_blank" rel="noopener">Dr. Karteek
+                    Alahari</a>
+                  e-visited our group and interected with students.
+                </li>
+                <li><strong>[March 2021]</strong> Website of VL2G is up.</li>
               </ul>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- Funding Section -->
-        <section class="funding-section mb-5">
-          <div class="row">
-            <div class="col-12">
-              <h4 class="section-title mb-4"><strong>Funding</strong></h4>
-              <p class="mb-4">
-                Our research has been generously supported by a range of
-                sponsors, including
-              </p>
+      <!-- Research Focus Section -->
+      <section class="research-section mb-5">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="section-title mb-4">
+              <strong>Broader Research Focus</strong>
+            </h4>
+            <ul class="research-list">
+              <li>Knowledge-aware Computer Vision</li>
+              <li>Multimodal query-guided Image Retrieval</li>
+              <li>Document Intelligence</li>
+              <li>Open-world Object Detection and Recognition</li>
+              <li>Visual Relationship Interpretation</li>
+              <li>Fine-grained Video Understanding</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-              <div class="row g-4 align-items-center justify-content-center">
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                  <a
-                    href="http://www.iitj.ac.in"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <img
-                      src="./iitjlogo.png"
-                      alt="IIT Jodhpur"
-                      class="img-fluid sponsor-logo"
-                    />
-                  </a>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                  <a
-                    href="https://bhashini.gov.in/"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <img
-                      src="data:image/png;base64,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"
-                      alt="Bhashini"
-                      class="img-fluid sponsor-logo"
-                    />
-                  </a>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                  <a
-                    href="https://www.education.gov.in/"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <img
-                      src="https://www.education.gov.in/sites/upload_files/mhrd/files/logo_2.png"
-                      alt="Ministry of Education"
-                      class="img-fluid sponsor-logo"
-                    />
-                  </a>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                  <a
-                    href="https://www.accenture.com/in-en"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <img
-                      src="/Accenture.png"
-                      alt="Accenture"
-                      class="img-fluid sponsor-logo"
-                    />
-                  </a>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                  <a href="https://ugc.ac.in" target="_blank" rel="noopener">
-                    <img
-                      src="/ugc.png"
-                      alt="UGC"
-                      class="img-fluid sponsor-logo"
-                    />
-                  </a>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                  <a
-                    href="https://microsoft.com"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <img
-                      src="/microsoft.png"
-                      alt="Microsoft"
-                      class="img-fluid sponsor-logo"
-                    />
-                  </a>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                  <a
-                    href="https://www.raapid.ai/"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <img
-                      src="https://56545f08.rocketcdn.me/wp-content/uploads/2021/12/RAAPID-Logo-300x100.png"
-                      alt="RAAPID"
-                      class="img-fluid sponsor-logo"
-                    />
-                  </a>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                  <a
-                    href="https://ihub-drishti.ai/"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    <img
-                      src="https://ihub-drishti.ai/images/tih_logo.png"
-                      alt="iHub Drishti"
-                      class="img-fluid sponsor-logo"
-                    />
-                  </a>
-                </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
-                  <a href="https://serb.gov.in/" target="_blank" rel="noopener">
-                    <img
-                      src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Science_and_Engineering_Research_Board.png/280px-Science_and_Engineering_Research_Board.png"
-                      alt="SERB"
-                      class="img-fluid sponsor-logo"
-                    />
-                  </a>
-                </div>
+      <!-- Funding Section -->
+      <section class="funding-section mb-5">
+        <div class="row">
+          <div class="col-12">
+            <h4 class="section-title mb-4"><strong>Funding</strong></h4>
+            <p class="mb-4">
+              Our research has been generously supported by a range of
+              sponsors, including
+            </p>
+
+            <div class="row g-4 align-items-center justify-content-center">
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <a href="http://www.iitj.ac.in" target="_blank" rel="noopener">
+                  <img src="./iitjlogo.png" alt="IIT Jodhpur" class="img-fluid sponsor-logo" />
+                </a>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <a href="https://bhashini.gov.in/" target="_blank" rel="noopener">
+                  <img
+                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHUAAAA7CAYAAABFVsWgAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAApzSURBVHgB7VzNbxvHFX8zpGTGtmz20tYpgm5OvRQIfSgQywVEtT70Ulg6xB9FAFEtisIny0jvpv4Cx5emvYQU0MKWc7B866GAaLSwU/Rg+lSgDeANUCNGg1r0hxSK5M7re7NccTm7Sy4VydZu+ANk78fM7Mz8Zt68jxkKSDkelax8TsJlQCjSbYH+8vTXoL+6QFhDgDsnqrYNKYKAFOPJr6zLqKAMLpHREFA+8bG9DClBKknVs1PAbbosjpDNptk8m4ZZKyGFOCRgHUYjlGEhDQQeEJBwZCFlePJL6xoiWDTraiSGeM18Ro9t5YrgghSwQP9bYXkpfeENCVfp8gokGKkSvzzL3gBY+Apg5e2q3YhK90XJKlHLmTwrNAHC20kWw6lWlAaBiLXAFdOW+U4hLH+vapchoUgvqR+dKYLAObo67j6QdcDMHbj0Z9tL0iX2AQS148aJiv0tSCjSR6omU1RIhlrhCbAKOLHskfu4ZJWlK4qNZMkVwenSfv9w5qorUqMIZQhaT511+OhnOk0L4MPQVALegYQiPaQyoagdDTFApDOxlWK+q1DVzBQdhMSK33SYNL/76ZwmFMn9J3ANUHyunwvktfIsXVjBTERsM7tEF2UygR7SzCxCSpAOUgUwqbNw6S+1kLdLXaWpEiCXfcKgZ7cNKcI3x6S5VsxDLrtOLS70PafB8MXfP2MtuOJ/TB0z992KfQcSiOTP1PdXKAIjLPcG6/CnhZXQdFdqDSJ2loh9RIz5TBhhkdcpb45uifA5JBQpUJTUQ0Dy2qLzDBw1mAgmVqBButaULSOl/e2qXYeEIvmk/nGxBkLZuiU36XoYUBpkCTtgvmBQG04Skk1qqZKHX1RK7o3cgPcrxeGZ0Pbf/WTjJYviov8ZkbwGCUay19QWab1CugoO8j+iCjDaLLvwv2eW8chOqoLkIeHiN3O279bBlaFZUPm0X7R//nTrrJGiDAlHsmeqwB5BSLZmnDVViJ085798YRlvbXLkDx8YBxzJnamligV+rVVgLVY+IWe8yw8eb/S9opBbooPjHpJLascwQzJiuHLDnqWus//8l8/hre32zityFV6nGGqiFSQPySUVDc+QVHdjZCp5V/5ZSjpW/c2qvQQpQZJJ9Qe261BdbAxMz6E2IXh/Enzwn6f+WWoLhHlIEZJLqoAeiaiGu/Q41Eb44dY2/PbxUzcbD4aUbAv1I8mk2r0baQ9My7FWWkt5dn78ryfuM4SV7RQSykiuSZMlJ0Nbz9bB+3S7wXOeoUwoEWuzlpsWpSgMyZ2pvIaick2QsK0nvIb+/sw6E/rrJw345J+PG28128tNhJNpJpSR/HjqBbJXj22U4c3PEL7z77vUouMkWzloXvjBV9sPL/73Rf03TxprJGZr8A1BeoLkFQqCN7NdM6djw6WaDWOMMcYYY4wxxhhjjDHGGGMkDdpOPfrjG0WhzPikbCCqRjbbrDdqgyMg+WIl324dsRzlNJqfXrTjpJ2Y3LTjlNvp5Ao7devW6eXfLtYgBvS3to8sSIFFcH+ZhTeVURmijtJZiSrnyPStQpy2DEvL74R0qA1gm++5bk4rN8dtymS2asP6wisrrM5eP6HKNDbvnauLqelV/sGLuUEFEvU1dNTyy09DCnz3huUIyTvfLZ0U8crz+xdCT5KZacnrM//i/vm10HQZWen+TE5YhRr0nao8tLUc1RlTp1bnukca89HNkuXn995bNvI92k1bzLRT0zdK5IXt7vrHhmrL2c1/nNPbU/PF23lnu/Vgpx8o/JeZ3DoZ1ZZjp1f5Jw+WotKadWbf72BCdZ2gKKRcP3bqZiCQ7Ejq+F7lAIW4HFVMR0LJn5YQSHvkRzTyZeZBNKH6K3kUsOS0Dj/gUWq+PTb9CR9pvD2IUF0KqLI/vzsQ/G0JObfaxdB2C7ngu8mLCVXy7jqdZsHoB0ttH478lo9QnbbNM3xAnUdy6HMGsxMxuLvdisov0HjX3zA9+mUWh5Lh/5azffi2WQaTBTHRbOZ63xLK+K6IrMco7dYlCe9Ee0R5NEiPvnujaD7n9gzOpwrGl/IhpGIVQC0qFEsUBVkxM/hHyV7DHP29KqGNiDUd1DYhoOjvDBKJhWASHQyfR6VmEfA6i+/uKzvOuvmqQNKwEpA8uVwDRkQgnqoA727eu1j17o9Or74jwLcfCEXcWTQyEORlEXhGa/n9i2XvnsWznNCnxXv1kIIHWo0vqf6WNOIUTlsseusZp6OOK/MMPUiEduGJ4Z1djY3afIP0HhgFQ8Wv8G8b2Wf0DR7gCYq1l/d6hDKYHCJ6xchnDSrXyTh9bWAl4wASqhElhkfBQFK1PDcVlo6swT4gbO0QMvwwsOAji3334vs714gBET0p5e3ckLXpICFUDI+AgPiVKBemTt+a4T09DvJudvS/tn1iLBKUvxL6QuEM7APQt6Ulm8vVnVa74RfP9L4wIeWjielb1UH2aRii2kKDp4CwbwiI4VEQ3KPEv32AXnX91RaNtnJmIQ6wt7/WKHvfodegU6uLrkljAktCydLU6dWaaokrcQZoVFv2nFA+NtJvmrAYvhPmGxiGEUwazNNov5YEMaYdGryXFyN+y4GWFDmBD7Q9e0BAnrJFn1ausVsxPOpuwjkitpArVk4Oc2vtCVAUaVatB58PVowYTCyt03VHn2KTM2GmEtuz5FB5FuU1epXo0NI2gWhKGMtpHbk2qlwImjTCueI47rmUjJMhT4gzR+40/4i2Oq0cezjKUYWyGRL2XII8i4aGOwRWHAKj0HA13BJfs+eFnScBDdv1GkWSGtUWgXqgFGEPwQPx6PTN66T4+bxTEUvZAARnKgpT3a9Th/Q1QDdoAEwzxMPUKRLdIc6BV4Guj3mN6lA1XXhs+0atr1FtOTp9o0yDvQh7jOzkoTL5hc+GOmFiIuaaahxr+BoffO0QwZPmIuPsm0NlVLCi566vu0fMNbV/ZpJTwIZXAEXuSr93y0NwtvXDH9Z68df+KBC5P/PygG+MZY03KIbjI2inQmaGwkb6WmHmuJR6Y7TVl0jAQzig0CGx7W5IzGE7k8wXJdZoNj6UKjtDvt8lU/HYjdmw3/g6YjhkpvLCLEt8RcHlUMWro/C1a4tRaAsxJ/0dweYLB8mVZKUnJAcHMF4/sq6r0/buWQzTWj/PpheMiJHP0rA26FekEA3bKiyS4qUVgbS9+5BohITsRpxy/MsBOfNtiA+7rXAZdgGz3RwI738P5v2znWuVCbQ1m2sG+o2VN0VBbxixHjLSQDczd8NXpjY4cehQ1W800zoY/XM1CvvXN19aHpl8vND32n5x7707ccoRUv/UjgZruVFmiAFbtcW8f4BmJnNr/v5ww3QRMHzg1D9GkKG/H7Atq941bznp/w6sRdn9m2xDGz/W5ajeve5/o86C1yC9IyECQjc+Ux/kUtPrGMVCUYE9bH3Se22AbF+U9bCtLG4kX+Uzk821QQ6OYd/U30G8KoQo9vzAgjXLOtlkd7OTzQ/Dyu9uUynovVBD2uL1HWJmY/P+ucAA4GgLBSWssDp634nVVt7+0mrO6cA8ERpalq8v/g8uluByCLItBgAAAABJRU5ErkJggg=="
+                    alt="Bhashini" class="img-fluid sponsor-logo" />
+                </a>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <a href="https://www.education.gov.in/" target="_blank" rel="noopener">
+                  <img src="https://www.education.gov.in/sites/upload_files/mhrd/files/logo_2.png"
+                    alt="Ministry of Education" class="img-fluid sponsor-logo" />
+                </a>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <a href="https://www.accenture.com/in-en" target="_blank" rel="noopener">
+                  <img src="/Accenture.png" alt="Accenture" class="img-fluid sponsor-logo" />
+                </a>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <a href="https://ugc.ac.in" target="_blank" rel="noopener">
+                  <img src="/ugc.png" alt="UGC" class="img-fluid sponsor-logo" />
+                </a>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <a href="https://microsoft.com" target="_blank" rel="noopener">
+                  <img src="/microsoft.png" alt="Microsoft" class="img-fluid sponsor-logo" />
+                </a>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <a href="https://www.raapid.ai/" target="_blank" rel="noopener">
+                  <img src="https://56545f08.rocketcdn.me/wp-content/uploads/2021/12/RAAPID-Logo-300x100.png"
+                    alt="RAAPID" class="img-fluid sponsor-logo" />
+                </a>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <a href="https://ihub-drishti.ai/" target="_blank" rel="noopener">
+                  <img src="https://ihub-drishti.ai/images/tih_logo.png" alt="iHub Drishti"
+                    class="img-fluid sponsor-logo" />
+                </a>
+              </div>
+              <div class="col-6 col-sm-4 col-md-3 col-lg-2 text-center">
+                <a href="https://serb.gov.in/" target="_blank" rel="noopener">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e1/Science_and_Engineering_Research_Board.png/280px-Science_and_Engineering_Research_Board.png"
+                    alt="SERB" class="img-fluid sponsor-logo" />
+                </a>
               </div>
             </div>
           </div>
-        </section>
-      </div>
-    </main>
+        </div>
+      </section>
+    </div>
+  </main>
 
-    <!-- Footer -->
-    <footer class="footer mt-5 py-4 bg-light">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 text-center">
-            <a href="http://www.iitj.ac.in" target="_blank" rel="noopener">
-              <img
-                src="./iitjlogo-with-name.png"
-                alt="IIT Jodhpur"
-                style="height: 100px"
-                class="img-fluid"
-              />
-            </a>
-          </div>
+  <!-- Footer -->
+  <footer class="footer mt-5 py-4 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <a href="http://www.iitj.ac.in" target="_blank" rel="noopener">
+            <img src="./iitjlogo-with-name.png" alt="IIT Jodhpur" style="height: 100px" class="img-fluid" />
+          </a>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-    <!-- Bootstrap 5 JS Bundle -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
