@@ -1,6 +1,6 @@
 {
     "class": "melanoma",
-    "image": "/projects/pcdf/static/samples/images//00098.png",
+    "image": "/projects/pcdf/static/samples/images/00098.png",
     "dialogue": [
         {
             "doctor": "Where on your body do you typically find these spots?",
