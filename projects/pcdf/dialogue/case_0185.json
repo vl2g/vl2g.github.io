@@ -1,0 +1,24 @@
+{
+  "0185": {
+    "dialogue": [
+      "Doctor: Is there anything else you've noticed around this spot?",
+      "Patient: Yes, there is a small, raised area just to the left of this spot. It's not as dark and seems to be a different texture.",
+      "Doctor: How does the surface of this area feel compared to your other skin?",
+      "Patient: The surface of this area feels slightly rougher and more uneven compared to my other skin.",
+      "Doctor: Do you have any sensations like itching or burning around this area?",
+      "Patient: No, I don't feel any itching or burning around this area. It just looks like a dark spot on my skin.",
+      "Doctor: Where on your body is this lesion located?",
+      "Patient: This lesion is located on my left arm, near the base of my thumb.",
+      "Doctor: Can you describe how big this spot is and its shape?",
+      "Patient: The spot is quite large, covering a significant portion of my skin, and it has an irregular, somewhat oval shape.",
+      "Doctor: What color is this area compared to your other skin?",
+      "Patient: This area is darker than my other skin.",
+      "Doctor: Is the edge of this spot clear or do you notice any irregularity?",
+      "Patient: The edge of this spot seems to be somewhat irregular, with a less defined boundary compared to the surrounding skin.",
+      "Doctor: How often do you notice this spot?",
+      "Patient: I usually notice this spot when I'm in the sun or after a shower."
+    ],
+    "diagnosis": "melanocytic nevi",
+    "image_path": "/storage/lokesh/HealthCare/Datasets/MedMNIST/DermaMNIST/train/00185.png"
+  }
+}

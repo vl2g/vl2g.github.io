@@ -1,0 +1,38 @@
+{
+    "class": "dermatofibroma",
+    "image": "/static/samples/images/00330.png",
+    "dialogue": [
+        {
+            "doctor": "Where exactly do you notice this lesion on your body?",
+            "patient": "I noticed this lesion on my left forearm."
+        },
+        {
+            "doctor": "Is there anything else like this on your body?",
+            "patient": "Yes, there is another one on my leg."
+        },
+        {
+            "doctor": "How big is this lesion compared to your other moles or spots?",
+            "patient": "This lesion is significantly larger than any of my other moles or spots."
+        },
+        {
+            "doctor": "Is the edge of this spot smooth or does it look uneven?",
+            "patient": "The edge of this spot looks uneven."
+        },
+        {
+            "doctor": "What color is the area around the lesion?",
+            "patient": "The area around the lesion is a lighter pink color, which contrasts with the darker pink of the lesion itself."
+        },
+        {
+            "doctor": "Does the surface of the lesion feel different from the rest of your skin?",
+            "patient": "Yes, the surface of the lesion feels different from the rest of my skin. It has a rough texture and appears to be elevated, which contrasts with the smoother, more uniform texture of the surrounding skin."
+        },
+        {
+            "doctor": "Does this area bother you when you touch it?",
+            "patient": "No, it doesn't really bother me when I touch it."
+        },
+        {
+            "doctor": "Do you notice any changes in how often you see this lesion?",
+            "patient": "Yes, I have noticed that this lesion appears more frequently than before."
+        }
+    ]
+}

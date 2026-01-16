@@ -1,0 +1,24 @@
+{
+  "0239": {
+    "dialogue": [
+      "Doctor: Where on your body is this spot located?",
+      "Patient: This spot is located on my inner thigh.",
+      "Doctor: Can you describe the shape and size of the spot?",
+      "Patient: The spot is irregular in shape, with some areas appearing raised and others sunken, giving it a somewhat uneven surface. It's not a perfect circle, but rather an oval with some irregularities. The size of the spot is difficult to determine without a reference, but it seems to be a few centimeters in diameter.",
+      "Doctor: How often do you notice this spot?",
+      "Patient: I notice this spot quite often, especially when I'm in the sun or after a hot shower.",
+      "Doctor: What do you think about the edges of this spot? Are they smooth or not?",
+      "Patient: The edges of this spot seem to be somewhat irregular and not very smooth.",
+      "Doctor: How many spots like this do you have on your body?",
+      "Patient: I have a few spots like this on my body, but they are not as noticeable as the one on my arm.",
+      "Doctor: What color is the spot compared to your other skin?",
+      "Patient: The spot is a darker shade compared to my other skin.",
+      "Doctor: Do you feel any discomfort or pain around this spot?",
+      "Patient: No, I don't feel any discomfort or pain around this spot. It just looks like a small, raised area on my skin.",
+      "Doctor: How does the texture of this spot feel compared to the rest of your skin?",
+      "Patient: The texture of this spot feels slightly raised and bumpy compared to the rest of my skin."
+    ],
+    "diagnosis": "vascular lesions",
+    "image_path": "/storage/lokesh/HealthCare/Datasets/MedMNIST/DermaMNIST/train/00239.png"
+  }
+}

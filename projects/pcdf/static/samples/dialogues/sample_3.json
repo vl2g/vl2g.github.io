@@ -1,0 +1,38 @@
+{
+    "class": "actinic keratoses",
+    "image": "/static/samples/images/00091.png",
+    "dialogue": [
+        {
+            "doctor": "Where on your body do you notice this spot?",
+            "patient": "I noticed this spot on my forehead."
+        },
+        {
+            "doctor": "Do you have other spots like this on your body?",
+            "patient": "Yes, I have a few other spots that look similar to this one. They are scattered across my body, but mostly on my arms and legs."
+        },
+        {
+            "doctor": "Could you describe the shape and size of the spot?",
+            "patient": "The spot is irregular in shape, somewhat oval, and it's quite large compared to the surrounding skin."
+        },
+        {
+            "doctor": "Is the edge of the spot well-defined or does it look irregular?",
+            "patient": "The edge of the spot looks irregular."
+        },
+        {
+            "doctor": "Does the area have any redness or is it predominantly dark or pale?",
+            "patient": "The area is predominantly dark, with some redness around the edges of the growths."
+        },
+        {
+            "doctor": "How does the texture of the area feel compared to the rest of your skin?",
+            "patient": "The texture of the area feels rougher and more uneven compared to the rest of my skin."
+        },
+        {
+            "doctor": "Are there any symptoms associated with this area, such as itching or burning?",
+            "patient": "I have noticed some itching around this area, but no burning sensation."
+        },
+        {
+            "doctor": "How often do you notice this spot?",
+            "patient": "I notice this spot quite often, especially when I'm outside in the sun."
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+  "0098": {
+    "dialogue": [
+      "Doctor: How often do you notice this spot?",
+      "Patient: I noticed this spot a few days ago.",
+      "Doctor: Where on your body do you typically find these spots?",
+      "Patient: I typically find these spots on my legs and arms.",
+      "Doctor: Do you experience any discomfort or symptoms around this area?",
+      "Patient: No, I don't experience any discomfort or symptoms around this area.",
+      "Doctor: Is there anything unusual about the texture of this spot?",
+      "Patient: Yes, there is something unusual about the texture. It appears to be rougher and more uneven than the surrounding skin.",
+      "Doctor: Does the edge of this spot look clear or fuzzy?",
+      "Patient: The edge of this spot looks fuzzy.",
+      "Doctor: What color is the spot on your skin?",
+      "Patient: The spot on my skin is red.",
+      "Doctor: Are there other similar spots in other parts of your body?",
+      "Patient: No, there are no other similar spots in other parts of my body.",
+      "Doctor: Can you describe the shape and size of this spot?",
+      "Patient: The spot is irregularly shaped, with a somewhat oval form, and it appears to be about the size of a small coin."
+    ],
+    "diagnosis": "melanoma",
+    "image_path": "/storage/lokesh/HealthCare/Datasets/MedMNIST/DermaMNIST/train/00098.png"
+  }
+}

@@ -1,0 +1,38 @@
+{
+    "class": "actinic keratoses",
+    "image": "/static/samples/images/00180.png",
+    "dialogue": [
+        {
+            "doctor": "Where is this lesion located on your body?",
+            "patient": "This lesion is located on my face, specifically on my cheek."
+        },
+        {
+            "doctor": "Is there more than one of these spots?",
+            "patient": "Yes, there are multiple spots on my skin that look like this."
+        },
+        {
+            "doctor": "How big do you estimate this spot to be?",
+            "patient": "I estimate this spot to be about the size of a pencil tip."
+        },
+        {
+            "doctor": "What color do you think this spot is?",
+            "patient": "I think this spot is pinkish-red."
+        },
+        {
+            "doctor": "Does the edge of this spot look smooth or rough?",
+            "patient": "Smooth."
+        },
+        {
+            "doctor": "Can you describe how this spot feels when you touch it?",
+            "patient": "When I touch this spot, it feels rough and uneven, like a small bump or a callus."
+        },
+        {
+            "doctor": "Do you feel any discomfort in this area?",
+            "patient": "No, I don't feel any discomfort in this area."
+        },
+        {
+            "doctor": "How often does this spot appear?",
+            "patient": "I've noticed this spot a few times over the past few months. It seems to come and go."
+        }
+    ]
+}

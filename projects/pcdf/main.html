@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Dialogue Animation</title>
+  <link rel="stylesheet" href="/static/css/bulma.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 60% !important;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .diagnosis {
+      background: rgba(255,255,255,0.2);
+      padding: 10px 20px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .chat-container {
+      height: 500px;
+      overflow-y: auto;
+      padding: 20px;
+      background: #f5f7fa;
+    }
+
+    .message {
+      display: flex;
+      margin-bottom: 20px;
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .message.patient {
+      flex-direction: row-reverse;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
+
+    .avatar.doctor {
+      background: #667eea;
+      color: white;
+      margin-right: 10px;
+    }
+
+    .avatar.patient {
+      background: #48bb78;
+      color: white;
+      margin-left: 10px;
+    }
+
+    .avatar img {
+      width: 70%;
+      height: 70%;
+      object-fit: contain;
+    }
+
+    .message-content {
+      max-width: 70%;
+      padding: 12px 18px;
+      border-radius: 18px;
+      position: relative;
+    }
+
+    .message.doctor .message-content {
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .message.patient .message-content {
+      background: #667eea;
+      color: white;
+    }
+
+    .message-label {
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      opacity: 0.7;
+    }
+
+    .image-message {
+      max-width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .image-message img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .controls {
+      padding: 20px;
+      background: white;
+      border-top: 2px solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .control-group {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #5568d3;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+
+    .speed-btn {
+      background: #e2e8f0;
+      color: #2d3748;
+      padding: 8px 16px;
+      font-size: 13px;
+    }
+
+    .speed-btn.active {
+      background: #667eea;
+      color: white;
+    }
+
+    .speed-btn:hover {
+      background: #cbd5e0;
+    }
+
+    .speed-btn.active:hover {
+      background: #5568d3;
+    }
+
+    .speed-label {
+      font-size: 14px;
+      color: #2d3748;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🏥 Medical Dialogue System</h1>
+      <div class="diagnosis" id="diagnosis">Loading samples...</div>
+    </div>
+    
+    <div class="chat-container" id="chatContainer"></div>
+    
+    <div class="controls">
+      <div class="control-group">
+        <button class="btn-primary" id="pauseBtn">Pause</button>
+      </div>
+      <div class="control-group">
+        <span class="speed-label">Speed:</span>
+        <button class="speed-btn" data-speed="slow">Slow</button>
+        <button class="speed-btn active" data-speed="normal">Normal</button>
+        <button class="speed-btn" data-speed="fast">Fast</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const chatContainer = document.getElementById('chatContainer');
+    const diagnosisEl = document.getElementById('diagnosis');
+    const pauseBtn = document.getElementById('pauseBtn');
+    const speedBtns = document.querySelectorAll('.speed-btn');
+
+    const doctorIcon = "/static/images/doctor.png";
+    const patientIcon = "/static/images/patient.png";
+
+    let samples = [];
+    let currentSample = 0;
+    let dialogueIndex = -1;
+    let animating = true;
+    let timer = null;
+    
+    const speeds = {
+      slow: 3000,
+      normal: 2000,
+      fast: 1000
+    };
+    let currentSpeed = 'normal';
+
+    async function loadSamples() {
+    const numSamples = 3;
+    const basePath = "/static/samples/dialogues/";
+
+    for (let i = 1; i <= numSamples; i++) {
+        try {
+        const res = await fetch(`${basePath}sample_${i}.json`);
+        if (!res.ok) continue; // skip if file missing
+        const data = await res.json();
+        samples.push(data);
+        } catch (error) {
+        console.warn(`Skipping sample_${i}.json (not found or invalid)`);
+        }
+    }
+
+    if (samples.length > 0) {
+        updateDiagnosis(samples[0].class);
+        animate();
+    } else {
+        diagnosisEl.textContent = "No samples found.";
+    }
+    }
+
+
+    function updateDiagnosis(text) {
+      diagnosisEl.textContent = "Diagnosis: " + text;
+    }
+
+    function addMessage(type, content, isImage) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = 'message ' + type;
+      
+      const avatar = document.createElement('div');
+      avatar.className = 'avatar ' + type;
+      const img = document.createElement('img');
+      img.src = type === 'doctor' ? doctorIcon : patientIcon;
+      avatar.appendChild(img);
+      
+      const contentDiv = document.createElement('div');
+      contentDiv.className = 'message-content';
+      
+      const label = document.createElement('div');
+      label.className = 'message-label';
+      label.textContent = type === 'doctor' ? 'DocVLM' : 'PatientVLM';
+      contentDiv.appendChild(label);
+      
+      if (isImage) {
+        const imageWrapper = document.createElement('div');
+        imageWrapper.className = 'image-message';
+        const imgEl = document.createElement('img');
+        imgEl.src = content;
+        imgEl.alt = 'Patient submitted image';
+        imageWrapper.appendChild(imgEl);
+        contentDiv.appendChild(imageWrapper);
+      } else {
+        const text = document.createElement('div');
+        text.textContent = content;
+        contentDiv.appendChild(text);
+      }
+      
+      messageDiv.appendChild(avatar);
+      messageDiv.appendChild(contentDiv);
+      chatContainer.appendChild(messageDiv);
+      
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    function resetChat() {
+      chatContainer.innerHTML = "";
+      dialogueIndex = -1;
+    }
+
+    function animate() {
+      if (!animating) return;
+      const sample = samples[currentSample];
+      const speed = speeds[currentSpeed];
+
+      if (dialogueIndex === -1) {
+        updateDiagnosis(sample.class);
+        addMessage("patient", sample.image, true);
+        dialogueIndex++;
+        timer = setTimeout(animate, speed);
+        return;
+      }
+
+      if (dialogueIndex < sample.dialogue.length) {
+        const d = sample.dialogue[dialogueIndex];
+        addMessage("doctor", d.doctor, false);
+        setTimeout(() => {
+          if (!animating) return;
+          addMessage("patient", d.patient, false);
+          dialogueIndex++;
+          timer = setTimeout(animate, speed);
+        }, speed / 2);
+      } else {
+        currentSample = (currentSample + 1) % samples.length;
+        dialogueIndex = -1;
+        resetChat();
+        timer = setTimeout(animate, speed);
+      }
+    }
+
+    pauseBtn.addEventListener("click", () => {
+      if (animating) {
+        animating = false;
+        clearTimeout(timer);
+        pauseBtn.textContent = "Resume";
+      } else {
+        animating = true;
+        pauseBtn.textContent = "Pause";
+        animate();
+      }
+    });
+
+    speedBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        speedBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentSpeed = btn.dataset.speed;
+      });
+    });
+
+    loadSamples();
+  </script>
+</body>
+</html>

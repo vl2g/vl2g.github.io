@@ -1,0 +1,38 @@
+{
+    "class": "benign keratosis-like lesions",
+    "image": "/static/samples/images/00309.png",
+    "dialogue": [
+        {
+            "doctor": "Where on your body is this lesion located?",
+            "patient": "I noticed this lesion on my left arm, near the elbow."
+        },
+        {
+            "doctor": "Is there more than one of these lesions, and are they spread out randomly or in a specific pattern?",
+            "patient": "Yes, there are multiple lesions, and they seem to be spread out randomly across my skin."
+        },
+        {
+            "doctor": "Could you describe the shape and size of the lesion?",
+            "patient": "The lesion appears to be irregular in shape, with some areas that are raised and others that are flat. The size seems to be quite large, covering a significant portion of the skin area it occupies."
+        },
+        {
+            "doctor": "Does the edge of the lesion look smooth or does it have a jagged border?",
+            "patient": "The edge of the lesion looks jagged."
+        },
+        {
+            "doctor": "What color is the lesion compared to your surrounding skin?",
+            "patient": "The lesion is a bit darker than my surrounding skin."
+        },
+        {
+            "doctor": "How does the texture of the lesion feel?",
+            "patient": "The texture of the lesion feels slightly raised and bumpy, with a rough surface that contrasts with the surrounding skin."
+        },
+        {
+            "doctor": "Do you have any symptoms associated with this area, like itching or pain?",
+            "patient": "I have noticed some itching in this area, but no significant pain."
+        },
+        {
+            "doctor": "How often do you notice this lesion?",
+            "patient": "I usually notice this lesion when I'm applying makeup or when I'm wearing a tight shirt."
+        }
+    ]
+}

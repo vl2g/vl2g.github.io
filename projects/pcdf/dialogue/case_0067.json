@@ -1,0 +1,24 @@
+{
+  "0067": {
+    "dialogue": [
+      "Doctor: Could you describe how the edges of the spot look? Are they clear or fuzzy around the sides?",
+      "Patient: The edges of the spot are quite clear, with a distinct boundary that separates it from the surrounding skin. There is no blurriness or fuzziness around the sides, which suggests that the edges are well-defined.",
+      "Doctor: How often do you notice this spot appearing or changing?",
+      "Patient: I usually notice this spot appearing more often during the summer months when I'm out in the sun more.",
+      "Doctor: Can you tell me if the spot is round or has any unusual shapes?",
+      "Patient: The spot is round, but it has a slightly irregular shape with some uneven edges.",
+      "Doctor: Does the spot feel smooth to touch or does it have any bumps or changes in texture?",
+      "Patient: The spot feels smooth to touch, without any noticeable bumps or changes in texture.",
+      "Doctor: Is there more than one spot like this on your body, or is it just this one?",
+      "Patient: I've noticed a few spots like this on my body, but this one seems to be the most prominent.",
+      "Doctor: Where else on your body do you find spots like this?",
+      "Patient: I've noticed a few spots like this on my legs and arms.",
+      "Doctor: What color is the spot compared to the rest of your skin?",
+      "Patient: The spot is a darker shade compared to the rest of my skin.",
+      "Doctor: Do you feel any discomfort or pain near this spot?",
+      "Patient: No, I don't feel any discomfort or pain near this spot."
+    ],
+    "diagnosis": "dermatofibroma",
+    "image_path": "/storage/lokesh/HealthCare/Datasets/MedMNIST/DermaMNIST/train/00067.png"
+  }
+}

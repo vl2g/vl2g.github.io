@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Dialogue Animation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .diagnosis {
+      background: rgba(255,255,255,0.2);
+      padding: 10px 20px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .chat-container {
+      height: 500px;
+      overflow-y: auto;
+      padding: 20px;
+      background: #f5f7fa;
+    }
+
+    .message {
+      display: flex;
+      margin-bottom: 20px;
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .message.patient {
+      flex-direction: row-reverse;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .avatar.doctor {
+      background: #667eea;
+      color: white;
+      margin-right: 10px;
+    }
+
+    .avatar.patient {
+      background: #48bb78;
+      color: white;
+      margin-left: 10px;
+    }
+
+    .message-content {
+      max-width: 70%;
+      padding: 12px 18px;
+      border-radius: 18px;
+      position: relative;
+    }
+
+    .message.doctor .message-content {
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .message.patient .message-content {
+      background: #667eea;
+      color: white;
+    }
+
+    .message-label {
+      font-size: 11px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      opacity: 0.7;
+    }
+
+    .image-message {
+      max-width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .image-message img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .controls {
+      padding: 20px;
+      background: white;
+      border-top: 2px solid #e2e8f0;
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    button {
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-primary {
+      background: #667eea;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #5568d3;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-secondary {
+      background: #e2e8f0;
+      color: #2d3748;
+    }
+
+    .btn-secondary:hover {
+      background: #cbd5e0;
+    }
+
+    .speed-control {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: auto;
+    }
+
+    .speed-control label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #2d3748;
+    }
+
+    .speed-control select {
+      padding: 8px 12px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .sample-selector {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sample-selector select {
+      padding: 8px 12px;
+      border: 2px solid #e2e8f0;
+      border-radius: 8px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🏥 Medical Dialogue System</h1>
+      <div class="diagnosis" id="diagnosis">Loading...</div>
+    </div>
+    
+    <div class="chat-container" id="chatContainer"></div>
+    
+    <div class="controls">
+      <div class="sample-selector">
+        <label>Sample:</label>
+        <select id="sampleSelect">
+          <option value="0">Sample 1</option>
+        </select>
+      </div>
+      <button class="btn-primary" id="startBtn">Start Animation</button>
+      <button class="btn-secondary" id="resetBtn">Reset</button>
+      <div class="speed-control">
+        <label>Speed:</label>
+        <select id="speedSelect">
+          <option value="3000">Slow</option>
+          <option value="2000" selected>Normal</option>
+          <option value="1000">Fast</option>
+          <option value="500">Very Fast</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const samples = [
+      {
+        class: "Seborrheic Keratosis",
+        image: "images/PAT_87_133_159.png",
+        dialogue: [
+          {
+            doctor: "Do you have this lesion for a long time?",
+            patient: "Yes, I have had it for several years."
+          },
+          {
+            doctor: "Has it changed in size or color recently?",
+            patient: "No, it has remained the same."
+          },
+          {
+            doctor: "Any itching, bleeding, or pain associated with it?",
+            patient: "No, it doesn't cause any discomfort."
+          }
+        ]
+      }
+    ];
+
+    let currentSampleIndex = 0;
+    let currentDialogueIndex = -1;
+    let isAnimating = false;
+    let animationTimeout = null;
+    let speed = 2000;
+
+    const chatContainer = document.getElementById('chatContainer');
+    const diagnosisEl = document.getElementById('diagnosis');
+    const startBtn = document.getElementById('startBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const speedSelect = document.getElementById('speedSelect');
+    const sampleSelect = document.getElementById('sampleSelect');
+
+    function addMessage(type, content, isImage) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = 'message ' + type;
+      
+      const avatar = document.createElement('div');
+      avatar.className = 'avatar ' + type;
+      avatar.innerHTML = type === 'doctor' ? '👨‍⚕️' : '👤';
+      
+      const contentDiv = document.createElement('div');
+      contentDiv.className = 'message-content';
+      
+      const label = document.createElement('div');
+      label.className = 'message-label';
+      label.textContent = type === 'doctor' ? 'DoctorVLM' : 'PatientVLM';
+      contentDiv.appendChild(label);
+      
+      if (isImage) {
+        const imageWrapper = document.createElement('div');
+        imageWrapper.className = 'image-message';
+        const img = document.createElement('img');
+        img.src = content;
+        img.alt = 'Patient submitted image';
+        imageWrapper.appendChild(img);
+        contentDiv.appendChild(imageWrapper);
+      } else {
+        const text = document.createElement('div');
+        text.textContent = content;
+        contentDiv.appendChild(text);
+      }
+      
+      messageDiv.appendChild(avatar);
+      messageDiv.appendChild(contentDiv);
+      chatContainer.appendChild(messageDiv);
+      
+      chatContainer.scrollTop = chatContainer.scrollHeight;
+    }
+
+    function updateDiagnosis(className) {
+      diagnosisEl.textContent = 'Diagnosis: ' + className;
+    }
+
+    function animate() {
+      if (!isAnimating) return;
+
+      const sample = samples[currentSampleIndex];
+      
+      if (currentDialogueIndex === -1) {
+        addMessage('patient', sample.image, true);
+        currentDialogueIndex++;
+        animationTimeout = setTimeout(animate, speed);
+        return;
+      }
+
+      if (currentDialogueIndex < sample.dialogue.length) {
+        const dialogue = sample.dialogue[currentDialogueIndex];
+        
+        addMessage('doctor', dialogue.doctor, false);
+        
+        animationTimeout = setTimeout(function() {
+          addMessage('patient', dialogue.patient, false);
+          currentDialogueIndex++;
+          
+          if (currentDialogueIndex < sample.dialogue.length && isAnimating) {
+            animationTimeout = setTimeout(animate, speed);
+          } else {
+            isAnimating = false;
+            startBtn.textContent = 'Start Animation';
+          }
+        }, speed / 2);
+      }
+    }
+
+    function reset() {
+      isAnimating = false;
+      currentDialogueIndex = -1;
+      chatContainer.innerHTML = '';
+      if (animationTimeout) {
+        clearTimeout(animationTimeout);
+      }
+      startBtn.textContent = 'Start Animation';
+      updateDiagnosis(samples[currentSampleIndex].class);
+    }
+
+    startBtn.addEventListener('click', function() {
+      if (isAnimating) {
+        isAnimating = false;
+        if (animationTimeout) {
+          clearTimeout(animationTimeout);
+        }
+        startBtn.textContent = 'Start Animation';
+      } else {
+        if (currentDialogueIndex === -1 || currentDialogueIndex >= samples[currentSampleIndex].dialogue.length) {
+          reset();
+        }
+        isAnimating = true;
+        startBtn.textContent = 'Pause';
+        animate();
+      }
+    });
+
+    resetBtn.addEventListener('click', reset);
+
+    speedSelect.addEventListener('change', function(e) {
+      speed = parseInt(e.target.value);
+    });
+
+    sampleSelect.addEventListener('change', function(e) {
+      currentSampleIndex = parseInt(e.target.value);
+      reset();
+    });
+
+    updateDiagnosis(samples[currentSampleIndex].class);
+  </script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-59PHFRF8');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8">
+  <meta name="description" content="A novel Pre-Consultation Dialogue framework using vision–language models (VLMs) to simulate doctor–patient interactions, integrating visual data with synthetic symptom profiles to improve diagnostic accuracy.">
+  <meta name="keywords" content="PatientVLM Meets DocVLM, AI in healthcare, Medical Diagnosis, Pre-Consultation Dialogue">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PatientVLM Meets DocVLM</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/player.css"/>
+  <link rel="stylesheet" href="./static/css/table.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-59PHFRF8"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://vl2g.github.io">
+          <span class="icon">
+            <i class="fas fa-home"></i>
+          </span>
+        </a>
+
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">More Research</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://vl2g.github.io/projects/retvqa/">RetVQA</a>
+            <a class="navbar-item" href="https://vl2g.github.io/projects/cofar/">COFAR</a>
+            <a class="navbar-item" href="https://textkvqa.github.io">Text-KVQA</a>
+            <a class="navbar-item" href="https://github.com/Bhashini-IITJ/BharatSceneTextDataset">Bharat Scene Text Dataset</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              PatientVLM Meets DocVLM: <br>
+              Pre-Consultation Dialogue Between Vision-Language Models for Efficient Diagnosis
+            </h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://Katikapalli.github.io/">K Lokesh</a><sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://abhiram4572.github.io/">Abhirama Subramanyam Penamakuri</a><sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="">Uday Agarwal</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="">Apoorva Challa</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="">Shreya K Gowda</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="">Somesh Gupta</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://anandmishra22.github.io/">Anand Mishra</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Indian Institute of Technology Jodhpur,</span>
+              <span class="author-block"><sup>2</sup>All India Institute of Medical Sciences Delhi</span> <br>
+              <span class="author-block" style="font-size: medium;"><sup>*</sup>Equal Contribution</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link -->
+                <span class="link-block">
+                  <a href="static/paper.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- arXiv Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2011.12948" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                <!-- Video Link -->
+                <!-- <span class="link-block">
+                  <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span> -->
+
+                <!-- Code Link -->
+                <span class="link-block">
+                  <a href="https://github.com/vl2g/pcdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Dataset Link -->
+                <span class="link-block">
+                  <a href="https://huggingface.co/datasets/vl2g/pcdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Data</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p class="abstract-text">
+              Traditionally, AI research in medical diagnosis has largely centered on image analysis. While this has led to notable advancements, the absence of patient-reported symptoms continues to hinder diagnostic accuracy. To address this, we propose a Pre-Consultation Dialogue framework that mimics real-world diagnostic procedures, where doctors iteratively query patients before reaching a conclusion. Specifically, we simulate diagnostic dialogues between two vision–language models (VLMs): a DocVLM, which generates follow-up questions based on the image and dialogue history, and a PatientVLM, which responds using a symptom profile derived from the ground-truth diagnosis. We additionally conducted a small-scale clinical validation of the synthetic symptoms generated by our framework, confirming their usefulness for diagnosis. These DocVLM–PatientVLM interactions yield realistic, multi-turn dialogues paired with images and diagnoses, which are then used to fine-tune the DocVLM. This dialogue-based training substantially enhances diagnostic performance. For instance, using Qwen2.5-VL-7B as the base model, with symptoms generated using our framework achieves an F1 score of 81.0%, compared to just 56.5% with direct image-only fine-tuning on the DermaMNIST dataset.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="section">
+    <div class="container is-max-desktop">
+      Paper Video
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">Overview of the Pre-Consultation Dialogue Framework (PCDF)</h2>
+          <img src="./static/images/PCDF_main.svg" alt="Framework Diagram">
+          <p class="overview-description">
+            In the Dialogue Simulation phase (left), a DocVLM and a PatientVLM engage in multi-turn conversation. At each turn \(t\)<i>t</i>, the DocVLM generates a follow-up question using the image, the current dialogue history, and an instruction prompt <i>Pdoc</i>. The PatientVLM responds using the image, the ground-truth diagnosis label (to simulate symptom expression), the question from the DocVLM, and an instruction prompt <i>Ppat</i>. This interaction continues for <i>T</i> turns, yielding an image–dialogue–diagnosis triplet. In the Dialogue-conditioned DocVLM Finetuning phase (right), the DocVLM is instruction-finetuned (using prompt <i>Pdocft</i>) on these synthetic triplets to perform dialogue-aware, accurate, and interpretable diagnosis.
+          </p>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Dialogue Player -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <div class="container container_player">
+            <div class="header">
+              <h1>PCDF Generated Dialogues</h1>
+              <div class="diagnosis" id="diagnosis">Loading samples...</div>
+            </div>
+
+            <div class="chat-container" id="chatContainer"></div>
+
+            <div class="controls">
+              <div class="control-group">
+                <button class="btn-primary" id="pauseBtn">Pause</button>
+              </div>
+              <div class="control-group">
+                <span class="speed-label">Speed:</span>
+                <button class="speed-btn" data-speed="slow">Slow</button>
+                <button class="speed-btn active" data-speed="normal">Normal</button>
+                <button class="speed-btn" data-speed="fast">Fast</button>
+          </div>
+        </div>
+      </div>
+
+      <script src="./static/js/player.js"></script>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Performance Table -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column">
+          <h2 class="title is-3">VLM Performance Comparison</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th class="model" rowspan="2">Model</th>
+                <th class="model" rowspan="2">Setting</th>
+                <th colspan="2">DermaMNIST</th>
+                <th colspan="2">PneumoniaMNIST</th>
+                <th colspan="2">RetinaMNIST</th>
+                <th colspan="2">PathMNIST</th>
+              </tr>
+              <tr>
+                <th>Accuracy</th>
+                <th>F1</th>
+                <th>Accuracy</th>
+                <th>F1</th>
+                <th>Accuracy</th>
+                <th>F1</th>
+                <th>Accuracy</th>
+                <th>F1</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="model setting" rowspan="2">InternVL3-2B</td>
+                <td class="setting">Image-only SFT</td>
+                <td>66.8</td>
+                <td>36.5</td>
+                <td>89.6</td>
+                <td>88.4</td>
+                <td>52.5</td>
+                <td>31.5</td>
+                <td>83.5</td>
+                <td>70.9</td>
+              </tr>
+              <tr class="pcdf">
+                <td class="setting">+PCDF (Ours)</td>
+                <td>89.6</td>
+                <td>73.7</td>
+                <td>98.7</td>
+                <td>98.6</td>
+                <td>72.2</td>
+                <td>54.9</td>
+                <td>95.7</td>
+                <td>85.5</td>
+              </tr>
+
+              <tr>
+                <td class="model setting" rowspan="2">Qwen2.5-VL-7B</td>
+                <td class="setting">Image-only SFT</td>
+                <td>77.8</td>
+                <td>56.5</td>
+                <td>85.6</td>
+                <td>83.3</td>
+                <td>54.8</td>
+                <td>33.8</td>
+                <td>71.6</td>
+                <td>73.5</td>
+              </tr>
+              <tr class="pcdf">
+                <td class="setting">+PCDF (Ours)</td>
+                <td>92.0</td>
+                <td>81.0</td>
+                <td>95.0</td>
+                <td>94.5</td>
+                <td>58.2</td>
+                <td>39.7</td>
+                <td>79.5</td>
+                <td>77.9</td>
+              </tr>
+
+              <tr>
+                <td class="model setting" rowspan="2">Gemma3-4B</td>
+                <td class="setting">Image-only SFT</td>
+                <td>87.2</td>
+                <td>78.3</td>
+                <td>96.0</td>
+                <td>95.7</td>
+                <td>64.8</td>
+                <td>47.7</td>
+                <td>89.5</td>
+                <td>86.0</td>
+              </tr>
+              <tr class="pcdf">
+                <td class="setting">+PCDF (Ours)</td>
+                <td>92.8</td>
+                <td>81.9</td>
+                <td>99.0</td>
+                <td>99.0</td>
+                <td>76.0</td>
+                <td>67.7</td>
+                <td>92.1</td>
+                <td>90.2</td>
+              </tr>
+
+              <tr>
+                <td class="model setting" rowspan="2">MedGemma3-4B</td>
+                <td class="setting">Image-only SFT</td>
+                <td>89.0</td>
+                <td>81.5</td>
+                <td>99.2</td>
+                <td>99.1</td>
+                <td>79.2</td>
+                <td>71.2</td>
+                <td>93.2</td>
+                <td>90.9</td>
+              </tr>
+              <tr class="pcdf">
+                <td class="setting">+PCDF (Ours)</td>
+                <td>94.4</td>
+                <td>86.4</td>
+                <td>99.4</td>
+                <td>99.3</td>
+                <td>82.2</td>
+                <td>81.3</td>
+                <td>97.5</td>
+                <td>96.9</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{lokesh2026patientvlm,
+  title     = {PatientVLM Meets DocVLM: Pre-Consultation Dialogue Between Vision-Language Models for Efficient Diagnosis},
+  author    = {Lokesh, K and Penamakuri, Abhirama Subramanyam and Agarwal, Uday and Challa, Apoorva and Gowda, Shreya K and Gupta, Somesh and Mishra, Anand},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  year      = {2026},
+  publisher = {AAAI Press}
+}</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="container is-max-desktop content">
+        <h2 class="title">Acknowledgement</h2>
+        <p>
+          This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

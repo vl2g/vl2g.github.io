@@ -1,0 +1,24 @@
+{
+  "114": {
+    "dialogue": [
+      "Doctor: Could you describe how the edges of the spot look? Are they smooth or do they have jagged edges?",
+      "Patient: The edges of the spot are not smooth; they have jagged edges.",
+      "Doctor: Is there just one spot, or do you have other spots nearby?",
+      "Patient: I have noticed a few spots nearby, but this one seems to be the most concerning.",
+      "Doctor: Where is this spot located on your body?",
+      "Patient: This spot is located on my left arm, near the elbow.",
+      "Doctor: What color does this spot appear to be?",
+      "Patient: This spot appears to be a mix of pink and red, with some areas that are lighter, almost white.",
+      "Doctor: How does the surface of this spot feel? Is it smooth or rough?",
+      "Patient: The surface of this spot feels rough.",
+      "Doctor: How often have you noticed this spot?",
+      "Patient: I've noticed this spot a few times over the past few months. It seems to come and go, but it's been more noticeable in the last week or so.",
+      "Doctor: Do you feel any itching, burning, or pain around this spot?",
+      "Patient: I don't feel any itching, burning, or pain around this spot. It just looks like a small, raised area on my skin.",
+      "Doctor: Could you tell me about the shape and size of the spot?",
+      "Patient: The spot is irregular in shape, with some areas appearing raised and others sunken. It's difficult to determine the exact size, but it seems to be quite large compared to the surrounding skin."
+    ],
+    "diagnosis": "basal cell carcinoma",
+    "image_path": "/storage/lokesh/HealthCare/Datasets/MedMNIST/DermaMNIST/test/00114.png"
+  }
+}

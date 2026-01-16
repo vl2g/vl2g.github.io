@@ -1,0 +1,38 @@
+{
+    "class": "dermatofibroma",
+    "image": "/static/samples/images/00001.png",
+    "dialogue": [
+        {
+            "doctor": "Where exactly on your body do you have this lesion?",
+            "patient": "I have this lesion on my left knee."
+        },
+        {
+            "doctor": "Is there more than one of these lesions?",
+            "patient": "Yes, there are multiple similar lesions visible on my skin."
+        },
+        {
+            "doctor": "What is the shape and size of the lesion?",
+            "patient": "The lesion is irregular in shape and appears to be quite large, covering a significant portion of the skin."
+        },
+        {
+            "doctor": "Can you describe the color of the lesion?",
+            "patient": "The lesion appears to be pinkish in color."
+        },
+        {
+            "doctor": "How do the edges of the lesion look? Are they well-defined or irregular?",
+            "patient": "The edges of the lesion are irregular, with some areas appearing more raised and others more flat."
+        },
+        {
+            "doctor": "How does the texture of the lesion feel?",
+            "patient": "The texture of the lesion feels rough and uneven, with a slightly raised surface compared to the surrounding skin."
+        },
+        {
+            "doctor": "Do you have any symptoms associated with the lesion, such as itching or pain?",
+            "patient": "I have noticed that the lesion is quite tender to the touch, and it does sometimes feel itchy."
+        },
+        {
+            "doctor": "How often do you notice this lesion?",
+            "patient": "I usually notice this lesion when I'm in the shower or when I'm applying lotion."
+        }
+    ]
+}
