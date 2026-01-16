@@ -1,6 +1,6 @@
 {
     "class": "dermatofibroma",
-    "image": "/static/samples/images/00001.png",
+    "image": "/projects/pcdf/static/samples/images//00001.png",
     "dialogue": [
         {
             "doctor": "Where exactly on your body do you have this lesion?",

@@ -1,6 +1,6 @@
 {
     "class": "vascular lesions",
-    "image": "/static/samples/images/00239.png",
+    "image": "/projects/pcdf/static/samples/images//00239.png",
     "dialogue": [
         {
             "doctor": "Where on your body is this spot located?",

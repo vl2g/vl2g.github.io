@@ -1,6 +1,6 @@
 {
     "class": "melanocytic nevi",
-    "image": "/static/samples/images/00185.png",
+    "image": "/projects/pcdf/static/samples/images//00185.png",
     "dialogue": [
         {
             "doctor": "Where on your body is this lesion located?",
