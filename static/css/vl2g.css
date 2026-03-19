@@ -324,17 +324,71 @@ a:hover {
   margin-bottom: 2rem;
 }
 
-.sponsor-logo {
-  max-width: 120px;
-  height: auto;
-  filter: grayscale(50%);
-  transition: all var(--transition-speed) ease;
-  padding: 0.5rem;
+.funding-container {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
 }
 
-.sponsor-logo:hover {
-  filter: grayscale(0%);
-  transform: scale(1.1);
+.funding-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  counter-reset: sponsor-counter;
+}
+
+.funding-list li {
+  position: relative;
+  background: linear-gradient(135deg, var(--background-light) 80%, #ffffff 100%);
+  border-left: 4px solid var(--secondary-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-speed) ease;
+  overflow: hidden;
+  counter-increment: sponsor-counter;
+}
+
+.funding-list li::before {
+  content: counter(sponsor-counter, decimal-leading-zero);
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background-color: rgba(212, 129, 31, 0.14);
+  color: var(--accent-color);
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.funding-list li:hover {
+  transform: translateX(8px);
+  border-left-color: var(--accent-color);
+  box-shadow: var(--shadow-md);
+}
+
+.funding-list a {
+  display: block;
+  padding: 0.95rem 1rem 0.95rem 3rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.funding-list a:hover {
+  color: var(--link-hover);
+  text-decoration: none;
 }
 
 /* ===================================
@@ -421,8 +475,12 @@ a:hover {
     font-size: 0.9rem;
   }
   
-  .sponsor-logo {
-    max-width: 100px;
+  .funding-container {
+    padding: 1rem;
+  }
+
+  .funding-list {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
   
   .research-list li {
@@ -450,8 +508,17 @@ a:hover {
     padding: 0.75rem;
   }
   
-  .sponsor-logo {
-    max-width: 90px;
+  .funding-container {
+    padding: 0.85rem;
+  }
+
+  .funding-list {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .funding-list a {
+    padding: 0.85rem 0.9rem 0.85rem 2.7rem;
   }
   
   .footer {
