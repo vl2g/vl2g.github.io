@@ -1,0 +1,18 @@
+body { font-family: 'Google Sans', sans-serif; }
+.author-block { margin-right: 0.5rem; }
+.publication-title { font-weight: 700; margin-bottom: 1.5rem; }
+.abstract-text { text-align: justify; margin-top: 1.5rem; font-family: 'Noto Sans', sans-serif; }
+.bibtex-box { text-align: left; background-color: #f5f5f5; padding: 1.5rem; border-radius: 0.5rem; }
+
+/* Modern Tabs Styling */
+.project-tabs { margin-bottom: 2rem; border-bottom: 2px solid #eaeaea; display: flex; justify-content: center; gap: 2rem; overflow-x: auto; }
+.project-tab { cursor: pointer; padding: 1rem 0; font-weight: 600; color: #7a7a7a; border-bottom: 3px solid transparent; transition: all 0.3s ease; white-space: nowrap; }
+.project-tab:hover { color: #363636; }
+.project-tab.is-active { color: #3273dc; border-bottom-color: #3273dc; }
+
+.tab-pane { display: none; animation: fadeIn 0.4s ease; }
+.tab-pane.is-active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+.sample-figure { height: 400px; display: flex; align-items: center; justify-content: center; }
+.sample-figure img { max-height: 100%; max-width: 100%; object-fit: contain; }
