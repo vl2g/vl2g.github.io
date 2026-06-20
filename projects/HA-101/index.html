@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Not Ready Yet: A Reality Check on AI Models for Automatic Handwritten Answer Sheet Grading</title>
+  <title>How Far Are We?: A Reality Check on AI Models for Automatic Handwritten Answer Sheet Grading</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -29,7 +29,7 @@
   <section class="section">
     <div class="container is-max-desktop">
       <div class="has-text-centered">
-        <h1 class="title is-2 publication-title">Not Ready Yet: A Reality Check on AI Models for Automatic Handwritten Answer Sheet Grading</h1>
+        <h1 class="title is-2 publication-title">How Far Are We?: A Reality Check on AI Models for Automatic Handwritten Answer Sheet Grading</h1>
         
         <div class="is-size-5 mb-4">
           <span class="author-block"><a href="#">Gyan Prabhat</a><sup>1</sup>,</span>
@@ -43,7 +43,7 @@
         </div>
 
         <div class="buttons is-centered">
-          <a href="#" class="button is-dark is-rounded">
+          <a href="https://github.com/PrabhatGyan/automatic_handwritten_answersheet_grading" class="button is-dark is-rounded" target="_blank" rel="noopener noreferrer">
             <span class="icon"><i class="fab fa-github"></i></span>
             <span>Code</span>
           </a>
@@ -74,6 +74,7 @@
         <div class="project-tab is-active" onclick="openTab(event, 'tab-problem')">Problem Statement</div>
         <div class="project-tab" onclick="openTab(event, 'tab-dataset')">Dataset</div>
         <div class="project-tab" onclick="openTab(event, 'tab-method')">Methodology</div>
+        <div class="project-tab" onclick="openTab(event, 'tab-webapp')">Webapp</div>
         <div class="project-tab" onclick="openTab(event, 'tab-results')">Results</div>
       </div>
 
@@ -85,7 +86,7 @@
         <div class="columns is-centered">
           <div class="column is-full">
             <figure class="image sample-figure">
-              <img src="assets/Screenshot%202026-06-18%20at%2008-59-28.png" alt="Problem Statement">
+              <img src="assets/problem-statement.png" alt="Problem Statement">
             </figure>
           </div>
         </div>
@@ -96,11 +97,21 @@
         <div class="content has-text-justified mb-5">
           <p>To fill this gap in the literature, we introduce the Handwritten Assessment (HA) - 101 Dataset a curated benchmark in a controlled setting designed to capture real-world variations in handwritten student responses. The dataset consists of scanned answer sheets from structured examinations, where students write their answers on printed question-cum-answer sheets. The Handwritten Assessment-101 Dataset comprises 745 answer sheet images collected from four different set of question papers and written by ~375 students.</p>
         </div>
-        <div class="columns is-centered">
+        <div class="columns is-multiline is-centered">
           <div class="column is-full">
-            <figure class="image sample-figure">
-              <img src="assets/dataset.png" alt="Dataset">
-            </figure>
+            <div class="box" style="box-shadow: none; border: 1px solid #eaeaea; margin-bottom: 2rem;">
+              <figure class="image" style="display: flex; justify-content: center; align-items: center; padding: 1rem;">
+                <img src="assets/dataset.png" alt="Dataset Samples" style="max-height: 500px; width: auto; object-fit: contain;">
+              </figure>
+            </div>
+          </div>
+          <div class="column is-full">
+            <div class="box" style="box-shadow: none; border: 1px solid #eaeaea;">
+              <h3 class="title is-5 has-text-centered mb-4">Data Collection Pipeline</h3>
+              <figure class="image" style="display: flex; justify-content: center; align-items: center; padding: 1rem;">
+                <img src="assets/Screenshot%202026-06-18%20at%2008-59-28.png" alt="Data Collection Pipeline" style="max-height: 600px; width: auto; object-fit: contain;">
+              </figure>
+            </div>
           </div>
         </div>
       </div>
@@ -115,6 +126,25 @@
             <figure class="image sample-figure">
               <img src="assets/9741EA1E-C8EA-4407-9F4A-31C0E050213A.png" alt="Methodology">
             </figure>
+          </div>
+        </div>
+      </div>
+
+      <div id="tab-webapp" class="tab-pane">
+        <h2 class="title is-4 has-text-centered mb-4">AutoEval Web Application</h2>
+        <div class="content has-text-justified mb-5">
+          <p>
+            <strong>AutoEval</strong> is a secure, user-friendly web platform designed for the seamless, end-to-end automated evaluation of handwritten answer sheets. Educators can effortlessly upload model answer keys alongside student submissions to initiate AI-driven grading workflows, completely abstracting the underlying complexity of Vision-Language Models.
+          </p>
+          <p>
+            The system provides real-time progress updates and a comprehensive interactive dashboard upon completion. Users can analyze summary statistics, review detailed student-wise scores, inspect question-level predictions on individual answer sheets, and export complete class reports.
+          </p>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-full has-text-centered">
+            <div class="publication-video" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+              <iframe src="https://player.vimeo.com/video/1202990372?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" title="AutoEval Demo"></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -140,7 +170,12 @@
     <div class="container is-max-desktop">
       <h2 class="title is-3">BibTeX</h2>
       <div class="bibtex-box">
-        <pre><code>[PLACEHOLDER]</code></pre>
+        <pre><code>@article{prabhat2026howfar,
+  title   = {How Far Are We?: A Reality Check on AI Models for Automatic Handwritten Answer Sheet Grading},
+  author  = {Prabhat, Gyan and Vassista, G. Sai and Mishra, Anand},
+  journal = {TBD},
+  year    = {2026},
+}</code></pre>
       </div>
     </div>
   </section>
