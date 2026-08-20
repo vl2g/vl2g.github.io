@@ -4,35 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="" />
+    <link rel="icon" href="/projects/IndicPhotoOCR/assets/site/IndicPhotoOCR_LOGO.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>IndicPhotoOCR | How to use</title>
-    <meta name="description" content="A user guide on IndicPhotoOCR. 
-">
+    <meta name="description" content="A user guide for using IndicPhotoOCR for detection, script identification, recognition, and end-to-end OCR.">
 
     <meta property="og:title" content="How to use">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vl2g.github.io/projects/IndicPhotoOCR//projects/IndicPhotoOCR/tutorials/how-to-use">
-    <meta property="og:description" content="A user guide on IndicPhotoOCR. 
-">
-    <meta property="og:site_name" content="">
+    <meta property="og:url" content="https://vl2g.github.io/projects/IndicPhotoOCR/tutorials/how-to-use">
+    <meta property="og:description" content="A user guide for using IndicPhotoOCR for detection, script identification, recognition, and end-to-end OCR.">
+    <meta property="og:site_name" content="IndicPhotoOCR">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:url" content="https://vl2g.github.io/projects/IndicPhotoOCR//projects/IndicPhotoOCR/tutorials/how-to-use">
+    <meta name="twitter:url" content="https://vl2g.github.io/projects/IndicPhotoOCR/tutorials/how-to-use">
     <meta name="twitter:title" content="How to use">
-    <meta name="twitter:description" content="A user guide on IndicPhotoOCR. 
-">
+    <meta name="twitter:description" content="A user guide for using IndicPhotoOCR for detection, script identification, recognition, and end-to-end OCR.">
 
     <!-- TODO: Adding page thumbnail for social meida -->
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://vl2g.github.io/projects/IndicPhotoOCR//projects/IndicPhotoOCR/tutorials/how-to-use">
+    <link rel="canonical" href="https://vl2g.github.io/projects/IndicPhotoOCR/tutorials/how-to-use">
 
     <!-- Stylesheet -->
    
     <link rel="stylesheet" href="/projects/IndicPhotoOCR/assets/css/bulma.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
 
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Add link to h2 ... h6 -->
@@ -52,18 +49,6 @@
       });
     </script>
     
-    <!-- Google Analytics -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '');
-</script>
-
-
 </head>
 
 <body>
@@ -78,8 +63,8 @@
                <img class="lp-badge" src="/projects/IndicPhotoOCR/assets/site/IndicPhotoOCR_LOGO.png" alt="Logo">
             </a>
     
-            <div class="navbar-burger" data-target="navbar-main"
-                onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+            <div class="navbar-burger" role="button" tabindex="0" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbar-main" data-target="navbar-main"
+              onclick="const menu = document.getElementById('navbar-main'); const expanded = menu.classList.toggle('is-active'); this.setAttribute('aria-expanded', expanded);">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -108,7 +93,7 @@
 
                 
                 <div class="navbar-item">
-                    <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR" class="bg-transparent button is-danger" target="_blank">
+                    <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR" class="bg-transparent button is-danger" target="_blank" rel="noopener noreferrer" aria-label="Open IndicPhotoOCR on GitHub">
                         <i class="fab fa-github fa-w-14 fa-lg" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -145,7 +130,7 @@
     
     <span class="field">
         
-        <a href="/category/starter" class="article-list-item">
+        <a href="/projects/IndicPhotoOCR/tutorials.html" class="article-list-item">
             Starter
         </a>
         

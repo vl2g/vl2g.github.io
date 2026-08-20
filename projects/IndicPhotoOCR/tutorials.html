@@ -4,33 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="" />
+    <link rel="icon" href="/projects/IndicPhotoOCR/assets/site/IndicPhotoOCR_LOGO.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>IndicPhotoOCR </title>
-    <meta name="description" content="">
+    <title>IndicPhotoOCR | Tutorials</title>
+    <meta name="description" content="Installation, usage, and project update tutorials for IndicPhotoOCR.">
 
-    <meta property="og:title" content="">
+    <meta property="og:title" content="IndicPhotoOCR | Tutorials">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="http://0.0.0.0:4000/tutorials.html">
-    <meta property="og:description" content="">
-    <meta property="og:site_name" content="">
+    <meta property="og:url" content="https://vl2g.github.io/projects/IndicPhotoOCR/tutorials.html">
+    <meta property="og:description" content="Installation, usage, and project update tutorials for IndicPhotoOCR.">
+    <meta property="og:site_name" content="IndicPhotoOCR">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:url" content="http://0.0.0.0:4000/tutorials.html">
-    <meta name="twitter:title" content="">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:url" content="https://vl2g.github.io/projects/IndicPhotoOCR/tutorials.html">
+    <meta name="twitter:title" content="IndicPhotoOCR | Tutorials">
+    <meta name="twitter:description" content="Installation, usage, and project update tutorials for IndicPhotoOCR.">
 
     <!-- TODO: Adding page thumbnail for social meida -->
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="http://0.0.0.0:4000/tutorials.html">
+    <link rel="canonical" href="https://vl2g.github.io/projects/IndicPhotoOCR/tutorials.html">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="/assets/css/bulma.css">
-    <link rel="stylesheet" href="/assets/css/syntax/manni.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
-    <link rel="stylesheet" href="/assets/css/slideshow.css">
+    <link rel="stylesheet" href="/projects/IndicPhotoOCR/assets/css/bulma.css">
+    <link rel="stylesheet" href="/projects/IndicPhotoOCR/assets/css/syntax/manni.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
 
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Add link to h2 ... h6 -->
@@ -50,18 +49,6 @@
       });
     </script>
     
-    <!-- Google Analytics -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '');
-</script>
-
-
 </head>
 
 <body>
@@ -73,12 +60,12 @@
     <!-- style="background-color: #EE7070;" -->
     <div class='container'>
         <div class="navbar-brand">
-            <a class="navbar-item" href="/">
-               <img class="lp-badge" src="/assets/site/IndicPhotoOCR_LOGO.png">
+                <a class="navbar-item" href="/projects/IndicPhotoOCR/">
+                    <img class="lp-badge" src="/projects/IndicPhotoOCR/assets/site/IndicPhotoOCR_LOGO.png" alt="IndicPhotoOCR logo">
             </a>
     
-            <div class="navbar-burger" data-target="navbar-main"
-                onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+            <div class="navbar-burger" role="button" tabindex="0" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbar-main" data-target="navbar-main"
+                onclick="const menu = document.getElementById('navbar-main'); const expanded = menu.classList.toggle('is-active'); this.setAttribute('aria-expanded', expanded);">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -93,11 +80,11 @@
                 
                 <a href="https://bhashini-iitj.github.io/IndicPhotoOCR/" onmousedown="return false" class="navbar-item">Docs</a>
                 
-                <a href="/team.html" onmousedown="return false" class="navbar-item">Team</a>
+                <a href="/projects/IndicPhotoOCR/team.html" class="navbar-item">Team</a>
                 
                 
                 <div class="navbar-item">
-                    <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR" class="bg-transparent button is-danger" target="_blank">
+                    <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR" class="bg-transparent button is-danger" target="_blank" rel="noopener noreferrer" aria-label="Open IndicPhotoOCR on GitHub">
                         <i class="fab fa-github fa-w-14 fa-lg" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -115,7 +102,7 @@
       <div class="container">
           <div class="content pb-3">
     <h1 class="title is-size-2">
-        Layout Parser Tutorials
+        IndicPhotoOCR Tutorials
     </h1>
 </div>
 <div class="columns">
@@ -135,7 +122,7 @@
                     
                     
                         
-                            <a class="is-size-5" href="https://layout-parser.readthedocs.io/en/latest/example/deep_layout_parsing/index.html">Load Layout Models and Perform Layout Detection</a>
+                            <a class="is-size-5" href="/projects/IndicPhotoOCR/tutorials/how-to-use">How to use IndicPhotoOCR</a>
                         
                         <div class="is-divider my-3"></div>
                     
@@ -183,7 +170,7 @@
                     
                     
                         
-                            <a class="is-size-5" href="https://layout-parser.readthedocs.io/en/latest/example/load_coco/index.html">Load COCO format (PubLayNet Dataset) and Visualize Layout Data</a>
+                            <a class="is-size-5" href="/projects/IndicPhotoOCR/tutorials/installation">Install IndicPhotoOCR</a>
                         
                         <div class="is-divider my-3"></div>
                     
@@ -197,7 +184,7 @@
                     
                     
                         
-                            <a class="is-size-5" href="https://layout-parser.readthedocs.io/en/latest/example/parse_ocr/index.html">OCR Tables and Parse the Output</a>
+                            <a class="is-size-5" href="/projects/IndicPhotoOCR/tutorials/updates">View IndicPhotoOCR updates</a>
                         
                         <div class="is-divider my-3"></div>
                     
@@ -230,7 +217,6 @@
     </div>
 </footer>
 
-    <script src="/assets/js/slideshow.js"></script>
 </body>
 
 </html>

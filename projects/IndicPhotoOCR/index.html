@@ -4,32 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="icon" href="" />
+    <link rel="icon" href="/projects/IndicPhotoOCR/assets/site/IndicPhotoOCR_LOGO.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>IndicPhotoOCR </title>
-    <meta name="description" content="">
+    <title>IndicPhotoOCR | Multilingual Scene Text Recognition</title>
+    <meta name="description" content="IndicPhotoOCR is a toolkit for scene text detection, script identification, and recognition across Indian languages and English.">
 
-    <meta property="og:title" content="">
+    <meta property="og:title" content="IndicPhotoOCR | Multilingual Scene Text Recognition">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vl2g.github.io/projects/IndicPhotoOCR//projects/IndicPhotoOCR/">
-    <meta property="og:description" content="">
-    <meta property="og:site_name" content="">
+    <meta property="og:url" content="https://vl2g.github.io/projects/IndicPhotoOCR/">
+    <meta property="og:description" content="A toolkit for scene text detection, script identification, and recognition across Indian languages and English.">
+    <meta property="og:site_name" content="IndicPhotoOCR">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:url" content="https://vl2g.github.io/projects/IndicPhotoOCR//projects/IndicPhotoOCR/">
-    <meta name="twitter:title" content="">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:url" content="https://vl2g.github.io/projects/IndicPhotoOCR/">
+    <meta name="twitter:title" content="IndicPhotoOCR | Multilingual Scene Text Recognition">
+    <meta name="twitter:description" content="A toolkit for scene text detection, script identification, and recognition across Indian languages and English.">
 
     <!-- TODO: Adding page thumbnail for social meida -->
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://vl2g.github.io/projects/IndicPhotoOCR//projects/IndicPhotoOCR/">
+    <link rel="canonical" href="https://vl2g.github.io/projects/IndicPhotoOCR/">
 
     <!-- Stylesheet -->
    
     <link rel="stylesheet" href="/projects/IndicPhotoOCR/assets/css/bulma.css">
-    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
 
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Add link to h2 ... h6 -->
@@ -49,18 +49,6 @@
       });
     </script>
     
-    <!-- Google Analytics -->
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id="></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', '');
-</script>
-
-
 </head>
 
 <body>
@@ -75,8 +63,8 @@
                <img class="lp-badge" src="/projects/IndicPhotoOCR/assets/site/IndicPhotoOCR_LOGO.png" alt="Logo">
             </a>
     
-            <div class="navbar-burger" data-target="navbar-main"
-                onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+            <div class="navbar-burger" role="button" tabindex="0" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbar-main" data-target="navbar-main"
+                onclick="const menu = document.getElementById('navbar-main'); const expanded = menu.classList.toggle('is-active'); this.setAttribute('aria-expanded', expanded);">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -105,7 +93,7 @@
 
                 
                 <div class="navbar-item">
-                    <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR" class="bg-transparent button is-danger" target="_blank">
+                        <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR" class="bg-transparent button is-danger" target="_blank" rel="noopener noreferrer" aria-label="Open IndicPhotoOCR on GitHub">
                         <i class="fab fa-github fa-w-14 fa-lg" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -120,44 +108,18 @@
         <div class="container has-text-centered">
             
             <h1 class="title slogan is-size-2">
-                <p>IndicPhotoOCR – in 3 Lines of Code</p>
+                <p>IndicPhotoOCR for Multilingual Scene Text Recognition</p>
 
             </h1>
             <h2 class="subtitle has-text-white-ter slogan-description is-size-5">
-                <p>MultiLingual Scene Text Recognition in 11 Indian Language</p>
+                <p>Multilingual Scene Text Recognition in 11 Indian Languages</p>
 
             </h2>
-            <button class="mt-5 install-btn install-code-block" onclick="copyPipInstall()">
-                <script>
-                    function copyPipInstall() {
-                        var copyText = document.getElementById("pip-install");
-                        var textArea = document.createElement("textarea");
-                        
-                        // Store the full HTML content, including the <br> tags
-                        const content = copyText.innerHTML; 
-            
-                        // Set the textarea value using the text content for a clean copy
-                        textArea.value = copyText.textContent; 
-            
-                        document.body.appendChild(textArea);
-                        textArea.select();
-                        document.execCommand("Copy");
-                        textArea.remove();
-            
-                        // Change the inner HTML to display "Copied!"
-                        $("#pip-install").html("Copied!"); 
-            
-                        // Restore the original HTML content after a delay
-                        setTimeout(function () {
-                            $("#pip-install").html(content); 
-                        }, 2000);
-                    }
-                </script>
-            
+            <button class="mt-5 install-btn install-code-block" type="button" onclick="copyPipInstall()" aria-describedby="copy-status">
                 <span class="is-small mr-2">
-                    <i class="fas fa-copy"><br></i>
+                    <i class="fas fa-copy" aria-hidden="true"></i>
                 </span>
-                <span id="pip-install">
+                <code id="pip-install">
                     
                         git clone https://github.com/Bhashini-IITJ/IndicPhotoOCR.git<br>
                     
@@ -167,8 +129,22 @@
                     
                         ./setup.sh<br>
                     
-                </span>
+                </code>
             </button>
+            <span id="copy-status" class="is-sr-only" role="status" aria-live="polite"></span>
+            <script>
+                async function copyPipInstall() {
+                    const commands = document.getElementById("pip-install").textContent.trim();
+                    const status = document.getElementById("copy-status");
+
+                    try {
+                        await navigator.clipboard.writeText(commands);
+                        status.textContent = "Installation commands copied.";
+                    } catch (error) {
+                        status.textContent = "Copy failed. Select the commands manually.";
+                    }
+                }
+            </script>
 
         </div>
     </div>
@@ -303,9 +279,9 @@ With just 3 lines of code, process a single image and to get all the words recog
   
     
       <figure>
-        <img src="/projects/IndicPhotoOCR/assets/images/index/D_image_271.jpg" alt="Detection | Script Identification | Recognition wrapped together">
+        <img src="/projects/IndicPhotoOCR/assets/images/index/D_image_271.jpg" alt="Detection | Script Identification | Recognition wrapped together" loading="lazy">
         
-          <figcaption><p>▲ <em>An example of End-to-End Recognition on a image.</em></p>
+          <figcaption><p>▲ <em>An example of end-to-end recognition on an image.</em></p>
 </figcaption>
         
       </figure>
@@ -328,7 +304,7 @@ off-the-shelf and incorporated in our pipeline.</p>
   
     
       <figure>
-        <img src="/projects/IndicPhotoOCR/assets/images/index/D_image_271_det.jpg" alt="Language Agnostic High Performance Text Detection">
+        <img src="/projects/IndicPhotoOCR/assets/images/index/D_image_271_det.jpg" alt="Language Agnostic High Performance Text Detection" loading="lazy">
         
           <figcaption><p>▲ <em>An example of Text Detection performed by IndicPhotoOCR.</em></p>
 </figcaption>
@@ -349,14 +325,14 @@ off-the-shelf and incorporated in our pipeline.</p>
   
     <p><p>The model was inherited from google/vit-base-patch16-224-in21k Vision Transformer (ViT) model, 
 which consists of 12 transformer layers and uses 16 x 16 patch embeddings. This base model 
-was appended with a classification head to be able to indentify the correct script.</p>
+was appended with a classification head to be able to identify the correct script.</p>
 </p>
   
     
       <figure>
-        <img src="/projects/IndicPhotoOCR/assets/images/index/scriptID-webpage.png" alt="ViT based 12 Class Script Classification">
+        <img src="/projects/IndicPhotoOCR/assets/images/index/scriptID-webpage.png" alt="ViT based 12 Class Script Classification" loading="lazy">
         
-          <figcaption><p>▲ <em>An example showing Script labelled to each word by the script identifiaciton module of IndicPhotoOCR.</em></p>
+          <figcaption><p>▲ <em>An example showing the script label assigned to each word by the script identification module of IndicPhotoOCR.</em></p>
 </figcaption>
         
       </figure>
@@ -378,7 +354,7 @@ was appended with a classification head to be able to indentify the correct scri
   
     
       <figure>
-        <img src="/projects/IndicPhotoOCR/assets/images/index/output.gif" alt="Transformer based Fast Recognition">
+        <img src="/projects/IndicPhotoOCR/assets/images/index/output.gif" alt="Transformer based Fast Recognition" loading="lazy">
         
           <figcaption><p>▲ <em>Examples showing recognitions on different languages on images from <a href="https://github.com/Bhashini-IITJ/BharatSceneTextDataset">BSTD</a>.</em></p>
 </figcaption>
@@ -423,7 +399,7 @@ snapshot of the supported languages.</p>
   
     
       <figure>
-        <img src="/projects/IndicPhotoOCR/assets/images/index/language_frequency_wordcloud2.png" alt="11 Indian Languages">
+        <img src="/projects/IndicPhotoOCR/assets/images/index/language_frequency_wordcloud2.png" alt="11 Indian Languages" loading="lazy">
         
       </figure>
     
@@ -548,12 +524,12 @@ snapshot of the supported languages.</p>
                     <button class="mt-2 p-4 slack-btn">
                         <a class="slack-btn-txt"
                             href="https://discord.gg/HHYCDZxqgW"
-                            target="_blank">Join our #Discord</a>
+                            target="_blank" rel="noopener noreferrer">Join our Discord</a>
                     </button>
                 </div>
                 <div class="column is-two-fifths">
                     <figure class="image is-2by1">
-                        <img src="/projects/IndicPhotoOCR/assets/site/Discord&IndicPhotoOCR.svg" alt="discord figure">
+                        <img src="/projects/IndicPhotoOCR/assets/site/Discord&IndicPhotoOCR.svg" alt="Discord community illustration" loading="lazy">
                       </figure>
                 </div>
             </div>
