@@ -216,19 +216,21 @@
 
 
 <script>
-    window.onload = () => {
-        document.querySelectorAll(".menu").forEach(menu => {
-            menu.querySelectorAll('a').forEach(atag => {
-                console.log(atag.target)
-                atag.onclick = () => {
-                    menu.querySelector('a.is-active').classList.remove('is-active');
-                    atag.classList.add('is-active');
-                    menu.parentElement.nextElementSibling.querySelector(".what-hero-detail.is-active").classList.remove("is-active");
-                    menu.parentElement.nextElementSibling.querySelector("#" + atag.text.replaceAll(" ", "-")).classList.add("is-active");
-                }
-            })
-        })
-    }
+    document.addEventListener("DOMContentLoaded", () => {
+        const menu = document.querySelector(".menu");
+        const details = document.querySelectorAll(".what-hero-detail");
+
+        menu.querySelectorAll("a[data-target]").forEach(tab => {
+            tab.addEventListener("click", event => {
+                event.preventDefault();
+
+                menu.querySelector("a.is-active")?.classList.remove("is-active");
+                tab.classList.add("is-active");
+                details.forEach(detail => detail.classList.remove("is-active"));
+                document.querySelector(tab.dataset.target)?.classList.add("is-active");
+            });
+        });
+    });
 </script>
 
 <section class="hero">
@@ -245,7 +247,7 @@
                             <ul class="menu-list">
                                 
                                     <li>
-                                        <a  class="is-active" >End-to-End pipeline</a>
+                                        <a href="#End-to-End-pipeline" data-target="#End-to-End-pipeline" class="is-active">End-to-End pipeline</a>
                                     </li>
                                     
                                 
@@ -257,7 +259,7 @@
                             <ul class="menu-list">
                                 
                                     <li>
-                                        <a >Text Detection Module</a>
+                                        <a href="#Text-Detection-Module" data-target="#Text-Detection-Module">Text Detection Module</a>
                                     </li>
                                     
                                 
@@ -269,7 +271,7 @@
                             <ul class="menu-list">
                                 
                                     <li>
-                                        <a >Script Identification</a>
+                                        <a href="#Script-Identification" data-target="#Script-Identification">Script Identification</a>
                                     </li>
                                     
                                 
@@ -281,7 +283,7 @@
                             <ul class="menu-list">
                                 
                                     <li>
-                                        <a >Crop Word Recognition</a>
+                                        <a href="#Crop-Word-Recognition" data-target="#Crop-Word-Recognition">Crop Word Recognition</a>
                                     </li>
                                     
                                 
@@ -293,12 +295,12 @@
                             <ul class="menu-list">
                                 
                                     <li>
-                                        <a >Introduction Video</a>
+                                        <a href="#Introduction-Video" data-target="#Introduction-Video">Introduction Video</a>
                                     </li>
                                     
                                 
                                     <li>
-                                        <a >Supported Languages</a>
+                                        <a href="#Supported-Languages" data-target="#Supported-Languages">Supported Languages</a>
                                     </li>
                                     
                                 
