@@ -1,0 +1,140 @@
+html {
+    overflow-x: hidden;
+}
+
+img,
+iframe {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+pre {
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.navbar-burger {
+    cursor: pointer;
+}
+
+.article-header h1 {
+    font-size: clamp(2rem, 7vw, 3rem);
+    overflow-wrap: anywhere;
+}
+
+@media screen and (max-width: 1023px) {
+    .navbar-menu.is-active {
+        display: block;
+    }
+
+    .navbar-menu.is-active .navbar-end {
+        padding: 0.5rem 0;
+    }
+
+    .navbar-menu.is-active .navbar-item {
+        min-height: 2.75rem;
+        justify-content: center;
+    }
+
+    .navbar-menu.is-active .navbar-item .button {
+        width: 100%;
+    }
+
+    .content {
+        overflow-wrap: anywhere;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .hero-body {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .columns {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .column {
+        padding-right: 0.75rem;
+        padding-left: 0.75rem;
+    }
+
+    .navbar .container {
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+    .navbar-brand {
+        min-height: 3.5rem;
+    }
+
+    .navbar-menu.is-active {
+        max-height: calc(100vh - 3.5rem);
+        overflow-y: auto;
+    }
+
+    .content pre {
+        font-size: 0.85rem;
+        line-height: 1.45;
+    }
+
+    .video_container {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .video_container iframe {
+        display: block;
+        min-height: 220px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .partner-strip {
+        gap: 0.75rem;
+    }
+
+    .partner-logo {
+        max-width: 46%;
+    }
+
+    .install-code-block {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .resource-card-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .resource-card-actions .button,
+    .resource-source {
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
