@@ -251,6 +251,31 @@
             color: #13947c;
         }
 
+        .partner-strip {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0.65rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .partner-logo {
+            display: block;
+            width: auto;
+            height: 42px;
+            object-fit: contain;
+        }
+
+        .footer-partner {
+            display: block;
+            width: auto;
+            height: 38px;
+            margin: 0 auto 1rem;
+            object-fit: contain;
+        }
+
         @media screen and (max-width: 480px) {
             .hero-actions {
                 align-items: stretch;
@@ -259,6 +284,14 @@
 
             .hero-action {
                 width: 100%;
+            }
+
+            .partner-logo {
+                height: 30px;
+            }
+
+            .partner-strip {
+                padding: 0.5rem 0.75rem;
             }
         }
     </style>
@@ -288,6 +321,10 @@
     
     <section class="hero is-danger is-bold slogan-hero">
     <div class="hero-head">
+        <div class="partner-strip" aria-label="Project partners">
+            <img class="partner-logo" src="/projects/IndicPhotoOCR/assets/images/index/IIT-Logo-name.png" alt="IIT Jodhpur">
+            <img class="partner-logo" src="/projects/IndicPhotoOCR/assets/images/index/icdar26-logo-transparent.png" alt="ICDAR 2026">
+        </div>
         <nav class="navbar lp-navbar" role="navigation">
     <div class='container'>
         <div class="navbar-brand">
@@ -736,6 +773,7 @@ snapshot of the supported languages.</p>
     <div class="container">
         <div class="is-divider mb-3"></div>
         <div class="content has-text-centered">
+            <img class="footer-partner" src="/projects/IndicPhotoOCR/assets/images/index/bhashini-logo.png" alt="Bhashini">
             <p>Created and maintained by IndicPhotoOCR Developers. Built with <a href="https://jekyllrb.com/">jekyll</a> and <a href="http://bulma.io/">bulma</a>.</p>
 
         </div>
