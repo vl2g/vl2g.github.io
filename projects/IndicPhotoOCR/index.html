@@ -101,6 +101,80 @@
             margin-top: 0.5rem;
         }
 
+        .feature-navigation {
+            position: relative;
+        }
+
+        .feature-navigation .menu-label {
+            margin-top: 1rem;
+            margin-bottom: 0.35rem;
+            color: #6b7280;
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .feature-navigation .menu-list a {
+            position: relative;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            color: #526174;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            padding: 0.65rem 0.8rem;
+            text-transform: uppercase;
+            transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .feature-navigation .menu-list a:hover,
+        .feature-navigation .menu-list a:focus-visible {
+            background: rgba(19, 148, 124, 0.08);
+            border-color: rgba(19, 148, 124, 0.25);
+            color: #0f615c;
+        }
+
+        .feature-navigation .menu-list a.is-active {
+            background: rgba(19, 148, 124, 0.12) !important;
+            border-color: rgba(19, 148, 124, 0.3);
+            color: #0f615c;
+            font-weight: 700;
+        }
+
+        .feature-navigation .menu-list a.is-active::after {
+            position: absolute;
+            top: 0.45rem;
+            right: 0.45rem;
+            bottom: 0.45rem;
+            width: 3px;
+            border-radius: 3px;
+            background: #13947c;
+            content: "";
+        }
+
+        .what-hero-detail {
+            animation: feature-panel-in 0.25s ease both;
+        }
+
+        @keyframes feature-panel-in {
+            from {
+                opacity: 0;
+                transform: translateY(0.35rem);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .feature-navigation .menu-list a,
+            .what-hero-detail {
+                animation: none;
+                transition: none;
+            }
+        }
+
         .hero-actions {
             display: flex;
             flex-wrap: wrap;
@@ -315,74 +389,27 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-3">
-                    <aside class="menu">
-                        
-                        
-                            <p class="menu-label is-size-6">
-                                End-to-end scene text recognition
-                            </p>
-                            <ul class="menu-list">
-                                
-                                    <li>
-                                        <a href="#End-to-End-pipeline" data-target="#End-to-End-pipeline" class="is-active">End-to-End pipeline</a>
-                                    </li>
-                                    
-                                
-                            </ul>
-                        
-                            <p class="menu-label is-size-6">
-                                Scene text detection
-                            </p>
-                            <ul class="menu-list">
-                                
-                                    <li>
-                                        <a href="#Text-Detection-Module" data-target="#Text-Detection-Module">Text Detection Module</a>
-                                    </li>
-                                    
-                                
-                            </ul>
-                        
-                            <p class="menu-label is-size-6">
-                                Scene text script identification
-                            </p>
-                            <ul class="menu-list">
-                                
-                                    <li>
-                                        <a href="#Script-Identification" data-target="#Script-Identification">Script Identification</a>
-                                    </li>
-                                    
-                                
-                            </ul>
-                        
-                            <p class="menu-label is-size-6">
-                                Scene text recognition
-                            </p>
-                            <ul class="menu-list">
-                                
-                                    <li>
-                                        <a href="#Crop-Word-Recognition" data-target="#Crop-Word-Recognition">Crop Word Recognition</a>
-                                    </li>
-                                    
-                                
-                            </ul>
-                        
-                            <p class="menu-label is-size-6">
-                                Resources
-                            </p>
-                            <ul class="menu-list">
-                                
-                                    <li>
-                                        <a href="#Introduction-Video" data-target="#Introduction-Video">Introduction Video</a>
-                                    </li>
-                                    
-                                
-                                    <li>
-                                        <a href="#Supported-Languages" data-target="#Supported-Languages">Supported Languages</a>
-                                    </li>
-                                    
-                                
-                            </ul>
-                        
+                    <aside class="menu feature-navigation" aria-label="Feature navigation">
+                        <ul class="menu-list">
+                            <li>
+                                <a href="#End-to-End-pipeline" data-target="#End-to-End-pipeline" class="is-active">End-to-end scene text recognition</a>
+                            </li>
+                            <li>
+                                <a href="#Text-Detection-Module" data-target="#Text-Detection-Module">Scene text detection</a>
+                            </li>
+                            <li>
+                                <a href="#Script-Identification" data-target="#Script-Identification">Scene text script identification</a>
+                            </li>
+                            <li>
+                                <a href="#Crop-Word-Recognition" data-target="#Crop-Word-Recognition">Scene text recognition</a>
+                            </li>
+                            <li>
+                                <a href="#Introduction-Video" data-target="#Introduction-Video">Introduction Video</a>
+                            </li>
+                            <li>
+                                <a href="#Supported-Languages" data-target="#Supported-Languages">Supported Languages</a>
+                            </li>
+                        </ul>
                     </aside>
                 </div>
                 <div class="column is-8 is-offset-1">
