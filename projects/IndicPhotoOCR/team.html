@@ -113,54 +113,108 @@
 
   <style>
     .team {
-      margin: 3rem auto;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 3.5rem 1rem 4rem;
+    }
+    .team-header {
+      max-width: 680px;
+      margin: 0 auto 3rem;
       text-align: center;
     }
-    .team h2 {
-      font-weight: bold;
-      margin-bottom: 2rem;
+    .team-header h1 {
+      margin-bottom: 0.75rem;
+      color: #13947c;
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      font-weight: 700;
     }
-    .card {
-      border: none;
-      background: #f9f9f9;
-      transition: transform 0.2s ease-in-out;
+    .team-header p {
+      margin: 0;
+      color: #687385;
+      font-size: 1.1rem;
     }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0px 6px 18px rgba(0,0,0,0.1);
+    .team .card {
+      height: 100%;
+      border: 1px solid #e4e9ed;
+      border-radius: 6px;
+      background: #fff;
+      box-shadow: 0 8px 22px rgba(31, 45, 61, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
-    .card img {
-      max-width: 100%;
+    .team .card:hover {
+      border-color: rgba(19, 148, 124, 0.45);
+      box-shadow: 0 12px 28px rgba(31, 45, 61, 0.12);
+      transform: translateY(-4px);
+    }
+    .team .card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      padding: 1.5rem 1rem 1.25rem;
+    }
+    .team .card img {
       border-radius: 50%;
       height: 140px;
       width: 140px;
       object-fit: cover;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
+      border: 4px solid #eef8f5;
     }
-    .card-title {
-      font-weight: bold;
+    .team .card-body > p {
+      margin: 0;
     }
-    .list-inline {
-      margin-top: 0.5rem;
+    .team .card-title {
+      min-height: 3rem;
+      margin-bottom: 0.5rem;
+      color: #263442;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.45;
     }
-    .list-inline a {
-      font-size: 1.2rem;
-      margin: 0 5px;
-      color: #555;
-      transition: color 0.2s;
+    .team .list-inline {
+      margin-top: auto;
+      margin-bottom: 0;
     }
-    .list-inline a:hover {
-      color: #0a66c2; /* LinkedIn blue or GitHub black depending */
+    .team .list-inline a {
+      display: inline-grid;
+      place-items: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      margin: 0 0.2rem;
+      border-radius: 50%;
+      color: #617080;
+      font-size: 1.1rem;
+      transition: color 0.2s ease, background-color 0.2s ease;
     }
-    .team h1 {
-    font-size: 4rem;
-    font-weight: 600;
-    /* text-transform: uppercase; */
-  }
+    .team .list-inline a:hover,
+    .team .list-inline a:focus-visible {
+      background: #e8f6f2;
+      color: #13947c;
+    }
+    .team .member-grid {
+      row-gap: 1.5rem;
+    }
+    .team .supervisor-row {
+      margin-top: 2.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid #e4e9ed;
+    }
+    @media screen and (max-width: 576px) {
+      .team {
+        padding-top: 2.5rem;
+      }
+      .team-header {
+        margin-bottom: 2rem;
+      }
+    }
   </style>
   <section class="team container">
-    <h1 class="section-title text-center" id="team">Team</h1>
-    <div class="row justify-content-center">
+    <header class="team-header">
+      <h1 id="team">The people behind IndicPhotoOCR</h1>
+      <p>Researchers and engineers building practical scene text recognition for Indic languages.</p>
+    </header>
+    <div class="row justify-content-center member-grid">
 
       <!-- Anik -->
       <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
@@ -308,7 +362,7 @@
 
 
         <!-- Anand -->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center supervisor-row">
             <div class="col-12 col-md-6 col-lg-4 mb-4">
               <div class="card text-center">
                 <div class="card-body">
