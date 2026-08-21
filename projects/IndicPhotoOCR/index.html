@@ -33,9 +33,12 @@
 
     <style>
             .install-code-block {
+                position: relative;
                 background: transparent;
                 border: 1px solid rgba(255, 255, 255, 0.75);
                 color: #fff;
+                padding: 0.25rem 2.75rem 0.25rem 0.25rem;
+                text-align: left;
             }
 
             .install-code-block:hover,
@@ -44,9 +47,50 @@
                 color: #fff;
             }
 
+            .install-code-block.is-copied {
+                background: rgba(255, 255, 255, 0.2);
+                border-color: #fff;
+            }
+
+            .copy-icon {
+                position: absolute;
+                right: 0.35rem;
+                bottom: 0.35rem;
+                display: grid;
+                place-items: center;
+                width: 2rem;
+                height: 2rem;
+            }
+
+            .copy-icon::after {
+                content: "Copy to clipboard";
+                position: absolute;
+                right: 0;
+                bottom: calc(100% + 0.5rem);
+                padding: 0.35rem 0.55rem;
+                border-radius: 3px;
+                background: #fff;
+                color: #333;
+                font: 0.8rem/1.2 sans-serif;
+                opacity: 0;
+                pointer-events: none;
+                transform: translateY(0.25rem);
+                transition: opacity 0.15s ease, transform 0.15s ease;
+                white-space: nowrap;
+            }
+
+            .install-code-block:hover .copy-icon::after,
+            .install-code-block:focus-visible .copy-icon::after {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
         .install-code-block code {
+            display: block;
             background: transparent;
-                color: #fff;
+            color: #fff;
+            line-height: 1.35;
+            margin: 0;
             white-space: pre-line;
         }
 
@@ -196,23 +240,26 @@
                     <i class="fab fa-github mr-2" aria-hidden="true"></i>GitHub
                 </a>
             </div>
-            <button class="mt-5 install-btn install-code-block" type="button" onclick="copyPipInstall()" aria-describedby="copy-status">
-                <span class="is-small mr-2">
-                    <i class="fas fa-copy" aria-hidden="true"></i>
+            <button class="mt-5 install-btn install-code-block" type="button" onclick="copyPipInstall()" aria-label="Copy install command" aria-describedby="copy-status">
+                <span class="copy-icon" title="Copy to clipboard" aria-hidden="true">
+                    <i class="fas fa-copy"></i>
                 </span>
-                <code id="pip-install">git clone https://github.com/Bhashini-IITJ/IndicPhotoOCR.git<br>cd IndicPhotoOCR<br>pip install -e .</code>
+                    <code id="pip-install">git clone https://github.com/Bhashini-IITJ/IndicPhotoOCR.git<br>cd IndicPhotoOCR<br>pip install -e .</code>
             </button>
             <span id="copy-status" class="copy-status" role="status" aria-live="polite"></span>
             <script>
                 async function copyPipInstall() {
                     const commands = "git clone https://github.com/Bhashini-IITJ/IndicPhotoOCR.git\ncd IndicPhotoOCR\npip install -e .";
                     const status = document.getElementById("copy-status");
+                    const button = document.querySelector(".install-code-block");
 
                     try {
                         await navigator.clipboard.writeText(commands);
                         status.textContent = "Copied!";
+                        button.classList.add("is-copied");
                         setTimeout(() => {
                             status.textContent = "";
+                            button.classList.remove("is-copied");
                         }, 2000);
                     } catch (error) {
                         status.textContent = "Copy failed. Select the commands manually.";
