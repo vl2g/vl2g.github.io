@@ -49,6 +49,56 @@
                 color: #fff;
             white-space: pre-line;
         }
+
+        .copy-status {
+            color: #fff;
+            display: block;
+            min-height: 1.5em;
+            margin-top: 0.5rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .hero-action {
+            min-width: 9rem;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            color: #fff;
+        }
+
+        .hero-action:hover,
+        .hero-action:focus-visible {
+            border-color: #fff;
+            color: #fff;
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        .hero-action-primary {
+            background: #fff;
+            color: #9f2d2d;
+        }
+
+        .hero-action-primary:hover,
+        .hero-action-primary:focus-visible {
+            background: #f7f7f7;
+            color: #7f2020;
+        }
+
+        @media screen and (max-width: 480px) {
+            .hero-actions {
+                align-items: stretch;
+                flex-direction: column;
+            }
+
+            .hero-action {
+                width: 100%;
+            }
+        }
     </style>
 
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
@@ -135,13 +185,24 @@
                 <p>Multilingual Scene Text Recognition in 11 Indian Languages</p>
 
             </h2>
+            <div class="hero-actions" aria-label="Primary project actions">
+                <a class="button hero-action hero-action-primary" href="/projects/IndicPhotoOCR/tutorials/installation">
+                    <i class="fas fa-rocket mr-2" aria-hidden="true"></i>Get Started
+                </a>
+                <a class="button hero-action" href="https://huggingface.co/spaces/Bhashini-IITJ/IndicPhotoOCR" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-play mr-2" aria-hidden="true"></i>Try Demo
+                </a>
+                <a class="button hero-action" href="https://github.com/Bhashini-IITJ/IndicPhotoOCR" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github mr-2" aria-hidden="true"></i>GitHub
+                </a>
+            </div>
             <button class="mt-5 install-btn install-code-block" type="button" onclick="copyPipInstall()" aria-describedby="copy-status">
                 <span class="is-small mr-2">
                     <i class="fas fa-copy" aria-hidden="true"></i>
                 </span>
                 <code id="pip-install">git clone https://github.com/Bhashini-IITJ/IndicPhotoOCR.git<br>cd IndicPhotoOCR<br>pip install -e .</code>
             </button>
-            <span id="copy-status" class="is-sr-only" role="status" aria-live="polite"></span>
+            <span id="copy-status" class="copy-status" role="status" aria-live="polite"></span>
             <script>
                 async function copyPipInstall() {
                     const commands = "git clone https://github.com/Bhashini-IITJ/IndicPhotoOCR.git\ncd IndicPhotoOCR\npip install -e .";
@@ -149,7 +210,10 @@
 
                     try {
                         await navigator.clipboard.writeText(commands);
-                        status.textContent = "Installation commands copied.";
+                        status.textContent = "Copied!";
+                        setTimeout(() => {
+                            status.textContent = "";
+                        }, 2000);
                     } catch (error) {
                         status.textContent = "Copy failed. Select the commands manually.";
                     }
