@@ -142,58 +142,24 @@
     </span>
 </div>
   </header>
+  <div class="notification is-light">
+    <strong>Source code:</strong>
+    <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR" target="_blank" rel="noopener noreferrer">View IndicPhotoOCR on GitHub</a>
+  </div>
   <h2 id="installation">Installation</h2>
-<p>Currently, you need to create the virtual environment manually.</p>
-<div class="language-python highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">indicphotoocr</span> <span class="n">python</span><span class="o">=</span><span class="mf">3.9</span> <span class="o">-</span><span class="n">y</span>
-<span class="n">conda</span> <span class="n">activate</span> <span class="n">indicphotoocr</span>
+  <p>Use Python 3.10 and install IndicPhotoOCR directly from the repository.</p>
+  <pre><code>conda create -n indicphotoocr python=3.10 -y
+conda activate indicphotoocr
+git clone https://github.com/Bhashini-IITJ/IndicPhotoOCR.git
+cd IndicPhotoOCR
+pip install -e .</code></pre>
 
-
-<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">Bhashini</span><span class="o">-</span><span class="n">IITJ</span><span class="o">/</span><span class="n">IndicPhotoOCR</span><span class="p">.</span><span class="n">git</span>
-<span class="n">cd</span> <span class="n">IndicPhotoOCR</span>
-</code></pre>
-  </div>
-</div>
-<h3 id="cpu-installation">CPU Installation</h3>
-
-<div class="language-bash highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code>  python setup.py sdist bdist_wheel
-  pip <span class="nb">install </span>dist/IndicPhotoOCR-1.3.1-py3-none-any.whl[cpu]
-</code></pre>
-  </div>
-</div>
-
-<h3 id="cuda-118-installation">CUDA 11.8 Installation</h3>
-<div class="language-bash highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code>  python setup.py sdist bdist_wheel
-  pip <span class="nb">install</span> ./dist/IndicPhotoOCR-1.3.1-py3-none-any.whl[cu118] <span class="nt">--extra-index-url</span> https://download.pytorch.org/whl/cu118
-</code></pre>
-  </div>
-</div>
-
-<h3 id="cuda-121-installation">CUDA 12.1 Installation</h3>
-<div class="language-bash highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code>  python setup.py sdist bdist_wheel
-  pip <span class="nb">install</span> ./dist/IndicPhotoOCR-1.3.1-py3-none-any.whl[cu121] <span class="nt">--extra-index-url</span> https://download.pytorch.org/whl/cu121
-</code></pre>
-  </div>
-</div>
-
-<p>If you find any trouble with the above installation use the <code class="language-plaintext highlighter-rouge">setup.sh</code> script. Make sure you have miniconda installed.</p>
-<h3 id="shell-script-installation">Shell script Installation</h3>
-<div class="language-bash highlighter-rouge">
-  <div class="highlight">
-    <pre class="highlight"><code>git clone https://github.com/Bhashini-IITJ/IndicPhotoOCR.git
-<span class="nb">cd </span>IndicPhotoOCR
-<span class="nb">chmod</span> +x setup.sh
-./setup.sh
-</code></pre>
-  </div>
-</div>
+  <h2 id="shell-installation">Shell installation</h2>
+  <p>For an automated setup, run the included shell script after cloning the repository.</p>
+  <pre><code>git clone https://github.com/Bhashini-IITJ/IndicPhotoOCR.git
+cd IndicPhotoOCR
+chmod +x setup.sh
+./setup.sh</code></pre>
 
 </article>
 
