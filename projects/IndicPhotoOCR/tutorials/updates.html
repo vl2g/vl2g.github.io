@@ -31,6 +31,79 @@
     <link rel="stylesheet" href="/projects/IndicPhotoOCR/assets/css/bulma.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
 
+    <style>
+        .updates-intro {
+            margin-bottom: 2rem;
+            color: #687385;
+            font-size: 1.05rem;
+        }
+
+        .updates-timeline {
+            position: relative;
+            margin-left: 0.5rem;
+            padding-left: 1.75rem;
+            border-left: 2px solid #dcebe7;
+        }
+
+        .update-item {
+            position: relative;
+            margin-bottom: 1.35rem;
+            padding: 0.9rem 1rem;
+            border: 1px solid #e4e9ed;
+            border-radius: 5px;
+            background: #fff;
+        }
+
+        .update-item::before {
+            position: absolute;
+            top: 1.15rem;
+            left: -2.2rem;
+            width: 0.85rem;
+            height: 0.85rem;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            background: #13947c;
+            box-shadow: 0 0 0 2px #b9ded5;
+            content: "";
+        }
+
+        .update-item.latest {
+            border-color: #9dd3c6;
+            background: #effaf7;
+            box-shadow: 0 8px 20px rgba(19, 148, 124, 0.1);
+        }
+
+        .update-item.latest::before {
+            background: #d35f4f;
+            box-shadow: 0 0 0 2px #efb4aa;
+        }
+
+        .update-date {
+            display: block;
+            margin-bottom: 0.3rem;
+            color: #13947c;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .update-item p {
+            margin: 0;
+        }
+
+        @media screen and (max-width: 480px) {
+            .updates-timeline {
+                margin-left: 0.25rem;
+                padding-left: 1.25rem;
+            }
+
+            .update-item::before {
+                left: -1.7rem;
+            }
+        }
+    </style>
+
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Add link to h2 ... h6 -->
     <!-- Ref: https://ben.balter.com/2014/03/13/pages-anchor-links/ -->
@@ -142,30 +215,27 @@
     </span>
 </div>
   </header>
-  <h2 id="updates">Updates</h2>
+    <div class="notification is-light">
+        <strong>Source code:</strong>
+        <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR" target="_blank" rel="noopener noreferrer">View IndicPhotoOCR on GitHub</a>
+    </div>
+    <h2 id="updates">Updates</h2>
+    <p class="updates-intro">Recent milestones in models, language support, demos, and documentation.</p>
 
-<p><strong>[August 2025]</strong>: <a href="https://vl2g.github.io/projects/IndicPhotoOCR/">Project page</a> created.</p>
-
-<p><strong>[April 2025]:</strong> <a href="https://bhashini-iitj.github.io/IndicPhotoOCR/">Documentation page</a> created using Sphnix.</p>
-
-<p><strong>[March 2025]:</strong> Support for the <a href="https://huggingface.co/spaces/Bhashini-IITJ/IndicPhotoOCR">Hugging Face demo</a> extended to 12 languages.</p>
-
-<p><strong>[February 2025]:</strong> Added option to choose between tri-lingual and 12-class script identification models.</p>
-
-<p><strong>[February 2025]:</strong> Added recognition models for Malayalam and Kannada.</p>
-
-<p><strong>[January 2025]:</strong> Added ViT-based script identification models.</p>
-
-<p><strong>[January 2025]:</strong> Demo available in <a href="https://huggingface.co/spaces/Bhashini-IITJ/IndicPhotoOCR">Hugging Face Space</a>.<br />
-Currently demo supports scene images containing bi-lingual Hindi and English text.</p>
-
-<p><strong>[December 2024]:</strong> Detection Module: TextBPN++ added.</p>
-
-<p><strong>[November 2024]:</strong> Code available at <a href="https://colab.research.google.com/drive/1BILXjUF2kKKrzUJ_evubgLHl2busPiH2?usp=sharing">Google Colab</a>.</p>
-
-<p><strong>[November 2024]:</strong> Added support for <a href="#config">10 languages</a> in the recognition module.</p>
-
-<p><strong>[September 2024]:</strong> Repository created.</p>
+    <div class="updates-timeline">
+        <div class="update-item latest">
+            <span class="update-date">May 2026</span>
+            <p>Paper accepted for publication in <em>International Journal on Document Analysis and Recognition</em> (IJDAR) and oral presentation at <a href="https://icdar2026.org/">ICDAR 2026</a> in Vienna.</p>
+        </div>
+        <div class="update-item"><span class="update-date">August 2025</span><p><a href="https://vl2g.github.io/projects/IndicPhotoOCR/">Project page</a> launched.</p></div>
+        <div class="update-item"><span class="update-date">April 2025</span><p><a href="https://bhashini-iitj.github.io/IndicPhotoOCR/">Documentation page</a> launched with Sphinx.</p></div>
+        <div class="update-item"><span class="update-date">March 2025</span><p><a href="https://huggingface.co/spaces/Bhashini-IITJ/IndicPhotoOCR">Hugging Face demo</a> extended to 12 languages.</p></div>
+        <div class="update-item"><span class="update-date">February 2025</span><p>Added tri-lingual and 12-class script identification models, plus recognition models for Malayalam and Kannada.</p></div>
+        <div class="update-item"><span class="update-date">January 2025</span><p>Added ViT-based script identification models and a <a href="https://huggingface.co/spaces/Bhashini-IITJ/IndicPhotoOCR">Hugging Face demo</a> for bilingual Hindi and English scenes.</p></div>
+        <div class="update-item"><span class="update-date">December 2024</span><p>Added the TextBPN++ detection module.</p></div>
+        <div class="update-item"><span class="update-date">November 2024</span><p>Released code through <a href="https://colab.research.google.com/drive/1BILXjUF2kKKrzUJ_evubgLHl2busPiH2?usp=sharing">Google Colab</a> and added recognition support for 10 languages.</p></div>
+        <div class="update-item"><span class="update-date">September 2024</span><p>Repository created.</p></div>
+    </div>
 
 </article>
 
