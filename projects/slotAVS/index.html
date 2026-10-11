@@ -1,1 +1,249 @@
-Hi
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SlotAVS: Object-Centric Audio-Visual Segmentation via Bi-Modal Slot Attention">
+    <meta name="keywords" content="SlotAVS, Audio-Visual Segmentation, Slot Attention, Object-Centric Learning, BMVC 2026, DINOv3, CLAP, Multi-Source AVS">
+    <meta name="author" content="VL2G IIT J">
+
+    <title>SlotAVS: Object-Centric Audio-Visual Segmentation via Bi-Modal Slot Attention</title>
+
+    <link href="./index_files/bootstrap.css" rel="stylesheet">
+    <link href="./index_files/style.css" rel="stylesheet">
+
+    <style>
+      .publication-links {
+        margin-top: 18px;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .pub-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background-color: #333333;
+        color: #ffffff !important;
+        font-size: 15px;
+        font-weight: 500;
+        padding: 7px 18px;
+        border-radius: 20px;
+        margin: 4px 6px;
+        text-decoration: none !important;
+        transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        border: 1px solid #222;
+      }
+      .pub-btn:hover {
+        background-color: #111111;
+        color: #ffffff !important;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.22);
+      }
+      .pub-btn.disabled {
+        background-color: #777777;
+        border-color: #666;
+        cursor: default;
+        box-shadow: none;
+      }
+      .pub-btn.disabled:hover {
+        background-color: #777777;
+        transform: none;
+      }
+      .pub-btn svg {
+        fill: currentColor;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+      }
+      .table-results {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 18px 0;
+        font-size: 0.92em;
+      }
+      .table-results th, .table-results td {
+        border: 1px solid #ddd;
+        padding: 7px 10px;
+        text-align: center;
+      }
+      .table-results th {
+        background-color: #f7f7f7;
+        font-weight: 600;
+      }
+      .table-results tr:hover {
+        background-color: #f9f9f9;
+      }
+      .table-results .ours-row {
+        background-color: #f0f7ff;
+        font-weight: bold;
+      }
+      .table-results .ours-row td {
+        border-top: 1.5px solid #337ab7;
+        border-bottom: 1.5px solid #337ab7;
+      }
+      .video-container {
+        margin-top: 15px;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .video-container video {
+        width: 100%;
+        max-width: 850px;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+    </style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header">
+        <h2 class="text"><center>SlotAVS: Object-Centric Audio-Visual Segmentation via Bi-Modal Slot Attention</center></h2>
+        <h4 class="text"><center><a href="mailto:m24cse004@iitj.ac.in">Arnav Sharma</a>&nbsp;<sup>1</sup>,&emsp;<a href="https://anandmishra22.github.io/">Anand Mishra</a>&nbsp;<sup>1</sup>,&emsp;<a href="mailto:renur@vehant.com">Renu Rameshan</a>&nbsp;<sup>2</sup></center></h4>
+
+        <h4 class="text"><center><sup>1</sup>Indian Institute of Technology Jodhpur &emsp; <sup>2</sup>Vehant Technologies Pvt Ltd</center></h4>
+
+        <h4 class="text"><center><a href="https://bmvc2026.org/">BMVC 2026</a> (British Machine Vision Conference 2026)</center></h4>
+
+        <div class="publication-links">
+          <a href="#" class="pub-btn disabled" title="Preprint link available soon">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+            Paper
+          </a>
+          <a href="#" class="pub-btn">
+            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14h-4v-2h4v2zm0-4h-4v-2h4v2zm0-4h-4V7h4v2z"/></svg>
+            arXiv
+          </a>
+          <a href="https://github.com/Arnav-Sharmaa/SlotAVS" target="_blank" class="pub-btn">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            Code
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <h3>Abstract</h3>
+        <p style="text-align: justify;">
+          Audio-Visual Segmentation (AVS) requires predicting pixel-wise masks of sounding objects by grounding acoustic signals in visual space. In multi-source scenes, concurrent sound sources often remain entangled within shared visual representations, leading to merged masks or unstable specialization when using standard alignment-focused transformer architectures. To address this, we present SlotAVS, an object-centric framework driven by competitive bi-modal slot attention. While robust foundation models provide rich semantic priors, SlotAVS shifts the paradigm from global cross-modal fusion to explicit competitive binding. By initializing discrete object slots from temporal audio sequences and enforcing strict slot-wise competition over spatial visual tokens, our method structurally mitigates the blending of distinct acoustic entities. Further, to stabilize instance-level learning, we introduce a Hungarian matching strategy that optimally aligns slots with ground-truth objects using spatial and boundary overlap. Coupled with a numerically stable, confidence-aware mask fusion mechanism, SlotAVS robustly aggregates multi-source predictions. Extensive experiments on the AVSBench dataset demonstrate the efficacy of our approach, achieving 88.6% mIoU on the Single Source (S4) split and 71.7% mIoU on the Multi-Source (MS3) split. These results show that explicit competitive binding is critical for complex audio-visual scene understanding and effectively leveraging foundation-model priors without relying solely on their capacity. The code and pretrained models are publicly available at: <a href="https://github.com/Arnav-Sharmaa/SlotAVS">https://github.com/Arnav-Sharmaa/SlotAVS</a>.
+        </p>
+      </div>
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+      <div class="row">
+        <h3>Overview of SlotAVS Architecture</h3>
+        <br>
+        <center>
+          <figure class="figure"> 
+            <img class="figure-img" width="100%" src="assets/architecture_web.png" alt="Overall architecture of SlotAVS"> 
+          </figure>
+        </center>
+        <p><center><b>Overall architecture of SlotAVS.</b> The framework leverages frozen foundation models (DINOv3 and CLAP) to extract visual and audio representations. A bi-modal slot attention module performs competitive cross-modal binding to establish object-centric slots. These slots condition the spatial features via Multi-Slot ACSA and act as queries in a mask decoder, followed by instance aware Hungarian matching, probabilistic fusion, and tri modal Contrastive Feature Distillation (CFD).</center></p>
+      </div>
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+      <div class="row">
+        <h3>Qualitative Results</h3>
+        <p>Demonstration of SlotAVS performing multi-source audio-visual segmentation on complex scenes with concurrent sound-producing entities.</p>
+        <div class="video-container">
+          <video controls poster="assets/video_poster.jpg" preload="metadata">
+            <source src="assets/slotAVS_Inference_Video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+&nbsp;
+&nbsp;
+&nbsp;
+
+      <div class="row">
+        <h3>Quantitative Results</h3>
+        <p>
+          Quantitative comparison on Single Source (S4) and Multi-Source (MS3) splits of AVSBench. <i>M<sub>J</sub></i> and <i>M<sub>F</sub></i> denote region similarity (mIoU) and contour accuracy (F-score), respectively. Baseline methods are sorted by MS3 <i>M<sub>J</sub></i>.
+        </p>
+        <div class="table-responsive">
+          <table class="table-results">
+            <thead>
+              <tr>
+                <th rowspan="2">Model</th>
+                <th rowspan="2">Backbone</th>
+                <th rowspan="2">Size</th>
+                <th colspan="2">Single Source (S4)</th>
+                <th colspan="2">Multi-Source (MS3)</th>
+                <th rowspan="2">AVSS<br><i>M<sub>J</sub></i><sup>1</sup></th>
+              </tr>
+              <tr>
+                <th><i>M<sub>J</sub></i></th>
+                <th><i>M<sub>F</sub></i></th>
+                <th><i>M<sub>J</sub></i></th>
+                <th><i>M<sub>F</sub></i></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>AV-SAM</td><td>ViT-H</td><td>1024</td><td>40.5</td><td>0.566</td><td>—</td><td>—</td><td>—</td></tr>
+              <tr><td>SAM</td><td>ViT-H</td><td>1024</td><td>55.1</td><td>0.739</td><td>54.0</td><td>0.638</td><td>—</td></tr>
+              <tr><td>AVSBench</td><td>PVT-v2</td><td>224</td><td>78.7</td><td>0.879</td><td>54.0</td><td>0.645</td><td>29.7</td></tr>
+              <tr><td>ECMVAE</td><td>PVT-v2</td><td>224</td><td>81.7</td><td>0.901</td><td>57.8</td><td>0.708</td><td>—</td></tr>
+              <tr><td>DiffusionAVS</td><td>PVT-v2</td><td>224</td><td>81.4</td><td>0.902</td><td>58.2</td><td>0.709</td><td>—</td></tr>
+              <tr><td>AVSegFormer</td><td>PVT-v2</td><td>224</td><td>82.1</td><td>0.899</td><td>58.4</td><td>0.693</td><td>36.7</td></tr>
+              <tr><td>BAVS</td><td>PVT-v2</td><td>224</td><td>82.0</td><td>0.886</td><td>58.6</td><td>0.655</td><td>32.6</td></tr>
+              <tr><td>CATR</td><td>PVT-v2</td><td>224</td><td>81.4</td><td>0.896</td><td>59.0</td><td>0.700</td><td>—</td></tr>
+              <tr><td>COMBO</td><td>PVT-v2</td><td>224</td><td>84.7</td><td>0.919</td><td>59.2</td><td>0.712</td><td>42.1</td></tr>
+              <tr><td>UFE-AVS</td><td>PVT-v2</td><td>224</td><td>83.2</td><td>0.904</td><td>59.5</td><td>0.676</td><td>—</td></tr>
+              <tr><td>QDFormer</td><td>Swin-T</td><td>224</td><td>79.5</td><td>0.882</td><td>61.9</td><td>0.661</td><td>—</td></tr>
+              <tr><td>GAVS</td><td>ViT-B</td><td>1024</td><td>80.1</td><td>0.902</td><td>63.7</td><td>0.774</td><td>—</td></tr>
+              <tr><td>SAMA-AVS</td><td>ViT-H</td><td>1024</td><td>83.2</td><td>0.901</td><td>66.9</td><td>0.754</td><td>—</td></tr>
+              <tr><td>AVSStone</td><td>Swin-B</td><td>224</td><td>83.2</td><td>0.913</td><td>67.3</td><td>0.776</td><td>48.5</td></tr>
+              <tr><td>CAVP</td><td>PVT-v2</td><td>224</td><td>87.3</td><td>0.936</td><td>67.3</td><td>0.781</td><td>48.6</td></tr>
+              <tr><td>VCT</td><td>Swin-B</td><td>384</td><td>86.2</td><td>0.934</td><td>67.6</td><td>0.814</td><td>51.2</td></tr>
+              <tr><td>TAViS</td><td>ViT-L</td><td>224</td><td>84.8</td><td>0.912</td><td>68.2</td><td>0.759</td><td>44.2</td></tr>
+              <tr><td>TAViS</td><td>ViT-L</td><td>1024</td><td>87.0</td><td>0.926</td><td>71.2</td><td>0.796</td><td>—</td></tr>
+              <tr class="ours-row"><td><b>SlotAVS (Ours)</b></td><td>ViT-L</td><td>224</td><td>84.5</td><td>0.904</td><td>64.4</td><td>0.765</td><td>45.6</td></tr>
+              <tr class="ours-row"><td><b>SlotAVS (Ours)</b></td><td>ViT-L</td><td>512</td><td>87.1</td><td>0.923</td><td>71.4</td><td>0.811</td><td>65.47</td></tr>
+              <tr class="ours-row"><td><b>SlotAVS (Ours)</b></td><td>ViT-L</td><td>1024</td><td><b>88.6</b></td><td><b>0.935</b></td><td><b>71.7</b></td><td><b>0.815</b></td><td><b>69.99</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <h3><strong><span style="font-size: 20pt;">Bibtex</span></strong></h3>
+        <p>Please cite our work as follows:</p>
+        <pre><tt>@inproceedings{sharma2026slotavs,
+  author    = {Sharma, Arnav and 
+               Mishra, Anand and 
+               Rameshan, Renu},
+  title     = {SlotAVS: Object-Centric Audio-Visual Segmentation via Bi-Modal Slot Attention},
+  booktitle = {British Machine Vision Conference (BMVC)},
+  year      = {2026}
+}</tt></pre>
+      </div>
+
+      <div class="row">
+        <h3><strong><span style="font-size: 14pt;">Acknowledgements</span></strong></h3>
+        <p>
+          The authors gratefully acknowledge Vehant Technologies Pvt. Ltd. for supporting this work.
+        </p>
+      </div>
+
+      <br><br><br>
+
+    </div>
+
+  </body>
+</html>
