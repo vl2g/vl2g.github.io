@@ -15,10 +15,16 @@
 <div class="paper-container">
 <header class="paper-header">
 <h1>X-STAR: Cross-Lingual Scene Text-Aware Image Retrieval</h1>
+<p class="project-subtitle">A multilingual scene-text image retrieval dataset and benchmark</p>
 <p class="authors"><span class="author-group">Dikshant Sharma<sup>1</sup>,</span><span class="author-group">Prateek<sup>1</sup>,</span><span class="author-group">Anand Mishra<sup>1</sup></span></p>
 <p class="affiliation">
 <sup>1</sup>Indian Institute of Technology Jodhpur</p>
 <div class="publication-links" aria-label="Project resources">
+<a class="pub-btn dataset-primary" href="#dataset">
+<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="12" cy="5" rx="9" ry="3"/>
+<path d="M3 5v14c0 4 18 4 18 0V5M3 12c0 4 18 4 18 0"/>
+</svg>Dataset</a>
 <span class="pub-btn pending" aria-label="Paper link forthcoming">
 <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
 <path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8M8 16h8"/>
@@ -28,11 +34,6 @@
 <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
 <path d="m8 5-6 7 6 7M16 5l6 7-6 7M14 2l-4 20"/>
 </svg>Code</a>
-<a class="pub-btn" href="#dataset">
-<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-<ellipse cx="12" cy="5" rx="9" ry="3"/>
-<path d="M3 5v14c0 4 18 4 18 0V5M3 12c0 4 18 4 18 0"/>
-</svg>Dataset</a>
 <a class="pub-btn" href="https://github.com/vl2g/X-STAR/releases/download/v0.1.0/colite_clip_xstar.pt" aria-label="Download CoLITE-CLIP model weights">
 <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
 <path d="M12 2v13m-5-5 5 5 5-5M3 16v6h18v-6"/>
@@ -41,6 +42,45 @@
 </div>
 </header>
 <main id="main">
+<section id="dataset" class="dataset-intro">
+<h2>The X-STAR Dataset</h2>
+<p class="dataset-lead">A benchmark for finding scene-text images across languages. Each image is paired with queries in 13 languages, so the language of a search can differ from the text visible in the scene.</p>
+<dl class="dataset-numbers" aria-label="Dataset at a glance">
+<div><dt>Images</dt><dd>6,449</dd></div><div><dt>Queries</dt><dd>83,837</dd></div><div><dt>Query languages</dt><dd>13</dd></div>
+</dl>
+<p class="dataset-download"><a class="pub-btn dataset-primary" href="https://github.com/vl2g/X-STAR/releases/download/v0.1.0/xstar_annotations.zip">Download annotations</a> <span>CC BY-SA 4.0 · Source images acquired separately</span></p>
+<p>Images come from Bharat Scene Text Dataset (5,949) and RCTW-17 (500). Queries span English, Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu and Chinese.</p>
+<dl class="split-summary" aria-label="Fixed dataset splits">
+<div><dt>Train</dt><dd><strong>4,515</strong> images · 58,695 queries</dd></div><div><dt>Validation</dt><dd><strong>645</strong> images · 8,385 queries</dd></div><div><dt>Test</dt><dd><strong>1,289</strong> images · 16,757 queries</dd></div>
+</dl>
+</section>
+<section id="examples">
+<h2>One Image, Thirteen Query Languages</h2>
+<p>A Telugu signboard from the training split, its annotated scene text, and queries in all 13 languages.</p>
+<article class="paper-example" id="example-a" aria-labelledby="example-a-title">
+<div class="paper-example-image">
+<h3 id="example-a-title">Telugu signboard</h3>
+<a href="assets/img/examples/L_image_254-1280.jpg" aria-label="Open the full-size Telugu signboard photograph"><img src="assets/img/examples/L_image_254-640.jpg" srcset="assets/img/examples/L_image_254-640.jpg 640w, assets/img/examples/L_image_254-1280.jpg 1280w" sizes="(min-width: 800px) 340px, 90vw" width="640" height="360" alt="Blue roadside signboard with white Telugu lettering, mounted on a post in front of trees and scrub." decoding="async"></a>
+<p class="scene-label"><strong>Scene text language:</strong> Telugu</p>
+<h4>Annotated scene text</h4><p class="paper-scene-text" lang="te">శ్రీపోతన చైతన్య వేదిక విశ్వనాధ భవనం గూడూరు పాలకుర్తి మండలం, జనగామ జిల్లా 506 252</p>
+<p class="small-note">Bharat Scene Text Dataset · Training split<br><a href="image-credits.html">Photograph source and license</a></p>
+</div>
+<div class="paper-example-queries"><h3>Queries</h3><dl class="query-list"><div><dt>English:</dt> <dd lang="en">Sripothana Chaitanya Vedika Telugu signboard</dd></div>
+<div><dt>Assamese:</dt> <dd lang="as">শ্ৰীপোথান চৈতন্য বেদিকা তেলেগু ছাইনব&#x27;ৰ্ড</dd></div>
+<div><dt>Bengali:</dt> <dd lang="bn">শ্রীপোথান চৈতন্য বেদিকা তেলেগু সাইনবোর্ড</dd></div>
+<div><dt>Gujarati:</dt> <dd lang="gu">શ્રીપોથના ચૈતન્ય વેદિકા તેલુગુ સાઇનબોર્ડ</dd></div>
+<div><dt>Hindi:</dt> <dd lang="hi">श्रीपोथना चैतन्य वेदिका तेलुगु साइनबोर्ड</dd></div>
+<div><dt>Kannada:</dt> <dd lang="kn">ಶ್ರೀಪೋತನ ಚೈತನ್ಯ ವೇದಿಕಾ ತೆಲುಗು ಫಲಕ</dd></div>
+<div><dt>Malayalam:</dt> <dd lang="ml">ശ്രീപോതന ചൈതന്യ വേദിക തെലുങ്ക് സൈൻബോർഡ്</dd></div>
+<div><dt>Marathi:</dt> <dd lang="mr">श्रीपोथना चैतन्य वेदिका तेलगू फलक</dd></div>
+<div><dt>Odia:</dt> <dd lang="or">ଶ୍ରୀପୋଥାନ ଚୈତନ୍ଯ଼ ବେଦିକା ତେଲୁଗୁ ସାଇନବୋର୍ଡ</dd></div>
+<div><dt>Punjabi:</dt> <dd lang="pa">ਸ਼੍ਰੀਪੋਥਾਨਾ ਚੈਤੰਨਿਆ ਵੇਦਿਕਾ ਤੇਲਗੂ ਸਾਈਨ ਬੋਰਡ</dd></div>
+<div><dt>Tamil:</dt> <dd lang="ta">ஸ்ரீபோத்தனா சைதன்யா வேதிகா தெலுங்கு அடையாளப் பலகை</dd></div>
+<div><dt>Telugu:</dt> <dd lang="te">శ్రీపోతన చైతన్య వేదిక తెలుగు సైన్బోర్డ్</dd></div>
+<div><dt>Chinese:</dt> <dd lang="zh-Hans">Sripothana Chaitanya Vedika 泰卢固语招牌</dd></div></dl></div>
+</article>
+<p class="small-note">Machine-generated queries and translations may contain errors. All 13 strings above are shown without correction.</p>
+</section>
 <section id="abstract">
 <h2>Abstract</h2>
 <p>Scene text provides distinctive cues for finding a place, storefront or institution, but the words in an image and the language of a search query may differ. We introduce <strong>X-STAR</strong>, a benchmark for cross-lingual scene text-aware image retrieval with <strong>6,449 images and queries in 13 languages</strong>. Our model, <strong>CoLITE-CLIP</strong>, combines frozen CLIP visual features with embeddings of recognised scene-text lines through bidirectional co-attention. Token-level late interaction then matches the query to the fused image representation. Non-English queries and scene text are mapped to English through upstream translation. On the X-STAR test split, CoLITE-CLIP achieves <strong>46.5% Recall@1</strong>, compared with <strong>24.6%</strong> for the global CLIP ViT-B/32 baseline, averaged over all 13 query sets. The split’s known exact-image overlap is documented alongside the results.</p>
@@ -99,46 +139,6 @@
 <strong>Overview of CoLITE-CLIP.</strong> Frozen CLIP encoders provide image, scene-text and query features. The trainable fusion blocks connect visual and OCR information; token-level matching ranks the gallery. English OCR lines and query translations are supplied by upstream preprocessing.</figcaption>
 </figure>
 <p>Image features are represented by 50 CLIP ViT-B/32 tokens. Up to 40 English OCR-line embeddings, padded with a learned null token, are fused with them through 11 bidirectional cross-attention blocks. ColBERT-style MaxSim scores the query tokens against the 90-token image bank. The fusion module is trained with a symmetric InfoNCE loss, first on TextCaps and then on X-STAR.</p>
-</section>
-<section id="dataset">
-<h2>The X-STAR Dataset</h2>
-<p><a href="https://github.com/vl2g/X-STAR/releases/download/v0.1.0/xstar_annotations.zip">Download annotations</a> · CC BY-SA 4.0 · Images acquired separately</p>
-<p>The primary benchmark uses the <strong>split</strong>. Images come from Bharat Scene Text Dataset (5,949) and RCTW-17 (500). Each record has a query in English, Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu and Chinese.</p>
-<div class="table-scroll" tabindex="0" role="region" aria-label="Dataset split sizes">
-<table>
-<caption>X-STAR split</caption>
-<thead>
-<tr>
-<th scope="col">Split</th>
-<th scope="col">Images</th>
-<th scope="col">Queries</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<th scope="row">Train</th>
-<td>4,515</td>
-<td>58,695</td>
-</tr>
-<tr>
-<th scope="row">Validation</th>
-<td>645</td>
-<td>8,385</td>
-</tr>
-<tr>
-<th scope="row">Test</th>
-<td>1,289</td>
-<td>16,757</td>
-</tr>
-<tr>
-<th scope="row">Total</th>
-<td>6,449</td>
-<td>83,837</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p class="small-note">Explore the dataset and retrieval examples below. Photographs retain their terms; see the <a href="image-credits.html">image credits</a>.</p>
 </section>
 <section id="results">
 <h2>Quantitative Results</h2>
@@ -314,99 +314,6 @@
 </div>
 </details>
 
-</section>
-<section id="examples" class="wrap">
-<h2>Dataset example</h2>
-<p class="section-intro">Each record has an image, its annotated scene text and one query in each of 13
-        languages. Queries are shown exactly as they appear in the dataset; machine-generated queries and
-        translations can contain errors. The Telugu signboard example below is from the training split.</p>
-<div class="examples">
-<!-- examples:start (generated by tools/prepare_assets.py) -->
-<article class="example" id="example-a" aria-labelledby="example-a-title">
-<figure class="example-photo">
-<a href="assets/img/examples/L_image_254-1280.jpg" aria-label="Full-size photograph: Telugu signboard">
-<img src="assets/img/examples/L_image_254-640.jpg" srcset="assets/img/examples/L_image_254-640.jpg 640w, assets/img/examples/L_image_254-1280.jpg 1280w"
-                 sizes="(min-width: 960px) 420px, (min-width: 640px) 45vw, 92vw"
-                 width="640" height="360" decoding="async"
-                 alt="Blue roadside signboard with white Telugu lettering, mounted on a post in front of trees and scrub.">
-</a>
-</figure>
-<div class="example-body">
-<h3 id="example-a-title">
-Telugu signboard</h3>
-<p class="example-meta">Scene text: Telugu · Bharat Scene Text Dataset · train split</p>
-<h4>Annotated scene text</h4>
-<ul class="scene-text" lang="te">
-<li>శ్రీపోతన చైతన్య వేదిక విశ్వనాధ భవనం గూడూరు పాలకుర్తి మండలం, జనగామ జిల్లా 506 252</li>
-</ul>
-<h4>English query</h4>
-<p class="query-en">Sripothana Chaitanya Vedika Telugu signboard</p>
-<details class="queries">
-<summary>Queries in all 13 languages</summary>
-<table>
-<caption class="visually-hidden">Queries for example (a) in 13 languages</caption>
-<tbody>
-<tr>
-<th scope="row">English</th>
-<td lang="en">Sripothana Chaitanya Vedika Telugu signboard</td>
-</tr>
-<tr>
-<th scope="row">Assamese</th>
-<td lang="as">শ্ৰীপোথান চৈতন্য বেদিকা তেলেগু ছাইনব&#x27;ৰ্ড</td>
-</tr>
-<tr>
-<th scope="row">Bengali</th>
-<td lang="bn">শ্রীপোথান চৈতন্য বেদিকা তেলেগু সাইনবোর্ড</td>
-</tr>
-<tr>
-<th scope="row">Gujarati</th>
-<td lang="gu">શ્રીપોથના ચૈતન્ય વેદિકા તેલુગુ સાઇનબોર્ડ</td>
-</tr>
-<tr>
-<th scope="row">Hindi</th>
-<td lang="hi">श्रीपोथना चैतन्य वेदिका तेलुगु साइनबोर्ड</td>
-</tr>
-<tr>
-<th scope="row">Kannada</th>
-<td lang="kn">ಶ್ರೀಪೋತನ ಚೈತನ್ಯ ವೇದಿಕಾ ತೆಲುಗು ಫಲಕ</td>
-</tr>
-<tr>
-<th scope="row">Malayalam</th>
-<td lang="ml">ശ്രീപോതന ചൈതന്യ വേദിക തെലുങ്ക് സൈൻബോർഡ്</td>
-</tr>
-<tr>
-<th scope="row">Marathi</th>
-<td lang="mr">श्रीपोथना चैतन्य वेदिका तेलगू फलक</td>
-</tr>
-<tr>
-<th scope="row">Odia</th>
-<td lang="or">ଶ୍ରୀପୋଥାନ ଚୈତନ୍ଯ଼ ବେଦିକା ତେଲୁଗୁ ସାଇନବୋର୍ଡ</td>
-</tr>
-<tr>
-<th scope="row">Punjabi</th>
-<td lang="pa">ਸ਼੍ਰੀਪੋਥਾਨਾ ਚੈਤੰਨਿਆ ਵੇਦਿਕਾ ਤੇਲਗੂ ਸਾਈਨ ਬੋਰਡ</td>
-</tr>
-<tr>
-<th scope="row">Tamil</th>
-<td lang="ta">ஸ்ரீபோத்தனா சைதன்யா வேதிகா தெலுங்கு அடையாளப் பலகை</td>
-</tr>
-<tr>
-<th scope="row">Telugu</th>
-<td lang="te">శ్రీపోతన చైతన్య వేదిక తెలుగు సైన్బోర్డ్</td>
-</tr>
-<tr>
-<th scope="row">Chinese</th>
-<td lang="zh-Hans">Sripothana Chaitanya Vedika 泰卢固语招牌</td>
-</tr>
-</tbody>
-</table>
-</details>
-</div>
-</article>
-<!-- examples:end -->
-</div>
-<p class="small-print">Photographs from the Bharat Scene Text Dataset and RCTW-17, shown for illustration;
-        they retain their source terms. <a href="image-credits.html">Photograph credits and reuse information</a>. Select a photograph to open a larger copy.</p>
 </section>
 <section id="retrieval" class="wrap">
 <h2>Qualitative retrieval results</h2>

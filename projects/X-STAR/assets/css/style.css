@@ -386,3 +386,40 @@ details {
 
 /* Keep the single dataset example comfortably sized. */
 #examples .examples{max-width:620px;margin:24px auto 0;grid-template-columns:minmax(0,1fr)}
+
+/* Dataset-first presentation, following the paper's image/query layout. */
+.project-subtitle{font-size:16px;color:#666;margin:0 0 15px}
+.dataset-lead{font-size:17px;line-height:1.65}
+.dataset-numbers{display:grid;grid-template-columns:repeat(3,1fr);margin:23px 0;border-top:1px solid #d5d5d5;border-bottom:1px solid #d5d5d5;padding:16px 0;text-align:center}
+.dataset-numbers>div{display:flex;flex-direction:column-reverse;border-right:1px solid #ddd}
+.dataset-numbers>div:last-child{border-right:0}
+.dataset-numbers dt{font-size:14px;color:#666}
+.dataset-numbers dd{font-size:35px;line-height:1.3;color:#2c6a9d;font-weight:600;margin:0}
+.pub-btn.dataset-primary{background:#286b9d;border-color:#286b9d;box-shadow:none}
+.pub-btn.dataset-primary:hover{background:#205779}
+.dataset-download{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:20px 0}
+.dataset-download span{font-size:13px;color:#666}
+.split-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:20px 0 0;padding:16px 0 0;border-top:1px solid #ddd}
+.split-summary dt{font-weight:600;font-size:14px}
+.split-summary dd{margin:2px 0 0;font-size:13px;color:#555}
+.paper-example{display:grid;grid-template-columns:minmax(0,0.78fr) minmax(0,1.22fr);gap:30px;border-top:1px solid #aaa;border-bottom:1px solid #aaa;padding:18px 0;margin:18px 0 8px;align-items:start}
+.paper-example h3{margin:0 0 12px;font-size:16px;font-weight:600}
+.paper-example h4{font-size:14px;margin:16px 0 5px}
+.paper-example-image img{display:block;width:100%;height:auto}
+.paper-example .scene-label{font-size:13px;margin:10px 0 0}
+.paper-scene-text{font-size:16px;line-height:1.6;margin:0 0 16px;overflow-wrap:anywhere}
+.query-list{margin:0;font-size:15px;line-height:1.6}
+.query-list>div{margin:0 0 5px;overflow-wrap:anywhere}
+.query-list dt{display:inline;font-weight:700}
+.query-list dd{display:inline;margin:0}
+.paper-method{margin:22px 0}
+.paper-method a{display:block}
+.paper-method img{display:block;width:100%;height:auto;background:#fff}
+.paper-method figcaption{font-size:13px;color:#555;line-height:1.6;text-align:center;margin-top:12px}
+.paper-method figcaption a{display:inline}
+#results table{border-top:2px solid #333;border-bottom:2px solid #333}
+#results th,#results td{border:0;padding:9px 12px}
+#results thead th{border-bottom:1px solid #555;background:#fff}
+#results tbody th{text-align:left;font-weight:400}
+#results .ours th,#results .ours td{font-weight:700;background:#f2f6f9}
+@media(max-width:640px){.dataset-lead{font-size:16px}.dataset-numbers dd{font-size:27px}.dataset-numbers dt{font-size:12px}.split-summary{grid-template-columns:1fr;gap:10px}.split-summary>div{display:flex;justify-content:space-between;gap:10px}.split-summary dd{margin:0;text-align:right}.paper-example{grid-template-columns:1fr;gap:22px}.paper-example-image{max-width:440px;width:100%;margin:auto}.query-list{font-size:14px}.dataset-download{gap:9px}.paper-method figcaption{text-align:left}}
