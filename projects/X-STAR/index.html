@@ -86,59 +86,13 @@
 <p>Scene text provides distinctive cues for finding a place, storefront or institution, but the words in an image and the language of a search query may differ. We introduce <strong>X-STAR</strong>, a benchmark for cross-lingual scene text-aware image retrieval with <strong>6,449 images and queries in 13 languages</strong>. Our model, <strong>CoLITE-CLIP</strong>, combines frozen CLIP visual features with embeddings of recognised scene-text lines through bidirectional co-attention. Token-level late interaction then matches the query to the fused image representation. Non-English queries and scene text are mapped to English through upstream translation. On the X-STAR test split, CoLITE-CLIP achieves <strong>46.5% Recall@1</strong>, compared with <strong>24.6%</strong> for the global CLIP ViT-B/32 baseline, averaged over all 13 query sets. The split’s known exact-image overlap is documented alongside the results.</p>
 </section>
 <section id="method">
-<h2>Overview of CoLITE-CLIP</h2>
-<figure class="method-diagram">
-<div class="diagram-scroll" tabindex="0" role="region" aria-label="CoLITE-CLIP architecture; scroll horizontally on small screens">
-<svg viewBox="0 0 900 294" role="img" aria-labelledby="method-title method-desc" xmlns="http://www.w3.org/2000/svg">
-<title id="method-title">CoLITE-CLIP architecture</title>
-<desc id="method-desc">An English-translated query is encoded into CLIP text tokens. Visual tokens and English OCR-line embeddings are fused by eleven bidirectional co-attention blocks. MaxSim matches query tokens to the fused image bank to rank gallery images.</desc>
-<defs>
-<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
-<path d="M0 0L8 4L0 8Z" fill="#777"/>
-</marker>
-</defs>
-<g fill="none" stroke="#777" stroke-width="1.5" marker-end="url(#arrow)">
-<path d="M195 51H225"/>
-<path d="M425 51H765V95"/>
-<path d="M195 156H210V190H225"/>
-<path d="M195 241H210V214H225"/>
-<path d="M425 203H460"/>
-<path d="M640 203H651V125H665"/>
-<path d="M765 155V215"/>
-</g>
-<g fill="#fff" stroke="#b7bec5" stroke-width="1.2">
-<rect x="15" y="25" width="180" height="52" rx="2"/>
-<rect x="225" y="25" width="200" height="52" rx="2"/>
-<rect x="15" y="130" width="180" height="52" rx="2"/>
-<rect x="15" y="215" width="180" height="52" rx="2"/>
-<rect x="460" y="170" width="180" height="66" rx="2"/>
-<rect x="665" y="95" width="200" height="60" rx="2"/>
-</g>
-<rect x="225" y="170" width="200" height="66" rx="2" fill="#eef5fb" stroke="#337ab7" stroke-width="1.5"/>
-<g font-family="Arial, sans-serif" font-size="15" fill="#333" text-anchor="middle">
-<text x="105" y="48">Native-language query</text>
-<text x="105" y="66" font-size="12" fill="#666">English back-translation</text>
-<text x="325" y="48">Frozen CLIP text encoder</text>
-<text x="325" y="66" font-size="12" fill="#666">Query token embeddings</text>
-<text x="105" y="152">CLIP image encoder</text>
-<text x="105" y="171" font-size="12" fill="#666">50 visual tokens · frozen</text>
-<text x="105" y="237">English OCR lines</text>
-<text x="105" y="256" font-size="12" fill="#666">40 slots, with null padding</text>
-<text x="325" y="198" font-weight="bold">11 co-attention blocks</text>
-<text x="325" y="218" font-size="12" fill="#536779">Visual ↔ OCR fusion</text>
-<text x="550" y="198">Fused image bank</text>
-<text x="550" y="218" font-size="12" fill="#666">90 tokens per image</text>
-<text x="765" y="121" font-weight="bold">MaxSim</text>
-<text x="765" y="141" font-size="12" fill="#666">Token-level late interaction</text>
-<text x="765" y="241">Ranked gallery images</text>
-</g>
-</svg>
-</div>
-<figcaption>
-<span class="diagram-hint">Scroll the diagram sideways on small screens.</span>
-<strong>Overview of CoLITE-CLIP.</strong> Frozen CLIP encoders provide image, scene-text and query features. The trainable fusion blocks connect visual and OCR information; token-level matching ranks the gallery. English OCR lines and query translations are supplied by upstream preprocessing.</figcaption>
+<h2>CoLITE-CLIP</h2>
+<p>Our retrieval model combines frozen CLIP features with scene text through bidirectional co-attention, then ranks images using token-level late interaction.</p>
+<figure class="paper-method">
+<a href="assets/figures/colite-clip-method.pdf" aria-label="Open the full-size method diagram PDF"><img src="assets/figures/colite-clip-method.png" width="2600" height="1304" alt="Method diagram from the paper: frozen image and text encoders, OCR and translation, repeated bidirectional cross-attention blocks, visual and OCR concatenation, and a late-interaction retrieval head." decoding="sync"></a>
+<figcaption><strong>CoLITE-CLIP architecture.</strong> The method and illustrative retrieval example from the paper. <a href="assets/figures/colite-clip-method.pdf">Open the full-size PDF</a>.</figcaption>
 </figure>
-<p>Image features are represented by 50 CLIP ViT-B/32 tokens. Up to 40 English OCR-line embeddings, padded with a learned null token, are fused with them through 11 bidirectional cross-attention blocks. ColBERT-style MaxSim scores the query tokens against the 90-token image bank. The fusion module is trained with a symmetric InfoNCE loss, first on TextCaps and then on X-STAR.</p>
+<p>The X-STAR model uses 50 CLIP ViT-B/32 visual tokens and up to 40 English OCR-line embeddings, padded with a learned null token. Eleven bidirectional co-attention blocks fuse the streams. MaxSim matches query tokens against the 90-token image bank. OCR and machine translation are supplied upstream.</p>
 </section>
 <section id="results">
 <h2>Quantitative Results</h2>
