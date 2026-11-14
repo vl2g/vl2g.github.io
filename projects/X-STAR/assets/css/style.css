@@ -387,22 +387,28 @@ details {
 /* Keep the single dataset example comfortably sized. */
 #examples .examples{max-width:620px;margin:24px auto 0;grid-template-columns:minmax(0,1fr)}
 
-/* Dataset-first presentation, following the paper's image/query layout. */
+/* Restrained academic layout and booktabs-style tables. */
+:root{--link:#333}
+a{text-decoration:underline;text-underline-offset:2px;text-decoration-color:#aaa}
+a:hover{text-decoration-color:#222}
+.authors>span:not(.author-comma){color:#333}
 .project-subtitle{font-size:16px;color:#666;margin:0 0 15px}
-.dataset-lead{font-size:17px;line-height:1.65}
-.dataset-numbers{display:grid;grid-template-columns:repeat(3,1fr);margin:23px 0;border-top:1px solid #d5d5d5;border-bottom:1px solid #d5d5d5;padding:16px 0;text-align:center}
-.dataset-numbers>div{display:flex;flex-direction:column-reverse;border-right:1px solid #ddd}
-.dataset-numbers>div:last-child{border-right:0}
-.dataset-numbers dt{font-size:14px;color:#666}
-.dataset-numbers dd{font-size:35px;line-height:1.3;color:#2c6a9d;font-weight:600;margin:0}
-.pub-btn.dataset-primary{background:#286b9d;border-color:#286b9d;box-shadow:none}
-.pub-btn.dataset-primary:hover{background:#205779}
-.dataset-download{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:20px 0}
-.dataset-download span{font-size:13px;color:#666}
-.split-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:20px 0 0;padding:16px 0 0;border-top:1px solid #ddd}
-.split-summary dt{font-weight:600;font-size:14px}
-.split-summary dd{margin:2px 0 0;font-size:13px;color:#555}
-.paper-example{display:grid;grid-template-columns:minmax(0,0.78fr) minmax(0,1.22fr);gap:30px;border-top:1px solid #aaa;border-bottom:1px solid #aaa;padding:18px 0;margin:18px 0 8px;align-items:start}
+.pub-btn{background:#fff;color:#222;border:1px solid #aaa;border-radius:3px;box-shadow:none;padding:6px 12px;text-decoration:none}
+.pub-btn:hover{background:#f3f3f3;color:#111}
+.pub-btn.pending{background:#fff;color:#888;border-color:#ccc}
+.paper-table,#results table{font-family:"Times New Roman","Liberation Serif",Times,serif;font-size:17px;line-height:1.35;border-collapse:collapse;border-top:1.5px solid #222;border-bottom:1.5px solid #222;color:#111}
+.paper-table caption{font-family:inherit;font-size:15px;line-height:1.4;text-align:left;color:#111;margin:0 0 8px;padding:0}
+.paper-table th,.paper-table td{border:0;background:transparent;padding:4px 10px;text-align:center;font-weight:400}
+.paper-table thead th{font-weight:700;border-bottom:1px solid #555;white-space:nowrap}
+.paper-table th:first-child{text-align:left;padding-left:0}
+.paper-table td:last-child,.paper-table th:last-child{padding-right:0}
+.paper-table .xstar-row th,.paper-table .xstar-row td,.paper-table .total-row th,.paper-table .total-row td{font-weight:700;border-top:1px solid #555}
+.comparison-table{min-width:650px}
+.split-table-wrap{max-width:470px;margin:23px 0 16px}
+.table-scroll{max-width:100%}
+.dataset-download{font-size:14px;margin:20px 0 30px}
+.dataset-download span{font-size:12px;color:#666;margin-left:10px}
+.paper-example{display:grid;grid-template-columns:minmax(0,.78fr) minmax(0,1.22fr);gap:30px;border-top:1px solid #aaa;border-bottom:1px solid #aaa;padding:18px 0;margin:18px 0 8px;align-items:start}
 .paper-example h3{margin:0 0 12px;font-size:16px;font-weight:600}
 .paper-example h4{font-size:14px;margin:16px 0 5px}
 .paper-example-image img{display:block;width:100%;height:auto}
@@ -417,9 +423,20 @@ details {
 .paper-method img{display:block;width:100%;height:auto;background:#fff}
 .paper-method figcaption{font-size:13px;color:#555;line-height:1.6;text-align:center;margin-top:12px}
 .paper-method figcaption a{display:inline}
-#results table{border-top:2px solid #333;border-bottom:2px solid #333}
-#results th,#results td{border:0;padding:9px 12px}
-#results thead th{border-bottom:1px solid #555;background:#fff}
-#results tbody th{text-align:left;font-weight:400}
-#results .ours th,#results .ours td{font-weight:700;background:#f2f6f9}
-@media(max-width:640px){.dataset-lead{font-size:16px}.dataset-numbers dd{font-size:27px}.dataset-numbers dt{font-size:12px}.split-summary{grid-template-columns:1fr;gap:10px}.split-summary>div{display:flex;justify-content:space-between;gap:10px}.split-summary dd{margin:0;text-align:right}.paper-example{grid-template-columns:1fr;gap:22px}.paper-example-image{max-width:440px;width:100%;margin:auto}.query-list{font-size:14px}.dataset-download{gap:9px}.paper-method figcaption{text-align:left}}
+#results table th,#results table td{border:0;padding:7px 10px;background:transparent}
+#results table thead th{border-bottom:1px solid #555}
+#results table tbody th{text-align:left;font-weight:400}
+#results .ours th,#results .ours td{font-weight:700;background:transparent}
+.acknowledgement-list{margin:0}
+.acknowledgement-list>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:15px;margin:0 0 12px}
+.acknowledgement-list dt{font-weight:600}
+.acknowledgement-list dd{margin:0}
+@media(max-width:640px){.dataset-download span{display:block;margin:6px 0 0}.paper-example{grid-template-columns:1fr;gap:22px}.paper-example-image{max-width:440px;width:100%;margin:auto}.query-list{font-size:14px}.paper-method figcaption{text-align:left}.acknowledgement-list>div{grid-template-columns:1fr;gap:2px;margin-bottom:14px}.paper-table{font-size:16px}}
+
+.paper-caption{font-family:"Times New Roman","Liberation Serif",Times,serif;font-size:15px;line-height:1.4;margin:20px 0 8px;text-align:left!important}
+.paper-caption+.comparison-scroll-hint+.table-scroll{margin-top:0}
+.comparison-scroll-hint{display:none}
+.table-scroll.split-table-wrap{max-width:470px}
+@media(max-width:640px){.comparison-scroll-hint{display:block;font-size:12px;color:#666;margin:0 0 8px}}
+
+@media(max-width:640px){.publication-links{gap:7px}.publication-links .pub-btn{font-size:12.5px;padding:6px 8px;gap:5px}.publication-links .pub-btn svg{width:13px;height:13px}}

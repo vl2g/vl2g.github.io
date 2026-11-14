@@ -20,11 +20,6 @@
 <p class="affiliation">
 <sup>1</sup>Indian Institute of Technology Jodhpur</p>
 <div class="publication-links" aria-label="Project resources">
-<a class="pub-btn dataset-primary" href="#dataset">
-<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-<ellipse cx="12" cy="5" rx="9" ry="3"/>
-<path d="M3 5v14c0 4 18 4 18 0V5M3 12c0 4 18 4 18 0"/>
-</svg>Dataset</a>
 <span class="pub-btn pending" aria-label="Paper link forthcoming">
 <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
 <path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8M8 16h8"/>
@@ -34,6 +29,11 @@
 <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
 <path d="m8 5-6 7 6 7M16 5l6 7-6 7M14 2l-4 20"/>
 </svg>Code</a>
+<a class="pub-btn" href="#dataset">
+<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="12" cy="5" rx="9" ry="3"/>
+<path d="M3 5v14c0 4 18 4 18 0V5M3 12c0 4 18 4 18 0"/>
+</svg>Dataset</a>
 <a class="pub-btn" href="https://github.com/vl2g/X-STAR/releases/download/v0.1.0/colite_clip_xstar.pt" aria-label="Download CoLITE-CLIP model weights">
 <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
 <path d="M12 2v13m-5-5 5 5 5-5M3 16v6h18v-6"/>
@@ -42,20 +42,29 @@
 </div>
 </header>
 <main id="main">
-<section id="dataset" class="dataset-intro">
-<h2>The X-STAR Dataset</h2>
-<p class="dataset-lead">A benchmark for finding scene-text images across languages. Each image is paired with queries in 13 languages, so the language of a search can differ from the text visible in the scene.</p>
-<dl class="dataset-numbers" aria-label="Dataset at a glance">
-<div><dt>Images</dt><dd>6,449</dd></div><div><dt>Queries</dt><dd>83,837</dd></div><div><dt>Query languages</dt><dd>13</dd></div>
-</dl>
-<p class="dataset-download"><a class="pub-btn dataset-primary" href="https://github.com/vl2g/X-STAR/releases/download/v0.1.0/xstar_annotations.zip">Download annotations</a> <span>CC BY-SA 4.0 · Source images acquired separately</span></p>
-<p>Images come from Bharat Scene Text Dataset (5,949) and RCTW-17 (500). Queries span English, Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu and Chinese.</p>
-<dl class="split-summary" aria-label="Fixed dataset splits">
-<div><dt>Train</dt><dd><strong>4,515</strong> images · 58,695 queries</dd></div><div><dt>Validation</dt><dd><strong>645</strong> images · 8,385 queries</dd></div><div><dt>Test</dt><dd><strong>1,289</strong> images · 16,757 queries</dd></div>
-</dl>
+<section id="abstract">
+<h2>Abstract</h2>
+<p>Scene text provides distinctive cues for finding a place, storefront or institution, but the words in an image and the language of a search query may differ. We introduce <strong>X-STAR</strong>, a benchmark for cross-lingual scene text-aware image retrieval with <strong>6,449 images and queries in 13 languages</strong>. Our model, <strong>CoLITE-CLIP</strong>, combines frozen CLIP visual features with embeddings of recognised scene-text lines through bidirectional co-attention. Token-level late interaction then matches the query to the fused image representation. Non-English queries and scene text are mapped to English through upstream translation. On the X-STAR test split, CoLITE-CLIP achieves <strong>46.5% Recall@1</strong>, compared with <strong>24.6%</strong> for the global CLIP ViT-B/32 baseline, averaged over all 13 query sets. The split’s known exact-image overlap is documented alongside the results.</p>
 </section>
-<section id="examples">
-<h2>One Image, Thirteen Query Languages</h2>
+<section id="dataset">
+<h2>The X-STAR Dataset</h2>
+<p>X-STAR contains 6,449 images and 83,837 queries in 13 languages. It supports cross-lingual scene-text-aware retrieval: the language of a query can differ from the text visible in the image.</p>
+<p class="paper-caption" id="comparison-caption"><strong>Comparison with scene-text-aware image retrieval datasets.</strong> X-STAR provides multilingual scene images and sentence-level queries across 13 languages.</p>
+<p class="comparison-scroll-hint">Scroll sideways to view all columns.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Dataset comparison table; scroll horizontally on smaller screens">
+<table class="paper-table comparison-table" aria-describedby="comparison-caption">
+<thead><tr><th scope="col">Dataset</th><th scope="col">#Imgs</th><th scope="col">#Langs</th><th scope="col">#Queries</th><th scope="col">Multilingual</th><th scope="col">Query Type</th></tr></thead>
+<tbody><tr><th scope="row">TextCaps</th><td>28,408</td><td>1 (en)</td><td>142,040</td><td><span aria-label="No">×</span></td><td>Sentence</td></tr><tr><th scope="row">CTC (StacMR)</th><td>10,683</td><td>1 (en)</td><td>53,415</td><td><span aria-label="No">×</span></td><td>Sentence</td></tr><tr><th scope="row">SVT</th><td>249</td><td>1 (en)</td><td>427</td><td><span aria-label="No">×</span></td><td>Word</td></tr><tr><th scope="row">Sports-10K</th><td>10,000</td><td>1 (en)</td><td>10</td><td><span aria-label="No">×</span></td><td>Sentence</td></tr><tr><th scope="row">TV-series-1M</th><td>1M</td><td>1 (en)</td><td>20</td><td><span aria-label="No">×</span></td><td>Sentence</td></tr><tr><th scope="row">IIIT STR</th><td>10,000</td><td>1 (en)</td><td>50</td><td><span aria-label="No">×</span></td><td>Word</td></tr><tr><th scope="row">DL-CSVTR</th><td>2,070</td><td>1 (zh)</td><td>89</td><td><span aria-label="No">×</span></td><td>Word</td></tr><tr class="xstar-row"><th scope="row">X-STAR (ours)</th><td>6,449</td><td>13</td><td>83,837</td><td><span aria-label="Yes">✓</span></td><td>Sentence</td></tr></tbody>
+</table></div>
+<p>Images come from Bharat Scene Text Dataset (5,949) and RCTW-17 (500). Query languages are English, Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu and Chinese.</p>
+<div class="table-scroll split-table-wrap" tabindex="0" role="region" aria-label="Dataset split sizes">
+<table class="paper-table split-table">
+<caption><strong>Dataset splits.</strong> Each image has 13 query-language sets.</caption>
+<thead><tr><th scope="col">Split</th><th scope="col">#Images</th><th scope="col">#Queries</th></tr></thead>
+<tbody><tr><th scope="row">Train</th><td>4,515</td><td>58,695</td></tr><tr><th scope="row">Validation</th><td>645</td><td>8,385</td></tr><tr><th scope="row">Test</th><td>1,289</td><td>16,757</td></tr><tr class="total-row"><th scope="row">Total</th><td>6,449</td><td>83,837</td></tr></tbody>
+</table></div>
+<p class="dataset-download"><a href="https://github.com/vl2g/X-STAR/releases/download/v0.1.0/xstar_annotations.zip">Download annotations</a> <span>CC BY-SA 4.0 · Source images acquired separately</span></p>
+<h3 id="examples">One Image, Thirteen Query Languages</h3>
 <p>A Telugu signboard from the training split, its annotated scene text, and queries in all 13 languages.</p>
 <article class="paper-example" id="example-a" aria-labelledby="example-a-title">
 <div class="paper-example-image">
@@ -80,10 +89,6 @@
 <div><dt>Chinese:</dt> <dd lang="zh-Hans">Sripothana Chaitanya Vedika 泰卢固语招牌</dd></div></dl></div>
 </article>
 <p class="small-note">Machine-generated queries and translations may contain errors. All 13 strings above are shown without correction.</p>
-</section>
-<section id="abstract">
-<h2>Abstract</h2>
-<p>Scene text provides distinctive cues for finding a place, storefront or institution, but the words in an image and the language of a search query may differ. We introduce <strong>X-STAR</strong>, a benchmark for cross-lingual scene text-aware image retrieval with <strong>6,449 images and queries in 13 languages</strong>. Our model, <strong>CoLITE-CLIP</strong>, combines frozen CLIP visual features with embeddings of recognised scene-text lines through bidirectional co-attention. Token-level late interaction then matches the query to the fused image representation. Non-English queries and scene text are mapped to English through upstream translation. On the X-STAR test split, CoLITE-CLIP achieves <strong>46.5% Recall@1</strong>, compared with <strong>24.6%</strong> for the global CLIP ViT-B/32 baseline, averaged over all 13 query sets. The split’s known exact-image overlap is documented alongside the results.</p>
 </section>
 <section id="method">
 <h2>CoLITE-CLIP</h2>
@@ -523,9 +528,13 @@
 }</code></pre></section>
 <section id="acknowledgements">
 <h2>Acknowledgements</h2>
-<p>We thank <a href="https://ai4bharat.iitm.ac.in/">AI4Bharat</a> for <a href="https://github.com/AI4Bharat/IndicTrans2">IndicTrans2</a>, used for Indic-language translation during dataset preparation.</p>
-<p>We acknowledge the <strong>National Language Translation Mission</strong> (<a href="https://bhashini.gov.in/">Bhashini</a>) for supporting this project at Indian Institute of Technology Jodhpur.</p>
-<p>We acknowledge <a href="https://github.com/Bhashini-IITJ/BharatSceneTextDataset">Bharat Scene Text Dataset</a>, <a href="https://rctw.vlrlab.net/">RCTW-17</a>, <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR">IndicPhotoOCR</a>, <a href="https://github.com/openai/CLIP">OpenAI CLIP</a>, the <a href="https://github.com/stanford-futuredata/ColBERT">ColBERT</a> late-interaction design, and <a href="https://textvqa.org/textcaps/">TextCaps</a> pre-training. Source photographs retain their own terms. Our annotations are CC BY-SA 4.0; code and released model weights are MIT licensed.</p>
+<dl class="acknowledgement-list">
+<div><dt>Project support</dt><dd>National Language Translation Mission (<a href="https://bhashini.gov.in/">Bhashini</a>).</dd></div>
+<div><dt>Datasets</dt><dd><a href="https://github.com/Bhashini-IITJ/BharatSceneTextDataset">Bharat Scene Text Dataset</a> and <a href="https://rctw.vlrlab.net/">RCTW-17</a>; <a href="https://textvqa.org/textcaps/">TextCaps</a> for pre-training.</dd></div>
+<div><dt>OCR &amp; translation</dt><dd><a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR">IndicPhotoOCR</a> for scene-text recognition and <a href="https://github.com/AI4Bharat/IndicTrans2">AI4Bharat IndicTrans2</a> for Indic-language translation.</dd></div>
+<div><dt>Model components</dt><dd><a href="https://github.com/openai/CLIP">OpenAI CLIP</a> and the <a href="https://github.com/stanford-futuredata/ColBERT">ColBERT</a> late-interaction design.</dd></div>
+</dl>
+<p class="small-note">Code and released model weights are MIT licensed; our annotation contributions use CC BY-SA 4.0. Photographs retain their source terms. See <a href="image-credits.html">image credits</a>.</p>
 </section>
 </main>
 <footer>
