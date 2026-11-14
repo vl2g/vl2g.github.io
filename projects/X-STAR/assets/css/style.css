@@ -443,3 +443,14 @@ a:hover{text-decoration-color:#222}
 
 /* Recorded retrieval demonstration. */
 .demo-video{margin:18px 0}.demo-video video{display:block;width:100%;height:auto;background:#fff}.demo-video figcaption{font-size:13px;line-height:1.6;color:#555;margin-top:9px;text-align:center}
+
+/* Header only: restore restrained, rounded resource buttons. */
+.paper-header{padding-top:8px;padding-bottom:28px}
+.paper-header h1{margin-top:8px;margin-bottom:12px;line-height:1.25}
+.paper-header .project-subtitle{margin-bottom:18px}
+.paper-header .authors{margin-bottom:4px}
+.paper-header .publication-links{margin-top:22px;gap:10px}
+.paper-header .pub-btn{background:#303030;color:#fff;border:1px solid #303030;border-radius:999px;box-shadow:none;padding:7px 16px;text-decoration:none}
+.paper-header .pub-btn:hover{background:#171717;color:#fff;border-color:#171717}
+.paper-header .pub-btn.pending{background:#777;color:#fff;border-color:#777}
+@media(max-width:640px){.paper-header{padding-top:0;padding-bottom:24px}.paper-header .publication-links{gap:7px}.paper-header .pub-btn{padding:6px 8px;font-size:12.5px;gap:5px}}
