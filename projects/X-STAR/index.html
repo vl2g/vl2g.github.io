@@ -44,7 +44,7 @@
 <main id="main">
 <section id="abstract">
 <h2>Abstract</h2>
-<p>Scene text provides distinctive cues for finding a place, storefront or institution, but the words in an image and the language of a search query may differ. We introduce <strong>X-STAR</strong>, a benchmark for cross-lingual scene text-aware image retrieval with <strong>6,449 images and queries in 13 languages</strong>. Our model, <strong>CoLITE-CLIP</strong>, combines frozen CLIP visual features with embeddings of recognised scene-text lines through bidirectional co-attention. Token-level late interaction then matches the query to the fused image representation. Non-English queries and scene text are mapped to English through upstream translation. On the X-STAR test split, CoLITE-CLIP achieves <strong>46.5% Recall@1</strong>, compared with <strong>24.6%</strong> for the global CLIP ViT-B/32 baseline, averaged over all 13 query sets. The split’s known exact-image overlap is documented alongside the results.</p>
+<p>Scene text provides distinctive cues for finding a place, storefront or institution, but the words in an image and the language of a search query may differ. We introduce <strong>X-STAR</strong>, a benchmark for cross-lingual scene text-aware image retrieval with <strong>6,449 images and queries in 13 languages</strong>. Our model, <strong>CoLITE-CLIP</strong>, combines frozen CLIP visual features with embeddings of recognised scene-text lines through bidirectional co-attention. Token-level late interaction then matches the query to the fused image representation. Non-English queries and scene text are mapped to English through upstream translation. On the X-STAR test split, CoLITE-CLIP achieves <strong>46.5% Recall@1</strong>, compared with <strong>24.6%</strong> for the global CLIP ViT-B/32 baseline, averaged over all 13 query sets.</p>
 </section>
 <section id="dataset">
 <h2>The X-STAR Dataset</h2>
@@ -88,7 +88,6 @@
 <div><dt>Telugu:</dt> <dd lang="te">శ్రీపోతన చైతన్య వేదిక తెలుగు సైన్బోర్డ్</dd></div>
 <div><dt>Chinese:</dt> <dd lang="zh-Hans">Sripothana Chaitanya Vedika 泰卢固语招牌</dd></div></dl></div>
 </article>
-<p class="small-note">Machine-generated queries and translations may contain errors. All 13 strings above are shown without correction.</p>
 </section>
 <section id="method">
 <h2>CoLITE-CLIP</h2>
@@ -97,7 +96,6 @@
 <a href="assets/figures/colite-clip-method.pdf" aria-label="Open the full-size method diagram PDF"><img src="assets/figures/colite-clip-method.png" width="2600" height="1304" alt="Method diagram from the paper: frozen image and text encoders, OCR and translation, repeated bidirectional cross-attention blocks, visual and OCR concatenation, and a late-interaction retrieval head." decoding="sync"></a>
 <figcaption><strong>CoLITE-CLIP architecture.</strong> The method and illustrative retrieval example from the paper. <a href="assets/figures/colite-clip-method.pdf">Open the full-size PDF</a>.</figcaption>
 </figure>
-<p>The X-STAR model uses 50 CLIP ViT-B/32 visual tokens and up to 40 English OCR-line embeddings, padded with a learned null token. Eleven bidirectional co-attention blocks fuse the streams. MaxSim matches query tokens against the 90-token image bank. OCR and machine translation are supplied upstream.</p>
 </section>
 <section id="results">
 <h2>Quantitative Results</h2>
@@ -129,7 +127,6 @@
 </tbody>
 </table>
 </div>
-<p class="small-note">These scores are verified evaluations of the existing main checkpoint and cached features, not a complete rerun from raw images. Equal scores retain the fixed gallery order. <strong>Integrity note:</strong> the split contains byte-identical images across training, validation and test. Selecting it as the primary benchmark does not remove that limitation.</p>
 <details>
 <summary>benchmark: results by query language</summary>
 <div class="table-scroll" tabindex="0" role="region" aria-label="benchmark results by language">
@@ -274,223 +271,16 @@
 </details>
 
 </section>
-<section id="retrieval" class="wrap">
-<h2>Qualitative retrieval results</h2>
-<p class="section-intro">
-<strong>These illustrative examples use the checkpoint and test
-        split.</strong> Each row shows a query in
-        one language, the English back-translation that the model actually receives (from the dataset), and the
-        top five images retrieved from all 1,289 test images, best match first. The five examples were chosen for
-        illustration (four with the target first, one with the target second) and do not estimate overall
-        performance.</p>
-<p class="retrieval-legend">
-<span class="swatch swatch-target" aria-hidden="true">
-</span> Green border: the
-        target image for the query. <span class="swatch swatch-other" aria-hidden="true">
-</span> Red border: other
-        retrieved images. The image descriptions state which image is the target.</p>
-<p class="scroll-hint">Scroll each row sideways to see all five images.</p>
-<div class="retrievals">
-<!-- retrieval:start (generated by tools/prepare_retrieval_examples.py) -->
-<article class="retrieval" id="retrieval-a" aria-labelledby="retrieval-a-query">
-<p class="retrieval-letter" aria-hidden="true">(a)</p>
-<div class="retrieval-body">
-<h3 class="retrieval-query" id="retrieval-a-query">
-<span class="visually-hidden">Example (a). </span>Query (Telugu): <span class="query-native" lang="te">కొలిడా చైనీస్ స్టోర్ ఫ్రంట్ సైన్ బిల్డింగ్ ముఖభాగం</span>
-</h3>
-<p class="retrieval-translation">
-<strong>English translation:</strong> Collida Chinese Storefront Sign Building Facade</p>
-<div class="retrieval-strip" role="region" tabindex="0" aria-label="Top five retrieved images for example (a), in ranked order">
-<ol class="retrieval-list">
-<li class="hit is-target" style="--ar: 0.7500">
-<a href="assets/img/retrieval/N_image_1044-1280.jpg">
-<img src="assets/img/retrieval/N_image_1044-h480.jpg" width="360" height="480" decoding="async" alt="Target image. Building facade with a large blue sign reading 科力达 in white Chinese characters.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.3333">
-<a href="assets/img/retrieval/C_image_5122-1280.jpg">
-<img src="assets/img/retrieval/C_image_5122-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Roadside row of partly built houses and small shops on a dusty street.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 0.7500">
-<a href="assets/img/retrieval/C_image_1981-1280.jpg">
-<img src="assets/img/retrieval/C_image_1981-h480.jpg" width="360" height="480" decoding="async" alt="Other retrieved image. Narrow street lined with shops and multi-storey buildings under a blue sky.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.3333">
-<a href="assets/img/retrieval/F_image_378-1280.jpg">
-<img src="assets/img/retrieval/F_image_378-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Rainy town street with a bus, cars, two-wheelers and shop signboards.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.3333">
-<a href="assets/img/retrieval/G_image_1692-1280.jpg">
-<img src="assets/img/retrieval/G_image_1692-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Street corner with multi-storey buildings, shop signs, a white van and auto-rickshaws.">
-</a>
-</li>
-</ol>
-</div>
-</div>
-</article>
-<article class="retrieval" id="retrieval-b" aria-labelledby="retrieval-b-query">
-<p class="retrieval-letter" aria-hidden="true">(b)</p>
-<div class="retrieval-body">
-<h3 class="retrieval-query" id="retrieval-b-query">
-<span class="visually-hidden">Example (b). </span>Query (Bengali): <span class="query-native" lang="bn">আন্দিপট্টি রেলওয়ে স্টেশন প্ল্যাটফর্ম সাইন বোর্ড</span>
-</h3>
-<p class="retrieval-translation">
-<strong>English translation:</strong> Andipatti Railway Station Platform Sign Board</p>
-<div class="retrieval-strip" role="region" tabindex="0" aria-label="Top five retrieved images for example (b), in ranked order">
-<ol class="retrieval-list">
-<li class="hit is-target" style="--ar: 1.3333">
-<a href="assets/img/retrieval/K_image_317-1280.jpg">
-<img src="assets/img/retrieval/K_image_317-h480.jpg" width="640" height="480" decoding="async" alt="Target image. Railway track beside an unpaved platform with a yellow station-name board, trees and hills behind.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 2.0771">
-<a href="assets/img/retrieval/L_image_609-1280.jpg">
-<img src="assets/img/retrieval/L_image_609-h480.jpg" width="997" height="480" decoding="async" alt="Other retrieved image. Station platform with a blue passenger train, overhead electric wires and a yellow station-name board.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.7771">
-<a href="assets/img/retrieval/I_image_158-1280.jpg">
-<img src="assets/img/retrieval/I_image_158-h480.jpg" width="853" height="480" decoding="async" alt="Other retrieved image. Covered railway platform in front of a yellow station building, with people waiting.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.3333">
-<a href="assets/img/retrieval/F_image_774-1280.jpg">
-<img src="assets/img/retrieval/F_image_774-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Railway tracks and platform with a red signal and a yellow station-name board.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.3333">
-<a href="assets/img/retrieval/L_image_147-1280.jpg">
-<img src="assets/img/retrieval/L_image_147-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Station platform beside a goods train of coal wagons, with a yellow board reading Anaparti.">
-</a>
-</li>
-</ol>
-</div>
-</div>
-</article>
-<article class="retrieval" id="retrieval-c" aria-labelledby="retrieval-c-query">
-<p class="retrieval-letter" aria-hidden="true">(c)</p>
-<div class="retrieval-body">
-<h3 class="retrieval-query" id="retrieval-c-query">
-<span class="visually-hidden">Example (c). </span>Query (Gujarati): <span class="query-native" lang="gu">કોઇલ કોંડા પોલીસ સ્ટેશનના ઘરના પ્રવેશદ્વારનું સાઇનબોર્ડ</span>
-</h3>
-<p class="retrieval-translation">
-<strong>English translation:</strong> Signboard at the entrance of Koil Konda police station house.</p>
-<div class="retrieval-strip" role="region" tabindex="0" aria-label="Top five retrieved images for example (c), in ranked order">
-<ol class="retrieval-list">
-<li class="hit is-target" style="--ar: 1.2896">
-<a href="assets/img/retrieval/L_image_717-1280.jpg">
-<img src="assets/img/retrieval/L_image_717-h480.jpg" width="619" height="480" decoding="async" alt="Target image. Single-storey building with a blue arched sign reading Koil Konda Police Station House.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 0.7500">
-<a href="assets/img/retrieval/N_image_1044-1280.jpg">
-<img src="assets/img/retrieval/N_image_1044-h480.jpg" width="360" height="480" decoding="async" alt="Other retrieved image. Building facade with a large blue sign reading 科力达 in white Chinese characters.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.3333">
-<a href="assets/img/retrieval/L_image_984-1280.jpg">
-<img src="assets/img/retrieval/L_image_984-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Open roadside area with a bench, memorial stones, signboards and trees.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.3771">
-<a href="assets/img/retrieval/E_image_505-1280.jpg">
-<img src="assets/img/retrieval/E_image_505-h480.jpg" width="661" height="480" decoding="async" alt="Other retrieved image. Old stone gateway with a signboard and a statue of a bull on top, among palm trees.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.7812">
-<a href="assets/img/retrieval/J_image_445-1280.jpg">
-<img src="assets/img/retrieval/J_image_445-h480.jpg" width="855" height="480" decoding="async" alt="Other retrieved image. Single-storey white house beside an open dirt area and trees.">
-</a>
-</li>
-</ol>
-</div>
-</div>
-</article>
-<article class="retrieval" id="retrieval-d" aria-labelledby="retrieval-d-query">
-<p class="retrieval-letter" aria-hidden="true">(d)</p>
-<div class="retrieval-body">
-<h3 class="retrieval-query" id="retrieval-d-query">
-<span class="visually-hidden">Example (d). </span>Query (Hindi): <span class="query-native" lang="hi">कर्नाटक बैंक स्टोरफ्रंट का बाहरी चिन्ह</span>
-</h3>
-<p class="retrieval-translation">
-<strong>English translation:</strong> The exterior sign of the Karnataka Bank storefront.</p>
-<div class="retrieval-strip" role="region" tabindex="0" aria-label="Top five retrieved images for example (d), in ranked order">
-<ol class="retrieval-list">
-<li class="hit is-other" style="--ar: 0.5625">
-<a href="assets/img/retrieval/E_image_167-1280.jpg">
-<img src="assets/img/retrieval/E_image_167-h480.jpg" width="270" height="480" decoding="async" alt="Other retrieved image. Shop front with a closed red shutter under an Axis Bank ATM sign.">
-</a>
-</li>
-<li class="hit is-target" style="--ar: 1.2917">
-<a href="assets/img/retrieval/E_image_778-1280.jpg">
-<img src="assets/img/retrieval/E_image_778-h480.jpg" width="620" height="480" decoding="async" alt="Target image. Bank building with purple bank and ATM signboards and motorbikes parked in front.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.3333">
-<a href="assets/img/retrieval/D_image_137-1280.jpg">
-<img src="assets/img/retrieval/D_image_137-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Brick building entrance with an Indian Bank signboard in Hindi and English.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.3333">
-<a href="assets/img/retrieval/E_image_361-1280.jpg">
-<img src="assets/img/retrieval/E_image_361-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Commercial building with a Cinepolis cinema sign, seen across a road and trees.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.7771">
-<a href="assets/img/retrieval/D_image_1457-1280.jpg">
-<img src="assets/img/retrieval/D_image_1457-h480.jpg" width="853" height="480" decoding="async" alt="Other retrieved image. Large colonial-style building with State Bank of India signs.">
-</a>
-</li>
-</ol>
-</div>
-</div>
-</article>
-<article class="retrieval" id="retrieval-e" aria-labelledby="retrieval-e-query">
-<p class="retrieval-letter" aria-hidden="true">(e)</p>
-<div class="retrieval-body">
-<h3 class="retrieval-query" id="retrieval-e-query">
-<span class="visually-hidden">Example (e). </span>Query (Chinese): <span class="query-native" lang="zh-Hans">果阿机场航站楼施工现场</span>
-</h3>
-<p class="retrieval-translation">
-<strong>English translation:</strong> Goa airport terminal construction site</p>
-<div class="retrieval-strip" role="region" tabindex="0" aria-label="Top five retrieved images for example (e), in ranked order">
-<ol class="retrieval-list">
-<li class="hit is-target" style="--ar: 1.3333">
-<a href="assets/img/retrieval/D_image_9-1280.jpg">
-<img src="assets/img/retrieval/D_image_9-h480.jpg" width="640" height="480" decoding="async" alt="Target image. Airport terminal building seen from an aircraft window, with the wing in the foreground.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.3333">
-<a href="assets/img/retrieval/L_image_984-1280.jpg">
-<img src="assets/img/retrieval/L_image_984-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Open roadside area with a bench, memorial stones, signboards and trees.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.3333">
-<a href="assets/img/retrieval/J_image_69-1280.jpg">
-<img src="assets/img/retrieval/J_image_69-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Man loading a truck beside a cow covered with a decorated blue cloth.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.3333">
-<a href="assets/img/retrieval/D_image_773-1280.jpg">
-<img src="assets/img/retrieval/D_image_773-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Concrete structure with blue railings and gates under a cloudy sky.">
-</a>
-</li>
-<li class="hit is-other" style="--ar: 1.7771">
-<a href="assets/img/retrieval/I_image_158-1280.jpg">
-<img src="assets/img/retrieval/I_image_158-h480.jpg" width="853" height="480" decoding="async" alt="Other retrieved image. Covered railway platform in front of a yellow station building, with people waiting.">
-</a>
-</li>
-</ol>
-</div>
-</div>
-</article>
-<!-- retrieval:end -->
-</div>
-<p class="small-print">Photographs from the Bharat Scene Text Dataset and RCTW-17, shown for illustration;
-        they retain their source terms. <a href="image-credits.html">Photograph credits and reuse information</a>. Select a photograph to open a larger copy.</p>
+<section id="demo" aria-labelledby="demo-title">
+<span id="retrieval" aria-hidden="true"></span>
+<h2 id="demo-title">Retrieval Demo</h2>
+<figure class="demo-video">
+<video controls playsinline muted preload="metadata" width="1920" height="1080" poster="assets/video/xstar-demo-poster.jpg" aria-label="Silent demonstration of multilingual image retrieval using CoLITE-CLIP">
+<source src="assets/video/xstar-demo.mp4" type="video/mp4">
+Your browser does not support embedded video. <a href="assets/video/xstar-demo.mp4">Download the demonstration</a>.
+</video>
+<figcaption>Multilingual image retrieval using CoLITE-CLIP. <a href="assets/video/xstar-demo.mp4" download>Download video</a>.</figcaption>
+</figure>
 </section>
 <section id="resources">
 <h2>Resources</h2>

@@ -440,3 +440,6 @@ a:hover{text-decoration-color:#222}
 @media(max-width:640px){.comparison-scroll-hint{display:block;font-size:12px;color:#666;margin:0 0 8px}}
 
 @media(max-width:640px){.publication-links{gap:7px}.publication-links .pub-btn{font-size:12.5px;padding:6px 8px;gap:5px}.publication-links .pub-btn svg{width:13px;height:13px}}
+
+/* Recorded retrieval demonstration. */
+.demo-video{margin:18px 0}.demo-video video{display:block;width:100%;height:auto;background:#fff}.demo-video figcaption{font-size:13px;line-height:1.6;color:#555;margin-top:9px;text-align:center}
