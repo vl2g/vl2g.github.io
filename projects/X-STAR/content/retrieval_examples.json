@@ -1,0 +1,1178 @@
+{
+  "generated_by": "website/tools/prepare_retrieval_examples.py",
+  "checkpoint": {
+    "description": "CoLITE-CLIP main-result checkpoint",
+    "sha256": "b702d7eb1017771ed3aa67120cbed39d5900fa6192da3244b469ea57680977b8"
+  },
+  "gallery": {
+    "split": "X-STAR test split",
+    "size": 1289,
+    "split_list_sha256": "125cf37abc8897db8e4da030ea18c7a5dd1225e88556ca84c318bfca7c503c36"
+  },
+  "manifest_sha256": "f6e594ac5d0eb470c5ff32bbc4637c5831c1cf2727e9227e2f023cde457d26a2",
+  "settings": {
+    "precision": "float32; TF32 disabled",
+    "tie_policy": "stable_gallery_order",
+    "query_source": "cached packed features for the recorded English back-translation of each native query",
+    "ocr_variant": "recognized"
+  },
+  "selection_note": "Five illustrative examples: four rank-1 successes and one rank-2 retrieval; not a representative performance estimate.",
+  "ranking_sources": [
+    {
+      "sha256": "a4d39cf24f60aeccbb686a252a4ae8070593d02d76a95409bbaef38c5999f119",
+      "role": "main retrieval verification"
+    },
+    {
+      "sha256": "7e4580302a5f9f74b5168310d1d7d70e7d9664d7eed36dc2845678e5ba23f0ef",
+      "role": "Chinese-query retrieval verification"
+    }
+  ],
+  "figure_data_sha256": "3124de437ca8402f6c04a512bb6ae338fbe8f8ff6d8bbb23ccef2c7933a5ad07",
+  "examples": [
+    {
+      "label": "a",
+      "relevant_image_id": "N_image_1044",
+      "query_set": "telugu_to_english",
+      "query_language": "Telugu",
+      "query_native": "కొలిడా చైనీస్ స్టోర్ ఫ్రంట్ సైన్ బిల్డింగ్ ముఖభాగం",
+      "query_native_field": "telugu_query",
+      "english_translation": "Collida Chinese Storefront Sign Building Facade",
+      "english_translation_field": "telugu_to_english",
+      "target_position": 1,
+      "top5": [
+        {
+          "image_id": "N_image_1044",
+          "filename": "N/image_1044.jpg",
+          "is_target": true,
+          "recorded_score": 0.1258016973733902,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/N_image_1044-h480.jpg",
+              "width": 360,
+              "height": 480,
+              "bytes": 35295,
+              "sha256": "09ba4f5d882bb63facf4aa4b6edf621834a7d3bf129072ae5b556b863a3a76c4"
+            },
+            "large": {
+              "file": "assets/img/retrieval/N_image_1044-1280.jpg",
+              "width": 960,
+              "height": 1280,
+              "bytes": 181167,
+              "sha256": "3d20bece9c7c676c5dc739368c983d93802bc9129d669869ed78d0d5f4e444f6"
+            }
+          }
+        },
+        {
+          "image_id": "C_image_5122",
+          "filename": "C/image_5122.JPG",
+          "is_target": false,
+          "recorded_score": 0.08506275713443756,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/C_image_5122-h480.jpg",
+              "width": 640,
+              "height": 480,
+              "bytes": 52589,
+              "sha256": "031369b7c01f7be7819887ae71301324f8d4e7d46d3ddadf1ebb49c700e53ec5"
+            },
+            "large": {
+              "file": "assets/img/retrieval/C_image_5122-1280.jpg",
+              "width": 1280,
+              "height": 960,
+              "bytes": 174971,
+              "sha256": "8878dc47ee6d6bd736883549f57f6921cb69a92ca75f0041b7f60d87a9e8f66b"
+            }
+          }
+        },
+        {
+          "image_id": "C_image_1981",
+          "filename": "C/image_1981.jpg",
+          "is_target": false,
+          "recorded_score": 0.07799750566482544,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/C_image_1981-h480.jpg",
+              "width": 360,
+              "height": 480,
+              "bytes": 33718,
+              "sha256": "207d144c28340e3e7fd5de43beeae23c03b500f063116ba4993453cad4f7ae66"
+            },
+            "large": {
+              "file": "assets/img/retrieval/C_image_1981-1280.jpg",
+              "width": 960,
+              "height": 1280,
+              "bytes": 188278,
+              "sha256": "60c5185e691297a0c0dcf39c175f1c3f63dcf9e1023fde84a2fa72f017cb522f"
+            }
+          }
+        },
+        {
+          "image_id": "F_image_378",
+          "filename": "F/image_378.jpg",
+          "is_target": false,
+          "recorded_score": 0.07551372796297073,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/F_image_378-h480.jpg",
+              "width": 640,
+              "height": 480,
+              "bytes": 78195,
+              "sha256": "0055183567e70091b88da74b330a48271d0e5757088c50869a3da1c09edf3735"
+            },
+            "large": {
+              "file": "assets/img/retrieval/F_image_378-1280.jpg",
+              "width": 960,
+              "height": 720,
+              "bytes": 151699,
+              "sha256": "bca5f751ab592cb8a089f2943535467ffc568a49aedd17c4f53797a820d4809e"
+            }
+          }
+        },
+        {
+          "image_id": "G_image_1692",
+          "filename": "G/image_1692.jpg",
+          "is_target": false,
+          "recorded_score": 0.0693461000919342,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/G_image_1692-h480.jpg",
+              "width": 640,
+              "height": 480,
+              "bytes": 53412,
+              "sha256": "d036778f6cf430f32863a1ba16a408f3bc66a3a11f3b7077465ad697af259dbe"
+            },
+            "large": {
+              "file": "assets/img/retrieval/G_image_1692-1280.jpg",
+              "width": 1280,
+              "height": 960,
+              "bytes": 165950,
+              "sha256": "2a07effbce829ef22316100b0a5a2467e66969692efab02f1159ab828215c3b9"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "b",
+      "relevant_image_id": "K_image_317",
+      "query_set": "bengali_to_english",
+      "query_language": "Bengali",
+      "query_native": "আন্দিপট্টি রেলওয়ে স্টেশন প্ল্যাটফর্ম সাইন বোর্ড",
+      "query_native_field": "bengali_query",
+      "english_translation": "Andipatti Railway Station Platform Sign Board",
+      "english_translation_field": "bengali_to_english",
+      "target_position": 1,
+      "top5": [
+        {
+          "image_id": "K_image_317",
+          "filename": "K/image_317.jpg",
+          "is_target": true,
+          "recorded_score": 0.23909780383110046,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/K_image_317-h480.jpg",
+              "width": 640,
+              "height": 480,
+              "bytes": 63975,
+              "sha256": "cff6846437959006f7e55048fafa28d3c1673f6932be8dfe6b79bde08ba40f92"
+            },
+            "large": {
+              "file": "assets/img/retrieval/K_image_317-1280.jpg",
+              "width": 1280,
+              "height": 960,
+              "bytes": 203787,
+              "sha256": "a865213b7238f204f30eea026136b3164a42d8d9cb991303c5e62b4b1060bb17"
+            }
+          }
+        },
+        {
+          "image_id": "L_image_609",
+          "filename": "L/image_609.jpg",
+          "is_target": false,
+          "recorded_score": 0.06500879675149918,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/L_image_609-h480.jpg",
+              "width": 997,
+              "height": 480,
+              "bytes": 83255,
+              "sha256": "273c4ab6cd0d5720416fec37050574e16e9ab137827098e02657e8cea3e09c85"
+            },
+            "large": {
+              "file": "assets/img/retrieval/L_image_609-1280.jpg",
+              "width": 1280,
+              "height": 616,
+              "bytes": 126318,
+              "sha256": "32d1bc66669847bf7c00e9be17e7d8ee8ba31017f63671f9cb9d98c9052a3a69"
+            }
+          }
+        },
+        {
+          "image_id": "I_image_158",
+          "filename": "I/image_158.jpg",
+          "is_target": false,
+          "recorded_score": 0.06270836293697357,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/I_image_158-h480.jpg",
+              "width": 853,
+              "height": 480,
+              "bytes": 80896,
+              "sha256": "db1b0b52c1d7536df80faa846ce02afd7609963f4244fef31e19d96516d846e7"
+            },
+            "large": {
+              "file": "assets/img/retrieval/I_image_158-1280.jpg",
+              "width": 1280,
+              "height": 720,
+              "bytes": 159288,
+              "sha256": "df67cdacb825c3396e5e053ecf9f518c0467018b0a72b449803e047b94dda83d"
+            }
+          }
+        },
+        {
+          "image_id": "F_image_774",
+          "filename": "F/image_774.jpg",
+          "is_target": false,
+          "recorded_score": 0.06154358386993408,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/F_image_774-h480.jpg",
+              "width": 640,
+              "height": 480,
+              "bytes": 87725,
+              "sha256": "96dba39f1d12b61001e26092afdbc27635088e804337e8025223f13acf3bd9e5"
+            },
+            "large": {
+              "file": "assets/img/retrieval/F_image_774-1280.jpg",
+              "width": 1280,
+              "height": 960,
+              "bytes": 334942,
+              "sha256": "4fee0bc0d4dd782be39837ca21f71d3056d27ba656b5f550be2917e69f833dd4"
+            }
+          }
+        },
+        {
+          "image_id": "L_image_147",
+          "filename": "L/image_147.jpg",
+          "is_target": false,
+          "recorded_score": 0.06074988842010498,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/L_image_147-h480.jpg",
+              "width": 640,
+              "height": 480,
+              "bytes": 73957,
+              "sha256": "4ff044f7f17b1f78b6d66f3a09006ab29646da2c137f79811405afd05e1c6fc8"
+            },
+            "large": {
+              "file": "assets/img/retrieval/L_image_147-1280.jpg",
+              "width": 1280,
+              "height": 960,
+              "bytes": 254038,
+              "sha256": "b993c40303cf41685e9f44a95c1a4077a407c00118ac75092512250609aaac09"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "c",
+      "relevant_image_id": "L_image_717",
+      "query_set": "gujarati_to_english",
+      "query_language": "Gujarati",
+      "query_native": "કોઇલ કોંડા પોલીસ સ્ટેશનના ઘરના પ્રવેશદ્વારનું સાઇનબોર્ડ",
+      "query_native_field": "gujarati_query",
+      "english_translation": "Signboard at the entrance of Koil Konda police station house.",
+      "english_translation_field": "gujarati_to_english",
+      "target_position": 1,
+      "top5": [
+        {
+          "image_id": "L_image_717",
+          "filename": "L/image_717.jpg",
+          "is_target": true,
+          "recorded_score": 0.23433545231819153,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/L_image_717-h480.jpg",
+              "width": 619,
+              "height": 480,
+              "bytes": 56227,
+              "sha256": "ac10fe2ffd3dedfd9820ed6a25030519f4dccc41eaa7274e660bda205d9f509e"
+            },
+            "large": {
+              "file": "assets/img/retrieval/L_image_717-1280.jpg",
+              "width": 686,
+              "height": 532,
+              "bytes": 61266,
+              "sha256": "1672fe1eeeb376afb7bea4ad81fd7ddb7bf20d7d99d7739d7a89db601ea6a0bf"
+            }
+          }
+        },
+        {
+          "image_id": "N_image_1044",
+          "filename": "N/image_1044.jpg",
+          "is_target": false,
+          "recorded_score": 0.23188719153404236,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/N_image_1044-h480.jpg",
+              "width": 360,
+              "height": 480,
+              "bytes": 35295,
+              "sha256": "09ba4f5d882bb63facf4aa4b6edf621834a7d3bf129072ae5b556b863a3a76c4"
+            },
+            "large": {
+              "file": "assets/img/retrieval/N_image_1044-1280.jpg",
+              "width": 960,
+              "height": 1280,
+              "bytes": 181167,
+              "sha256": "3d20bece9c7c676c5dc739368c983d93802bc9129d669869ed78d0d5f4e444f6"
+            }
+          }
+        },
+        {
+          "image_id": "L_image_984",
+          "filename": "L/image_984.jpg",
+          "is_target": false,
+          "recorded_score": 0.12143175303936005,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/L_image_984-h480.jpg",
+              "width": 640,
+              "height": 480,
+              "bytes": 60352,
+              "sha256": "e1ee219436af5c22f546ea8839464a8516f6842de4be3fcaf57032611094620f"
+            },
+            "large": {
+              "file": "assets/img/retrieval/L_image_984-1280.jpg",
+              "width": 1280,
+              "height": 960,
+              "bytes": 267669,
+              "sha256": "b825e08a54dec6b4cf3297f37ee4948bbf9ca351142fa3471c7e2ec397f8310b"
+            }
+          }
+        },
+        {
+          "image_id": "E_image_505",
+          "filename": "E/image_505.jpg",
+          "is_target": false,
+          "recorded_score": 0.11248160898685455,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/E_image_505-h480.jpg",
+              "width": 661,
+              "height": 480,
+              "bytes": 111719,
+              "sha256": "2160fc2cc0acfa9dda310c9ea397c04ed8b671de648cf2f2c01fef4a9885f3e9"
+            },
+            "large": {
+              "file": "assets/img/retrieval/E_image_505-1280.jpg",
+              "width": 1280,
+              "height": 930,
+              "bytes": 402541,
+              "sha256": "db8d6d3a05fd800abfcec667da93b0a187d2e0d0e76592999f94f8f2d161c5ba"
+            }
+          }
+        },
+        {
+          "image_id": "J_image_445",
+          "filename": "J/image_445.jpg",
+          "is_target": false,
+          "recorded_score": 0.10508863627910614,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/J_image_445-h480.jpg",
+              "width": 855,
+              "height": 480,
+              "bytes": 88256,
+              "sha256": "81ed27ab9b706182e5659b9c99a2203af5cedf7ec5801558d8fc77946b6094e8"
+            },
+            "large": {
+              "file": "assets/img/retrieval/J_image_445-1280.jpg",
+              "width": 1280,
+              "height": 719,
+              "bytes": 187203,
+              "sha256": "3dcb9f78b8c433b55a743b93caca4174e7c4885e7a592d970bc08c684324fc3e"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "d",
+      "relevant_image_id": "E_image_778",
+      "query_set": "hindi_to_english",
+      "query_language": "Hindi",
+      "query_native": "कर्नाटक बैंक स्टोरफ्रंट का बाहरी चिन्ह",
+      "query_native_field": "hindi_query",
+      "english_translation": "The exterior sign of the Karnataka Bank storefront.",
+      "english_translation_field": "hindi_to_english",
+      "target_position": 2,
+      "top5": [
+        {
+          "image_id": "E_image_167",
+          "filename": "E/image_167.jpg",
+          "is_target": false,
+          "recorded_score": 0.1250334233045578,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/E_image_167-h480.jpg",
+              "width": 270,
+              "height": 480,
+              "bytes": 23210,
+              "sha256": "8b8d9ccdbf098075f2c6b93ea32309b2b9253eab71d55f7303099389f758a5be"
+            },
+            "large": {
+              "file": "assets/img/retrieval/E_image_167-1280.jpg",
+              "width": 720,
+              "height": 1280,
+              "bytes": 128778,
+              "sha256": "53f91c3238b00973e0767ee8a0f13e5476f41c05b4a278d0acfbbb7f5327cf0e"
+            }
+          }
+        },
+        {
+          "image_id": "E_image_778",
+          "filename": "E/image_778.jpg",
+          "is_target": true,
+          "recorded_score": 0.07759968936443329,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/E_image_778-h480.jpg",
+              "width": 620,
+              "height": 480,
+              "bytes": 49175,
+              "sha256": "e755921729d630afb1688e1d882e32a113bca516fe278e9f5c7dcac255a0f88a"
+            },
+            "large": {
+              "file": "assets/img/retrieval/E_image_778-1280.jpg",
+              "width": 692,
+              "height": 536,
+              "bytes": 55772,
+              "sha256": "6ab1924aedb4d8a637288ac01a57c4972186929e0b5a9165fb705277a5258252"
+            }
+          }
+        },
+        {
+          "image_id": "D_image_137",
+          "filename": "D/image_137.jpg",
+          "is_target": false,
+          "recorded_score": 0.05417371541261673,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/D_image_137-h480.jpg",
+              "width": 640,
+              "height": 480,
+              "bytes": 56864,
+              "sha256": "9f86688ca08e8eea585c453204380bcf4ad33f0e5dca5d96d0f7a762c0103617"
+            },
+            "large": {
+              "file": "assets/img/retrieval/D_image_137-1280.jpg",
+              "width": 1280,
+              "height": 960,
+              "bytes": 204926,
+              "sha256": "bec835d05a461b07ec7743e0e5f10cd8710a3acdc5ea509b8b8b55183427b7bf"
+            }
+          }
+        },
+        {
+          "image_id": "E_image_361",
+          "filename": "E/image_361.jpg",
+          "is_target": false,
+          "recorded_score": 0.036982521414756775,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/E_image_361-h480.jpg",
+              "width": 640,
+              "height": 480,
+              "bytes": 58135,
+              "sha256": "8136be218a8c97475dc83a7ce98149c426cec6486714f1dcdc6558973052e4e1"
+            },
+            "large": {
+              "file": "assets/img/retrieval/E_image_361-1280.jpg",
+              "width": 1280,
+              "height": 960,
+              "bytes": 184473,
+              "sha256": "b4880ead3dd3b282f408e49886272e223d18ffc17e7c8e965f4847bb276bb39b"
+            }
+          }
+        },
+        {
+          "image_id": "D_image_1457",
+          "filename": "D/image_1457.jpg",
+          "is_target": false,
+          "recorded_score": 0.03121050074696541,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/D_image_1457-h480.jpg",
+              "width": 853,
+              "height": 480,
+              "bytes": 94910,
+              "sha256": "760bfba465a94a87d0f19438dfc736dd5b4c40ca1e43e9ec856f770e4945ea96"
+            },
+            "large": {
+              "file": "assets/img/retrieval/D_image_1457-1280.jpg",
+              "width": 1280,
+              "height": 720,
+              "bytes": 193295,
+              "sha256": "b343ab4c5b36a479b151c8fd8982af5a85b14d8c49942baf3276375bc1d72d15"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "label": "e",
+      "relevant_image_id": "D_image_9",
+      "query_set": "chinese_to_english",
+      "query_language": "Chinese",
+      "query_native": "果阿机场航站楼施工现场",
+      "query_native_field": "chinese_query",
+      "english_translation": "Goa airport terminal construction site",
+      "english_translation_field": "chinese_to_english",
+      "target_position": 1,
+      "top5": [
+        {
+          "image_id": "D_image_9",
+          "filename": "D/image_9.jpg",
+          "is_target": true,
+          "recorded_score": 0.10014393925666809,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/D_image_9-h480.jpg",
+              "width": 640,
+              "height": 480,
+              "bytes": 36634,
+              "sha256": "4dd044829a12aad23e14677b07602959b404740dfd61e31c14167303efd0affe"
+            },
+            "large": {
+              "file": "assets/img/retrieval/D_image_9-1280.jpg",
+              "width": 1280,
+              "height": 960,
+              "bytes": 128261,
+              "sha256": "1ca199fdbb3cc2ab637cc895f4304d9fc165080a02c3e41958f5626da0010c6f"
+            }
+          }
+        },
+        {
+          "image_id": "L_image_984",
+          "filename": "L/image_984.jpg",
+          "is_target": false,
+          "recorded_score": 0.03702002018690109,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/L_image_984-h480.jpg",
+              "width": 640,
+              "height": 480,
+              "bytes": 60352,
+              "sha256": "e1ee219436af5c22f546ea8839464a8516f6842de4be3fcaf57032611094620f"
+            },
+            "large": {
+              "file": "assets/img/retrieval/L_image_984-1280.jpg",
+              "width": 1280,
+              "height": 960,
+              "bytes": 267669,
+              "sha256": "b825e08a54dec6b4cf3297f37ee4948bbf9ca351142fa3471c7e2ec397f8310b"
+            }
+          }
+        },
+        {
+          "image_id": "J_image_69",
+          "filename": "J/image_69.jpg",
+          "is_target": false,
+          "recorded_score": 0.0116051584482193,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/J_image_69-h480.jpg",
+              "width": 640,
+              "height": 480,
+              "bytes": 80365,
+              "sha256": "99cee41b0da5cc589874dc05dd7898f265fa07f0b7ccfc67dfe6eb69c85dfebe"
+            },
+            "large": {
+              "file": "assets/img/retrieval/J_image_69-1280.jpg",
+              "width": 1280,
+              "height": 960,
+              "bytes": 276859,
+              "sha256": "4b715d919670a41798148fa5b1fe85ba2c65a93f002cd0570b85e22729446f23"
+            }
+          }
+        },
+        {
+          "image_id": "D_image_773",
+          "filename": "D/image_773.jpg",
+          "is_target": false,
+          "recorded_score": 0.010998275130987167,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/D_image_773-h480.jpg",
+              "width": 640,
+              "height": 480,
+              "bytes": 59146,
+              "sha256": "2e0ed071f392c1d35066bea96d9ee008adc41b5a37b77661792d85d4040fa47d"
+            },
+            "large": {
+              "file": "assets/img/retrieval/D_image_773-1280.jpg",
+              "width": 1280,
+              "height": 960,
+              "bytes": 197488,
+              "sha256": "3c83d80447579c264c5f6de260b03b996c64da4e3a0d0277f4cd0c627cb8cc3c"
+            }
+          }
+        },
+        {
+          "image_id": "I_image_158",
+          "filename": "I/image_158.jpg",
+          "is_target": false,
+          "recorded_score": -0.0012641511857509613,
+          "web_images": {
+            "display": {
+              "file": "assets/img/retrieval/I_image_158-h480.jpg",
+              "width": 853,
+              "height": 480,
+              "bytes": 80896,
+              "sha256": "db1b0b52c1d7536df80faa846ce02afd7609963f4244fef31e19d96516d846e7"
+            },
+            "large": {
+              "file": "assets/img/retrieval/I_image_158-1280.jpg",
+              "width": 1280,
+              "height": 720,
+              "bytes": 159288,
+              "sha256": "df67cdacb825c3396e5e053ecf9f518c0467018b0a72b449803e047b94dda83d"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "images": {
+    "N_image_1044": {
+      "filename": "N/image_1044.jpg",
+      "source_sha256": "bd3aab37a2d0329e72e86c5c3aaf98ee7cab11e2a97821fd514840ff640c01f6",
+      "oriented_size": [
+        2400,
+        3200
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/N_image_1044-h480.jpg",
+          "width": 360,
+          "height": 480,
+          "bytes": 35295,
+          "sha256": "09ba4f5d882bb63facf4aa4b6edf621834a7d3bf129072ae5b556b863a3a76c4"
+        },
+        "large": {
+          "file": "assets/img/retrieval/N_image_1044-1280.jpg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 181167,
+          "sha256": "3d20bece9c7c676c5dc739368c983d93802bc9129d669869ed78d0d5f4e444f6"
+        }
+      }
+    },
+    "C_image_5122": {
+      "filename": "C/image_5122.JPG",
+      "source_sha256": "387985cea878652e5b5333316cc8859d76af6d579cdf3db30b11332f070cd617",
+      "oriented_size": [
+        2592,
+        1944
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/C_image_5122-h480.jpg",
+          "width": 640,
+          "height": 480,
+          "bytes": 52589,
+          "sha256": "031369b7c01f7be7819887ae71301324f8d4e7d46d3ddadf1ebb49c700e53ec5"
+        },
+        "large": {
+          "file": "assets/img/retrieval/C_image_5122-1280.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 174971,
+          "sha256": "8878dc47ee6d6bd736883549f57f6921cb69a92ca75f0041b7f60d87a9e8f66b"
+        }
+      }
+    },
+    "C_image_1981": {
+      "filename": "C/image_1981.jpg",
+      "source_sha256": "18bd171f19ae252bcdeaf3426879400ed9969ab7745929a35e3331b89bb2c7e4",
+      "oriented_size": [
+        3000,
+        4000
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/C_image_1981-h480.jpg",
+          "width": 360,
+          "height": 480,
+          "bytes": 33718,
+          "sha256": "207d144c28340e3e7fd5de43beeae23c03b500f063116ba4993453cad4f7ae66"
+        },
+        "large": {
+          "file": "assets/img/retrieval/C_image_1981-1280.jpg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 188278,
+          "sha256": "60c5185e691297a0c0dcf39c175f1c3f63dcf9e1023fde84a2fa72f017cb522f"
+        }
+      }
+    },
+    "F_image_378": {
+      "filename": "F/image_378.jpg",
+      "source_sha256": "726db3a2029c79baf06240632f0de1d97ac13e91b5959ab544bd59d9cc892756",
+      "oriented_size": [
+        960,
+        720
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/F_image_378-h480.jpg",
+          "width": 640,
+          "height": 480,
+          "bytes": 78195,
+          "sha256": "0055183567e70091b88da74b330a48271d0e5757088c50869a3da1c09edf3735"
+        },
+        "large": {
+          "file": "assets/img/retrieval/F_image_378-1280.jpg",
+          "width": 960,
+          "height": 720,
+          "bytes": 151699,
+          "sha256": "bca5f751ab592cb8a089f2943535467ffc568a49aedd17c4f53797a820d4809e"
+        }
+      }
+    },
+    "G_image_1692": {
+      "filename": "G/image_1692.jpg",
+      "source_sha256": "5bb4e77c678e72e051146246131c55c3572287bf79256820ebde6b5b9015ebfd",
+      "oriented_size": [
+        4608,
+        3456
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/G_image_1692-h480.jpg",
+          "width": 640,
+          "height": 480,
+          "bytes": 53412,
+          "sha256": "d036778f6cf430f32863a1ba16a408f3bc66a3a11f3b7077465ad697af259dbe"
+        },
+        "large": {
+          "file": "assets/img/retrieval/G_image_1692-1280.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 165950,
+          "sha256": "2a07effbce829ef22316100b0a5a2467e66969692efab02f1159ab828215c3b9"
+        }
+      }
+    },
+    "K_image_317": {
+      "filename": "K/image_317.jpg",
+      "source_sha256": "2d1e9890d800744c6fcb7142b019b8e186c746602de141e3b65d0cce75734d29",
+      "oriented_size": [
+        1280,
+        960
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/K_image_317-h480.jpg",
+          "width": 640,
+          "height": 480,
+          "bytes": 63975,
+          "sha256": "cff6846437959006f7e55048fafa28d3c1673f6932be8dfe6b79bde08ba40f92"
+        },
+        "large": {
+          "file": "assets/img/retrieval/K_image_317-1280.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 203787,
+          "sha256": "a865213b7238f204f30eea026136b3164a42d8d9cb991303c5e62b4b1060bb17"
+        }
+      }
+    },
+    "L_image_609": {
+      "filename": "L/image_609.jpg",
+      "source_sha256": "433f509b3e77c613b60923c39c8628aaa7ce11237d458922705d83d714b0434e",
+      "oriented_size": [
+        3590,
+        1728
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/L_image_609-h480.jpg",
+          "width": 997,
+          "height": 480,
+          "bytes": 83255,
+          "sha256": "273c4ab6cd0d5720416fec37050574e16e9ab137827098e02657e8cea3e09c85"
+        },
+        "large": {
+          "file": "assets/img/retrieval/L_image_609-1280.jpg",
+          "width": 1280,
+          "height": 616,
+          "bytes": 126318,
+          "sha256": "32d1bc66669847bf7c00e9be17e7d8ee8ba31017f63671f9cb9d98c9052a3a69"
+        }
+      }
+    },
+    "I_image_158": {
+      "filename": "I/image_158.jpg",
+      "source_sha256": "70d0a4b619056f40a3359f180eeceed1eb4f2bbee4cc06f80f56227c12d7dab6",
+      "oriented_size": [
+        1536,
+        864
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/I_image_158-h480.jpg",
+          "width": 853,
+          "height": 480,
+          "bytes": 80896,
+          "sha256": "db1b0b52c1d7536df80faa846ce02afd7609963f4244fef31e19d96516d846e7"
+        },
+        "large": {
+          "file": "assets/img/retrieval/I_image_158-1280.jpg",
+          "width": 1280,
+          "height": 720,
+          "bytes": 159288,
+          "sha256": "df67cdacb825c3396e5e053ecf9f518c0467018b0a72b449803e047b94dda83d"
+        }
+      }
+    },
+    "F_image_774": {
+      "filename": "F/image_774.jpg",
+      "source_sha256": "11f569cc5f0d6842d3a594eeb88d599c824648fb2f4d3ea715e9b67386f04113",
+      "oriented_size": [
+        2995,
+        2246
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/F_image_774-h480.jpg",
+          "width": 640,
+          "height": 480,
+          "bytes": 87725,
+          "sha256": "96dba39f1d12b61001e26092afdbc27635088e804337e8025223f13acf3bd9e5"
+        },
+        "large": {
+          "file": "assets/img/retrieval/F_image_774-1280.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 334942,
+          "sha256": "4fee0bc0d4dd782be39837ca21f71d3056d27ba656b5f550be2917e69f833dd4"
+        }
+      }
+    },
+    "L_image_147": {
+      "filename": "L/image_147.jpg",
+      "source_sha256": "ce085aeff48910a34097b8ef95c87d9952ac9a767a30832f270e75c32fdd0c1c",
+      "oriented_size": [
+        1600,
+        1200
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/L_image_147-h480.jpg",
+          "width": 640,
+          "height": 480,
+          "bytes": 73957,
+          "sha256": "4ff044f7f17b1f78b6d66f3a09006ab29646da2c137f79811405afd05e1c6fc8"
+        },
+        "large": {
+          "file": "assets/img/retrieval/L_image_147-1280.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 254038,
+          "sha256": "b993c40303cf41685e9f44a95c1a4077a407c00118ac75092512250609aaac09"
+        }
+      }
+    },
+    "L_image_717": {
+      "filename": "L/image_717.jpg",
+      "source_sha256": "9ce253719c26fb106a2387f7dd230fb22ecc5c1161af3ed414ad32af99b10531",
+      "oriented_size": [
+        686,
+        532
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/L_image_717-h480.jpg",
+          "width": 619,
+          "height": 480,
+          "bytes": 56227,
+          "sha256": "ac10fe2ffd3dedfd9820ed6a25030519f4dccc41eaa7274e660bda205d9f509e"
+        },
+        "large": {
+          "file": "assets/img/retrieval/L_image_717-1280.jpg",
+          "width": 686,
+          "height": 532,
+          "bytes": 61266,
+          "sha256": "1672fe1eeeb376afb7bea4ad81fd7ddb7bf20d7d99d7739d7a89db601ea6a0bf"
+        }
+      }
+    },
+    "L_image_984": {
+      "filename": "L/image_984.jpg",
+      "source_sha256": "697f117acf12f5e76a284f6d22deaf203c2d0b81de9dbf181934b39b05da609e",
+      "oriented_size": [
+        4000,
+        3000
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/L_image_984-h480.jpg",
+          "width": 640,
+          "height": 480,
+          "bytes": 60352,
+          "sha256": "e1ee219436af5c22f546ea8839464a8516f6842de4be3fcaf57032611094620f"
+        },
+        "large": {
+          "file": "assets/img/retrieval/L_image_984-1280.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 267669,
+          "sha256": "b825e08a54dec6b4cf3297f37ee4948bbf9ca351142fa3471c7e2ec397f8310b"
+        }
+      }
+    },
+    "E_image_505": {
+      "filename": "E/image_505.jpg",
+      "source_sha256": "b2c6c59541be500141904c65a029a24aecf94d6e299420d31654dd734cb0dec7",
+      "oriented_size": [
+        2048,
+        1488
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/E_image_505-h480.jpg",
+          "width": 661,
+          "height": 480,
+          "bytes": 111719,
+          "sha256": "2160fc2cc0acfa9dda310c9ea397c04ed8b671de648cf2f2c01fef4a9885f3e9"
+        },
+        "large": {
+          "file": "assets/img/retrieval/E_image_505-1280.jpg",
+          "width": 1280,
+          "height": 930,
+          "bytes": 402541,
+          "sha256": "db8d6d3a05fd800abfcec667da93b0a187d2e0d0e76592999f94f8f2d161c5ba"
+        }
+      }
+    },
+    "J_image_445": {
+      "filename": "J/image_445.jpg",
+      "source_sha256": "0da8fb11f3b6b64a228fbe6b6ec4949fdb209a406896268fad46da2c44478820",
+      "oriented_size": [
+        2592,
+        1456
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/J_image_445-h480.jpg",
+          "width": 855,
+          "height": 480,
+          "bytes": 88256,
+          "sha256": "81ed27ab9b706182e5659b9c99a2203af5cedf7ec5801558d8fc77946b6094e8"
+        },
+        "large": {
+          "file": "assets/img/retrieval/J_image_445-1280.jpg",
+          "width": 1280,
+          "height": 719,
+          "bytes": 187203,
+          "sha256": "3dcb9f78b8c433b55a743b93caca4174e7c4885e7a592d970bc08c684324fc3e"
+        }
+      }
+    },
+    "E_image_167": {
+      "filename": "E/image_167.jpg",
+      "source_sha256": "bf86692cba982e07243d9e493c653a722bd519dab139c532babb5d2bb4b8d121",
+      "oriented_size": [
+        2592,
+        4608
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/E_image_167-h480.jpg",
+          "width": 270,
+          "height": 480,
+          "bytes": 23210,
+          "sha256": "8b8d9ccdbf098075f2c6b93ea32309b2b9253eab71d55f7303099389f758a5be"
+        },
+        "large": {
+          "file": "assets/img/retrieval/E_image_167-1280.jpg",
+          "width": 720,
+          "height": 1280,
+          "bytes": 128778,
+          "sha256": "53f91c3238b00973e0767ee8a0f13e5476f41c05b4a278d0acfbbb7f5327cf0e"
+        }
+      }
+    },
+    "E_image_778": {
+      "filename": "E/image_778.jpg",
+      "source_sha256": "73fc75cefde92bd4ae817a5666a4393e1118ae9b84ab45a338e9e19369ab9cc3",
+      "oriented_size": [
+        692,
+        536
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/E_image_778-h480.jpg",
+          "width": 620,
+          "height": 480,
+          "bytes": 49175,
+          "sha256": "e755921729d630afb1688e1d882e32a113bca516fe278e9f5c7dcac255a0f88a"
+        },
+        "large": {
+          "file": "assets/img/retrieval/E_image_778-1280.jpg",
+          "width": 692,
+          "height": 536,
+          "bytes": 55772,
+          "sha256": "6ab1924aedb4d8a637288ac01a57c4972186929e0b5a9165fb705277a5258252"
+        }
+      }
+    },
+    "D_image_137": {
+      "filename": "D/image_137.jpg",
+      "source_sha256": "c63e39e99c2418af0745ea449cb974a5e9630fdfca5dc5214052c0aa69501e69",
+      "oriented_size": [
+        1600,
+        1200
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/D_image_137-h480.jpg",
+          "width": 640,
+          "height": 480,
+          "bytes": 56864,
+          "sha256": "9f86688ca08e8eea585c453204380bcf4ad33f0e5dca5d96d0f7a762c0103617"
+        },
+        "large": {
+          "file": "assets/img/retrieval/D_image_137-1280.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 204926,
+          "sha256": "bec835d05a461b07ec7743e0e5f10cd8710a3acdc5ea509b8b8b55183427b7bf"
+        }
+      }
+    },
+    "E_image_361": {
+      "filename": "E/image_361.jpg",
+      "source_sha256": "dd20bda5242817cea34f3066af52db7adaede142de7548ee20aa07c922a08aa7",
+      "oriented_size": [
+        4000,
+        3000
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/E_image_361-h480.jpg",
+          "width": 640,
+          "height": 480,
+          "bytes": 58135,
+          "sha256": "8136be218a8c97475dc83a7ce98149c426cec6486714f1dcdc6558973052e4e1"
+        },
+        "large": {
+          "file": "assets/img/retrieval/E_image_361-1280.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 184473,
+          "sha256": "b4880ead3dd3b282f408e49886272e223d18ffc17e7c8e965f4847bb276bb39b"
+        }
+      }
+    },
+    "D_image_1457": {
+      "filename": "D/image_1457.jpg",
+      "source_sha256": "6eccf5644631ea88fedc9ab5ea867260bfce526b33adc2571fd05a26f09834f4",
+      "oriented_size": [
+        4128,
+        2322
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/D_image_1457-h480.jpg",
+          "width": 853,
+          "height": 480,
+          "bytes": 94910,
+          "sha256": "760bfba465a94a87d0f19438dfc736dd5b4c40ca1e43e9ec856f770e4945ea96"
+        },
+        "large": {
+          "file": "assets/img/retrieval/D_image_1457-1280.jpg",
+          "width": 1280,
+          "height": 720,
+          "bytes": 193295,
+          "sha256": "b343ab4c5b36a479b151c8fd8982af5a85b14d8c49942baf3276375bc1d72d15"
+        }
+      }
+    },
+    "D_image_9": {
+      "filename": "D/image_9.jpg",
+      "source_sha256": "fe522b92e450987501ec562eb726f47d9e453877f7de1bfd38e10ea9b15ef672",
+      "oriented_size": [
+        2304,
+        1728
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/D_image_9-h480.jpg",
+          "width": 640,
+          "height": 480,
+          "bytes": 36634,
+          "sha256": "4dd044829a12aad23e14677b07602959b404740dfd61e31c14167303efd0affe"
+        },
+        "large": {
+          "file": "assets/img/retrieval/D_image_9-1280.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 128261,
+          "sha256": "1ca199fdbb3cc2ab637cc895f4304d9fc165080a02c3e41958f5626da0010c6f"
+        }
+      }
+    },
+    "J_image_69": {
+      "filename": "J/image_69.jpg",
+      "source_sha256": "0f16aa83e9ea3651f0478bdec71ed6d82b596865174673add1f05374665f4a02",
+      "oriented_size": [
+        4032,
+        3024
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/J_image_69-h480.jpg",
+          "width": 640,
+          "height": 480,
+          "bytes": 80365,
+          "sha256": "99cee41b0da5cc589874dc05dd7898f265fa07f0b7ccfc67dfe6eb69c85dfebe"
+        },
+        "large": {
+          "file": "assets/img/retrieval/J_image_69-1280.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 276859,
+          "sha256": "4b715d919670a41798148fa5b1fe85ba2c65a93f002cd0570b85e22729446f23"
+        }
+      }
+    },
+    "D_image_773": {
+      "filename": "D/image_773.jpg",
+      "source_sha256": "d54a5d4d0a7b10e58f58bf10c1e5c717683ebfce97f8337f91e01006374b7102",
+      "oriented_size": [
+        4032,
+        3024
+      ],
+      "web_images": {
+        "display": {
+          "file": "assets/img/retrieval/D_image_773-h480.jpg",
+          "width": 640,
+          "height": 480,
+          "bytes": 59146,
+          "sha256": "2e0ed071f392c1d35066bea96d9ee008adc41b5a37b77661792d85d4040fa47d"
+        },
+        "large": {
+          "file": "assets/img/retrieval/D_image_773-1280.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 197488,
+          "sha256": "3c83d80447579c264c5f6de260b03b996c64da4e3a0d0277f4cd0c627cb8cc3c"
+        }
+      }
+    }
+  }
+}

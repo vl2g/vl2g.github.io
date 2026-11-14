@@ -1,0 +1,270 @@
+{
+  "generated_by": "website/tools/prepare_assets.py",
+  "query_source": "X-STAR manifest fields <language>_query, verbatim",
+  "manifest_sha256": "f6e594ac5d0eb470c5ff32bbc4637c5831c1cf2727e9227e2f023cde457d26a2",
+  "examples": [
+    {
+      "label": "a",
+      "image_id": "L_image_254",
+      "title": "Telugu signboard",
+      "scene_language": "Telugu",
+      "scene_lang_tag": "te",
+      "alt": "Blue roadside signboard with white Telugu lettering, mounted on a post in front of trees and scrub.",
+      "filename": "L/image_254.jpg",
+      "split": "train",
+      "source_dataset": "Bharat Scene Text Dataset",
+      "scene_text": {
+        "lines": [
+          "శ్రీపోతన చైతన్య వేదిక విశ్వనాధ భవనం గూడూరు పాలకుర్తి మండలం, జనగామ జిల్లా 506 252"
+        ],
+        "source": "BSTD annotation JSON, region texts in order"
+      },
+      "queries": {
+        "English": "Sripothana Chaitanya Vedika Telugu signboard",
+        "Assamese": "শ্ৰীপোথান চৈতন্য বেদিকা তেলেগু ছাইনব'ৰ্ড",
+        "Bengali": "শ্রীপোথান চৈতন্য বেদিকা তেলেগু সাইনবোর্ড",
+        "Gujarati": "શ્રીપોથના ચૈતન્ય વેદિકા તેલુગુ સાઇનબોર્ડ",
+        "Hindi": "श्रीपोथना चैतन्य वेदिका तेलुगु साइनबोर्ड",
+        "Kannada": "ಶ್ರೀಪೋತನ ಚೈತನ್ಯ ವೇದಿಕಾ ತೆಲುಗು ಫಲಕ",
+        "Malayalam": "ശ്രീപോതന ചൈതന്യ വേദിക തെലുങ്ക് സൈൻബോർഡ്",
+        "Marathi": "श्रीपोथना चैतन्य वेदिका तेलगू फलक",
+        "Odia": "ଶ୍ରୀପୋଥାନ ଚୈତନ୍ଯ଼ ବେଦିକା ତେଲୁଗୁ ସାଇନବୋର୍ଡ",
+        "Punjabi": "ਸ਼੍ਰੀਪੋਥਾਨਾ ਚੈਤੰਨਿਆ ਵੇਦਿਕਾ ਤੇਲਗੂ ਸਾਈਨ ਬੋਰਡ",
+        "Tamil": "ஸ்ரீபோத்தனா சைதன்யா வேதிகா தெலுங்கு அடையாளப் பலகை",
+        "Telugu": "శ్రీపోతన చైతన్య వేదిక తెలుగు సైన్బోర్డ్",
+        "Chinese": "Sripothana Chaitanya Vedika 泰卢固语招牌"
+      },
+      "source_image": {
+        "sha256": "0e5af9f61cfe46c7df691993bef34a901b3024fa7ef8982b6183198346f93e17",
+        "oriented_size": [
+          4160,
+          2340
+        ]
+      },
+      "web_images": [
+        {
+          "file": "assets/img/examples/L_image_254-640.jpg",
+          "width": 640,
+          "height": 360,
+          "bytes": 65316,
+          "sha256": "ae1220a3272905bb5aa23a56d1ec432b4b04ad59112b698d00cc6176ed151ca8"
+        },
+        {
+          "file": "assets/img/examples/L_image_254-1280.jpg",
+          "width": 1280,
+          "height": 720,
+          "bytes": 214184,
+          "sha256": "2469ee66b542e0081de2daf3ff84c46042e09f0f7f65835a4796b06e19317d9a"
+        }
+      ]
+    },
+    {
+      "label": "b",
+      "image_id": "N_image_139",
+      "title": "Chinese storefront",
+      "scene_language": "Chinese",
+      "scene_lang_tag": "zh-Hans",
+      "alt": "Restaurant front with a large red sign in yellow Chinese characters, the English name Wokoo BBQ, and a row of smaller Chinese signs above the entrance; apartment towers behind.",
+      "filename": "N/image_139.jpg",
+      "split": "train",
+      "source_dataset": "RCTW-17",
+      "scene_text": {
+        "lines": [
+          "悟空烧烤",
+          "小食汇",
+          "Wokoo BBQ",
+          "用心烤好每一串",
+          "餐粥",
+          "烧烤 小海鲜 生烫牛杂",
+          "特色美食",
+          "羊蝎子",
+          "特色",
+          "手抓鹅翅",
+          "7元/只",
+          "筒子骨汤 12元",
+          "12元",
+          "童子甲鱼",
+          "15元",
+          "养生鸡汤",
+          "12元",
+          "8元",
+          "老鸽子汤",
+          "16元",
+          "菌子骨汤",
+          "10元"
+        ],
+        "source": "RCTW-17 train_gts/image_139.txt, legible regions"
+      },
+      "queries": {
+        "English": "Wokoo BBQ storefront sign red facade",
+        "Assamese": "ৱোকু বি. বি. কিউ. ষ্ট \"ৰ ফ্ৰণ্টত ৰঙা মুখমণ্ডলত চিহ্ন দিয়া হৈছে",
+        "Bengali": "ওকু বি. বি. কিউ স্টোরফ্রন্ট সাইন লাল সম্মুখভাগ",
+        "Gujarati": "વોકૂ BBQ સ્ટોરફ્રન્ટ સાઇન લાલ રવેશ",
+        "Hindi": "वोकू बी. बी. क्यू. स्टोरफ्रंट साइन लाल मुखौटा",
+        "Kannada": "ವೊಕ್ಕೂ ಬಿಬಿಕ್ಯು ಅಂಗಡಿಯ ಮುಂಭಾಗವು ಕೆಂಪು ಮುಂಭಾಗವನ್ನು ಸೂಚಿಸುತ್ತದೆ",
+        "Malayalam": "വോക്കൂ ബിബിക്യു സ്റ്റോർ ഫ്രണ്ട് സൈൻ റെഡ് ഫെയിസ്",
+        "Marathi": "वोकू बी. बी. क्यू. स्टोअरफ्रंटचा दर्शनी भाग लाल रंगाचा",
+        "Odia": "ୱୋକୁ ବିବିକ୍ଯ଼ୁ ଷ୍ଟୋର୍ ଫ୍ରଣ୍ଟ ସାଇନ୍ ଲାଲ୍ ସମ୍ମୁଖଭାଗ",
+        "Punjabi": "ਵੋਕੋ ਬੀ. ਬੀ. ਕਿਊ. ਸਟੋਰਫ੍ਰੰਟ'ਤੇ ਲਾਲ ਰੰਗ ਦਾ ਨਿਸ਼ਾਨ",
+        "Tamil": "வோக்கூ BBQ கடையின் முன்புறத்தில் சிவப்பு முகப்பில் கையெழுத்திடுங்கள்",
+        "Telugu": "వోకూ BBQ స్టోర్ ఫ్రంట్ సైన్ ఎరుపు ముఖభాగం",
+        "Chinese": "Wokoo BBQ店面标志红色门面"
+      },
+      "source_image": {
+        "sha256": "b4f1a90f32b08f444d2585364482aea751fa8072f532be7ab18f60b5e247c6fd",
+        "oriented_size": [
+          2448,
+          3264
+        ]
+      },
+      "web_images": [
+        {
+          "file": "assets/img/examples/N_image_139-640.jpg",
+          "width": 480,
+          "height": 640,
+          "bytes": 68313,
+          "sha256": "db72ac7e4f130c7e8065dc4e8d45369626072830801933ead3e16ca5008e0b7d"
+        },
+        {
+          "file": "assets/img/examples/N_image_139-1280.jpg",
+          "width": 960,
+          "height": 1280,
+          "bytes": 207162,
+          "sha256": "5b658ec0774a05d1ef0a6f0563120fc77761a3005032f7077f1772b0e24d1559"
+        }
+      ]
+    },
+    {
+      "label": "c",
+      "image_id": "D_image_725",
+      "title": "Hindi and English Lake Park sign",
+      "scene_language": "Hindi and English",
+      "scene_lang_tag": "hi",
+      "alt": "Blue direction sign beside a footpath and railing, reading Jheel Udyan in Hindi and LAKE PARK in English, with an arrow pointing right.",
+      "filename": "D/image_725.jpg",
+      "split": "train",
+      "source_dataset": "Bharat Scene Text Dataset",
+      "scene_text": {
+        "lines": [
+          "झील उद्यान",
+          "LAKE PARK"
+        ],
+        "source": "BSTD annotation JSON, region texts in order"
+      },
+      "queries": {
+        "English": "Jheel Udyan blue road sign",
+        "Assamese": "ঝিল উদ্যান নীলা পথ চিহ্ন",
+        "Bengali": "ঝিল উদ্যান নীল রাস্তার চিহ্ন",
+        "Gujarati": "ઝીલ ઉદ્યાન બ્લુ રોડ સાઇન",
+        "Hindi": "झील उद्यान नीला सड़क चिन्ह",
+        "Kannada": "ಝೀಲ್ ಉದ್ಯಾನ್ ನೀಲಿ ರಸ್ತೆ ಚಿಹ್ನೆ",
+        "Malayalam": "ഝീൽ ഉദ്യാൻ നീല റോഡ് അടയാളം",
+        "Marathi": "झील उद्यान निळा रस्ता चिन्ह",
+        "Odia": "ଝିଲ୍ ଉଦଯ଼ାନ୍ ନୀଳ ସଡ଼କ ଚିହ୍ନ",
+        "Punjabi": "ਝੀਲ ਉਦਿਆਣ ਨੀਲਾ ਸਡ਼ਕ ਚਿੰਨ੍ਹ",
+        "Tamil": "ஜீல் உத்யன் நீல சாலை அடையாளம்",
+        "Telugu": "జీల్ ఉద్యాన్ బ్లూ రోడ్ సైన్",
+        "Chinese": "Jheel Udyan 蓝色路标"
+      },
+      "source_image": {
+        "sha256": "287d62d466de704b51b50f80af5e0e20ac604bd3903f2d6b8ce8298eae7b180a",
+        "oriented_size": [
+          3264,
+          2448
+        ]
+      },
+      "web_images": [
+        {
+          "file": "assets/img/examples/D_image_725-640.jpg",
+          "width": 640,
+          "height": 480,
+          "bytes": 68766,
+          "sha256": "61b8f3ba087dcbf1cb073072ac79c265cbfdab25ad14fc99a7140989e0dff31d"
+        },
+        {
+          "file": "assets/img/examples/D_image_725-1280.jpg",
+          "width": 1280,
+          "height": 960,
+          "bytes": 250920,
+          "sha256": "c42892cd433595378ced38f011357647c381209afc6a5ae84e5c5000d51584b1"
+        }
+      ]
+    },
+    {
+      "label": "d",
+      "image_id": "K_image_14",
+      "title": "Tamil exhibit",
+      "scene_language": "Tamil",
+      "scene_lang_tag": "ta",
+      "alt": "Clay water pot on a table covered with a white cloth, with small Tamil labels on the table and pictures of musical instruments on the board behind.",
+      "filename": "K/image_14.jpg",
+      "split": "train",
+      "source_dataset": "Bharat Scene Text Dataset",
+      "scene_text": {
+        "lines": [
+          "கடம்",
+          "தண்ணீர்"
+        ],
+        "source": "BSTD annotation JSON, region texts in order"
+      },
+      "queries": {
+        "English": "கடம் clay water pot table display",
+        "Assamese": "ক্লে ৱাটাৰ পট টেবুল প্ৰদৰ্শন",
+        "Bengali": "ক্লে ওয়াটার পট টেবিল ডিসপ্লে",
+        "Gujarati": "ક્લે વોટર પોટ ટેબલ ડિસ્પ્લે",
+        "Hindi": "क्ले वाटर पॉट टेबल डिस्प्ले",
+        "Kannada": "ಕ್ಲೇ ವಾಟರ್ ಪಾಟ್ ಟೇಬಲ್ ಪ್ರದರ್ಶನ",
+        "Malayalam": "കളിമണ്ണ് വാട്ടർ പോട്ട് ടേബിൾ ഡിസ്പ്ലേ",
+        "Marathi": "क्ले वॉटर पॉट टेबलचे प्रदर्शन",
+        "Odia": "କ୍ଲେ ୱାଟର ପଟ ଟେବୁଲ ପ୍ରଦର୍ଶନ",
+        "Punjabi": "ਮਿੱਟੀ ਦੇ ਪਾਣੀ ਦੇ ਪੋਟ ਟੇਬਲ ਡਿਸਪਲੇਅ",
+        "Tamil": "களிமண் நீர் பானை மேஜை காட்சி",
+        "Telugu": "క్లే వాటర్ పాట్ టేబుల్ డిస్ప్లే",
+        "Chinese": "கடம்粘土水壶桌面展示"
+      },
+      "source_image": {
+        "sha256": "a1467f16a67ddb0341f358c7e872b107d95f41a64401401bb116669270cd9d1e",
+        "oriented_size": [
+          1936,
+          2592
+        ]
+      },
+      "web_images": [
+        {
+          "file": "assets/img/examples/K_image_14-640.jpg",
+          "width": 478,
+          "height": 640,
+          "bytes": 36819,
+          "sha256": "bb79daf1e24c48b89aa5d2296e71122c15cc9648462482d1f75846f791207e72"
+        },
+        {
+          "file": "assets/img/examples/K_image_14-1280.jpg",
+          "width": 956,
+          "height": 1280,
+          "bytes": 132590,
+          "sha256": "dc2d0b04f18a6201c0b3cefd5c3956851c686d5a1349259260aba43b65dfa9f0"
+        }
+      ]
+    }
+  ],
+  "method_figure": {
+    "source": "paper figure main_method_copy_xstar.pdf",
+    "source_sha256": "b590e056bd12b1d047c8eb2423bc472f8d25b28ec87f5f44d3a6969502f60658",
+    "web_images": [
+      {
+        "file": "assets/img/method/colite_clip_overview-1600.png",
+        "width": 1600,
+        "height": 802,
+        "bytes": 469365,
+        "sha256": "f721cbc1719f4a057c2cc89348224efb3985c2c3615fe4a54babdade2f41bfdd"
+      },
+      {
+        "file": "assets/img/method/colite_clip_overview-3200.png",
+        "width": 3200,
+        "height": 1604,
+        "bytes": 1367830,
+        "sha256": "296f48b400bc3ea6fa5648f8952d3378b5812eecdb469a2105afbbfacbf2d7c2"
+      }
+    ]
+  }
+}

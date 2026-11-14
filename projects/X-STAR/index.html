@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>X-STAR: Cross-Lingual Scene Text-Aware Image Retrieval</title>
+<meta name="description" content="X-STAR and CoLITE-CLIP: scene text-aware image retrieval across 13 query languages. Research from IIT Jodhpur.">
+<meta name="author" content="Dikshant Sharma, Prateek, Anand Mishra">
+<link rel="icon" href="data:,">
+<link rel="canonical" href="https://vl2g.github.io/projects/X-STAR/">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="paper-container">
+<header class="paper-header">
+<h1>X-STAR: Cross-Lingual Scene Text-Aware Image Retrieval</h1>
+<p class="authors"><span class="author-group">Dikshant Sharma<sup>1</sup>,</span><span class="author-group">Prateek<sup>1</sup>,</span><span class="author-group">Anand Mishra<sup>1</sup></span></p>
+<p class="affiliation">
+<sup>1</sup>Indian Institute of Technology Jodhpur</p>
+<div class="publication-links" aria-label="Project resources">
+<span class="pub-btn pending" aria-label="Paper link forthcoming">
+<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M5 2h9l5 5v15H5zM14 2v6h5M8 12h8M8 16h8"/>
+</svg>Paper <small>soon</small>
+</span>
+<a class="pub-btn" href="https://github.com/vl2g/X-STAR" aria-label="X-STAR source code on GitHub">
+<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+<path d="m8 5-6 7 6 7M16 5l6 7-6 7M14 2l-4 20"/>
+</svg>Code</a>
+<a class="pub-btn" href="#dataset">
+<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="12" cy="5" rx="9" ry="3"/>
+<path d="M3 5v14c0 4 18 4 18 0V5M3 12c0 4 18 4 18 0"/>
+</svg>Dataset</a>
+<a class="pub-btn" href="https://github.com/vl2g/X-STAR/releases/download/v0.1.0/colite_clip_xstar.pt" aria-label="Download CoLITE-CLIP model weights">
+<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+<path d="M12 2v13m-5-5 5 5 5-5M3 16v6h18v-6"/>
+</svg>Models
+</a>
+</div>
+</header>
+<main id="main">
+<section id="abstract">
+<h2>Abstract</h2>
+<p>Scene text provides distinctive cues for finding a place, storefront or institution, but the words in an image and the language of a search query may differ. We introduce <strong>X-STAR</strong>, a benchmark for cross-lingual scene text-aware image retrieval with <strong>6,449 images and queries in 13 languages</strong>. Our model, <strong>CoLITE-CLIP</strong>, combines frozen CLIP visual features with embeddings of recognised scene-text lines through bidirectional co-attention. Token-level late interaction then matches the query to the fused image representation. Non-English queries and scene text are mapped to English through upstream translation. On the X-STAR test split, CoLITE-CLIP achieves <strong>46.5% Recall@1</strong>, compared with <strong>24.6%</strong> for the global CLIP ViT-B/32 baseline, averaged over all 13 query sets. The split’s known exact-image overlap is documented alongside the results.</p>
+</section>
+<section id="method">
+<h2>Overview of CoLITE-CLIP</h2>
+<figure class="method-diagram">
+<div class="diagram-scroll" tabindex="0" role="region" aria-label="CoLITE-CLIP architecture; scroll horizontally on small screens">
+<svg viewBox="0 0 900 294" role="img" aria-labelledby="method-title method-desc" xmlns="http://www.w3.org/2000/svg">
+<title id="method-title">CoLITE-CLIP architecture</title>
+<desc id="method-desc">An English-translated query is encoded into CLIP text tokens. Visual tokens and English OCR-line embeddings are fused by eleven bidirectional co-attention blocks. MaxSim matches query tokens to the fused image bank to rank gallery images.</desc>
+<defs>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+<path d="M0 0L8 4L0 8Z" fill="#777"/>
+</marker>
+</defs>
+<g fill="none" stroke="#777" stroke-width="1.5" marker-end="url(#arrow)">
+<path d="M195 51H225"/>
+<path d="M425 51H765V95"/>
+<path d="M195 156H210V190H225"/>
+<path d="M195 241H210V214H225"/>
+<path d="M425 203H460"/>
+<path d="M640 203H651V125H665"/>
+<path d="M765 155V215"/>
+</g>
+<g fill="#fff" stroke="#b7bec5" stroke-width="1.2">
+<rect x="15" y="25" width="180" height="52" rx="2"/>
+<rect x="225" y="25" width="200" height="52" rx="2"/>
+<rect x="15" y="130" width="180" height="52" rx="2"/>
+<rect x="15" y="215" width="180" height="52" rx="2"/>
+<rect x="460" y="170" width="180" height="66" rx="2"/>
+<rect x="665" y="95" width="200" height="60" rx="2"/>
+</g>
+<rect x="225" y="170" width="200" height="66" rx="2" fill="#eef5fb" stroke="#337ab7" stroke-width="1.5"/>
+<g font-family="Arial, sans-serif" font-size="15" fill="#333" text-anchor="middle">
+<text x="105" y="48">Native-language query</text>
+<text x="105" y="66" font-size="12" fill="#666">English back-translation</text>
+<text x="325" y="48">Frozen CLIP text encoder</text>
+<text x="325" y="66" font-size="12" fill="#666">Query token embeddings</text>
+<text x="105" y="152">CLIP image encoder</text>
+<text x="105" y="171" font-size="12" fill="#666">50 visual tokens · frozen</text>
+<text x="105" y="237">English OCR lines</text>
+<text x="105" y="256" font-size="12" fill="#666">40 slots, with null padding</text>
+<text x="325" y="198" font-weight="bold">11 co-attention blocks</text>
+<text x="325" y="218" font-size="12" fill="#536779">Visual ↔ OCR fusion</text>
+<text x="550" y="198">Fused image bank</text>
+<text x="550" y="218" font-size="12" fill="#666">90 tokens per image</text>
+<text x="765" y="121" font-weight="bold">MaxSim</text>
+<text x="765" y="141" font-size="12" fill="#666">Token-level late interaction</text>
+<text x="765" y="241">Ranked gallery images</text>
+</g>
+</svg>
+</div>
+<figcaption>
+<span class="diagram-hint">Scroll the diagram sideways on small screens.</span>
+<strong>Overview of CoLITE-CLIP.</strong> Frozen CLIP encoders provide image, scene-text and query features. The trainable fusion blocks connect visual and OCR information; token-level matching ranks the gallery. English OCR lines and query translations are supplied by upstream preprocessing.</figcaption>
+</figure>
+<p>Image features are represented by 50 CLIP ViT-B/32 tokens. Up to 40 English OCR-line embeddings, padded with a learned null token, are fused with them through 11 bidirectional cross-attention blocks. ColBERT-style MaxSim scores the query tokens against the 90-token image bank. The fusion module is trained with a symmetric InfoNCE loss, first on TextCaps and then on X-STAR.</p>
+</section>
+<section id="dataset">
+<h2>The X-STAR Dataset</h2>
+<p><a href="https://github.com/vl2g/X-STAR/releases/download/v0.1.0/xstar_annotations.zip">Download annotations</a> · CC BY-SA 4.0 · Images acquired separately</p>
+<p>The primary benchmark uses the <strong>split</strong>. Images come from Bharat Scene Text Dataset (5,949) and RCTW-17 (500). Each record has a query in English, Assamese, Bengali, Gujarati, Hindi, Kannada, Malayalam, Marathi, Odia, Punjabi, Tamil, Telugu and Chinese.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Dataset split sizes">
+<table>
+<caption>X-STAR split</caption>
+<thead>
+<tr>
+<th scope="col">Split</th>
+<th scope="col">Images</th>
+<th scope="col">Queries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Train</th>
+<td>4,515</td>
+<td>58,695</td>
+</tr>
+<tr>
+<th scope="row">Validation</th>
+<td>645</td>
+<td>8,385</td>
+</tr>
+<tr>
+<th scope="row">Test</th>
+<td>1,289</td>
+<td>16,757</td>
+</tr>
+<tr>
+<th scope="row">Total</th>
+<td>6,449</td>
+<td>83,837</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="small-note">Explore the dataset and retrieval examples below. Photographs retain their terms; see the <a href="image-credits.html">image credits</a>.</p>
+</section>
+<section id="results">
+<h2>Quantitative Results</h2>
+<p>Results on the <strong>X-STAR benchmark</strong>, the primary release setting. Recall@K (%) is macro-averaged over all 13 query sets: 16,757 queries, each ranked against the complete 1,289-image test gallery.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Primary benchmark: X-STAR test split">
+<table>
+<caption>Primary benchmark: X-STAR test split</caption>
+<thead>
+<tr>
+<th scope="col">Method</th>
+<th scope="col">R@1</th>
+<th scope="col">R@5</th>
+<th scope="col">R@10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">CLIP ViT-B/32</th>
+<td>24.6</td>
+<td>42.8</td>
+<td>52.0</td>
+</tr>
+<tr class="ours">
+<th scope="row">CoLITE-CLIP</th>
+<td>46.5</td>
+<td>65.8</td>
+<td>73.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="small-note">These scores are verified evaluations of the existing main checkpoint and cached features, not a complete rerun from raw images. Equal scores retain the fixed gallery order. <strong>Integrity note:</strong> the split contains byte-identical images across training, validation and test. Selecting it as the primary benchmark does not remove that limitation.</p>
+<details>
+<summary>benchmark: results by query language</summary>
+<div class="table-scroll" tabindex="0" role="region" aria-label="benchmark results by language">
+<table class="per-language">
+<caption>split, Recall@K (%)</caption>
+<thead>
+<tr>
+<th rowspan="2" scope="col">Query language</th>
+<th colspan="3" scope="colgroup">CoLITE-CLIP</th>
+<th colspan="3" scope="colgroup">CLIP baseline</th>
+</tr>
+<tr>
+<th scope="col">R@1</th>
+<th scope="col">R@5</th>
+<th scope="col">R@10</th>
+<th scope="col">R@1</th>
+<th scope="col">R@5</th>
+<th scope="col">R@10</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">English</th>
+<td>52.2</td>
+<td>69.3</td>
+<td>75.7</td>
+<td>27.1</td>
+<td>45.5</td>
+<td>55.5</td>
+</tr>
+<tr>
+<th scope="row">Assamese → English</th>
+<td>44.2</td>
+<td>62.1</td>
+<td>70.1</td>
+<td>23.6</td>
+<td>41.8</td>
+<td>51.8</td>
+</tr>
+<tr>
+<th scope="row">Bengali → English</th>
+<td>45.1</td>
+<td>65.0</td>
+<td>72.9</td>
+<td>24.2</td>
+<td>42.4</td>
+<td>51.0</td>
+</tr>
+<tr>
+<th scope="row">Gujarati → English</th>
+<td>47.0</td>
+<td>68.0</td>
+<td>74.6</td>
+<td>24.5</td>
+<td>43.1</td>
+<td>52.8</td>
+</tr>
+<tr>
+<th scope="row">Hindi → English</th>
+<td>46.8</td>
+<td>67.0</td>
+<td>72.9</td>
+<td>24.9</td>
+<td>43.2</td>
+<td>52.3</td>
+</tr>
+<tr>
+<th scope="row">Kannada → English</th>
+<td>45.8</td>
+<td>64.7</td>
+<td>72.3</td>
+<td>24.3</td>
+<td>43.0</td>
+<td>52.2</td>
+</tr>
+<tr>
+<th scope="row">Malayalam → English</th>
+<td>49.0</td>
+<td>67.6</td>
+<td>74.9</td>
+<td>25.4</td>
+<td>44.0</td>
+<td>52.0</td>
+</tr>
+<tr>
+<th scope="row">Marathi → English</th>
+<td>43.0</td>
+<td>63.5</td>
+<td>70.4</td>
+<td>23.6</td>
+<td>41.2</td>
+<td>49.6</td>
+</tr>
+<tr>
+<th scope="row">Odia → English</th>
+<td>46.9</td>
+<td>65.7</td>
+<td>73.6</td>
+<td>25.0</td>
+<td>41.9</td>
+<td>51.6</td>
+</tr>
+<tr>
+<th scope="row">Punjabi → English</th>
+<td>46.4</td>
+<td>66.2</td>
+<td>73.1</td>
+<td>24.4</td>
+<td>42.2</td>
+<td>52.1</td>
+</tr>
+<tr>
+<th scope="row">Tamil → English</th>
+<td>43.8</td>
+<td>65.1</td>
+<td>73.2</td>
+<td>23.9</td>
+<td>41.8</td>
+<td>51.0</td>
+</tr>
+<tr>
+<th scope="row">Telugu → English</th>
+<td>46.4</td>
+<td>65.7</td>
+<td>73.2</td>
+<td>24.5</td>
+<td>43.2</td>
+<td>51.3</td>
+</tr>
+<tr>
+<th scope="row">Chinese → English</th>
+<td>47.5</td>
+<td>65.7</td>
+<td>72.1</td>
+<td>25.0</td>
+<td>43.0</td>
+<td>52.2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+
+</section>
+<section id="examples" class="wrap">
+<h2>Dataset example</h2>
+<p class="section-intro">Each record has an image, its annotated scene text and one query in each of 13
+        languages. Queries are shown exactly as they appear in the dataset; machine-generated queries and
+        translations can contain errors. The Telugu signboard example below is from the training split.</p>
+<div class="examples">
+<!-- examples:start (generated by tools/prepare_assets.py) -->
+<article class="example" id="example-a" aria-labelledby="example-a-title">
+<figure class="example-photo">
+<a href="assets/img/examples/L_image_254-1280.jpg" aria-label="Full-size photograph: Telugu signboard">
+<img src="assets/img/examples/L_image_254-640.jpg" srcset="assets/img/examples/L_image_254-640.jpg 640w, assets/img/examples/L_image_254-1280.jpg 1280w"
+                 sizes="(min-width: 960px) 420px, (min-width: 640px) 45vw, 92vw"
+                 width="640" height="360" decoding="async"
+                 alt="Blue roadside signboard with white Telugu lettering, mounted on a post in front of trees and scrub.">
+</a>
+</figure>
+<div class="example-body">
+<h3 id="example-a-title">
+Telugu signboard</h3>
+<p class="example-meta">Scene text: Telugu · Bharat Scene Text Dataset · train split</p>
+<h4>Annotated scene text</h4>
+<ul class="scene-text" lang="te">
+<li>శ్రీపోతన చైతన్య వేదిక విశ్వనాధ భవనం గూడూరు పాలకుర్తి మండలం, జనగామ జిల్లా 506 252</li>
+</ul>
+<h4>English query</h4>
+<p class="query-en">Sripothana Chaitanya Vedika Telugu signboard</p>
+<details class="queries">
+<summary>Queries in all 13 languages</summary>
+<table>
+<caption class="visually-hidden">Queries for example (a) in 13 languages</caption>
+<tbody>
+<tr>
+<th scope="row">English</th>
+<td lang="en">Sripothana Chaitanya Vedika Telugu signboard</td>
+</tr>
+<tr>
+<th scope="row">Assamese</th>
+<td lang="as">শ্ৰীপোথান চৈতন্য বেদিকা তেলেগু ছাইনব&#x27;ৰ্ড</td>
+</tr>
+<tr>
+<th scope="row">Bengali</th>
+<td lang="bn">শ্রীপোথান চৈতন্য বেদিকা তেলেগু সাইনবোর্ড</td>
+</tr>
+<tr>
+<th scope="row">Gujarati</th>
+<td lang="gu">શ્રીપોથના ચૈતન્ય વેદિકા તેલુગુ સાઇનબોર્ડ</td>
+</tr>
+<tr>
+<th scope="row">Hindi</th>
+<td lang="hi">श्रीपोथना चैतन्य वेदिका तेलुगु साइनबोर्ड</td>
+</tr>
+<tr>
+<th scope="row">Kannada</th>
+<td lang="kn">ಶ್ರೀಪೋತನ ಚೈತನ್ಯ ವೇದಿಕಾ ತೆಲುಗು ಫಲಕ</td>
+</tr>
+<tr>
+<th scope="row">Malayalam</th>
+<td lang="ml">ശ്രീപോതന ചൈതന്യ വേദിക തെലുങ്ക് സൈൻബോർഡ്</td>
+</tr>
+<tr>
+<th scope="row">Marathi</th>
+<td lang="mr">श्रीपोथना चैतन्य वेदिका तेलगू फलक</td>
+</tr>
+<tr>
+<th scope="row">Odia</th>
+<td lang="or">ଶ୍ରୀପୋଥାନ ଚୈତନ୍ଯ଼ ବେଦିକା ତେଲୁଗୁ ସାଇନବୋର୍ଡ</td>
+</tr>
+<tr>
+<th scope="row">Punjabi</th>
+<td lang="pa">ਸ਼੍ਰੀਪੋਥਾਨਾ ਚੈਤੰਨਿਆ ਵੇਦਿਕਾ ਤੇਲਗੂ ਸਾਈਨ ਬੋਰਡ</td>
+</tr>
+<tr>
+<th scope="row">Tamil</th>
+<td lang="ta">ஸ்ரீபோத்தனா சைதன்யா வேதிகா தெலுங்கு அடையாளப் பலகை</td>
+</tr>
+<tr>
+<th scope="row">Telugu</th>
+<td lang="te">శ్రీపోతన చైతన్య వేదిక తెలుగు సైన్బోర్డ్</td>
+</tr>
+<tr>
+<th scope="row">Chinese</th>
+<td lang="zh-Hans">Sripothana Chaitanya Vedika 泰卢固语招牌</td>
+</tr>
+</tbody>
+</table>
+</details>
+</div>
+</article>
+<!-- examples:end -->
+</div>
+<p class="small-print">Photographs from the Bharat Scene Text Dataset and RCTW-17, shown for illustration;
+        they retain their source terms. <a href="image-credits.html">Photograph credits and reuse information</a>. Select a photograph to open a larger copy.</p>
+</section>
+<section id="retrieval" class="wrap">
+<h2>Qualitative retrieval results</h2>
+<p class="section-intro">
+<strong>These illustrative examples use the checkpoint and test
+        split.</strong> Each row shows a query in
+        one language, the English back-translation that the model actually receives (from the dataset), and the
+        top five images retrieved from all 1,289 test images, best match first. The five examples were chosen for
+        illustration (four with the target first, one with the target second) and do not estimate overall
+        performance.</p>
+<p class="retrieval-legend">
+<span class="swatch swatch-target" aria-hidden="true">
+</span> Green border: the
+        target image for the query. <span class="swatch swatch-other" aria-hidden="true">
+</span> Red border: other
+        retrieved images. The image descriptions state which image is the target.</p>
+<p class="scroll-hint">Scroll each row sideways to see all five images.</p>
+<div class="retrievals">
+<!-- retrieval:start (generated by tools/prepare_retrieval_examples.py) -->
+<article class="retrieval" id="retrieval-a" aria-labelledby="retrieval-a-query">
+<p class="retrieval-letter" aria-hidden="true">(a)</p>
+<div class="retrieval-body">
+<h3 class="retrieval-query" id="retrieval-a-query">
+<span class="visually-hidden">Example (a). </span>Query (Telugu): <span class="query-native" lang="te">కొలిడా చైనీస్ స్టోర్ ఫ్రంట్ సైన్ బిల్డింగ్ ముఖభాగం</span>
+</h3>
+<p class="retrieval-translation">
+<strong>English translation:</strong> Collida Chinese Storefront Sign Building Facade</p>
+<div class="retrieval-strip" role="region" tabindex="0" aria-label="Top five retrieved images for example (a), in ranked order">
+<ol class="retrieval-list">
+<li class="hit is-target" style="--ar: 0.7500">
+<a href="assets/img/retrieval/N_image_1044-1280.jpg">
+<img src="assets/img/retrieval/N_image_1044-h480.jpg" width="360" height="480" decoding="async" alt="Target image. Building facade with a large blue sign reading 科力达 in white Chinese characters.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.3333">
+<a href="assets/img/retrieval/C_image_5122-1280.jpg">
+<img src="assets/img/retrieval/C_image_5122-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Roadside row of partly built houses and small shops on a dusty street.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 0.7500">
+<a href="assets/img/retrieval/C_image_1981-1280.jpg">
+<img src="assets/img/retrieval/C_image_1981-h480.jpg" width="360" height="480" decoding="async" alt="Other retrieved image. Narrow street lined with shops and multi-storey buildings under a blue sky.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.3333">
+<a href="assets/img/retrieval/F_image_378-1280.jpg">
+<img src="assets/img/retrieval/F_image_378-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Rainy town street with a bus, cars, two-wheelers and shop signboards.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.3333">
+<a href="assets/img/retrieval/G_image_1692-1280.jpg">
+<img src="assets/img/retrieval/G_image_1692-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Street corner with multi-storey buildings, shop signs, a white van and auto-rickshaws.">
+</a>
+</li>
+</ol>
+</div>
+</div>
+</article>
+<article class="retrieval" id="retrieval-b" aria-labelledby="retrieval-b-query">
+<p class="retrieval-letter" aria-hidden="true">(b)</p>
+<div class="retrieval-body">
+<h3 class="retrieval-query" id="retrieval-b-query">
+<span class="visually-hidden">Example (b). </span>Query (Bengali): <span class="query-native" lang="bn">আন্দিপট্টি রেলওয়ে স্টেশন প্ল্যাটফর্ম সাইন বোর্ড</span>
+</h3>
+<p class="retrieval-translation">
+<strong>English translation:</strong> Andipatti Railway Station Platform Sign Board</p>
+<div class="retrieval-strip" role="region" tabindex="0" aria-label="Top five retrieved images for example (b), in ranked order">
+<ol class="retrieval-list">
+<li class="hit is-target" style="--ar: 1.3333">
+<a href="assets/img/retrieval/K_image_317-1280.jpg">
+<img src="assets/img/retrieval/K_image_317-h480.jpg" width="640" height="480" decoding="async" alt="Target image. Railway track beside an unpaved platform with a yellow station-name board, trees and hills behind.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 2.0771">
+<a href="assets/img/retrieval/L_image_609-1280.jpg">
+<img src="assets/img/retrieval/L_image_609-h480.jpg" width="997" height="480" decoding="async" alt="Other retrieved image. Station platform with a blue passenger train, overhead electric wires and a yellow station-name board.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.7771">
+<a href="assets/img/retrieval/I_image_158-1280.jpg">
+<img src="assets/img/retrieval/I_image_158-h480.jpg" width="853" height="480" decoding="async" alt="Other retrieved image. Covered railway platform in front of a yellow station building, with people waiting.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.3333">
+<a href="assets/img/retrieval/F_image_774-1280.jpg">
+<img src="assets/img/retrieval/F_image_774-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Railway tracks and platform with a red signal and a yellow station-name board.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.3333">
+<a href="assets/img/retrieval/L_image_147-1280.jpg">
+<img src="assets/img/retrieval/L_image_147-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Station platform beside a goods train of coal wagons, with a yellow board reading Anaparti.">
+</a>
+</li>
+</ol>
+</div>
+</div>
+</article>
+<article class="retrieval" id="retrieval-c" aria-labelledby="retrieval-c-query">
+<p class="retrieval-letter" aria-hidden="true">(c)</p>
+<div class="retrieval-body">
+<h3 class="retrieval-query" id="retrieval-c-query">
+<span class="visually-hidden">Example (c). </span>Query (Gujarati): <span class="query-native" lang="gu">કોઇલ કોંડા પોલીસ સ્ટેશનના ઘરના પ્રવેશદ્વારનું સાઇનબોર્ડ</span>
+</h3>
+<p class="retrieval-translation">
+<strong>English translation:</strong> Signboard at the entrance of Koil Konda police station house.</p>
+<div class="retrieval-strip" role="region" tabindex="0" aria-label="Top five retrieved images for example (c), in ranked order">
+<ol class="retrieval-list">
+<li class="hit is-target" style="--ar: 1.2896">
+<a href="assets/img/retrieval/L_image_717-1280.jpg">
+<img src="assets/img/retrieval/L_image_717-h480.jpg" width="619" height="480" decoding="async" alt="Target image. Single-storey building with a blue arched sign reading Koil Konda Police Station House.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 0.7500">
+<a href="assets/img/retrieval/N_image_1044-1280.jpg">
+<img src="assets/img/retrieval/N_image_1044-h480.jpg" width="360" height="480" decoding="async" alt="Other retrieved image. Building facade with a large blue sign reading 科力达 in white Chinese characters.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.3333">
+<a href="assets/img/retrieval/L_image_984-1280.jpg">
+<img src="assets/img/retrieval/L_image_984-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Open roadside area with a bench, memorial stones, signboards and trees.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.3771">
+<a href="assets/img/retrieval/E_image_505-1280.jpg">
+<img src="assets/img/retrieval/E_image_505-h480.jpg" width="661" height="480" decoding="async" alt="Other retrieved image. Old stone gateway with a signboard and a statue of a bull on top, among palm trees.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.7812">
+<a href="assets/img/retrieval/J_image_445-1280.jpg">
+<img src="assets/img/retrieval/J_image_445-h480.jpg" width="855" height="480" decoding="async" alt="Other retrieved image. Single-storey white house beside an open dirt area and trees.">
+</a>
+</li>
+</ol>
+</div>
+</div>
+</article>
+<article class="retrieval" id="retrieval-d" aria-labelledby="retrieval-d-query">
+<p class="retrieval-letter" aria-hidden="true">(d)</p>
+<div class="retrieval-body">
+<h3 class="retrieval-query" id="retrieval-d-query">
+<span class="visually-hidden">Example (d). </span>Query (Hindi): <span class="query-native" lang="hi">कर्नाटक बैंक स्टोरफ्रंट का बाहरी चिन्ह</span>
+</h3>
+<p class="retrieval-translation">
+<strong>English translation:</strong> The exterior sign of the Karnataka Bank storefront.</p>
+<div class="retrieval-strip" role="region" tabindex="0" aria-label="Top five retrieved images for example (d), in ranked order">
+<ol class="retrieval-list">
+<li class="hit is-other" style="--ar: 0.5625">
+<a href="assets/img/retrieval/E_image_167-1280.jpg">
+<img src="assets/img/retrieval/E_image_167-h480.jpg" width="270" height="480" decoding="async" alt="Other retrieved image. Shop front with a closed red shutter under an Axis Bank ATM sign.">
+</a>
+</li>
+<li class="hit is-target" style="--ar: 1.2917">
+<a href="assets/img/retrieval/E_image_778-1280.jpg">
+<img src="assets/img/retrieval/E_image_778-h480.jpg" width="620" height="480" decoding="async" alt="Target image. Bank building with purple bank and ATM signboards and motorbikes parked in front.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.3333">
+<a href="assets/img/retrieval/D_image_137-1280.jpg">
+<img src="assets/img/retrieval/D_image_137-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Brick building entrance with an Indian Bank signboard in Hindi and English.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.3333">
+<a href="assets/img/retrieval/E_image_361-1280.jpg">
+<img src="assets/img/retrieval/E_image_361-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Commercial building with a Cinepolis cinema sign, seen across a road and trees.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.7771">
+<a href="assets/img/retrieval/D_image_1457-1280.jpg">
+<img src="assets/img/retrieval/D_image_1457-h480.jpg" width="853" height="480" decoding="async" alt="Other retrieved image. Large colonial-style building with State Bank of India signs.">
+</a>
+</li>
+</ol>
+</div>
+</div>
+</article>
+<article class="retrieval" id="retrieval-e" aria-labelledby="retrieval-e-query">
+<p class="retrieval-letter" aria-hidden="true">(e)</p>
+<div class="retrieval-body">
+<h3 class="retrieval-query" id="retrieval-e-query">
+<span class="visually-hidden">Example (e). </span>Query (Chinese): <span class="query-native" lang="zh-Hans">果阿机场航站楼施工现场</span>
+</h3>
+<p class="retrieval-translation">
+<strong>English translation:</strong> Goa airport terminal construction site</p>
+<div class="retrieval-strip" role="region" tabindex="0" aria-label="Top five retrieved images for example (e), in ranked order">
+<ol class="retrieval-list">
+<li class="hit is-target" style="--ar: 1.3333">
+<a href="assets/img/retrieval/D_image_9-1280.jpg">
+<img src="assets/img/retrieval/D_image_9-h480.jpg" width="640" height="480" decoding="async" alt="Target image. Airport terminal building seen from an aircraft window, with the wing in the foreground.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.3333">
+<a href="assets/img/retrieval/L_image_984-1280.jpg">
+<img src="assets/img/retrieval/L_image_984-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Open roadside area with a bench, memorial stones, signboards and trees.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.3333">
+<a href="assets/img/retrieval/J_image_69-1280.jpg">
+<img src="assets/img/retrieval/J_image_69-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Man loading a truck beside a cow covered with a decorated blue cloth.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.3333">
+<a href="assets/img/retrieval/D_image_773-1280.jpg">
+<img src="assets/img/retrieval/D_image_773-h480.jpg" width="640" height="480" decoding="async" alt="Other retrieved image. Concrete structure with blue railings and gates under a cloudy sky.">
+</a>
+</li>
+<li class="hit is-other" style="--ar: 1.7771">
+<a href="assets/img/retrieval/I_image_158-1280.jpg">
+<img src="assets/img/retrieval/I_image_158-h480.jpg" width="853" height="480" decoding="async" alt="Other retrieved image. Covered railway platform in front of a yellow station building, with people waiting.">
+</a>
+</li>
+</ol>
+</div>
+</div>
+</article>
+<!-- retrieval:end -->
+</div>
+<p class="small-print">Photographs from the Bharat Scene Text Dataset and RCTW-17, shown for illustration;
+        they retain their source terms. <a href="image-credits.html">Photograph credits and reuse information</a>. Select a photograph to open a larger copy.</p>
+</section>
+<section id="resources">
+<h2>Resources</h2>
+<dl class="resources">
+<div>
+<dt>Paper</dt>
+<dd>Paper link and publication metadata forthcoming.</dd>
+</div>
+<div>
+<dt>Code</dt>
+<dd><a href="https://github.com/vl2g/X-STAR">Source code on GitHub</a>: training, feature extraction, evaluation and retrieval, with MIT-licensed software.</dd>
+</div>
+<div>
+<dt>Dataset</dt>
+<dd><a href="https://github.com/vl2g/X-STAR/releases/download/v0.1.0/xstar_annotations.zip">Download X-STAR annotations</a> (CC BY-SA 4.0). Source images are obtained from <a href="https://github.com/Bhashini-IITJ/BharatSceneTextDataset">Bharat Scene Text Dataset</a> and <a href="https://rctw.vlrlab.net/">RCTW-17</a> under their own terms.</dd>
+</div>
+<div>
+<dt>Models</dt>
+<dd><a href="https://github.com/vl2g/X-STAR/releases/download/v0.1.0/colite_clip_xstar.pt">Download CoLITE-CLIP weights</a> (185 MB, MIT). Weights and retrieval results match the full training checkpoint. The full checkpoint stays on storage for training continuation.</dd>
+</div>
+<div>
+<dt>Features</dt>
+<dd>Precomputed feature downloads are forthcoming.</dd>
+</div>
+</dl>
+</section>
+<section id="citation">
+<h2>Citation</h2>
+<p>Paper citation details will be added when available. The current project page can be cited as:</p><pre><code>@misc{sharma2026xstar,
+  title = {X-STAR: Cross-Lingual Scene Text-Aware Image Retrieval},
+  author = {Sharma, Dikshant and {Prateek} and Mishra, Anand},
+  year = {2026},
+  howpublished = {Project website},
+  url = {https://vl2g.github.io/projects/X-STAR/}
+}</code></pre></section>
+<section id="acknowledgements">
+<h2>Acknowledgements</h2>
+<p>We thank <a href="https://ai4bharat.iitm.ac.in/">AI4Bharat</a> for <a href="https://github.com/AI4Bharat/IndicTrans2">IndicTrans2</a>, used for Indic-language translation during dataset preparation.</p>
+<p>We acknowledge the <strong>National Language Translation Mission</strong> (<a href="https://bhashini.gov.in/">Bhashini</a>) for supporting this project at Indian Institute of Technology Jodhpur.</p>
+<p>We acknowledge <a href="https://github.com/Bhashini-IITJ/BharatSceneTextDataset">Bharat Scene Text Dataset</a>, <a href="https://rctw.vlrlab.net/">RCTW-17</a>, <a href="https://github.com/Bhashini-IITJ/IndicPhotoOCR">IndicPhotoOCR</a>, <a href="https://github.com/openai/CLIP">OpenAI CLIP</a>, the <a href="https://github.com/stanford-futuredata/ColBERT">ColBERT</a> late-interaction design, and <a href="https://textvqa.org/textcaps/">TextCaps</a> pre-training. Source photographs retain their own terms. Our annotations are CC BY-SA 4.0; code and released model weights are MIT licensed.</p>
+</section>
+</main>
+<footer>
+<p>
+<a href="https://github.com/vl2g/vl2g.github.io/tree/master/projects/X-STAR">Website source</a> · <a href="image-credits.html">Image credits</a> · X-STAR, IIT Jodhpur</p>
+</footer>
+</div>
+</body>
+</html>
